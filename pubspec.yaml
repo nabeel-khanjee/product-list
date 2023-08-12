@@ -35,10 +35,36 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_flavorizr: ^2.2.1
 
+ 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+
+
+flavorizr:
+  flavors:
+    prod:
+      app:
+        name: "AT Care"
+      android:
+        applicationId: "com.atCare.patient.android"
+      ios:
+        bundleId: "com.atCare.patient.ios"
+      macos:
+        bundleId: "com.atCare.patient.mac"        
+    staging:
+      app:
+        name: "AT Care Staging"
+      android:
+        applicationId: "com.atCare.patient.android"
+      ios:
+        bundleId: "com.atCare.patient.ios"
+      macos:
+        bundleId: "com.atCare.patient.mac"        
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
