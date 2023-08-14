@@ -1,7 +1,10 @@
-import 'dart:async';
-import 'package:flutter/material.dart';
-import 'app.dart';
+import 'package:patient_app/src/app/app_export.dart';
 
 FutureOr<void> main() async {
-  runApp(const App());
+  runApp(
+    ChangeNotifierProvider<MyTheme>(
+      create: (_) => new MyTheme(),
+      child: const App(),
+    ),
+  );
 }

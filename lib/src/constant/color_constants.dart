@@ -1,0 +1,84 @@
+import 'package:flutter/material.dart';
+
+class ColorConstants {
+  static const Color black = Color(0xff000000);
+  static const Color blackLight = Color(0xff333333);
+  static const Color blackLightColor = Color(0xff6A6A6A);
+  static const Color blackish4 = Color(0xff2E2E2E);
+  static const Color blueGrey = Color(0xff83A3A1);
+  static const Color blurLightGreenishBlue = Color(0xffD9FAF7);
+  static const Color brightGreen = Color(0xff6ED73F);
+  static const Color brightGreen2 = Color(0xff3B9915);
+  static const Color brightGreen3 = Color(0xff7CC14B);
+  static const Color brown = Color(0xffBEA200);
+  static const Color lightPink4 = Color(0xffFDECF1);
+  static const Color cyan = Color(0xFF1AB5B7);
+  static const Color cyanLite = Color(0xFFF2FDFF);
+  static const Color darkGreen = Color(0xff0ca200);
+  static const Color pink4 = Color(0xffEF6286);
+  static const Color blue = Color(0xff19B3B5);
+  static const Color blue1 = Color(0xffE1F3F4);
+  static const Color darkestGreen = Color(0xff2AB21E);
+  static const Color deepGreen = Color(0xFF48AB06);
+  static const Color deepGreen2 = Color(0xff326C5D);
+  static const Color disable = Color(0xffCBCBCB);
+  static const Color disableDark = Color(0xffB7C4CB);
+  static const Color fbBlue = Color(0xff1373F2);
+  static const Color darkblue = Color(0xff0645AD);
+  static const Color greenishBlue = Color(0xff1EBCC2);
+  static const Color greenishBlueLight = Color(0xffBEF5F1);
+  static const Color grey = Color(0xff9D9D9D);
+  static const Color greyishWhite = Color(0xfff5f5f5);
+  static const Color iconBlue = Color(0xff29BCC1);
+  static const Color lightBlack = Color(0xff313131);
+  static const Color lightBlue = Color(0xff23BEC3);
+  static const Color lightBlue1 = Color(0xffEAFAFB);
+  static const Color lightBluish = Color(0xFF19B3B5);
+  static const Color lightBrown = Color(0xffFEF1A0);
+  static const Color lightGreen = Color(0xff72D54A);
+  static const Color lightGreen1 = Color(0xffE9F5F1);
+  static const Color lightGreen2 = Color(0xffCEE1C7);
+  static const Color lightGreenishBlue = Color(0xffBEF5F1);
+  static const Color lightGrey = Color(0xffF4F4F4);
+  static const Color lightGrey2 = Color(0xffDBDBDB);
+  static const Color lightGrey3 = Color(0xffBFBFBF);
+  static const Color lightGrey4 = Color(0xff9B9B9B);
+  static const Color lightGrey5 = Color(0xffF7F7F7);
+  static const Color lightGrey6 = Color(0xff8E8E8E);
+  static const Color lightGrey7 = Color(0xffEFEFEF);
+  static const Color lightGrey8 = Color(0xff404040);
+  static const Color lightOrange = Color(0xffEFAE00);
+  static const Color lightPink = Color(0xffF27394);
+  static const Color lightRed = Color(0xffF84D24);
+  static const Color lightSeaGreen = Color(0xffD6FEC6);
+  static const Color lightSkyBlue = Color(0xffE5FDFC);
+  static const Color lightYellow = Color(0xffFFF5BE);
+  static const Color lightestBlack = Color(0xff404040);
+  static const Color lightestBlue = Color(0xffCEFCFD);
+  static const Color lightestPink = Color(0xffFEE6ED);
+  static const Color lightestPink2 = Color(0xffFDECF1);
+  static const Color lightestYellow = Color(0xffFFF7C7);
+  static const Color linkBlue = Color(0xff0645AD);
+  static const Color logoBlue = Color(0xff12B6B8);
+  static const Color logoGreen = Color(0xff70D44B);
+  static const Color niceBlue = Color(0xff127CC0);
+  static const Color numberGrey = Color(0xff6B6B6B);
+  static const Color orange = Color(0xffFD8925);
+  static const Color orange2 = Color(0xffFD8924);
+  static const Color orangeYellow = Color(0xffF5D730);
+  static const Color pink = Color(0xffEF6286);
+  static const Color pink2 = Color(0xffCB5774);
+  
+  static const Color red = Color(0xffF54E30);
+  // FFD3CB
+
+  static const Color reddish = Color(0xFFFFD3CB);
+
+  static const Color scanBlue = Color(0xff19B5B7);
+  static const Color scanGreen = Color(0xff7CC14D);
+  static const Color scanRed = Color(0xffEE6285);
+  static const Color statusBorderColor = Color(0xff2A87FE);
+  static const Color transparent = Colors.transparent;
+  static const Color white = Colors.white;
+  static const Color yellowScan = Color(0xffFFF1A0);
+}
