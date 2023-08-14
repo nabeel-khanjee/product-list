@@ -1,13 +1,9 @@
-
 import 'package:patient_app/src/app/app_export.dart';
-
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
-
   @override
   State<App> createState() => _AppState();
 }
-
 class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
@@ -31,29 +27,10 @@ class _AppState extends State<App> {
               brightness: Brightness.light
               // primarySwatch: Colors.blue,
               ),
+              home: OnboardingScreen(),
           onGenerateRoute: onGenerateRoute,
         );
       },
     );
   }
 }
-
-Widget flavorBanner({
-  required Widget child,
-  bool show = true,
-}) =>
-    show
-        ? Banner(
-            child: child,
-            location: BannerLocation.topStart,
-            message: F.name,
-            color: Colors.green.withOpacity(0.6),
-            textStyle: TextStyle(
-                fontWeight: FontWeight.w700,
-                fontSize: 12.0,
-                letterSpacing: 1.0),
-            textDirection: TextDirection.ltr,
-          )
-        : Container(
-            child: child,
-          );

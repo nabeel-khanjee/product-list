@@ -1,5 +1,10 @@
 export 'package:patient_app/src/pages/home/components/list_tile_component_home.dart';
 export 'package:flutter/material.dart';
+export 'package:patient_app/src/flavors/flavour_banner.dart';
+export 'package:patient_app/src/pages/onboarding/components/onboarding_page.dart';
+export 'package:patient_app/src/pages/onboarding/onboarding_screen.dart';
+export 'package:dots_indicator/dots_indicator.dart';
+export 'package:patient_app/src/pages/onboarding/components/onboarding_list.dart';
 export 'package:patient_app/src/pages/home/components/app_color_picker.dart';
 export 'package:patient_app/src/pages/splash/splash_screen.dart';
 export 'package:patient_app/src/pages/home/components/home_screen_body.dart';
@@ -12,6 +17,7 @@ export 'package:patient_app/src/constant/route_constants.dart';
 export 'package:patient_app/src/app/app.dart';
 export 'package:patient_app/src/constant/color_constants.dart';
 export 'package:patient_app/src/flavors/flavors.dart';
+export 'package:patient_app/src/pages/home/components/app_bar_title.dart';
 export 'package:patient_app/src/pages/home/components/home_page_app_bar.dart';
 export 'package:patient_app/src/pages/home/components/home_page_list_view.dart';
 export 'package:patient_app/src/style/font_style.constant.dart';

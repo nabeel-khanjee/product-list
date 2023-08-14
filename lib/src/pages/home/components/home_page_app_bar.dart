@@ -18,45 +18,7 @@ class HomePageAppBar extends StatelessWidget {
       floating: true,
       expandedHeight: 160.0,
       centerTitle: true,
-      title: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Hi ',
-                style: FontStylesConstants.nonito(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w700,
-                    color: MyTheme.isDark
-                        ? ColorConstants.white
-                        : ColorConstants.black),
-              ),
-              Text(
-                'Nabbel ',
-                style: FontStylesConstants.nonito(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w700,
-                    color: MyTheme.isDark
-                        ? ColorConstants.white
-                        : ColorConstants.black),
-              ),
-            ],
-          ),
-          Text(
-            F.title,
-            style: FontStylesConstants.nonito(
-                fontSize: 10,
-                fontWeight: FontWeight.w700,
-                color: MyTheme.isDark
-                    ? ColorConstants.white
-                    : ColorConstants.black),
-          ),
-        ],
-      ),
+      title: AppBarTitle(),
       flexibleSpace: Center(
         child: FlexibleSpaceBar(
           expandedTitleScale: 10,
@@ -80,3 +42,4 @@ class HomePageAppBar extends StatelessWidget {
     );
   }
 }
+
