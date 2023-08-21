@@ -1,21 +1,23 @@
 
-import 'package:patient_app/src/app/app_export.dart';
+import 'package:provider_app/src/app/app_export.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({
     super.key,
     required this.snap,
-    required GlobalKey<ScaffoldState> scaffoldKey,
-  }) : _scaffoldKey = scaffoldKey;
+    required this.onTap,
+  });
 
   final bool snap;
-  final GlobalKey<ScaffoldState> _scaffoldKey;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: <Widget>[
-        HomePageAppBar(snap: snap, scaffoldKey: _scaffoldKey),
+        HomePageAppBar(snap: snap, 
+        onTap: onTap,
+        ),
         HomePageListView(),
       ],
     );

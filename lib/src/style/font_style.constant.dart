@@ -1,4 +1,4 @@
-import 'package:patient_app/src/app/app_export.dart';
+import 'package:provider_app/src/app/app_export.dart';
 
 class FontStylesConstants {
   ///Noto Naskh Arabic
@@ -20,7 +20,7 @@ class FontStylesConstants {
       );
   static TextStyle nonito(
           {required double fontSize,
-          Color color = ColorConstants.black,
+          Color? color,
           FontWeight fontWeight = FontWeight.normal,
           TextDecoration decoration = TextDecoration.none,
           double letterSpacing = 0,
@@ -30,7 +30,7 @@ class FontStylesConstants {
         color: color,
         fontWeight: fontWeight,
         fontStyle: FontStyle.normal,
-        fontSize: 14,
+        fontSize: fontSize,
         height: 1.4,
         letterSpacing: letterSpacing,
       );

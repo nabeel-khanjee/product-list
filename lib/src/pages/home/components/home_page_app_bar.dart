@@ -1,14 +1,14 @@
-import 'package:patient_app/src/app/app_export.dart';
+import 'package:provider_app/src/app/app_export.dart';
 
 class HomePageAppBar extends StatelessWidget {
   const HomePageAppBar({
     super.key,
     required this.snap,
-    required GlobalKey<ScaffoldState> scaffoldKey,
-  }) : _scaffoldKey = scaffoldKey;
+     required this.onTap,
+  });
 
   final bool snap;
-  final GlobalKey<ScaffoldState> _scaffoldKey;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +35,10 @@ class HomePageAppBar extends StatelessWidget {
         ),
       ],
       leading: IconButton(
-          onPressed: () => _scaffoldKey.currentState!.openDrawer(),
+          onPressed:  onTap,
           icon: const Icon(
             Icons.more_vert,
           )),
     );
   }
 }
-

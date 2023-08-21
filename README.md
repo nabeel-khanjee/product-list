@@ -1,4 +1,4 @@
-# patient_app
+# provider_app
 
 A new Flutter project.
 

@@ -1,4 +1,4 @@
-import 'package:patient_app/src/app/app_export.dart';
+import 'package:provider_app/src/app/app_export.dart';
 
 class ListTileComponentHomeScreen extends StatelessWidget {
   final int index;
