@@ -126,8 +126,5 @@ Future<void> _initRepos() async {
     )
     ..registerFactory(
       () => AppCubit(),
-    )
-    ..registerFactory(
-      () => MyTheme(),
     );
 }
