@@ -1,5 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/home/components/animated_drawer_back_drop.dart';
+import 'package:provider_app/src/pages/animated_drawer/animated_drawer_back_drop.dart';
 
 class AnimatedDrawerAfterLoadedState extends StatelessWidget {
   const AnimatedDrawerAfterLoadedState({

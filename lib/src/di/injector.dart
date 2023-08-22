@@ -11,7 +11,7 @@ import 'package:provider_app/src/domain/repository/api_repository.dart';
 import 'package:provider_app/src/listeners/login_state.dart';
 import 'package:provider_app/src/network/dio_network/dio_api_services.dart';
 import 'package:provider_app/src/network/dio_network/dio_client_network.dart';
-import 'package:provider_app/src/pages/home/cubit/animated_drawer_cubit.dart';
+import 'package:provider_app/src/pages/animated_drawer/cubit/animated_drawer_cubit.dart';
 import 'package:provider_app/src/util/shared_preferences_util.dart';
 import 'package:uuid/uuid.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -120,7 +120,6 @@ Future<void> _initRepos() async {
             locale: 1,
           );
 
-          // await navigationService!.navigateTo(RouteConstants.checkPhoneRoute);
         },
       ),
     )

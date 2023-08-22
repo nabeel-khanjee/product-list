@@ -3,8 +3,8 @@ import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/components/app_loader.dart';
 import 'package:provider_app/src/components/retry_button.dart';
 import 'package:provider_app/src/di/injector.dart';
-import 'package:provider_app/src/pages/home/components/animated_drawer_after_loaded_state.dart';
-import 'package:provider_app/src/pages/home/cubit/animated_drawer_cubit.dart';
+import 'package:provider_app/src/pages/animated_drawer/animated_drawer_after_loaded_state.dart';
+import 'package:provider_app/src/pages/animated_drawer/cubit/animated_drawer_cubit.dart';
 
 class HomeScreenComponent extends StatelessWidget {
   HomeScreenComponent({

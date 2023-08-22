@@ -13,17 +13,12 @@ class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
 
   int _bottomNavIndex = 0;
 
-  Future<void> updateIndex({required int index,required bool isOpen }) async {
+  Future<void> updateIndex({required int index, required bool isOpen}) async {
     _bottomNavIndex = index;
     emit(
-      _AnimatedDrawerIndexUpdated(
-        index,isOpen
-      ),
+      _AnimatedDrawerIndexUpdated(index, isOpen),
     );
   }
-
-
-  
 
   int get getBottomNavIndex => _bottomNavIndex;
 }
@@ -39,8 +34,6 @@ class AnimatedDrawerState with _$AnimatedDrawerState {
   const factory AnimatedDrawerState.loaded(PageController pageController) =
       _Loaded;
 
-  const factory AnimatedDrawerState.animatedDrawerIndexUpdated(int index, bool isOper) =
-      _AnimatedDrawerIndexUpdated;
-      
-      
+  const factory AnimatedDrawerState.animatedDrawerIndexUpdated(
+      int index, bool isOper) = _AnimatedDrawerIndexUpdated;
 }

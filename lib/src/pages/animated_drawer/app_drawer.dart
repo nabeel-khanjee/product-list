@@ -40,7 +40,7 @@ class AppDrawer extends StatelessWidget {
             .entries
             .map((e) => Container(
                   padding: EdgeInsets.all(20),
-                  child: GestureDetector(
+                  child: InkWell(
                     onTap: () {
                       if (e.value.isInnerPage) {
                         drawerStateChnageUpdateIndex(
