@@ -8,6 +8,8 @@ class EnglishConstant {
     'settings': 'Settings',
     'receiveNotifications': 'Receive Notifications',
     'themeDarkLight': "Theme Dark Light",
-    'selectLanguage': 'Select Language'
+    'selectLanguage': 'Select Language',
+    'home': 'Home',
+    'profile': 'Profile'
   };
 }

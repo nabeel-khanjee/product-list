@@ -1,9 +1,9 @@
-import 'package:provider_app/src/theme/theme.dart';
+// import 'package:provider_app/src/theme/theme.dart';
 
-class SettingScreenArgs {
-  final MyTheme theme;
+// class SettingScreenArgs {
+//   final MyTheme theme;
 
-  SettingScreenArgs({
-    required this.theme,
-  });
-}
+//   SettingScreenArgs({
+//     required this.theme,
+//   });
+// }

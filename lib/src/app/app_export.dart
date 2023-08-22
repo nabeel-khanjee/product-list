@@ -1,7 +1,11 @@
 export 'package:easy_localization/easy_localization.dart' hide TextDirection;
 export 'package:provider_app/src/pages/setting/components/language_setting.dart';
 export 'package:provider_app/src/pages/setting/components/language_component.dart';
-
+export 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
+export 'package:provider_app/src/pages/home/components/drawer_actions.dart';
+export 'package:provider_app/src/theme/get_theme_state.dart';
+export 'package:provider_app/src/pages/home/components/advanced_drawer_child_componetn.dart';
+export 'package:provider_app/src/constant/language_constants/get_current_language_text_direction.dart';
 export 'package:provider_app/src/app/app_export.dart';
 export 'package:provider_app/src/pages/setting/components/select_languages.dart';
 export 'package:logger/logger.dart';

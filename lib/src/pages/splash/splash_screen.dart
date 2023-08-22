@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void _navigateAfterDelay() {
     Timer(Duration(seconds: 0), () async {
       await NavigationUtil.push(context, RouteConstants.onboardingRoute,
-          args: OnboardingScreenArgs(theme: theme!));
+        );
     });
   }
 

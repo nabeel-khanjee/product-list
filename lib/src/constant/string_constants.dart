@@ -8,6 +8,10 @@ class StringConstants {
   static String get themeDarkLight => _getLang('themeDarkLight');
   static String get receiveNotifications => _getLang('receiveNotifications');
   static String get settings => _getLang('settings');
+  static String get profile => _getLang('profile');
+  
+  static String get home => _getLang('home');
+  
   static String get generalSettings => _getLang('generalSettings');
   static String get selectColor => _getLang('selectColor');
   static String get onboardingText => _getLang('onboardingText');

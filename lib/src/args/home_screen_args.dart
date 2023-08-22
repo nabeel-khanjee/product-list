@@ -1,9 +1,9 @@
-import 'package:provider_app/src/theme/theme.dart';
+// import 'package:provider_app/src/theme/theme.dart';
 
-class HomeScreenArgs {
-  final MyTheme theme;
+// class HomeScreenArgs {
+//   final MyTheme theme;
 
-  HomeScreenArgs({
-    required this.theme,
-  });
-}
+//   HomeScreenArgs({
+//     required this.theme,
+//   });
+// }

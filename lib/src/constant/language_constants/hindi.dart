@@ -8,6 +8,8 @@ class HindiConstant {
     'settings': 'समायोजन',
     'receiveNotifications': 'सूचनाएं प्राप्त करें',
     'themeDarkLight': "थीम डार्क लाइट",
-    'selectLanguage': 'भाषा चुने'
+    'selectLanguage': 'भाषा चुने',
+    'home': 'घर',
+    'profile': 'प्रोफ़ाइल'
   };
 }

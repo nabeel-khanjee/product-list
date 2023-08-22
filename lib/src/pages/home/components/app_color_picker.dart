@@ -1,12 +1,11 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/theme/switch_color_app.dart';
 
 class AppColorPicker extends StatelessWidget {
   const AppColorPicker({
     super.key,
-    required this.theme,
   });
 
-  final MyTheme theme;
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +25,13 @@ class AppColorPicker extends StatelessWidget {
             height: 20,
           ),
           MaterialColorPicker(
-            onColorChange: (value) {
-              theme.switchColor(value);
+            onColorChange: (colro) {
+              switchColorApp(color: colro);
             },
             onMainColorChange: (ColorSwatch? color) {
-              theme.switchColor(color!);
+              switchColorApp(color: color!);
             },
-            selectedColor: theme.getColor(),
+            selectedColor: getThemeColor(context),
           )
         ],
       ),

@@ -1,9 +1,9 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class OnboardingScreen extends StatelessWidget {
-  final OnboardingScreenArgs args;
+  // final OnboardingScreenArgs args;
 
-  const OnboardingScreen({super.key, required this.args});
+  const OnboardingScreen({super.key, });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,10 +52,7 @@ class OnboardingScreen extends StatelessWidget {
                         onPressed: () {
                           NavigationUtil.push(
                             context,
-                            RouteConstants.HomeRoute,
-                            args: HomeScreenArgs(
-                              theme: args.theme,
-                            ),
+                            RouteConstants.homeRoute,
                           );
                         },
                         child: Text(StringConstants.getStarted),
@@ -75,7 +72,7 @@ class OnboardingScreen extends StatelessWidget {
               child: InkWell(
                 onTap: () {
                   NavigationUtil.push(context, RouteConstants.settingRoute,
-                      args: SettingScreenArgs(theme: args.theme));
+                      );
                 },
                 child: Icon(
                   Icons.settings,

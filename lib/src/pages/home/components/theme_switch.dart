@@ -1,12 +1,10 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/theme/switch_theme.dart';
 
 class ThemeSwitch extends StatelessWidget {
   const ThemeSwitch({
     super.key,
-    required this.theme,
   });
-
-  final MyTheme theme;
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +13,9 @@ class ThemeSwitch extends StatelessWidget {
       value: Theme.of(context).brightness == Brightness.light,
       onChanged: (value) async {
         if (Theme.of(context).brightness == Brightness.light) {
-          theme.switchTheme();
+          switchThemeApp();
         } else {
-          theme.switchTheme();
+          switchThemeApp();
         }
       },
     );

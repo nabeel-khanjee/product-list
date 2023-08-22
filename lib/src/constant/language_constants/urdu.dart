@@ -8,6 +8,8 @@ class UrduConstant {
     'settings': 'ترتیبات',
     'receiveNotifications': 'اطلاعات موصول کریں۔',
     'themeDarkLight': "تھیم ڈارک لائٹ",
-    'selectLanguage': 'زبان منتخب کریں۔'
+    'selectLanguage': 'زبان منتخب کریں۔',
+    'home': 'گھر',
+    'profile': 'پروفائل'
   };
 }

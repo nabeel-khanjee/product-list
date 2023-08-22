@@ -8,6 +8,8 @@ class SpanishConstant {
     'settings': 'Ajustes',
     'receiveNotifications': 'Recibir notificaciones',
     'themeDarkLight': "Tema Luz Oscura",
-    'selectLanguage': 'Seleccione el idioma'
+    'selectLanguage': 'Seleccione el idioma',
+    'home': 'Hogar',
+    'profile': 'Perfil'
   };
 }

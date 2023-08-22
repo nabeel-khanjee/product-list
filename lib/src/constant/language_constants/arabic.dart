@@ -8,6 +8,8 @@ class ArabicConstant {
     'settings': 'إعدادات',
     'receiveNotifications': 'تلقي الإخطارات',
     'themeDarkLight': "موضوع ضوء الظلام",
-    'selectLanguage': 'اختار اللغة'
+    'selectLanguage': 'اختار اللغة',
+    'home': 'بيت',
+    'profile': 'حساب تعريفي'
   };
 }

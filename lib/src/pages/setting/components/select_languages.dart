@@ -3,11 +3,9 @@ import 'package:provider_app/src/app/app_export.dart';
 class SelectLanguagesComponent extends StatefulWidget {
   const SelectLanguagesComponent({
     super.key,
-    required this.theme,
   });
 
-  final MyTheme theme;
-
+ 
   @override
   State<SelectLanguagesComponent> createState() =>
       _SelectLanguagesComponentState();

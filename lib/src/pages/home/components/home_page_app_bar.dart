@@ -4,11 +4,9 @@ class HomePageAppBar extends StatelessWidget {
   const HomePageAppBar({
     super.key,
     required this.snap,
-     required this.onTap,
   });
 
   final bool snap;
-  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +33,9 @@ class HomePageAppBar extends StatelessWidget {
         ),
       ],
       leading: IconButton(
-          onPressed:  onTap,
+          onPressed: () => drawerStateChnageUpdateIndex(isOpen: false,
+          context: context
+          ),
           icon: const Icon(
             Icons.more_vert,
           )),

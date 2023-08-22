@@ -1,8 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class HomeScreen extends StatelessWidget {
-  final HomeScreenArgs args;
-  const HomeScreen({super.key, required this.args});
+  const HomeScreen({super.key, });
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +11,6 @@ class HomeScreen extends StatelessWidget {
       show: true,
       child: HomeScreenComponent(
         snap: snap,
-        theme: args.theme,
       ),
     );
   }
