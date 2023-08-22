@@ -1,6 +1,4 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/home/cubit/animated_drawer_cubit.dart';
 
 class AdvancedDrawerChildComponent extends StatelessWidget {
   const AdvancedDrawerChildComponent({
