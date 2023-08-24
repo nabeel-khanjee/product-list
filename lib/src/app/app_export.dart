@@ -2,6 +2,46 @@ export 'package:easy_localization/easy_localization.dart' hide TextDirection;
 export 'package:provider_app/src/pages/setting/components/language_setting.dart';
 export 'package:provider_app/src/pages/setting/components/language_component.dart';
 export 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
+export 'package:provider_app/src/pages/is_gradient_background_component/liner_gradient_for_app.dart';
+export 'package:provider_app/src/pages/setting/components/setting_screen_body.dart';
+export 'package:provider_app/src/pages/is_gradient_background_component/cubit/is_gradient_background_cubit.dart';
+export 'package:provider_app/src/theme/switch_theme.dart';
+export 'package:flutter_bloc/flutter_bloc.dart';
+export 'dart:io';
+export 'package:provider_app/src/pages/is_gradient_background_component/is_gradient_background_component.dart';
+export 'package:provider_app/src/theme/dark_theme_data.dart';
+export 'package:provider_app/src/theme/light_theme_data.dart';
+export 'package:provider_app/src/theme/switch_color_app.dart';
+
+export 'package:provider_app/src/components/app_loader.dart';
+export 'package:provider_app/src/components/retry_button.dart';
+export 'package:provider_app/src/pages/animated_drawer/animated_drawer_after_loaded_state.dart';
+export 'package:provider_app/src/pages/animated_drawer/drawer_leading_component.dart';
+
+export 'package:provider_app/src/di/injector.dart';
+export 'package:pretty_dio_logger/pretty_dio_logger.dart';
+export 'package:provider_app/src/pages/animated_drawer/animated_drawer_back_drop.dart';
+export 'package:provider_app/src/pages/profile/profile_screen.dart';
+
+export 'package:freezed_annotation/freezed_annotation.dart';
+
+export 'package:dio/dio.dart';
+export 'package:provider_app/src/app/app_cubit/app_cubit.dart';
+export 'package:provider_app/src/constant/http_constants.dart';
+export 'package:provider_app/src/data/common/object_mapper.dart';
+export 'package:provider_app/src/data/datasource/api/at_care_api.dart';
+export 'package:provider_app/src/data/datasource/interceptor/auth_interceptor.dart';
+export 'package:provider_app/src/data/repository/api_repository_impl.dart';
+export 'package:provider_app/src/domain/repository/api_repository.dart';
+export 'package:provider_app/src/listeners/login_state.dart';
+export 'package:provider_app/src/network/dio_network/dio_api_services.dart';
+export 'package:provider_app/src/network/dio_network/dio_client_network.dart';
+export 'package:provider_app/src/pages/animated_drawer/cubit/animated_drawer_cubit.dart';
+export 'package:provider_app/src/util/shared_preferences_util.dart';
+export 'package:uuid/uuid.dart';
+export 'package:get_it/get_it.dart';
+export 'package:provider_app/src/core/log_filter.dart';
+
 export 'package:provider_app/src/pages/animated_drawer/drawer_actions.dart';
 export 'package:provider_app/src/theme/get_theme_state.dart';
 export 'package:provider_app/src/pages/animated_drawer/advanced_drawer_child_componetn.dart';

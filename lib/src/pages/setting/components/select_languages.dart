@@ -1,17 +1,11 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-class SelectLanguagesComponent extends StatefulWidget {
+class SelectLanguagesComponent extends StatelessWidget {
   const SelectLanguagesComponent({
     super.key,
   });
 
  
-  @override
-  State<SelectLanguagesComponent> createState() =>
-      _SelectLanguagesComponentState();
-}
-
-class _SelectLanguagesComponentState extends State<SelectLanguagesComponent> {
   @override
   Widget build(BuildContext context) {
     List<LanguageSetting> languageSetting = [

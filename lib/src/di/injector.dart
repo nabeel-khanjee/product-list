@@ -1,22 +1,4 @@
-import 'package:dio/dio.dart';
-import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:provider_app/src/app/app_cubit/app_cubit.dart';
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/constant/http_constants.dart';
-import 'package:provider_app/src/data/common/object_mapper.dart';
-import 'package:provider_app/src/data/datasource/api/at_care_api.dart';
-import 'package:provider_app/src/data/datasource/interceptor/auth_interceptor.dart';
-import 'package:provider_app/src/data/repository/api_repository_impl.dart';
-import 'package:provider_app/src/domain/repository/api_repository.dart';
-import 'package:provider_app/src/listeners/login_state.dart';
-import 'package:provider_app/src/network/dio_network/dio_api_services.dart';
-import 'package:provider_app/src/network/dio_network/dio_client_network.dart';
-import 'package:provider_app/src/pages/animated_drawer/cubit/animated_drawer_cubit.dart';
-import 'package:provider_app/src/util/shared_preferences_util.dart';
-import 'package:uuid/uuid.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
-import 'package:provider_app/src/core/log_filter.dart';
 
 final getIt = GetIt.instance;
 
@@ -44,6 +26,7 @@ void _injectUtilities({
 
 void _injectBlocsAndCubits() {
   getIt.registerFactory(() => AnimatedDrawerCubit());
+  getIt.registerFactory(() => IsGradientBackgroundCubit());
 }
 
 Future<void> _initializeData({bool enableLogging = true}) async {
@@ -119,7 +102,6 @@ Future<void> _initRepos() async {
             deleteToken: true,
             locale: 1,
           );
-
         },
       ),
     )

@@ -24,7 +24,7 @@ class AppDrawer extends StatelessWidget {
       ),
       RouteListApp(
         isInnerPage: true,
-        pageIndex: 8,
+        pageIndex: 2,
         name: StringConstants.settings,
         route: RouteConstants.settingRoute,
         icon: AssetsConstants.settingIcon,
@@ -44,6 +44,7 @@ class AppDrawer extends StatelessWidget {
                     onTap: () {
                       if (e.value.isInnerPage) {
                         drawerStateChnageUpdateIndex(
+                          advancedDrawerController: BlocProvider.of<AnimatedDrawerCubit>(context).advancedDrawerController,
                             isOpen: true,
                             context: context,
                             index: e.value.pageIndex);

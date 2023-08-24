@@ -1,25 +1,19 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/animated_drawer/animated_drawer_back_drop.dart';
 
 class AnimatedDrawerAfterLoadedState extends StatelessWidget {
   const AnimatedDrawerAfterLoadedState({
     super.key,
-    required AdvancedDrawerController advancedDrawerController,
-    required this.borderSide,
-    required this.pageController,
-    required this.snap,
-  }) : _advancedDrawerController = advancedDrawerController;
+  });
 
-  final AdvancedDrawerController _advancedDrawerController;
-  final BorderSide borderSide;
-  final PageController pageController;
-  final bool snap;
 
   @override
   Widget build(BuildContext context) {
+    BorderSide borderSide =
+        BorderSide(color: lighten(getThemeColor(context), 0.1), width: 20);
     return AdvancedDrawer(
         backdrop: AnimatedDrawerBackDrop(),
-        controller: _advancedDrawerController,
+        controller: BlocProvider.of<AnimatedDrawerCubit>(context)
+            .advancedDrawerController,
         animationCurve: Curves.easeInOut,
         animationDuration: const Duration(
           milliseconds: 300,
@@ -43,14 +37,9 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           child: Scaffold(
             body: PageView(
-              physics: NeverScrollableScrollPhysics(),
-              controller: pageController,
-              children: [
-                HomeScreenBody(
-                  snap: snap,
-                ),
-                SettingsScreen()
-              ],
+              controller: BlocProvider.of<AnimatedDrawerCubit>(context)
+            .pageController,
+              children: [HomeScreenBody(), ProfileScreen(), SettingsScreen()],
             ),
           ),
         ));

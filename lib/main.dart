@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/di/injector.dart';
 
 FutureOr<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

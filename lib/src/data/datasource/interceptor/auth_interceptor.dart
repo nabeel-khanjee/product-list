@@ -1,10 +1,4 @@
-import 'dart:io';
-import 'package:dio/dio.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider_app/src/app/app_cubit/app_cubit.dart';
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/di/injector.dart';
-import 'package:provider_app/src/util/shared_preferences_util.dart';
 
 class AuthInterceptor extends InterceptorsWrapper {
   static const requiresAuth = 'requiresAuthentication';

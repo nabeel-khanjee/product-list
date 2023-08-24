@@ -66,6 +66,7 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () => drawerStateChnageUpdateIndex(
+                    advancedDrawerController: BlocProvider.of<AnimatedDrawerCubit>(context).advancedDrawerController,
                       isOpen: true, context: context),
                   child: Container(
                     decoration: BoxDecoration(

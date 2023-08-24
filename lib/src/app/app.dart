@@ -1,14 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/theme/dark_theme_data.dart';
-import 'package:provider_app/src/theme/light_theme_data.dart';
 
-class App extends StatefulWidget {
+class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
-  @override
-  State<App> createState() => _AppState();
-}
-
-class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return RestartWidget(
@@ -32,6 +25,4 @@ class _AppState extends State<App> {
       ),
     );
   }
-
-
 }

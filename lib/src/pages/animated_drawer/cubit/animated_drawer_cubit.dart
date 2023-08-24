@@ -1,26 +1,39 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:provider_app/src/app/app_export.dart';
 part 'animated_drawer_cubit.freezed.dart';
 
 class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
   AnimatedDrawerCubit() : super(const _Initial());
 
-  getDashBoardOverview(context, {required PageController pageController}) {
+  getDashBoardOverview(context,
+      {required PageController pageController,
+      required AdvancedDrawerController advancedDrawerController}) {
+    _advancedDrawerController = advancedDrawerController;
+
     emit(const _Loading());
     emit(_Loaded(pageController));
   }
 
-  int _bottomNavIndex = 0;
-
-  Future<void> updateIndex({required int index, required bool isOpen}) async {
+  Future<void> updateIndex(
+      {required int index,
+      required bool isOpen,
+      required AdvancedDrawerController advancedDrawerController}) async {
     _bottomNavIndex = index;
+    _advancedDrawerController = advancedDrawerController;
+
     emit(
       _AnimatedDrawerIndexUpdated(index, isOpen),
     );
   }
 
+  int _bottomNavIndex = 0;
+  AdvancedDrawerController _advancedDrawerController =
+      AdvancedDrawerController();
+  PageController _pageController = PageController();
+
   int get getBottomNavIndex => _bottomNavIndex;
+  AdvancedDrawerController get advancedDrawerController =>
+      _advancedDrawerController;
+  PageController get pageController => _pageController;
 }
 
 @freezed
@@ -35,5 +48,7 @@ class AnimatedDrawerState with _$AnimatedDrawerState {
       _Loaded;
 
   const factory AnimatedDrawerState.animatedDrawerIndexUpdated(
-      int index, bool isOper) = _AnimatedDrawerIndexUpdated;
+    int index,
+    bool isOpen,
+  ) = _AnimatedDrawerIndexUpdated;
 }

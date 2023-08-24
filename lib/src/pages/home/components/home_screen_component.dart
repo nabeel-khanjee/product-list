@@ -1,10 +1,4 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/components/app_loader.dart';
-import 'package:provider_app/src/components/retry_button.dart';
-import 'package:provider_app/src/di/injector.dart';
-import 'package:provider_app/src/pages/animated_drawer/animated_drawer_after_loaded_state.dart';
-import 'package:provider_app/src/pages/animated_drawer/cubit/animated_drawer_cubit.dart';
 
 class HomeScreenComponent extends StatelessWidget {
   HomeScreenComponent({
@@ -17,40 +11,40 @@ class HomeScreenComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    PageController pageController = PageController(initialPage: 0);
-    var borderSide =
-        BorderSide(color: lighten(getThemeColor(context), 0.1), width: 20);
     return BlocProvider(
       create: (context) => getIt.get<AnimatedDrawerCubit>()
         ..getDashBoardOverview(context,
-            pageController: PageController(initialPage: 0)),
+            pageController: PageController(initialPage: 0),
+            advancedDrawerController: _advancedDrawerController),
       child: BlocBuilder<AnimatedDrawerCubit, AnimatedDrawerState>(
         builder: (context, state) => state.maybeWhen(
           loaded: (
             pageControllerLoaded,
           ) {
-            return AnimatedDrawerAfterLoadedState(
-                advancedDrawerController: _advancedDrawerController,
-                borderSide: borderSide,
-                pageController: pageController,
-                snap: snap);
+            return AnimatedDrawerAfterLoadedState();
           },
-          animatedDrawerIndexUpdated: (index, isOpen) {
-            pageController.jumpToPage(index);
+          animatedDrawerIndexUpdated: (
+            index,
+            isOpen,
+          ) {
+            BlocProvider.of<AnimatedDrawerCubit>(context)
+                .pageController
+                .jumpToPage(index);
             isOpen
-                ? _advancedDrawerController.hideDrawer()
-                : _advancedDrawerController.showDrawer();
-            return AnimatedDrawerAfterLoadedState(
-                advancedDrawerController: _advancedDrawerController,
-                borderSide: borderSide,
-                pageController: pageController,
-                snap: snap);
+                ? BlocProvider.of<AnimatedDrawerCubit>(context)
+                    .advancedDrawerController
+                    .hideDrawer()
+                : BlocProvider.of<AnimatedDrawerCubit>(context)
+                    .advancedDrawerController
+                    .showDrawer();
+            return AnimatedDrawerAfterLoadedState();
           },
           error: (error) => RetryButton(
             onTap: () => context
                 .read<AnimatedDrawerCubit>()
                 .getDashBoardOverview(context,
-                    pageController: PageController(initialPage: 0)),
+                    pageController: PageController(initialPage: 0),
+                    advancedDrawerController: _advancedDrawerController),
           ),
           loading: () => AppProgressIndicator(),
           orElse: () => const SizedBox.shrink(),
@@ -59,5 +53,3 @@ class HomeScreenComponent extends StatelessWidget {
     );
   }
 }
-
-

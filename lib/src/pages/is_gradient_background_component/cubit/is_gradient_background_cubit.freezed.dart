@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'animated_drawer_cubit.dart';
+part of 'is_gradient_background_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,15 +15,14 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$AnimatedDrawerState {
+mixin _$IsGradientBackgroundState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String message) error,
-    required TResult Function(PageController pageController) loaded,
-    required TResult Function(int index, bool isOpen)
-        animatedDrawerIndexUpdated,
+    required TResult Function() loaded,
+    required TResult Function(Color color) updateColorState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,8 +30,8 @@ mixin _$AnimatedDrawerState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
-    TResult? Function(PageController pageController)? loaded,
-    TResult? Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult? Function()? loaded,
+    TResult? Function(Color color)? updateColorState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,8 +39,8 @@ mixin _$AnimatedDrawerState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String message)? error,
-    TResult Function(PageController pageController)? loaded,
-    TResult Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult Function()? loaded,
+    TResult Function(Color color)? updateColorState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,8 +50,7 @@ mixin _$AnimatedDrawerState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_AnimatedDrawerIndexUpdated value)
-        animatedDrawerIndexUpdated,
+    required TResult Function(_UpdateColorState value) updateColorState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -61,8 +59,7 @@ mixin _$AnimatedDrawerState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult? Function(_UpdateColorState value)? updateColorState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -71,24 +68,24 @@ mixin _$AnimatedDrawerState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult Function(_UpdateColorState value)? updateColorState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AnimatedDrawerStateCopyWith<$Res> {
-  factory $AnimatedDrawerStateCopyWith(
-          AnimatedDrawerState value, $Res Function(AnimatedDrawerState) then) =
-      _$AnimatedDrawerStateCopyWithImpl<$Res, AnimatedDrawerState>;
+abstract class $IsGradientBackgroundStateCopyWith<$Res> {
+  factory $IsGradientBackgroundStateCopyWith(IsGradientBackgroundState value,
+          $Res Function(IsGradientBackgroundState) then) =
+      _$IsGradientBackgroundStateCopyWithImpl<$Res, IsGradientBackgroundState>;
 }
 
 /// @nodoc
-class _$AnimatedDrawerStateCopyWithImpl<$Res, $Val extends AnimatedDrawerState>
-    implements $AnimatedDrawerStateCopyWith<$Res> {
-  _$AnimatedDrawerStateCopyWithImpl(this._value, this._then);
+class _$IsGradientBackgroundStateCopyWithImpl<$Res,
+        $Val extends IsGradientBackgroundState>
+    implements $IsGradientBackgroundStateCopyWith<$Res> {
+  _$IsGradientBackgroundStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -105,7 +102,7 @@ abstract class _$$_InitialCopyWith<$Res> {
 
 /// @nodoc
 class __$$_InitialCopyWithImpl<$Res>
-    extends _$AnimatedDrawerStateCopyWithImpl<$Res, _$_Initial>
+    extends _$IsGradientBackgroundStateCopyWithImpl<$Res, _$_Initial>
     implements _$$_InitialCopyWith<$Res> {
   __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
       : super(_value, _then);
@@ -118,7 +115,7 @@ class _$_Initial implements _Initial {
 
   @override
   String toString() {
-    return 'AnimatedDrawerState.initial()';
+    return 'IsGradientBackgroundState.initial()';
   }
 
   @override
@@ -136,9 +133,8 @@ class _$_Initial implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String message) error,
-    required TResult Function(PageController pageController) loaded,
-    required TResult Function(int index, bool isOpen)
-        animatedDrawerIndexUpdated,
+    required TResult Function() loaded,
+    required TResult Function(Color color) updateColorState,
   }) {
     return initial();
   }
@@ -149,8 +145,8 @@ class _$_Initial implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
-    TResult? Function(PageController pageController)? loaded,
-    TResult? Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult? Function()? loaded,
+    TResult? Function(Color color)? updateColorState,
   }) {
     return initial?.call();
   }
@@ -161,8 +157,8 @@ class _$_Initial implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String message)? error,
-    TResult Function(PageController pageController)? loaded,
-    TResult Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult Function()? loaded,
+    TResult Function(Color color)? updateColorState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -178,8 +174,7 @@ class _$_Initial implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_AnimatedDrawerIndexUpdated value)
-        animatedDrawerIndexUpdated,
+    required TResult Function(_UpdateColorState value) updateColorState,
   }) {
     return initial(this);
   }
@@ -191,8 +186,7 @@ class _$_Initial implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult? Function(_UpdateColorState value)? updateColorState,
   }) {
     return initial?.call(this);
   }
@@ -204,8 +198,7 @@ class _$_Initial implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult Function(_UpdateColorState value)? updateColorState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -215,7 +208,7 @@ class _$_Initial implements _Initial {
   }
 }
 
-abstract class _Initial implements AnimatedDrawerState {
+abstract class _Initial implements IsGradientBackgroundState {
   const factory _Initial() = _$_Initial;
 }
 
@@ -228,7 +221,7 @@ abstract class _$$_LoadingCopyWith<$Res> {
 
 /// @nodoc
 class __$$_LoadingCopyWithImpl<$Res>
-    extends _$AnimatedDrawerStateCopyWithImpl<$Res, _$_Loading>
+    extends _$IsGradientBackgroundStateCopyWithImpl<$Res, _$_Loading>
     implements _$$_LoadingCopyWith<$Res> {
   __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
       : super(_value, _then);
@@ -241,7 +234,7 @@ class _$_Loading implements _Loading {
 
   @override
   String toString() {
-    return 'AnimatedDrawerState.loading()';
+    return 'IsGradientBackgroundState.loading()';
   }
 
   @override
@@ -259,9 +252,8 @@ class _$_Loading implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String message) error,
-    required TResult Function(PageController pageController) loaded,
-    required TResult Function(int index, bool isOpen)
-        animatedDrawerIndexUpdated,
+    required TResult Function() loaded,
+    required TResult Function(Color color) updateColorState,
   }) {
     return loading();
   }
@@ -272,8 +264,8 @@ class _$_Loading implements _Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
-    TResult? Function(PageController pageController)? loaded,
-    TResult? Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult? Function()? loaded,
+    TResult? Function(Color color)? updateColorState,
   }) {
     return loading?.call();
   }
@@ -284,8 +276,8 @@ class _$_Loading implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String message)? error,
-    TResult Function(PageController pageController)? loaded,
-    TResult Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult Function()? loaded,
+    TResult Function(Color color)? updateColorState,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -301,8 +293,7 @@ class _$_Loading implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_AnimatedDrawerIndexUpdated value)
-        animatedDrawerIndexUpdated,
+    required TResult Function(_UpdateColorState value) updateColorState,
   }) {
     return loading(this);
   }
@@ -314,8 +305,7 @@ class _$_Loading implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult? Function(_UpdateColorState value)? updateColorState,
   }) {
     return loading?.call(this);
   }
@@ -327,8 +317,7 @@ class _$_Loading implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult Function(_UpdateColorState value)? updateColorState,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -338,7 +327,7 @@ class _$_Loading implements _Loading {
   }
 }
 
-abstract class _Loading implements AnimatedDrawerState {
+abstract class _Loading implements IsGradientBackgroundState {
   const factory _Loading() = _$_Loading;
 }
 
@@ -352,7 +341,7 @@ abstract class _$$_ErrorCopyWith<$Res> {
 
 /// @nodoc
 class __$$_ErrorCopyWithImpl<$Res>
-    extends _$AnimatedDrawerStateCopyWithImpl<$Res, _$_Error>
+    extends _$IsGradientBackgroundStateCopyWithImpl<$Res, _$_Error>
     implements _$$_ErrorCopyWith<$Res> {
   __$$_ErrorCopyWithImpl(_$_Error _value, $Res Function(_$_Error) _then)
       : super(_value, _then);
@@ -381,7 +370,7 @@ class _$_Error implements _Error {
 
   @override
   String toString() {
-    return 'AnimatedDrawerState.error(message: $message)';
+    return 'IsGradientBackgroundState.error(message: $message)';
   }
 
   @override
@@ -407,9 +396,8 @@ class _$_Error implements _Error {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String message) error,
-    required TResult Function(PageController pageController) loaded,
-    required TResult Function(int index, bool isOpen)
-        animatedDrawerIndexUpdated,
+    required TResult Function() loaded,
+    required TResult Function(Color color) updateColorState,
   }) {
     return error(message);
   }
@@ -420,8 +408,8 @@ class _$_Error implements _Error {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
-    TResult? Function(PageController pageController)? loaded,
-    TResult? Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult? Function()? loaded,
+    TResult? Function(Color color)? updateColorState,
   }) {
     return error?.call(message);
   }
@@ -432,8 +420,8 @@ class _$_Error implements _Error {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String message)? error,
-    TResult Function(PageController pageController)? loaded,
-    TResult Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult Function()? loaded,
+    TResult Function(Color color)? updateColorState,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -449,8 +437,7 @@ class _$_Error implements _Error {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_AnimatedDrawerIndexUpdated value)
-        animatedDrawerIndexUpdated,
+    required TResult Function(_UpdateColorState value) updateColorState,
   }) {
     return error(this);
   }
@@ -462,8 +449,7 @@ class _$_Error implements _Error {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult? Function(_UpdateColorState value)? updateColorState,
   }) {
     return error?.call(this);
   }
@@ -475,8 +461,7 @@ class _$_Error implements _Error {
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult Function(_UpdateColorState value)? updateColorState,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -486,7 +471,7 @@ class _$_Error implements _Error {
   }
 }
 
-abstract class _Error implements AnimatedDrawerState {
+abstract class _Error implements IsGradientBackgroundState {
   const factory _Error(final String message) = _$_Error;
 
   String get message;
@@ -499,61 +484,34 @@ abstract class _Error implements AnimatedDrawerState {
 abstract class _$$_LoadedCopyWith<$Res> {
   factory _$$_LoadedCopyWith(_$_Loaded value, $Res Function(_$_Loaded) then) =
       __$$_LoadedCopyWithImpl<$Res>;
-  @useResult
-  $Res call({PageController pageController});
 }
 
 /// @nodoc
 class __$$_LoadedCopyWithImpl<$Res>
-    extends _$AnimatedDrawerStateCopyWithImpl<$Res, _$_Loaded>
+    extends _$IsGradientBackgroundStateCopyWithImpl<$Res, _$_Loaded>
     implements _$$_LoadedCopyWith<$Res> {
   __$$_LoadedCopyWithImpl(_$_Loaded _value, $Res Function(_$_Loaded) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? pageController = null,
-  }) {
-    return _then(_$_Loaded(
-      null == pageController
-          ? _value.pageController
-          : pageController // ignore: cast_nullable_to_non_nullable
-              as PageController,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$_Loaded implements _Loaded {
-  const _$_Loaded(this.pageController);
-
-  @override
-  final PageController pageController;
+  const _$_Loaded();
 
   @override
   String toString() {
-    return 'AnimatedDrawerState.loaded(pageController: $pageController)';
+    return 'IsGradientBackgroundState.loaded()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Loaded &&
-            (identical(other.pageController, pageController) ||
-                other.pageController == pageController));
+        (other.runtimeType == runtimeType && other is _$_Loaded);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, pageController);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_LoadedCopyWith<_$_Loaded> get copyWith =>
-      __$$_LoadedCopyWithImpl<_$_Loaded>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -561,11 +519,10 @@ class _$_Loaded implements _Loaded {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String message) error,
-    required TResult Function(PageController pageController) loaded,
-    required TResult Function(int index, bool isOpen)
-        animatedDrawerIndexUpdated,
+    required TResult Function() loaded,
+    required TResult Function(Color color) updateColorState,
   }) {
-    return loaded(pageController);
+    return loaded();
   }
 
   @override
@@ -574,10 +531,10 @@ class _$_Loaded implements _Loaded {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
-    TResult? Function(PageController pageController)? loaded,
-    TResult? Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult? Function()? loaded,
+    TResult? Function(Color color)? updateColorState,
   }) {
-    return loaded?.call(pageController);
+    return loaded?.call();
   }
 
   @override
@@ -586,12 +543,12 @@ class _$_Loaded implements _Loaded {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String message)? error,
-    TResult Function(PageController pageController)? loaded,
-    TResult Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult Function()? loaded,
+    TResult Function(Color color)? updateColorState,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(pageController);
+      return loaded();
     }
     return orElse();
   }
@@ -603,8 +560,7 @@ class _$_Loaded implements _Loaded {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_AnimatedDrawerIndexUpdated value)
-        animatedDrawerIndexUpdated,
+    required TResult Function(_UpdateColorState value) updateColorState,
   }) {
     return loaded(this);
   }
@@ -616,8 +572,7 @@ class _$_Loaded implements _Loaded {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult? Function(_UpdateColorState value)? updateColorState,
   }) {
     return loaded?.call(this);
   }
@@ -629,8 +584,7 @@ class _$_Loaded implements _Loaded {
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult Function(_UpdateColorState value)? updateColorState,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -640,87 +594,70 @@ class _$_Loaded implements _Loaded {
   }
 }
 
-abstract class _Loaded implements AnimatedDrawerState {
-  const factory _Loaded(final PageController pageController) = _$_Loaded;
-
-  PageController get pageController;
-  @JsonKey(ignore: true)
-  _$$_LoadedCopyWith<_$_Loaded> get copyWith =>
-      throw _privateConstructorUsedError;
+abstract class _Loaded implements IsGradientBackgroundState {
+  const factory _Loaded() = _$_Loaded;
 }
 
 /// @nodoc
-abstract class _$$_AnimatedDrawerIndexUpdatedCopyWith<$Res> {
-  factory _$$_AnimatedDrawerIndexUpdatedCopyWith(
-          _$_AnimatedDrawerIndexUpdated value,
-          $Res Function(_$_AnimatedDrawerIndexUpdated) then) =
-      __$$_AnimatedDrawerIndexUpdatedCopyWithImpl<$Res>;
+abstract class _$$_UpdateColorStateCopyWith<$Res> {
+  factory _$$_UpdateColorStateCopyWith(
+          _$_UpdateColorState value, $Res Function(_$_UpdateColorState) then) =
+      __$$_UpdateColorStateCopyWithImpl<$Res>;
   @useResult
-  $Res call({int index, bool isOpen});
+  $Res call({Color color});
 }
 
 /// @nodoc
-class __$$_AnimatedDrawerIndexUpdatedCopyWithImpl<$Res>
-    extends _$AnimatedDrawerStateCopyWithImpl<$Res,
-        _$_AnimatedDrawerIndexUpdated>
-    implements _$$_AnimatedDrawerIndexUpdatedCopyWith<$Res> {
-  __$$_AnimatedDrawerIndexUpdatedCopyWithImpl(
-      _$_AnimatedDrawerIndexUpdated _value,
-      $Res Function(_$_AnimatedDrawerIndexUpdated) _then)
+class __$$_UpdateColorStateCopyWithImpl<$Res>
+    extends _$IsGradientBackgroundStateCopyWithImpl<$Res, _$_UpdateColorState>
+    implements _$$_UpdateColorStateCopyWith<$Res> {
+  __$$_UpdateColorStateCopyWithImpl(
+      _$_UpdateColorState _value, $Res Function(_$_UpdateColorState) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? index = null,
-    Object? isOpen = null,
+    Object? color = null,
   }) {
-    return _then(_$_AnimatedDrawerIndexUpdated(
-      null == index
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == isOpen
-          ? _value.isOpen
-          : isOpen // ignore: cast_nullable_to_non_nullable
-              as bool,
+    return _then(_$_UpdateColorState(
+      null == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
     ));
   }
 }
 
 /// @nodoc
 
-class _$_AnimatedDrawerIndexUpdated implements _AnimatedDrawerIndexUpdated {
-  const _$_AnimatedDrawerIndexUpdated(this.index, this.isOpen);
+class _$_UpdateColorState implements _UpdateColorState {
+  const _$_UpdateColorState(this.color);
 
   @override
-  final int index;
-  @override
-  final bool isOpen;
+  final Color color;
 
   @override
   String toString() {
-    return 'AnimatedDrawerState.animatedDrawerIndexUpdated(index: $index, isOpen: $isOpen)';
+    return 'IsGradientBackgroundState.updateColorState(color: $color)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AnimatedDrawerIndexUpdated &&
-            (identical(other.index, index) || other.index == index) &&
-            (identical(other.isOpen, isOpen) || other.isOpen == isOpen));
+            other is _$_UpdateColorState &&
+            (identical(other.color, color) || other.color == color));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, index, isOpen);
+  int get hashCode => Object.hash(runtimeType, color);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AnimatedDrawerIndexUpdatedCopyWith<_$_AnimatedDrawerIndexUpdated>
-      get copyWith => __$$_AnimatedDrawerIndexUpdatedCopyWithImpl<
-          _$_AnimatedDrawerIndexUpdated>(this, _$identity);
+  _$$_UpdateColorStateCopyWith<_$_UpdateColorState> get copyWith =>
+      __$$_UpdateColorStateCopyWithImpl<_$_UpdateColorState>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -728,11 +665,10 @@ class _$_AnimatedDrawerIndexUpdated implements _AnimatedDrawerIndexUpdated {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(String message) error,
-    required TResult Function(PageController pageController) loaded,
-    required TResult Function(int index, bool isOpen)
-        animatedDrawerIndexUpdated,
+    required TResult Function() loaded,
+    required TResult Function(Color color) updateColorState,
   }) {
-    return animatedDrawerIndexUpdated(index, isOpen);
+    return updateColorState(color);
   }
 
   @override
@@ -741,10 +677,10 @@ class _$_AnimatedDrawerIndexUpdated implements _AnimatedDrawerIndexUpdated {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(String message)? error,
-    TResult? Function(PageController pageController)? loaded,
-    TResult? Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult? Function()? loaded,
+    TResult? Function(Color color)? updateColorState,
   }) {
-    return animatedDrawerIndexUpdated?.call(index, isOpen);
+    return updateColorState?.call(color);
   }
 
   @override
@@ -753,12 +689,12 @@ class _$_AnimatedDrawerIndexUpdated implements _AnimatedDrawerIndexUpdated {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(String message)? error,
-    TResult Function(PageController pageController)? loaded,
-    TResult Function(int index, bool isOpen)? animatedDrawerIndexUpdated,
+    TResult Function()? loaded,
+    TResult Function(Color color)? updateColorState,
     required TResult orElse(),
   }) {
-    if (animatedDrawerIndexUpdated != null) {
-      return animatedDrawerIndexUpdated(index, isOpen);
+    if (updateColorState != null) {
+      return updateColorState(color);
     }
     return orElse();
   }
@@ -770,10 +706,9 @@ class _$_AnimatedDrawerIndexUpdated implements _AnimatedDrawerIndexUpdated {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Error value) error,
     required TResult Function(_Loaded value) loaded,
-    required TResult Function(_AnimatedDrawerIndexUpdated value)
-        animatedDrawerIndexUpdated,
+    required TResult Function(_UpdateColorState value) updateColorState,
   }) {
-    return animatedDrawerIndexUpdated(this);
+    return updateColorState(this);
   }
 
   @override
@@ -783,10 +718,9 @@ class _$_AnimatedDrawerIndexUpdated implements _AnimatedDrawerIndexUpdated {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Error value)? error,
     TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult? Function(_UpdateColorState value)? updateColorState,
   }) {
-    return animatedDrawerIndexUpdated?.call(this);
+    return updateColorState?.call(this);
   }
 
   @override
@@ -796,24 +730,21 @@ class _$_AnimatedDrawerIndexUpdated implements _AnimatedDrawerIndexUpdated {
     TResult Function(_Loading value)? loading,
     TResult Function(_Error value)? error,
     TResult Function(_Loaded value)? loaded,
-    TResult Function(_AnimatedDrawerIndexUpdated value)?
-        animatedDrawerIndexUpdated,
+    TResult Function(_UpdateColorState value)? updateColorState,
     required TResult orElse(),
   }) {
-    if (animatedDrawerIndexUpdated != null) {
-      return animatedDrawerIndexUpdated(this);
+    if (updateColorState != null) {
+      return updateColorState(this);
     }
     return orElse();
   }
 }
 
-abstract class _AnimatedDrawerIndexUpdated implements AnimatedDrawerState {
-  const factory _AnimatedDrawerIndexUpdated(
-      final int index, final bool isOpen) = _$_AnimatedDrawerIndexUpdated;
+abstract class _UpdateColorState implements IsGradientBackgroundState {
+  const factory _UpdateColorState(final Color color) = _$_UpdateColorState;
 
-  int get index;
-  bool get isOpen;
+  Color get color;
   @JsonKey(ignore: true)
-  _$$_AnimatedDrawerIndexUpdatedCopyWith<_$_AnimatedDrawerIndexUpdated>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_UpdateColorStateCopyWith<_$_UpdateColorState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
