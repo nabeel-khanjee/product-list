@@ -10,6 +10,12 @@ class EnglishConstant {
     'themeDarkLight': "Theme Dark Light",
     'selectLanguage': 'Select Language',
     'home': 'Home',
-    'profile': 'Profile'
+    'profile': 'Profile',
+    'otherSettings': 'Other Settings',
+    'changeLanguage': 'Change language',
+    'changeLocation': 'Change Location',
+    'notification': 'Notification',
+    'newsletters': 'Newsletters',
+    'offersAndPromotions': 'Offers and Promotions'
   };
 }

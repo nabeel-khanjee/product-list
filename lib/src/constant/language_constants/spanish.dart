@@ -10,6 +10,12 @@ class SpanishConstant {
     'themeDarkLight': "Tema Luz Oscura",
     'selectLanguage': 'Seleccione el idioma',
     'home': 'Hogar',
-    'profile': 'Perfil'
+    'profile': 'Perfil',
+    'otherSettings': 'Otros ajustes',
+    'changeLanguage': 'Cambiar idioma',
+    'changeLocation': 'Cambiar locación',
+    'notification': 'notificación',
+    'newsletters': 'Boletines',
+    'offersAndPromotions': 'ofertas y promociones'
   };
 }

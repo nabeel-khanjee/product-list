@@ -10,6 +10,12 @@ class ArabicConstant {
     'themeDarkLight': "موضوع ضوء الظلام",
     'selectLanguage': 'اختار اللغة',
     'home': 'بيت',
-    'profile': 'حساب تعريفي'
+    'profile': 'حساب تعريفي',
+    'otherSettings': 'اعدادات اخرى',
+    'changeLanguage': 'تغيير اللغة',
+    'changeLocation': 'تغيير الموقع',
+    'notification': 'إشعار',
+    'newsletters': 'النشرات الإخبارية',
+    'offersAndPromotions': 'پیشکشیں اور پروموشنز'
   };
 }

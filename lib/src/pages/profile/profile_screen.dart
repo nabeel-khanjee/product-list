@@ -5,19 +5,9 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-            onPressed: () => drawerStateChnageUpdateIndex(
-                isOpen: false,
-                context: context,
-                advancedDrawerController:
-                    BlocProvider.of<AnimatedDrawerCubit>(context)
-                        .advancedDrawerController),
-            icon: Icon(Icons.more_vert)),
-        title: Text(StringConstants.profile),
-      ),
-      body: Container(),
-    );
+    return IsGradientBackGround(
+        body: Container(),
+        isBackAppBar: false,
+        appbarText: StringConstants.profile);
   }
 }
