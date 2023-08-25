@@ -10,6 +10,12 @@ class HindiConstant {
     'themeDarkLight': "थीम डार्क लाइट",
     'selectLanguage': 'भाषा चुने',
     'home': 'घर',
-    'profile': 'प्रोफ़ाइल'
+    'profile': 'प्रोफ़ाइल',
+    'otherSettings': 'अन्य सेटिंग',
+    'changeLanguage': 'भाषा बदलें',
+    'changeLocation': 'स्थान बदलें',
+    'notification': 'अधिसूचना',
+    'newsletters': 'समाचार',
+    'offersAndPromotions': 'ऑफर और प्रमोशन'
   };
 }

@@ -13,44 +13,61 @@ class ThemeSwitchApp extends StatelessWidget {
   final Function(bool value) onChnage;
   @override
   Widget build(BuildContext context) {
-    return SwitchListTile.adaptive(
-      contentPadding: EdgeInsets.only(
-        left: 10,
-        right: 10,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: SwitchListTile.adaptive(
+        contentPadding: EdgeInsets.only(
+          left: 10,
+          right: 10,
+        ),
+        tileColor: getThemeStateIsLight()
+            ? lighten(getThemeColor(context), 0.1)
+            : darken(getThemeColor(context), 0.5),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        title: Container(
+            child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            TilesIconComponent(image: image),
+            SizedBox(
+              width: 10,
+            ),
+            Text(text),
+          ],
+        )),
+        value: Theme.of(context).brightness == Brightness.light,
+        onChanged: (value) => onChnage(value),
       ),
-      tileColor: getThemeStateIsLight()
-          ? lighten(getThemeColor(context), 0.1)
-          : darken(getThemeColor(context), 0.5),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      title: Container(
-          child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: lighten(getThemeColor(context), 0.5)),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset(
-                  image,
-                  height: 30,
-                  fit: BoxFit.fill,
-                  color: darken(
-                    getThemeColor(context),
-                    0.3,
-                  ),
-                ),
-              )),
-          SizedBox(
-            width: 10,
-          ),
-          Text(text),
-        ],
-      )),
-      value: Theme.of(context).brightness == Brightness.light,
-      onChanged: (value) => onChnage(value),
     );
+  }
+}
+
+class TilesIconComponent extends StatelessWidget {
+  const TilesIconComponent({
+    super.key,
+    required this.image,
+  });
+
+  final String image;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: lighten(getThemeColor(context), 0.5)),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset(
+            image,
+            height: 30,
+            fit: BoxFit.fill,
+            color: darken(
+              getThemeColor(context),
+              0.3,
+            ),
+          ),
+        ));
   }
 }

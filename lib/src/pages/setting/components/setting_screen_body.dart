@@ -15,11 +15,49 @@ class SettingScreenBody extends StatelessWidget {
           children: [
             TextComponentSettingMainHeading(
                 text: StringConstants.generalSettings),
-            SizedBox(height: 16.0),
+            AppTileComponent(
+              onTap: () => NavigationUtil.push(
+                  context, RouteConstants.changeLanguageRoute),
+              image: AssetsConstants.chnageLanguageIcon,
+              test: StringConstants.changeLanguage,
+            ),
+            AppTileComponent(
+              onTap: () {},
+              image: AssetsConstants.changeLocationIcon,
+              test: StringConstants.changeLocation,
+            ),
+            TextComponentSettingMainHeading(
+                text: StringConstants.otherSettings),
+            ThemeSwitchApp(
+                image: AssetsConstants.notificationIcon,
+                onChnage: (value) async {
+                  await switchThemeApp();
+                  await BlocProvider.of<IsGradientBackgroundCubit>(context)
+                      .updateState(color: getThemeColor(context));
+                },
+                text: StringConstants.notification),
+            ThemeSwitchApp(
+                image: AssetsConstants.newsLetterIcon,
+                onChnage: (value) async {
+                  await switchThemeApp();
+                  await BlocProvider.of<IsGradientBackgroundCubit>(context)
+                      .updateState(color: getThemeColor(context));
+                },
+                text: StringConstants.newsletters),
+            ThemeSwitchApp(
+                image: AssetsConstants.offersAndPromotionIcon,
+                onChnage: (value) async {
+                  await switchThemeApp();
+                  await BlocProvider.of<IsGradientBackgroundCubit>(context)
+                      .updateState(color: getThemeColor(context));
+                },
+                text: StringConstants.offersAndPromotions),
             ThemeSwitchApp(
                 image: AssetsConstants.lightDarkIcon,
                 onChnage: (value) async {
                   await switchThemeApp();
+                  await BlocProvider.of<IsGradientBackgroundCubit>(context)
+                      .updateState(color: getThemeColor(context));
                 },
                 text: StringConstants.themeDarkLight),
             AppColorPicker(),
@@ -27,22 +65,6 @@ class SettingScreenBody extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class TextComponentSettingMainHeading extends StatelessWidget {
-  const TextComponentSettingMainHeading({
-    super.key,
-    required this.text,
-  });
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
     );
   }
 }

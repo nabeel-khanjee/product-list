@@ -7,11 +7,12 @@ class HomeScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: <Widget>[
-        HomePageAppBar(),
-        HomePageListView(),
-      ],
-    );
+    return MainScaffold(
+        body: Container(),
+        isGradient: false,
+        appBar: AppBarcomponent(
+            isGradient: false,
+            title: StringConstants.home,
+            isBackAppBar: false));
   }
 }

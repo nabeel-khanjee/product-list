@@ -8,23 +8,21 @@ export 'package:provider_app/src/pages/is_gradient_background_component/cubit/is
 export 'package:provider_app/src/theme/switch_theme.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
 export 'dart:io';
+export 'package:provider_app/src/pages/setting/components/app_tile_component.dart';
+export 'package:provider_app/src/pages/setting/components/text_component_setting_main.dart';
 export 'package:provider_app/src/pages/is_gradient_background_component/is_gradient_background_component.dart';
 export 'package:provider_app/src/theme/dark_theme_data.dart';
 export 'package:provider_app/src/theme/light_theme_data.dart';
 export 'package:provider_app/src/theme/switch_color_app.dart';
-
 export 'package:provider_app/src/components/app_loader.dart';
 export 'package:provider_app/src/components/retry_button.dart';
 export 'package:provider_app/src/pages/animated_drawer/animated_drawer_after_loaded_state.dart';
 export 'package:provider_app/src/pages/animated_drawer/drawer_leading_component.dart';
-
 export 'package:provider_app/src/di/injector.dart';
 export 'package:pretty_dio_logger/pretty_dio_logger.dart';
 export 'package:provider_app/src/pages/animated_drawer/animated_drawer_back_drop.dart';
 export 'package:provider_app/src/pages/profile/profile_screen.dart';
-
 export 'package:freezed_annotation/freezed_annotation.dart';
-
 export 'package:dio/dio.dart';
 export 'package:provider_app/src/app/app_cubit/app_cubit.dart';
 export 'package:provider_app/src/constant/http_constants.dart';
@@ -41,7 +39,6 @@ export 'package:provider_app/src/util/shared_preferences_util.dart';
 export 'package:uuid/uuid.dart';
 export 'package:get_it/get_it.dart';
 export 'package:provider_app/src/core/log_filter.dart';
-
 export 'package:provider_app/src/pages/animated_drawer/drawer_actions.dart';
 export 'package:provider_app/src/theme/get_theme_state.dart';
 export 'package:provider_app/src/pages/animated_drawer/advanced_drawer_child_componetn.dart';

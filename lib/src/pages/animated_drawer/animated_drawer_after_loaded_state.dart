@@ -5,7 +5,6 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
     super.key,
   });
 
-
   @override
   Widget build(BuildContext context) {
     BorderSide borderSide =
@@ -37,8 +36,8 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           child: Scaffold(
             body: PageView(
-              controller: BlocProvider.of<AnimatedDrawerCubit>(context)
-            .pageController,
+              controller:
+                  BlocProvider.of<AnimatedDrawerCubit>(context).pageController,
               children: [HomeScreenBody(), ProfileScreen(), SettingsScreen()],
             ),
           ),

@@ -10,6 +10,12 @@ class UrduConstant {
     'themeDarkLight': "تھیم ڈارک لائٹ",
     'selectLanguage': 'زبان منتخب کریں۔',
     'home': 'گھر',
-    'profile': 'پروفائل'
+    'profile': 'پروفائل',
+    'otherSettings': 'دیگر ترتیبات',
+    'changeLanguage': 'زبان تبدیل کریں',
+    'changeLocation': 'مقام تبدیل کریں۔',
+    'notification': 'اطلاع',
+    'newsletters': 'خبرنامے',
+    'offersAndPromotions': 'پیشکشیں اور پروموشنز'
   };
 }
