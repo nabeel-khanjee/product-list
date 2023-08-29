@@ -6,8 +6,36 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IsGradientBackGround(
-        body: Container(),
+        body: Column(
+          children: [
+            UserProfileComponent(),
+            Container(
+              padding: EdgeInsets.all(3),
+              decoration: BoxDecoration(
+                  color: ColorConstants.white,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20))),
+              child: Column(children: [
+                AppTileComponent(
+                  isExpandable: false,
+                  test: StringConstants.demographicProfile,
+                  image: AssetsConstants.demographicProfile,
+                  onTap: () {},
+                ),
+                ExpansionPanelListComponent(),
+                AppTileComponent(
+                  isExpandable: false,
+                  test: StringConstants.familyHealthProfile,
+                  image: AssetsConstants.familyHealthProfile,
+                  onTap: () {},
+                ),
+              ]),
+            ),
+          ],
+        ),
         isBackAppBar: false,
         appbarText: StringConstants.profile);
   }
 }
+

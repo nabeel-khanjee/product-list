@@ -7,6 +7,11 @@ class IsGradientBackgroundCubit extends Cubit<IsGradientBackgroundState> {
   updateState({required Color color}) {
     emit(_UpdateColorState(color));
   }
+
+  updateStateDarkLight({required bool value}) {
+        emit(_UpdateThemeState(value));
+
+  }
 }
 
 @freezed
@@ -22,4 +27,8 @@ class IsGradientBackgroundState with _$IsGradientBackgroundState {
 
   const factory IsGradientBackgroundState.updateColorState(Color color) =
       _UpdateColorState;
+      
+  const factory IsGradientBackgroundState.updateStateDarkLight(bool value) =
+      _UpdateThemeState;
+      
 }
