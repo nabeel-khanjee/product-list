@@ -11,7 +11,7 @@ class TextComponentSettingMainHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text, style: FontStylesConstants.gilroy(
-      fontFamily: 'GilroyRegular',
+      fontFamily: FontConstantc.gilroyRegular,
       fontSize: 20));
   }
 }

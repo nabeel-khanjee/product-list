@@ -129,9 +129,6 @@ flutter:
     - family: GilroyBoldItalic
       fonts:
         - asset: assets/fonts/Gilroy-BoldItalic.ttf
-    - family: GilroyBoldItalic
-      fonts:
-        - asset: assets/fonts/Gilroy-BoldItalic.ttf
     - family: GilroyMedium
       fonts:
         - asset: assets/fonts/Gilroy-Medium.ttf

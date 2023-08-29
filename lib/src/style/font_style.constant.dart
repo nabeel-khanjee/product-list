@@ -31,7 +31,7 @@ class FontStylesConstants {
         color: color,
         fontWeight: fontWeight,
         fontStyle: FontStyle.normal,
-        fontFamily: fontFamily ?? 'GilroyRegular',
+        fontFamily: fontFamily ?? FontConstantc.gilroyRegular,
         fontSize: fontSize,
         height: height,
         letterSpacing: letterSpacing,

@@ -39,7 +39,7 @@ class OnboardingScreen extends StatelessWidget {
                   child: Text(
                     StringConstants.onboardingText,
                     style: FontStylesConstants.gilroy(
-                      fontFamily: 'GilroyRegular',
+                      fontFamily: FontConstantc.gilroyRegular,
                       fontSize: 30,
                       color: ColorConstants.white,
                       fontWeight: FontWeight.w400,
