@@ -1,0 +1,30 @@
+
+import 'package:provider_app/src/app/app_export.dart';
+
+class SearchCompoentHome extends StatelessWidget {
+  const SearchCompoentHome({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 54,
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: darken(getThemeColor(context), 0.3)),
+      child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(StringConstants.searchDoctorOrAnything),
+            Image.asset(
+              AssetsConstants.searchIcon,
+              height: 20,
+              width: 20,
+            )
+          ]),
+    );
+  }
+}

@@ -10,6 +10,8 @@ class TextComponentSettingMainHeading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: FontStylesConstants.nonito(fontSize: 20));
+    return Text(text, style: FontStylesConstants.gilroy(
+      fontFamily: 'GilroyRegular',
+      fontSize: 20));
   }
 }

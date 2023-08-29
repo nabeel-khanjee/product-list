@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+
 class MyTheme with ChangeNotifier {
   static bool isDark = false;
   static Color color = ColorConstants.royalBlue;

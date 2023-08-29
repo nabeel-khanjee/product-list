@@ -1,6 +1,6 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-linerGradientForApp({required Color color}) {
+linerGradientForApp({ Color? color,}) {
   return LinearGradient(
     begin: Alignment.bottomCenter,
     tileMode: TileMode.mirror,
@@ -9,11 +9,11 @@ linerGradientForApp({required Color color}) {
       !getThemeStateIsLight()
           ? Theme.of(navigationService!.navigatorKey.currentContext!)
               .scaffoldBackgroundColor
-          : darken(color, 0.3),
+          : darken(color??getThemeColor(navigationService!.navigatorKey.currentContext!), 0.3),
       !getThemeStateIsLight()
           ? Theme.of(navigationService!.navigatorKey.currentContext!)
               .scaffoldBackgroundColor
-          : color,
+          : color??getThemeColor(navigationService!.navigatorKey.currentContext!),
     ],
   );
 }

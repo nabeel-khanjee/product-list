@@ -4,11 +4,14 @@ class AppTileComponent extends StatelessWidget {
   final String test;
   final String image;
   final VoidCallback onTap;
+  final bool isExpandable;
 
   const AppTileComponent({
     super.key,
     required this.test,
-    required this.image, required this.onTap,
+    required this.image,
+    required this.onTap,
+    required this.isExpandable,
   });
 
   @override
@@ -16,12 +19,14 @@ class AppTileComponent extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 10),
+        margin: !isExpandable
+            ? EdgeInsets.symmetric(vertical: 10)
+            : EdgeInsets.zero,
         padding: const EdgeInsets.all(10),
         width: double.infinity,
         // height: 70,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(15),
           color: getThemeStateIsLight()
               ? lighten(getThemeColor(context), 0.1)
               : darken(getThemeColor(context), 0.5),

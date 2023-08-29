@@ -3,7 +3,9 @@ import 'package:provider_app/src/app/app_export.dart';
 class OnboardingScreen extends StatelessWidget {
   // final OnboardingScreenArgs args;
 
-  const OnboardingScreen({super.key, });
+  const OnboardingScreen({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +38,8 @@ class OnboardingScreen extends StatelessWidget {
                 Container(
                   child: Text(
                     StringConstants.onboardingText,
-                    style: FontStylesConstants.nonito(
+                    style: FontStylesConstants.gilroy(
+                      fontFamily: 'GilroyRegular',
                       fontSize: 30,
                       color: ColorConstants.white,
                       fontWeight: FontWeight.w400,
@@ -61,25 +64,6 @@ class OnboardingScreen extends StatelessWidget {
                   ],
                 ),
               ],
-            ),
-          ),
-          Align(
-            alignment: Alignment.topRight,
-            child: Padding(
-              padding: const EdgeInsets.all(
-                AppConstants.kDefaultPadding + AppConstants.kDefaultPadding,
-              ),
-              child: InkWell(
-                onTap: () {
-                  NavigationUtil.push(context, RouteConstants.settingRoute,
-                      );
-                },
-                child: Icon(
-                  Icons.settings,
-                  color: ColorConstants.white,
-                  size: 40,
-                ),
-              ),
             ),
           ),
         ],

@@ -5,12 +5,14 @@ class ThemeSwitchApp extends StatelessWidget {
     super.key,
     required this.image,
     required this.text,
-    required this.onChnage,
+    required this.onChnage, required this.value,
   });
 
   final String image;
   final String text;
   final Function(bool value) onChnage;
+  final bool value;
+  
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -36,7 +38,7 @@ class ThemeSwitchApp extends StatelessWidget {
             Text(text),
           ],
         )),
-        value: Theme.of(context).brightness == Brightness.light,
+        value: value,
         onChanged: (value) => onChnage(value),
       ),
     );

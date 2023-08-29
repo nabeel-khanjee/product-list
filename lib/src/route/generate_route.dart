@@ -1,5 +1,6 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/chnage_language/chnage_language_screen.dart';
+import 'package:provider_app/src/pages/change_location/change_location.dart';
+import 'package:provider_app/src/pages/change_language/chnage_language_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -9,11 +10,14 @@ Route onGenerateRoute(RouteSettings settings) {
       return materialRoute(
         HomeScreen(),
       );
-      case RouteConstants.changeLanguageRoute:
+    case RouteConstants.changeLanguageRoute:
       return materialRoute(
-        ChnageLanguageScreen(),
+        ChangeLanguageScreen(),
       );
-      
+    case RouteConstants.changeLocationRoute:
+      return materialRoute(
+        ChangeLocationScreen(),
+      );
     case RouteConstants.settingRoute:
       return materialRoute(
         SettingsScreen(),
