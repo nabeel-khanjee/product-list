@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/constant/font_constants.dart';
 
 class FontStylesConstants {
   ///Noto Naskh Arabic
@@ -31,7 +32,7 @@ class FontStylesConstants {
         color: color,
         fontWeight: fontWeight,
         fontStyle: FontStyle.normal,
-        fontFamily: fontFamily ?? 'GilroyRegular',
+        fontFamily: fontFamily ?? FontConstantc.gilroyRegular,
         fontSize: fontSize,
         height: height,
         letterSpacing: letterSpacing,

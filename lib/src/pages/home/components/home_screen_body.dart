@@ -1,9 +1,11 @@
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/components/appbar_component.dart';
 import 'package:provider_app/src/components/main_scaffold.dart';
+import 'package:provider_app/src/constant/font_constants.dart';
 import 'package:provider_app/src/pages/home/components/health_condition_widget.dart';
 import 'package:provider_app/src/pages/home/components/search_component_home.dart';
 import 'package:provider_app/src/pages/home/components/upcomming_appointment_list.dart';
+import 'package:provider_app/src/pages/home/components/upcomming_appointment_widget_home.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({
@@ -19,38 +21,7 @@ class HomeScreenBody extends StatelessWidget {
             children: [
               SearchCompoentHome(),
               HealthConditionsWidget(),
-              Container(
-                child: Column(children: [
-                  HomeWidgetHeading(
-                    title: StringConstants.upcomingAppointments,
-                    isSeeAll: false,
-                    bottonPadding: 10,
-                    topPadding: 22,
-                  ),
-                  SingleChildScrollView(
-                    child: Row(
-                      children: upcommingAppointment
-                          .asMap()
-                          .entries
-                          .map((e) => Container(
-                                decoration: BoxDecoration(
-                                    color: getThemeColor(context)),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Image.asset(
-                                            AssetsConstants.calenderIcon)
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              ))
-                          .toList(),
-                    ),
-                  )
-                ]),
-              )
+              UpcommingAppointmentWidgetHome()
             ],
           ),
         ),
@@ -62,3 +33,5 @@ class HomeScreenBody extends StatelessWidget {
             isBackAppBar: false));
   }
 }
+
+

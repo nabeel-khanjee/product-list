@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/constant/font_constants.dart';
 
 class OnboardingScreen extends StatelessWidget {
   // final OnboardingScreenArgs args;
@@ -39,7 +40,7 @@ class OnboardingScreen extends StatelessWidget {
                   child: Text(
                     StringConstants.onboardingText,
                     style: FontStylesConstants.gilroy(
-                      fontFamily: 'GilroyRegular',
+                      fontFamily: FontConstantc.gilroyRegular,
                       fontSize: 30,
                       color: ColorConstants.white,
                       fontWeight: FontWeight.w400,
