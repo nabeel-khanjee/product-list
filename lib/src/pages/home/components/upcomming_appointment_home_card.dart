@@ -1,6 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/constant/font_constants.dart';
-import 'package:provider_app/src/pages/home/components/upcomming_appointment_list.dart';
 
 class UpcommingAppointmentHomeCard extends StatelessWidget {
   const UpcommingAppointmentHomeCard({

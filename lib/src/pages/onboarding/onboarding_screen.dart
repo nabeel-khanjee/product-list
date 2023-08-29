@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/constant/font_constants.dart';
 
 class OnboardingScreen extends StatelessWidget {
   // final OnboardingScreenArgs args;

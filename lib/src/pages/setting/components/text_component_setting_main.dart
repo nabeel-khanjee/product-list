@@ -1,6 +1,5 @@
 
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/constant/font_constants.dart';
 
 class TextComponentSettingMainHeading extends StatelessWidget {
   const TextComponentSettingMainHeading({

@@ -8,9 +8,18 @@ export 'package:provider_app/src/pages/is_gradient_background_component/cubit/is
 export 'package:provider_app/src/theme/switch_theme.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
 export 'dart:io';
+export 'package:provider_app/src/pages/home/components/upcomming_appointment_home_card.dart';
+export 'package:provider_app/src/pages/home/components/doctor_card_rating_home_widget.dart';
+export 'package:provider_app/src/pages/home/components/doctor_detail_and_book_now_widget.dart';
+export 'package:provider_app/src/pages/home/components/top_rated_doctors_home_card.dart';
+export 'package:provider_app/src/pages/home/components/upcomming_appointment_list.dart';
 export 'package:provider_app/src/pages/home/components/pulse_temp_weight_widget.dart';
 export 'package:provider_app/src/pages/home/components/home_widget_heading.dart';
 export 'package:provider_app/src/pages/home/components/blood_pressure_widget.dart';
+export 'package:provider_app/src/constant/font_constants.dart';
+export 'package:provider_app/src/pages/home/components/top_rated_doctors_list_args.dart';
+export 'package:provider_app/src/pages/home/components/top_rated_doctor_bg_image_component.dart';
+export 'package:provider_app/src/pages/home/components/top_rated_doctor_front_element_gradient.dart';
 
 export 'package:provider_app/src/pages/home/components/home_title_component.dart';
 export 'package:provider_app/src/pages/profile/health_profile_list.dart';

@@ -1,6 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/home/components/upcomming_appointment_home_card.dart';
-import 'package:provider_app/src/pages/home/components/upcomming_appointment_list.dart';
 
 class UpcommingAppointmentWidgetHome extends StatelessWidget {
   const UpcommingAppointmentWidgetHome({
@@ -9,6 +7,34 @@ class UpcommingAppointmentWidgetHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<UpCommingAppointmentData> upcommingAppointment = [
+      UpCommingAppointmentData(
+          date: StringConstants.eightMar0920am,
+          title: StringConstants.videoConsultation,
+          dec: StringConstants.waitingForCall,
+          decColor: ColorConstants.yellowGolden,
+          titleColor: ColorConstants.white,
+          docName: StringConstants.drRachelBrown,
+          docImage: AssetsConstants.upcommingAppointmentCardDoctorImage),
+      UpCommingAppointmentData(
+          date: StringConstants.eightMar0920am,
+          title: StringConstants.audioConsultation,
+          dec: StringConstants.waitingForCall,
+          decColor: ColorConstants.green,
+          titleColor: ColorConstants.white,
+          docName: StringConstants.drRachelBrown,
+          docImage: AssetsConstants.upcommingAppointmentCardDoctorImage),
+      UpCommingAppointmentData(
+          date: StringConstants.eightMar0920am,
+          title: StringConstants.diagnosticTests,
+          dec: StringConstants.diagnosticTests,
+          decColor:
+              getThemeColor(navigationService!.navigatorKey.currentContext!),
+          titleColor: Theme.of(navigationService!.navigatorKey.currentContext!)
+              .scaffoldBackgroundColor,
+          docName: StringConstants.drRachelBrown,
+          docImage: AssetsConstants.upcommingAppointmentCardDoctorImage)
+    ];
     return Container(
       child: Column(children: [
         HomeWidgetHeading(
@@ -23,8 +49,8 @@ class UpcommingAppointmentWidgetHome extends StatelessWidget {
             children: upcommingAppointment
                 .asMap()
                 .entries
-                .map((element) =>
-                    UpcommingAppointmentHomeCard(element: element))
+                .map(
+                    (element) => UpcommingAppointmentHomeCard(element: element))
                 .toList(),
           ),
         )
