@@ -2,6 +2,8 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class StringConstants {
   static String language = 'ur_PK';
+
+  static String get demographic => _getLang('demographic');
   static String get searchDoctorOrAnything =>
       _getLang('searchDoctorOrAnything');
   static String get healthConditions => _getLang('healthConditions');
@@ -36,6 +38,7 @@ class StringConstants {
   static String get familyHealthProfile => _getLang('familyHealthProfile');
   static String get physicalHealth => _getLang('physicalHealth');
   static String get saveChanges => _getLang('saveChanges');
+  static String get save => _getLang('save');
   static String get otherSettings => _getLang('otherSettings');
   static String get selectLanguage => _getLang('selectLanguage');
   static String get themeDarkLight => _getLang('themeDarkLight');

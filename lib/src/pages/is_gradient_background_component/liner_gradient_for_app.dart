@@ -1,6 +1,6 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-linerGradientForApp({ Color? color,}) {
+LinearGradient linerGradientForApp({ Color? color,}) {
   return LinearGradient(
     begin: Alignment.bottomCenter,
     tileMode: TileMode.mirror,

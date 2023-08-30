@@ -2,13 +2,13 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class MainScaffold extends StatelessWidget {
   final bool isGradient;
-  final Widget appBar;
+  final Widget? appBar;
 
   const MainScaffold({
     super.key,
     required this.body,
     required this.isGradient,
-    required this.appBar,
+    this.appBar,
   });
 
   final Widget body;
@@ -21,8 +21,10 @@ class MainScaffold extends StatelessWidget {
               ? Colors.transparent
               : Theme.of(context).scaffoldBackgroundColor
           : Theme.of(context).scaffoldBackgroundColor,
-      appBar: PreferredSize(
-          child: appBar, preferredSize: Size.fromHeight(kToolbarHeight)),
+      appBar: appBar != null
+          ? PreferredSize(
+              child: appBar!, preferredSize: Size.fromHeight(kToolbarHeight))
+          : null,
       body: body,
     );
   }

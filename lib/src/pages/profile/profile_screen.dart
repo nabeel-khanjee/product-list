@@ -21,7 +21,10 @@ class ProfileScreen extends StatelessWidget {
                   isExpandable: false,
                   test: StringConstants.demographicProfile,
                   image: AssetsConstants.demographicProfile,
-                  onTap: () {},
+                  onTap: () {
+                    NavigationUtil.push(
+                        context, RouteConstants.demographicRoute);
+                  },
                 ),
                 ExpansionPanelListComponent(),
                 AppTileComponent(
@@ -38,4 +41,3 @@ class ProfileScreen extends StatelessWidget {
         appbarText: StringConstants.profile);
   }
 }
-

@@ -29,6 +29,7 @@ class IsGradientBackGround extends StatelessWidget {
                 body: body,
                 isGradient: true,
                 appBar: AppBarcomponent(
+                  
                   isTitleTowLines: false,
                   isBackAppBar: isBackAppBar,
                   isGradient: true,

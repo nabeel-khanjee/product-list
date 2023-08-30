@@ -1,6 +1,6 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-drawerStateChnageUpdateIndex(
+Future<AnimatedDrawerCubit> drawerStateChnageUpdateIndex(
         {int? index,
         required bool isOpen,
         required AdvancedDrawerController advancedDrawerController,
