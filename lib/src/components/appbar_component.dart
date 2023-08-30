@@ -5,6 +5,7 @@ class AppBarcomponent extends StatelessWidget {
   final bool isBackAppBar;
   final String title;
   final bool isTitleTowLines;
+  final Widget? actionTextButton;
 
   const AppBarcomponent({
     super.key,
@@ -12,6 +13,7 @@ class AppBarcomponent extends StatelessWidget {
     required this.title,
     required this.isBackAppBar,
     required this.isTitleTowLines,
+    this.actionTextButton,
   });
 
   @override
@@ -44,12 +46,12 @@ class AppBarcomponent extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 3.0, right: 3),
-                    child: IconButton(onPressed: () {
-
-                    }, icon: Icon(Icons.menu)),
+                    child: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
                   )
                 ]
-              : null,
+              : actionTextButton != null
+                  ? [actionTextButton!]
+                  : null,
           backgroundColor: getThemeStateIsLight()
               ? isGradient
                   ? Colors.transparent
@@ -77,4 +79,3 @@ class AppBarcomponent extends StatelessWidget {
     );
   }
 }
-

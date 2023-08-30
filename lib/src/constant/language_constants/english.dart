@@ -18,7 +18,9 @@ class EnglishConstant {
     'newsletters': 'Newsletters',
     'offersAndPromotions': 'Offers and Promotions',
     'saveChanges': 'Save Changes',
+    'save': 'Save',
     'demographicProfile': 'Demographic Profile',
+    'demographic': 'Demographic',
     'healthProfile': 'Health Profile',
     'physicalHealth': 'Physical Health',
     'socialHealth': 'Social Health',
@@ -49,6 +51,6 @@ class EnglishConstant {
     'drLouisaJackson': 'Dr. Louisa Jackson',
     'heartSpecialist': 'Heart Specialist',
     'bookNow': 'Book Now',
-    'fourPointThree':'4.3',
+    'fourPointThree': '4.3',
   };
 }

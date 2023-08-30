@@ -8,8 +8,8 @@ List<HealthProfileList> healthProfile = [
         route: RouteConstants.physicalHealthRoute),
     HealthProfileList(
         text: StringConstants.socialHealth,
-        route: RouteConstants.physicalHealthRoute),
+        route: RouteConstants.socialHealthRoute),
     HealthProfileList(
         text: StringConstants.mentalHealth,
-        route: RouteConstants.physicalHealthRoute),
+        route: RouteConstants.mentalHealthRoute),
   ];
