@@ -44,7 +44,9 @@ class AppDrawer extends StatelessWidget {
                     onTap: () {
                       if (e.value.isInnerPage) {
                         drawerStateChnageUpdateIndex(
-                          advancedDrawerController: BlocProvider.of<AnimatedDrawerCubit>(context).advancedDrawerController,
+                            advancedDrawerController:
+                                BlocProvider.of<AnimatedDrawerCubit>(context)
+                                    .advancedDrawerController,
                             isOpen: true,
                             context: context,
                             index: e.value.pageIndex);

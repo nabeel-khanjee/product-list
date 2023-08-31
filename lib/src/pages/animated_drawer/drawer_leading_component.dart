@@ -8,21 +8,22 @@ class DrawerLeadingComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () => drawerStateChnageUpdateIndex(
-            advancedDrawerController:
-                BlocProvider.of<AnimatedDrawerCubit>(context)
-                    .advancedDrawerController,
-            isOpen: false,
-            context: context),
-        child: Container(
-          margin: EdgeInsets.all(9),
-          padding: EdgeInsets.all(9),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100),
-              color: darken(getThemeColor(context), 0.3)),
-          child: Image.asset(
-            AssetsConstants.drawerIcon,
-          ),
-        ));
+      onTap: () => drawerStateChnageUpdateIndex(
+        advancedDrawerController: BlocProvider.of<AnimatedDrawerCubit>(context)
+            .advancedDrawerController,
+        isOpen: false,
+        context: context,
+      ),
+      child: Container(
+        margin: EdgeInsets.all(9),
+        padding: EdgeInsets.all(9),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(100),
+            color: darken(getThemeColor(context), 0.3)),
+        child: Image.asset(
+          AssetsConstants.drawerIcon,
+        ),
+      ),
+    );
   }
 }

@@ -3,7 +3,10 @@ import 'package:provider_app/src/app/app_export.dart';
 class OnboardingScreen extends StatelessWidget {
   // final OnboardingScreenArgs args;
 
-  const OnboardingScreen({super.key, });
+  const OnboardingScreen({
+    super.key,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,9 +53,14 @@ class OnboardingScreen extends StatelessWidget {
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {
+                          // NavigationUtil.push(
+                          //   context,
+                          //   RouteConstants.homeRoute,
+                          // );
+
                           NavigationUtil.push(
                             context,
-                            RouteConstants.homeRoute,
+                            RouteConstants.signInRoute,
                           );
                         },
                         child: Text(StringConstants.getStarted),
@@ -71,8 +79,10 @@ class OnboardingScreen extends StatelessWidget {
               ),
               child: InkWell(
                 onTap: () {
-                  NavigationUtil.push(context, RouteConstants.settingRoute,
-                      );
+                  NavigationUtil.push(
+                    context,
+                    RouteConstants.settingRoute,
+                  );
                 },
                 child: Icon(
                   Icons.settings,

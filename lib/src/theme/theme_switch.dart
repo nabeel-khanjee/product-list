@@ -11,6 +11,7 @@ class ThemeSwitchApp extends StatelessWidget {
   final String image;
   final String text;
   final Function(bool value) onChnage;
+
   @override
   Widget build(BuildContext context) {
     return SwitchListTile.adaptive(
@@ -23,32 +24,33 @@ class ThemeSwitchApp extends StatelessWidget {
           : darken(getThemeColor(context), 0.5),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       title: Container(
-          child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: lighten(getThemeColor(context), 0.5)),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset(
-                  image,
-                  height: 30,
-                  fit: BoxFit.fill,
-                  color: darken(
-                    getThemeColor(context),
-                    0.3,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: lighten(getThemeColor(context), 0.5)),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(
+                    image,
+                    height: 30,
+                    fit: BoxFit.fill,
+                    color: darken(
+                      getThemeColor(context),
+                      0.3,
+                    ),
                   ),
-                ),
-              )),
-          SizedBox(
-            width: 10,
-          ),
-          Text(text),
-        ],
-      )),
+                )),
+            SizedBox(
+              width: 10,
+            ),
+            Text(text),
+          ],
+        ),
+      ),
       value: Theme.of(context).brightness == Brightness.light,
       onChanged: (value) => onChnage(value),
     );

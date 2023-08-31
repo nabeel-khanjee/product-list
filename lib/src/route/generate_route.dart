@@ -16,6 +16,15 @@ Route onGenerateRoute(RouteSettings settings) {
       return materialRoute(
         SplashScreen(),
       );
+    case RouteConstants.signInRoute:
+      return materialRoute(
+        SignInScreen(),
+      );
+
+    case RouteConstants.signUpRoute:
+      return materialRoute(
+        SignUpScreen(),
+      );
     case RouteConstants.onboardingRoute:
       return materialRoute(
         OnboardingScreen(),
@@ -23,6 +32,7 @@ Route onGenerateRoute(RouteSettings settings) {
     default:
       return materialRoute(
         SplashScreen(),
+
       );
   }
 }

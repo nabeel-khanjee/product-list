@@ -32,7 +32,7 @@ class AppColorPicker extends StatelessWidget {
               BlocProvider.of<IsGradientBackgroundCubit>(context).updateState(color: color);
             },
             selectedColor: getThemeColor(context),
-          )
+          ),
         ],
       ),
     );

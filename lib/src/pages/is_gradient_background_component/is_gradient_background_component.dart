@@ -5,6 +5,7 @@ class IsGradientBackGround extends StatelessWidget {
     super.key,
     required this.body,
   });
+
   final Widget body;
 
   @override
@@ -26,9 +27,7 @@ class IsGradientBackGround extends StatelessWidget {
                     ? Colors.transparent
                     : Theme.of(context).scaffoldBackgroundColor,
                 appBar: AppBar(
-                  actions: [
-                    
-                  ],
+                    actions: [],
                     backgroundColor: getThemeStateIsLight()
                         ? Colors.transparent
                         : Theme.of(context).scaffoldBackgroundColor,
@@ -43,4 +42,3 @@ class IsGradientBackGround extends StatelessWidget {
         ));
   }
 }
-

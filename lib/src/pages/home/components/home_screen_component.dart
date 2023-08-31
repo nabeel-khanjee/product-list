@@ -5,6 +5,7 @@ class HomeScreenComponent extends StatelessWidget {
     super.key,
     required this.snap,
   });
+
   final bool snap;
 
   final _advancedDrawerController = AdvancedDrawerController();
