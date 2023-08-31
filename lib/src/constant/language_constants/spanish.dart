@@ -1,6 +1,20 @@
 class SpanishConstant {
   static Map<String, String> spanishLabels = {
-    'onboardingText':
+   'insurance': 'Insurance',
+    'contact': 'Contact',
+    'personal': 'Personal',
+    'patientDetails': 'Patient Details',
+    'patientID': 'Patient ID',
+    'firstName': 'First Name',
+    'middleName': 'Middle Name',
+    'lastName': 'Last Name',
+    'suffix': 'Suffix',
+    'dateOfBirth': 'Date of Birth',
+    'gender': 'Gender',
+    'ssn': 'SSN',
+    'selectCountry': 'Select Country',
+    'selectState': 'Select State',
+     'onboardingText':
         '¡Experimente la atención médica reinventada con ATCare! Conéctese virtualmente con los mejores médicos, terapeutas y especialistas.',
     'getStarted': 'Empezar',
     'selectColor': 'seleccionar el color',
