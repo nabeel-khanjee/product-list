@@ -1,5 +1,19 @@
 class UrduConstant {
   static Map<String, String> urduLabels = {
+    'insurance': 'Insurance',
+    'contact': 'Contact',
+    'personal': 'Personal',
+    'patientDetails': 'Patient Details',
+    'patientID': 'Patient ID',
+    'firstName': 'First Name',
+    'middleName': 'Middle Name',
+    'lastName': 'Last Name',
+    'suffix': 'Suffix',
+    'dateOfBirth': 'Date of Birth',
+    'gender': 'Gender',
+    'ssn': 'SSN',
+    'selectCountry': 'Select Country',
+    'selectState': 'Select State',
     'onboardingText':
         'اے ٹی کیئر کے ساتھ صحت کی دیکھ بھال کا دوبارہ تصور کریں! اعلیٰ ڈاکٹروں، معالجین اور ماہرین سے عملی طور پر جڑیں۔',
     'getStarted': 'شروع کریں',

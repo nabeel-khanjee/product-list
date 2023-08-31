@@ -1,5 +1,19 @@
 class ArabicConstant {
   static Map<String, String> arabicLabels = {
+    'insurance': 'Insurance',
+    'contact': 'Contact',
+    'personal': 'Personal',
+    'patientDetails': 'Patient Details',
+    'patientID': 'Patient ID',
+    'firstName': 'First Name',
+    'middleName': 'Middle Name',
+    'lastName': 'Last Name',
+    'suffix': 'Suffix',
+    'dateOfBirth': 'Date of Birth',
+    'gender': 'Gender',
+    'ssn': 'SSN',
+    'selectCountry': 'Select Country',
+    'selectState': 'Select State',
     'onboardingText':
         'تجربة الرعاية الصحية أعيد تصورها مع ATCare! تواصل مع أفضل الأطباء والمعالجين والمتخصصين تقريبًا.',
     'getStarted': 'البدء',

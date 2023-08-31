@@ -2,7 +2,23 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class StringConstants {
   static String language = 'ur_PK';
-
+  static String get insurance => _getLang('insurance');
+  static String get male => _getLang('male');
+  static String get female => _getLang('female');
+  static String get contact => _getLang('contact');
+  static String get personal => _getLang('personal');
+  static String get patientDetails => _getLang('patientDetails');
+  static String get patientID => _getLang('patientID');
+  static String get firstName => _getLang('firstName');
+  static String get middleName => _getLang('middleName');
+  static String get lastName => _getLang('lastName');
+  static String get suffix => _getLang('suffix');
+  static String get dateOfBirth => _getLang('dateOfBirth');
+  static String get gender => _getLang('gender');
+  static String get ssn => _getLang('ssn');
+  static String get selectCountry => _getLang('selectCountry');
+  static String get selectState => _getLang('selectState');
+  static String get onboardingText => _getLang('onboardingText');
   static String get demographic => _getLang('demographic');
   static String get searchDoctorOrAnything =>
       _getLang('searchDoctorOrAnything');
@@ -48,7 +64,6 @@ class StringConstants {
   static String get home => _getLang('home');
   static String get generalSettings => _getLang('generalSettings');
   static String get selectColor => _getLang('selectColor');
-  static String get onboardingText => _getLang('onboardingText');
   static String get getStarted => _getLang('getStarted');
   static String get changeLanguage => _getLang('changeLanguage');
   static String get changeLocation => _getLang('changeLocation');
