@@ -21,6 +21,7 @@ class AppBarcomponent extends StatelessWidget {
     return PreferredSize(
       preferredSize: Size.fromHeight(kToolbarHeight),
       child: AppBar(
+        
           centerTitle: isBackAppBar,
           actions: !isBackAppBar
               ? [
