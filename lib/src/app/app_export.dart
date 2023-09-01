@@ -1,4 +1,10 @@
 export 'package:easy_localization/easy_localization.dart' hide TextDirection;
+export 'package:provider_app/src/components/card_formater.dart';
+export 'package:provider_app/src/components/text_field_component.dart';
+export 'package:provider_app/src/pages/demographic/components/dropdown_component_profile.dart';
+export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/patient_detail_screen_form.dart';
+export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/date_picker_and_dropdown_widget.dart';
+
 export 'package:provider_app/src/pages/change_language/components/language_setting.dart';
 export 'package:provider_app/src/pages/change_language/components/language_component.dart';
 export 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';

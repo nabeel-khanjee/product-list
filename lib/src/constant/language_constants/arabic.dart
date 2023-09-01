@@ -1,5 +1,7 @@
 class ArabicConstant {
   static Map<String, String> arabicLabels = {
+    'selectCity': 'اختر مدينة',
+    'zipCode': 'الرمز البريدي',
     'insurance': 'تأمين',
     'contact': 'اتصال',
     'personal': 'شخصي',

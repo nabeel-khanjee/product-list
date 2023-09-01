@@ -1,7 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/components/card_formater.dart';
-import 'package:provider_app/src/components/text_field_component.dart';
-import 'package:provider_app/src/pages/demographic/components/dropdown_component_profile.dart';
+import 'package:provider_app/src/pages/demographic/components/title_demographics_main_page_inner_heading.dart';
 
 class PatientDetailScreen extends StatelessWidget {
   const PatientDetailScreen({
@@ -30,9 +28,14 @@ class PatientDetailScreen extends StatelessWidget {
     required this.getGenderValue,
     required this.getCountryValue,
     this.selectedCountry,
+    required this.titleDemographicInnerScreen,
+    required this.selectCityController,
+    required this.zipCodeController,
   });
 
   final GlobalKey<FormState> formkey;
+  final TextEditingController zipCodeController;
+  final TextEditingController selectCityController;
   final TextEditingController patientIdController;
   final TextEditingController firstNameController;
   final TextEditingController middleNameController;
@@ -47,7 +50,7 @@ class PatientDetailScreen extends StatelessWidget {
   final List<String> states;
   final String? selectedStates;
   final String? selectedCountry;
-
+  final String titleDemographicInnerScreen;
   final VoidCallback onDatePickerTap;
   final VoidCallback onDropdownFieldTapCity;
   final VoidCallback onDropdownFieldTapGender;
@@ -67,109 +70,34 @@ class PatientDetailScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-                child: Text(
-              StringConstants.patientDetails,
-              style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  color: getThemeColor(context),
-                  fontFamily: FontConstantc.gilroySemiBold),
-            )),
-            SizedBox(height: 10),
-            Form(
-                key: formkey,
-                child: Column(
-                  children: [
-                    TextFormFieldComponentProfile(
-                        label: StringConstants.patientID,
-                        patientIdcontroller: patientIdController,
-                        listTextInputFormatter: [
-                          CardFormatter(
-                              sample: 'xxxx-xxxx-xxxx-xxxx', separator: '-')
-                        ]),
-                    TextFormFieldComponentProfile(
-                      label: StringConstants.firstName,
-                      patientIdcontroller: firstNameController,
-                    ),
-                    TextFormFieldComponentProfile(
-                      label: StringConstants.middleName,
-                      patientIdcontroller: middleNameController,
-                    ),
-                    TextFormFieldComponentProfile(
-                      label: StringConstants.lastName,
-                      patientIdcontroller: lastNameController,
-                    ),
-                    TextFormFieldComponentProfile(
-                      label: StringConstants.suffix,
-                      patientIdcontroller: suffixController,
-                    ),
-                    SizedBox(
-                      height: 75,
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: InkWell(
-                              onTap: onDatePickerTap,
-                              child: Stack(
-                                children: [
-                                  DropDownComponentProfile(
-                                    onDropdownFieldTap: onDropdownFieldTapCity,
-                                    suffixIcon: AssetsConstants.calenderIcon,
-                                    hintText: StringConstants.dateOfBirth,
-                                    items: country,
-                                    selectedItem: (value) {
-                                      getCityValue(value);
-                                    },
-                                    value: selectedDate,
-                                  ),
-                                  Container(
-                                    color: Colors.transparent,
-                                    width: double.maxFinite,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Expanded(
-                            child: DropDownComponentProfile(
-                              onDropdownFieldTap: onDropdownFieldTapGender,
-                              hintText: StringConstants.gender,
-                              items: gender,
-                              selectedItem: (value) {
-                                getGenderValue(value);
-                              },
-                              value: selectedGender,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    TextFormFieldComponentProfile(
-                      label: StringConstants.ssn,
-                      patientIdcontroller: ssnController,
-                    ),
-                    DropDownComponentProfile(
-                      onDropdownFieldTap: onDropdownFieldTapCountry,
-                      hintText: StringConstants.selectCountry,
-                      items: country,
-                      selectedItem: (value) {
-                        getCountryValue(value);
-                      },
-                      value: selectedCountry,
-                    ),
-                    DropDownComponentProfile(
-                      onDropdownFieldTap: onDropdownFieldTapState,
-                      hintText: StringConstants.selectState,
-                      items: states,
-                      selectedItem: (value) {
-                        getStateValue(value);
-                      },
-                      value: selectedStates,
-                    )
-                  ],
-                ))
+            TitleDemographicsMainHeadingInnerPage(
+                titleDemographicInnerScreen: titleDemographicInnerScreen),
+            PatientDetailScreenForm(
+                formkey: formkey,
+                selectCityController: selectCityController,
+                zipCodeController: zipCodeController,
+                patientIdController: patientIdController,
+                firstNameController: firstNameController,
+                middleNameController: middleNameController,
+                lastNameController: lastNameController,
+                suffixController: suffixController,
+                onDatePickerTap: onDatePickerTap,
+                onDropdownFieldTapCity: onDropdownFieldTapCity,
+                country: country,
+                getCityValue: getCityValue,
+                selectedDate: selectedDate,
+                onDropdownFieldTapGender: onDropdownFieldTapGender,
+                gender: gender,
+                getGenderValue: getGenderValue,
+                selectedGender: selectedGender,
+                ssnController: ssnController,
+                onDropdownFieldTapCountry: onDropdownFieldTapCountry,
+                getCountryValue: getCountryValue,
+                selectedCountry: selectedCountry,
+                onDropdownFieldTapState: onDropdownFieldTapState,
+                states: states,
+                getStateValue: getStateValue,
+                selectedStates: selectedStates)
           ],
         ),
       ),
