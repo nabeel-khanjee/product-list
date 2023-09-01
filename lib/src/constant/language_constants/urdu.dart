@@ -1,5 +1,7 @@
 class UrduConstant {
   static Map<String, String> urduLabels = {
+    'selectCity': 'شہر منتخب کریں۔',
+    'zipCode': 'زپ کوڈ',
     'insurance': 'انشورنس',
     'contact': 'رابطہ کریں۔',
     'personal': 'ذاتی',

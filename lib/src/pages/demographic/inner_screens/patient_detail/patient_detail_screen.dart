@@ -29,9 +29,13 @@ class PatientDetailScreen extends StatelessWidget {
     required this.getCountryValue,
     this.selectedCountry,
     required this.titleDemographicInnerScreen,
+    required this.selectCityController,
+    required this.zipCodeController,
   });
 
   final GlobalKey<FormState> formkey;
+  final TextEditingController zipCodeController;
+  final TextEditingController selectCityController;
   final TextEditingController patientIdController;
   final TextEditingController firstNameController;
   final TextEditingController middleNameController;
@@ -70,6 +74,8 @@ class PatientDetailScreen extends StatelessWidget {
                 titleDemographicInnerScreen: titleDemographicInnerScreen),
             PatientDetailScreenForm(
                 formkey: formkey,
+                selectCityController: selectCityController,
+                zipCodeController: zipCodeController,
                 patientIdController: patientIdController,
                 firstNameController: firstNameController,
                 middleNameController: middleNameController,

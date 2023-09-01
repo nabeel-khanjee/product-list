@@ -2,6 +2,8 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class StringConstants {
   static String language = 'ur_PK';
+  static String get selectCity => _getLang('selectCity');
+  static String get zipCode => _getLang('zipCode');
   static String get insurance => _getLang('insurance');
   static String get male => _getLang('male');
   static String get female => _getLang('female');

@@ -20,6 +20,10 @@ class _DemographicScreenState extends State<DemographicScreen> {
   final TextEditingController lastNameController = TextEditingController();
   final TextEditingController suffixController = TextEditingController();
   final TextEditingController ssnController = TextEditingController();
+  final TextEditingController selectCityController = TextEditingController();
+
+  final TextEditingController zipCodeController = TextEditingController();
+
   List<String> country = ['Pakistan', 'USA', "UAE"];
   List<String> states = ['Sindh', 'Punjab', "Blochistan"];
   String? selectedCountry;
@@ -93,6 +97,8 @@ class _DemographicScreenState extends State<DemographicScreen> {
                       patientIdController: patientIdController,
                       firstNameController: firstNameController,
                       middleNameController: middleNameController,
+                      selectCityController: selectCityController,
+                      zipCodeController: zipCodeController,
                       lastNameController: lastNameController,
                       suffixController: suffixController,
                       country: country,

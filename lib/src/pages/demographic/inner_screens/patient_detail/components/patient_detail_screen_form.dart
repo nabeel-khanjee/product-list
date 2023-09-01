@@ -26,8 +26,12 @@ class PatientDetailScreenForm extends StatelessWidget {
     required this.states,
     required this.getStateValue,
     required this.selectedStates,
+    required this.zipCodeController,
+    required this.selectCityController,
   });
   final GlobalKey<FormState> formkey;
+  final TextEditingController zipCodeController;
+  final TextEditingController selectCityController;
   final TextEditingController patientIdController;
   final TextEditingController firstNameController;
   final TextEditingController middleNameController;
@@ -104,7 +108,15 @@ class PatientDetailScreenForm extends StatelessWidget {
             items: states,
             selectedItem: (value) => getStateValue(value),
             value: selectedStates,
-          )
+          ),
+          TextFormFieldComponentProfile(
+            label: StringConstants.selectCity,
+            patientIdcontroller: selectCityController,
+          ),
+          TextFormFieldComponentProfile(
+            label: StringConstants.zipCode,
+            patientIdcontroller: zipCodeController,
+          ),
         ]));
   }
 }

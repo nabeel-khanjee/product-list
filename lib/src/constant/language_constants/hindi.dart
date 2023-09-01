@@ -1,6 +1,8 @@
 class HindiConstant {
   static Map<String, String> hindiLabels = {
-  'insurance': 'बीमा',
+    'selectCity': 'शहर चुनें',
+    'zipCode': 'ज़िप कोड',
+    'insurance': 'बीमा',
     'contact': 'संपर्क',
     'personal': 'निजी',
     'patientDetails': 'रोगी विवरण',
@@ -14,7 +16,7 @@ class HindiConstant {
     'ssn': 'एस एस एन',
     'selectCountry': 'देश चुनें',
     'selectState': 'राज्य चुनें',
-      'onboardingText':
+    'onboardingText':
         'ATCare के साथ पुनर्कल्पित स्वास्थ्य सेवा का अनुभव लें! शीर्ष डॉक्टरों, चिकित्सकों और विशेषज्ञों से वर्चुअली जुड़ें।',
     'getStarted': 'बहुत बढ़िया',
     'selectColor': 'रंग चुनो',
