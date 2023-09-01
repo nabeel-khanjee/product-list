@@ -87,6 +87,8 @@ class _DemographicScreenState extends State<DemographicScreen> {
                                   .format(value!)
                                   .substring(0, 10))),
                       selectedCountry: selectedCountry,
+                      titleDemographicInnerScreen:
+                          StringConstants.patientDetails,
                       formkey: formkey,
                       patientIdController: patientIdController,
                       firstNameController: firstNameController,
