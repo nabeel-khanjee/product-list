@@ -1,7 +1,8 @@
-import 'package:flutter/services.dart';
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/components/appbar_component.dart';
 import 'package:provider_app/src/components/main_scaffold.dart';
+import 'package:provider_app/src/pages/demographic/components/profile_indicators_widgets.dart';
+import 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/patient_detail_screen.dart';
 
 class DemographicScreen extends StatefulWidget {
   const DemographicScreen({super.key});
@@ -13,8 +14,23 @@ class DemographicScreen extends StatefulWidget {
 class _DemographicScreenState extends State<DemographicScreen> {
   int currentPage = 0;
   final formkey = GlobalKey<FormState>();
+  final TextEditingController patientIdController = TextEditingController();
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController middleNameController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
+  final TextEditingController suffixController = TextEditingController();
+  final TextEditingController ssnController = TextEditingController();
+  List<String> country = ['Pakistan', 'USA', "UAE"];
+  List<String> states = ['Sindh', 'Punjab', "Blochistan"];
+  String? selectedCountry;
+  String? selectedStates;
+  String? selectedGender;
+  List<String> gender = [
+    StringConstants.male,
+    StringConstants.female,
+  ];
 
-  final TextEditingController patientIdcontroller = TextEditingController();
+  String? selectedDate;
 
   @override
   Widget build(BuildContext context) {
@@ -22,123 +38,69 @@ class _DemographicScreenState extends State<DemographicScreen> {
 
     return MainScaffold(
       body: Container(
-        margin: EdgeInsets.all(12),
+        margin: EdgeInsets.symmetric(horizontal: 12),
         child: Column(
           children: [
-            Container(
-              // height: 58,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: lighten(getThemeColor(context), 0.35)),
-              child: Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IndicatorWidget(
-                      onTap: () {
-                        pageController.jumpToPage(0);
-                        setState(() {
-                          currentPage = 0;
-                        });
-                      },
-                      isSelected: currentPage == 0,
-                      title: StringConstants.personal,
-                    ),
-                    IndicatorWidget(
-                      onTap: () {
-                        pageController.jumpToPage(1);
-                        setState(() {
-                          currentPage = 1;
-                        });
-                      },
-                      isSelected: currentPage == 1,
-                      title: StringConstants.contact,
-                    ),
-                    IndicatorWidget(
-                      onTap: () {
-                        pageController.jumpToPage(2);
-                        setState(() {
-                          currentPage = 2;
-                        });
-                      },
-                      isSelected: currentPage == 2,
-                      title: StringConstants.insurance,
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            ProfileIndicatorsWidget(
+                onThirdIndicatorPresses: () {
+                  pageController.jumpToPage(2);
+                  setState(() => currentPage = 2);
+                },
+                onSecondIndicatorPresses: () {
+                  pageController.jumpToPage(1);
+                  setState(() => currentPage = 1);
+                },
+                onFirstIndicatorPresses: () {
+                  pageController.jumpToPage(0);
+                  setState(() => currentPage = 0);
+                },
+                currentPage: currentPage),
             Expanded(
               child: PageView(
                 controller: pageController,
-                onPageChanged: (value) {},
+                onPageChanged: (value) => setState(() => currentPage = value),
                 children: [
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 20),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                            child: Text(
-                          StringConstants.patientDetails,
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge!
-                              .copyWith(
-                                  color: getThemeColor(context),
-                                  fontFamily: FontConstantc.gilroySemiBold),
-                        )),
-                        Form(
-                            key: formkey,
-                            child: Column(
-                              children: [
-                                TextFormField(
-                                  strutStyle: StrutStyle(
-                                    height: 1,
-                                  ),
-                                  inputFormatters: [
-                                    FilteringTextInputFormatter.digitsOnly
-                                  ],
-                                  controller: patientIdcontroller,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodySmall!
-                                      .copyWith(
-                                          fontFamily:
-                                              FontConstantc.gilroyMedium,
-                                          color: darken(
-                                            getThemeColor(context),
-                                            0.4,
-                                          )),
-                                  decoration: InputDecoration(
-                                      filled: true,
-                                      labelStyle: Theme.of(context)
-                                          .textTheme
-                                          .bodySmall!
-                                          .copyWith(
-                                              color: ColorConstants.greyText),
-                                      // fillColor: ColorConstants.white,
-                                      // labelText: StringConstants.patientID,
-                                      // contentPadding: EdgeInsets.all(20),
-                                      label: Text(
-                                        StringConstants.patientID,
-                                      ),
-                                      border: UnderlineInputBorder(
-
-                                          // gapPadding: 10,
-                                          borderSide: BorderSide(
-                                              color: ColorConstants.white,
-                                              width: 0),
-                                          borderRadius:
-                                              BorderRadius.circular(15))),
-                                )
-                              ],
-                            ))
-                      ],
-                    ),
-                  ),
+                  PatientDetailScreen(
+                      onDropdownFieldTapCountry: () =>
+                          setState(() => selectedCountry = null),
+                      onDropdownFieldTapState: () =>
+                          setState(() => selectedStates = null),
+                      onDropdownFieldTapGender: () =>
+                          setState(() => selectedGender = null),
+                      onDropdownFieldTapCity: () =>
+                          setState(() => selectedDate = null),
+                      getStateValue: (value) =>
+                          setState(() => selectedStates = value),
+                      getGenderValue: (value) =>
+                          setState(() => selectedGender = value),
+                      getCityValue: (value) =>
+                          setState(() => selectedCountry = value),
+                      getCountryValue: (value) =>
+                          setState(() => selectedCountry = value),
+                      onDatePickerTap: () => showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now())
+                          .then((value) => setState(() => selectedDate =
+                              DateFormat('yyyy-MM-dd')
+                                  .format(value!)
+                                  .substring(0, 10))),
+                      selectedCountry: selectedCountry,
+                      formkey: formkey,
+                      patientIdController: patientIdController,
+                      firstNameController: firstNameController,
+                      middleNameController: middleNameController,
+                      lastNameController: lastNameController,
+                      suffixController: suffixController,
+                      country: country,
+                      selectedDate: selectedDate,
+                      gender: gender,
+                      selectedGender: selectedGender,
+                      ssnController: ssnController,
+                      selectedCity: selectedCountry,
+                      states: states,
+                      selectedStates: selectedStates),
                   Container(
                     child: Text('Contact'),
                   ),
@@ -167,44 +129,6 @@ class _DemographicScreenState extends State<DemographicScreen> {
           isBackAppBar: true,
           isTitleTowLines: false),
       isGradient: false,
-    );
-  }
-}
-
-class IndicatorWidget extends StatelessWidget {
-  final String title;
-  final bool isSelected;
-  final VoidCallback onTap;
-
-  const IndicatorWidget({
-    super.key,
-    required this.title,
-    required this.isSelected,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        height: 48,
-        width: 111,
-        decoration: isSelected
-            ? BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: getThemeColor(context))
-            : null,
-        child: Center(
-            child: Text(
-          title,
-          style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-              color: !isSelected
-                  ? Theme.of(context).scaffoldBackgroundColor
-                  : ColorConstants.white,
-              fontFamily: FontConstantc.gilroySemiBold),
-        )),
-      ),
     );
   }
 }
