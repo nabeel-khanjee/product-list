@@ -29,14 +29,17 @@ class TextFormFieldComponentProfile extends StatelessWidget {
               0.4,
             )),
         decoration: InputDecoration(
+            focusColor: getThemeColor(context),
             filled: true,
+            fillColor: ColorConstants.white,
             labelStyle: Theme.of(context)
                 .textTheme
                 .bodySmall!
                 .copyWith(color: ColorConstants.greyText),
-            label: Text(
-              label,
-            ),
+            label: Text(label,
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      color: ColorConstants.greyText,
+                    )),
             border: UnderlineInputBorder(
                 borderSide: BorderSide(color: ColorConstants.white, width: 0),
                 borderRadius: BorderRadius.circular(15))),

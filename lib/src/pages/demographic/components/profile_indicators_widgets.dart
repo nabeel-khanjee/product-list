@@ -19,6 +19,8 @@ class ProfileIndicatorsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // height: 58,
+      margin: const EdgeInsets.symmetric(vertical: 10.0),
+
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: lighten(getThemeColor(context), 0.35)),

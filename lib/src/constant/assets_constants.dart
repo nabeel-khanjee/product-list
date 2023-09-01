@@ -38,4 +38,6 @@ class AssetsConstants {
   static const String demographicProfile =
       'assets/icon/demographic_profile_icon.png';
   static const String healthProfile = 'assets/icon/health_profile_icon.png';
+  static const String arrowDownDropdownIcon =
+      'assets/icon/arrow_down_dropdown_icon.png';
 }
