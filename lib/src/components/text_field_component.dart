@@ -18,8 +18,14 @@ class TextFormFieldComponentProfile extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: TextFormField(
         strutStyle: StrutStyle(
-          height: 1.5,
+          height: 1.3,
         ),
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Please enter some text';
+          }
+          return null;
+        },
         inputFormatters: listTextInputFormatter,
         controller: patientIdcontroller,
         style: Theme.of(context).textTheme.bodySmall!.copyWith(

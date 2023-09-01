@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 
 class DropDownComponentProfile extends StatelessWidget {
