@@ -125,12 +125,17 @@ class _DemographicScreenState extends State<DemographicScreen> {
           actionTextButton: Padding(
             padding: const EdgeInsets.all(8.0),
             child: InkWell(
+                onTap: () {
+                  if (formkey.currentState!.validate()) {}else{
+                    
+                  }
+                },
                 child: Text(
-              StringConstants.save,
-              style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  color: getThemeColor(context),
-                  fontFamily: FontConstantc.gilroyMedium),
-            )),
+                  StringConstants.save,
+                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                      color: getThemeColor(context),
+                      fontFamily: FontConstantc.gilroyMedium),
+                )),
           ),
           isGradient: false,
           title: StringConstants.demographic,

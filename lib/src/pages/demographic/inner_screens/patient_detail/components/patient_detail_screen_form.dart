@@ -59,7 +59,7 @@ class PatientDetailScreenForm extends StatelessWidget {
     return Form(
         key: formkey,
         child: Column(children: [
-          TextFormFieldComponentProfile(
+          TextFormFieldComponentProfile(  
               label: StringConstants.patientID,
               patientIdcontroller: patientIdController,
               listTextInputFormatter: [
