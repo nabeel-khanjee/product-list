@@ -2,6 +2,21 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class StringConstants {
   static String language = 'ur_PK';
+  static String get  insuranceName=> _getLang('insuranceName');
+
+
+  static String get contactDetails => _getLang('contactDetails');
+  static String get cellPhoneNumber => _getLang('cellPhoneNumber');
+  static String get residenceNumber => _getLang('residenceNumber');
+  static String get address => _getLang('address');
+  static String get emergancyContactInfo => _getLang('emergancyContactInfo');
+  static String get name => _getLang('name');
+  static String get relation => _getLang('relation');
+  static String get contactNumber => _getLang('contactNumber');
+  static String get yourPharmacyAddress => _getLang('yourPharmacyAddress');
+  static String get pharmacyName => _getLang('pharmacyName');
+  static String get city => _getLang('city');
+  static String get phoneNumber => _getLang('phoneNumber');
   static String get selectCity => _getLang('selectCity');
   static String get zipCode => _getLang('zipCode');
   static String get insurance => _getLang('insurance');

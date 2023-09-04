@@ -2,6 +2,8 @@ import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/components/appbar_component.dart';
 import 'package:provider_app/src/components/main_scaffold.dart';
 import 'package:provider_app/src/pages/demographic/components/profile_indicators_widgets.dart';
+import 'package:provider_app/src/pages/demographic/components/title_demographics_main_page_inner_heading.dart';
+import 'package:provider_app/src/pages/demographic/inner_screens/contact_detail/contact_detail_screen.dart';
 import 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/patient_detail_screen.dart';
 
 class DemographicScreen extends StatefulWidget {
@@ -13,7 +15,10 @@ class DemographicScreen extends StatefulWidget {
 
 class _DemographicScreenState extends State<DemographicScreen> {
   int currentPage = 0;
-  final formkey = GlobalKey<FormState>();
+  final _formkeyPatientDetail = GlobalKey<FormState>();
+  final _formkeyContactDetail = GlobalKey<FormState>();
+  final _formkeyInsuranceDetail = GlobalKey<FormState>();
+
   final TextEditingController patientIdController = TextEditingController();
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController middleNameController = TextEditingController();
@@ -21,9 +26,13 @@ class _DemographicScreenState extends State<DemographicScreen> {
   final TextEditingController suffixController = TextEditingController();
   final TextEditingController ssnController = TextEditingController();
   final TextEditingController selectCityController = TextEditingController();
-
   final TextEditingController zipCodeController = TextEditingController();
-
+  final TextEditingController addressController = TextEditingController();
+  final TextEditingController cellPhoneNumberController =
+      TextEditingController();
+  final TextEditingController residenceNumberController =
+      TextEditingController();
+  final TextEditingController selectStateController = TextEditingController();
   List<String> country = ['Pakistan', 'USA', "UAE"];
   List<String> states = ['Sindh', 'Punjab', "Blochistan"];
   String? selectedCountry;
@@ -35,6 +44,31 @@ class _DemographicScreenState extends State<DemographicScreen> {
   ];
 
   String? selectedDate;
+
+  final TextEditingController nameContactDetailController =
+      TextEditingController();
+
+  final TextEditingController relationContactController =
+      TextEditingController();
+
+  final TextEditingController contactNumberContactDetailController =
+      TextEditingController();
+
+  final TextEditingController pharmacyNamePharmacyConroller =
+      TextEditingController();
+
+  final TextEditingController addressPharmacyController =
+      TextEditingController();
+
+  final TextEditingController cityPharmacyController = TextEditingController();
+
+  final TextEditingController zipCodePharmacyController =
+      TextEditingController();
+
+  final TextEditingController phoneNumberPharmacyController =
+      TextEditingController();
+      
+        final TextEditingController primaryInsuranceNameController= TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +127,69 @@ class _DemographicScreenState extends State<DemographicScreen> {
                       selectedCountry: selectedCountry,
                       titleDemographicInnerScreen:
                           StringConstants.patientDetails,
-                      formkey: formkey,
+                      formkey: _formkeyPatientDetail,
+                      patientIdController: patientIdController,
+                      firstNameController: firstNameController,
+                      middleNameController: middleNameController,
+                      selectCityController: selectCityController,
+                      zipCodeController: zipCodeController,
+                      lastNameController: lastNameController,
+                      suffixController: suffixController,
+                      country: country,
+                      selectedDate: selectedDate,
+                      gender: gender,
+                      selectedGender: selectedGender,
+                      ssnController: ssnController,
+                      selectedCity: selectedCountry,
+                      states: states,
+                      selectedStates: selectedStates),
+                  ContactDetailScreen(
+                      nameContactDetailController: nameContactDetailController,
+                      relationContactController: relationContactController,
+                      contactNumberContactDetailController:
+                          contactNumberContactDetailController,
+                      pharmacyNamePharmacyConroller:
+                          pharmacyNamePharmacyConroller,
+                      addressPharmacyController: addressPharmacyController,
+                      cityPharmacyController: cityPharmacyController,
+                      zipCodePharmacyController: zipCodePharmacyController,
+                      phoneNumberPharmacyController:
+                          phoneNumberPharmacyController,
+                      addressController: addressController,
+                      cellPhoneNumberController: cellPhoneNumberController,
+                      residenceNumberController: residenceNumberController,
+                      selectStateController: selectStateController,
+                      onDropdownFieldTapCountry: () =>
+                          setState(() => selectedCountry = null),
+                      onDropdownFieldTapState: () =>
+                          setState(() => selectedStates = null),
+                      onDropdownFieldTapGender: () =>
+                          setState(() => selectedGender = null),
+                      onDropdownFieldTapCity: () =>
+                          setState(() => selectedDate = null),
+                      getStateValue: (value) =>
+                          setState(() => selectedStates = value),
+                      getGenderValue: (value) =>
+                          setState(() => selectedGender = value),
+                      getCityValue: (value) =>
+                          setState(() => selectedCountry = value),
+                      getCountryValue: (value) =>
+                          setState(() => selectedCountry = value),
+                      onDatePickerTap: () => showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now())
+                          .then((value) => setState(() => selectedDate =
+                              DateFormat('yyyy-MM-dd')
+                                  .format(value!)
+                                  .substring(0, 10))),
+                      selectedCountry: selectedCountry,
+                      titleDemographicInnerScreen:
+                          StringConstants.contactDetails,
+                      subHeadingOneDemographicInnerScreen: StringConstants.emergancyContactInfo,
+                      subHeadingTwoDemographicInnerScreen: StringConstants.yourPharmacyAddress,
+                      formkey: _formkeyContactDetail,
                       patientIdController: patientIdController,
                       firstNameController: firstNameController,
                       middleNameController: middleNameController,
@@ -110,11 +206,18 @@ class _DemographicScreenState extends State<DemographicScreen> {
                       states: states,
                       selectedStates: selectedStates),
                   Container(
-                    child: Text('Contact'),
-                  ),
-                  Container(
-                    child: Text('Insurance'),
-                  ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        TitleDemographicsMainHeadingInnerPage(
+                            titleDemographicInnerScreen:
+                                StringConstants.insurance),
+                        TextFormFieldComponentProfile(patientIdcontroller: primaryInsuranceNameController, label: StringConstants.insuranceName)
+
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
@@ -126,9 +229,8 @@ class _DemographicScreenState extends State<DemographicScreen> {
             padding: const EdgeInsets.all(8.0),
             child: InkWell(
                 onTap: () {
-                  if (formkey.currentState!.validate()) {}else{
-                    
-                  }
+                  if (_formkeyPatientDetail.currentState!.validate()) {
+                  } else {}
                 },
                 child: Text(
                   StringConstants.save,

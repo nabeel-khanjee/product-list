@@ -1,5 +1,17 @@
 class SpanishConstant {
   static Map<String, String> spanishLabels = {
+    'contactDetails': 'Contact Details',
+    'cellPhoneNumber': 'Cellphone Number',
+    'residenceNumber': 'Residence Number',
+    'address': 'Address',
+    'emergancyContactInfo': 'Emergancy Contact Info',
+    'name': 'Name',
+    'relation': 'Relation',
+    'contactNumber': 'Contact Number',
+    'yourPharmacyAddress': 'Your Pharmacy Address',
+    'pharmacyName': 'Pharmacy Name',
+    'city': 'City',
+    'phoneNumber': 'Phone Number',
     'selectCity': 'Ciudad selecta',
     'zipCode': 'Código postal',
     'insurance': 'Seguro',
