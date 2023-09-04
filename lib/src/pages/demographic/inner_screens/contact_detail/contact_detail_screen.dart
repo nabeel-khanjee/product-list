@@ -43,7 +43,8 @@ class ContactDetailScreen extends StatelessWidget {
     required this.pharmacyNamePharmacyConroller,
     required this.addressPharmacyController,
     required this.cityPharmacyController,
-    required this.zipCodePharmacyController, required this.phoneNumberPharmacyController,
+    required this.zipCodePharmacyController,
+    required this.phoneNumberPharmacyController,
   });
 
   final GlobalKey<FormState> formkey;
@@ -91,54 +92,52 @@ class ContactDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Container(
-        margin: EdgeInsets.symmetric(vertical: 10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TitleDemographicsMainHeadingInnerPage(
-                titleDemographicInnerScreen: titleDemographicInnerScreen),
-            ContactDetailScreenForm(
-                formkey: formkey,
-                addressPharmacyController: addressPharmacyController,
-                cityPharmacyController: cityPharmacyController,
-                contactNumberContactDetailController: contactNumberContactDetailController,
-                nameContactDetailController: nameContactDetailController,
-                pharmacyNamePharmacyConroller: pharmacyNamePharmacyConroller,
-                phoneNumberPharmacyController: phoneNumberPharmacyController,
-                relationContactController: relationContactController,
-                zipCodePharmacyController: zipCodePharmacyController,
-                subHeadingOneDemographicInnerScreen:
-                    subHeadingOneDemographicInnerScreen,
-                subHeadingTwoDemographicInnerScreen:
-                    subHeadingTwoDemographicInnerScreen,
-                selectCityController: selectCityController,
-                zipCodeController: zipCodeController,
-                addressController: addressController,
-                cellPhoneNumberController: cellPhoneNumberController,
-                residenceNumberController: residenceNumberController,
-                selectStateController: selectStateController,
-                suffixController: suffixController,
-                onDatePickerTap: onDatePickerTap,
-                onDropdownFieldTapCity: onDropdownFieldTapCity,
-                country: country,
-                getCityValue: getCityValue,
-                selectedDate: selectedDate,
-                onDropdownFieldTapGender: onDropdownFieldTapGender,
-                gender: gender,
-                getGenderValue: getGenderValue,
-                selectedGender: selectedGender,
-                ssnController: ssnController,
-                onDropdownFieldTapCountry: onDropdownFieldTapCountry,
-                getCountryValue: getCountryValue,
-                selectedCountry: selectedCountry,
-                onDropdownFieldTapState: onDropdownFieldTapState,
-                states: states,
-                getStateValue: getStateValue,
-                selectedStates: selectedStates)
-          ],
-        ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TitleDemographicsMainHeadingInnerPage(
+              titleDemographicInnerScreen: titleDemographicInnerScreen),
+          ContactDetailScreenForm(
+              formkey: formkey,
+              addressPharmacyController: addressPharmacyController,
+              cityPharmacyController: cityPharmacyController,
+              contactNumberContactDetailController:
+                  contactNumberContactDetailController,
+              nameContactDetailController: nameContactDetailController,
+              pharmacyNamePharmacyConroller: pharmacyNamePharmacyConroller,
+              phoneNumberPharmacyController: phoneNumberPharmacyController,
+              relationContactController: relationContactController,
+              zipCodePharmacyController: zipCodePharmacyController,
+              subHeadingOneDemographicInnerScreen:
+                  subHeadingOneDemographicInnerScreen,
+              subHeadingTwoDemographicInnerScreen:
+                  subHeadingTwoDemographicInnerScreen,
+              selectCityController: selectCityController,
+              zipCodeController: zipCodeController,
+              addressController: addressController,
+              cellPhoneNumberController: cellPhoneNumberController,
+              residenceNumberController: residenceNumberController,
+              selectStateController: selectStateController,
+              suffixController: suffixController,
+              onDatePickerTap: onDatePickerTap,
+              onDropdownFieldTapCity: onDropdownFieldTapCity,
+              country: country,
+              getCityValue: getCityValue,
+              selectedDate: selectedDate,
+              onDropdownFieldTapGender: onDropdownFieldTapGender,
+              gender: gender,
+              getGenderValue: getGenderValue,
+              selectedGender: selectedGender,
+              ssnController: ssnController,
+              onDropdownFieldTapCountry: onDropdownFieldTapCountry,
+              getCountryValue: getCountryValue,
+              selectedCountry: selectedCountry,
+              onDropdownFieldTapState: onDropdownFieldTapState,
+              states: states,
+              getStateValue: getStateValue,
+              selectedStates: selectedStates)
+        ],
       ),
     );
   }

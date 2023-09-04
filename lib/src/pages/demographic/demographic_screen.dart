@@ -18,7 +18,6 @@ class _DemographicScreenState extends State<DemographicScreen> {
   final _formkeyPatientDetail = GlobalKey<FormState>();
   final _formkeyContactDetail = GlobalKey<FormState>();
   final _formkeyInsuranceDetail = GlobalKey<FormState>();
-
   final TextEditingController patientIdController = TextEditingController();
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController middleNameController = TextEditingController();
@@ -42,32 +41,22 @@ class _DemographicScreenState extends State<DemographicScreen> {
     StringConstants.male,
     StringConstants.female,
   ];
-
   String? selectedDate;
-
   final TextEditingController nameContactDetailController =
       TextEditingController();
-
   final TextEditingController relationContactController =
       TextEditingController();
-
   final TextEditingController contactNumberContactDetailController =
       TextEditingController();
-
   final TextEditingController pharmacyNamePharmacyConroller =
       TextEditingController();
-
   final TextEditingController addressPharmacyController =
       TextEditingController();
-
   final TextEditingController cityPharmacyController = TextEditingController();
-
   final TextEditingController zipCodePharmacyController =
       TextEditingController();
-
   final TextEditingController phoneNumberPharmacyController =
       TextEditingController();
-
   final TextEditingController primaryInsuranceNameController =
       TextEditingController();
   final TextEditingController primaryInsurancememberIdController =
@@ -122,6 +111,7 @@ class _DemographicScreenState extends State<DemographicScreen> {
                 currentPage: currentPage),
             Expanded(
               child: PageView(
+                physics: NeverScrollableScrollPhysics(),
                 controller: pageController,
                 onPageChanged: (value) => setState(() => currentPage = value),
                 children: [
@@ -233,50 +223,41 @@ class _DemographicScreenState extends State<DemographicScreen> {
                       states: states,
                       selectedStates: selectedStates),
                   DemographicInsuranceScreen(
-                    onTapPrimaryInsuranceEndDate: () {
-                      setState(() {
-                        
-                      });
-                    },
-                    onTapPrimaryInsuranceHealthPlan: () {
-                      
-                    },
-                    onTapSecondaryInsuranceEndDate: () {
-                      
-                    },
-                    onTapSecondaryInsuranceHealthPlan: () {
-                      
-                    },
-                    formkeyInsuranceDetail: _formkeyInsuranceDetail,
-                      primaryInsuranceNameController:
-                          primaryInsuranceNameController,
-                      primaryInsuranceSelectedDateHealtPlan:
-                          primaryInsuranceSelectedDateHealtPlan,
-                      primaryInsurancememberIdController:
-                          primaryInsurancememberIdController,
-                      primaryInsuranceinsuranceGroupController:
-                          primaryInsuranceinsuranceGroupController,
-                      primaryInsuranceSelectedDateEndDate:
-                          primaryInsuranceSelectedDateEndDate,
-                      primaryInsuranceBinController:
-                          primaryInsuranceBinController,
-                      secondaryInsuranceNameController:
-                          secondaryInsuranceNameController,
-                      secondaryInsuranceSelectedDateHealtPlan:
-                          secondaryInsuranceSelectedDateHealtPlan,
-                      secondaryInsurancememberIdController:
-                          secondaryInsurancememberIdController,
-                      secondaryInsuranceinsuranceGroupController:
-                          secondaryInsuranceinsuranceGroupController,
-                      secondaryInsuranceSelectedDateEndDate:
-                          secondaryInsuranceSelectedDateEndDate,
-                      secondaryInsuranceBinController:
-                          secondaryInsuranceBinController,
+                      onTapPrimaryInsuranceEndDate: () => showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now())
+                          .then((value) => setState(() =>
+                              primaryInsuranceSelectedDateEndDate =
+                                  DateFormat('yyyy-MM-dd')
+                                      .format(value!)
+                                      .substring(0, 10))),
+                      onTapPrimaryInsuranceHealthPlan: () => showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now())
+                          .then((value) => setState(() => primaryInsuranceSelectedDateHealtPlan = DateFormat('yyyy-MM-dd').format(value!).substring(0, 10))),
+                      onTapSecondaryInsuranceEndDate: () => showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(2000), lastDate: DateTime.now()).then((value) => setState(() => secondaryInsuranceSelectedDateEndDate = DateFormat('yyyy-MM-dd').format(value!).substring(0, 10))),
+                      onTapSecondaryInsuranceHealthPlan: () => showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(2000), lastDate: DateTime.now()).then((value) => setState(() => secondaryInsuranceSelectedDateHealtPlan = DateFormat('yyyy-MM-dd').format(value!).substring(0, 10))),
+                      formkeyInsuranceDetail: _formkeyInsuranceDetail,
+                      primaryInsuranceNameController: primaryInsuranceNameController,
+                      primaryInsuranceSelectedDateHealtPlan: primaryInsuranceSelectedDateHealtPlan,
+                      primaryInsurancememberIdController: primaryInsurancememberIdController,
+                      primaryInsuranceinsuranceGroupController: primaryInsuranceinsuranceGroupController,
+                      primaryInsuranceSelectedDateEndDate: primaryInsuranceSelectedDateEndDate,
+                      primaryInsuranceBinController: primaryInsuranceBinController,
+                      secondaryInsuranceNameController: secondaryInsuranceNameController,
+                      secondaryInsuranceSelectedDateHealtPlan: secondaryInsuranceSelectedDateHealtPlan,
+                      secondaryInsurancememberIdController: secondaryInsurancememberIdController,
+                      secondaryInsuranceinsuranceGroupController: secondaryInsuranceinsuranceGroupController,
+                      secondaryInsuranceSelectedDateEndDate: secondaryInsuranceSelectedDateEndDate,
+                      secondaryInsuranceBinController: secondaryInsuranceBinController,
                       pharmacyPayerIdController: pharmacyPayerIdController,
                       pharmacyrxBinController: pharmacyrxBinController,
                       pharmacyrxGroupController: pharmacyrxGroupController,
-                      pharmacyrxGroupPCNController:
-                          pharmacyrxGroupPCNController)
+                      pharmacyrxGroupPCNController: pharmacyrxGroupPCNController)
                 ],
               ),
             ),
@@ -306,4 +287,3 @@ class _DemographicScreenState extends State<DemographicScreen> {
     );
   }
 }
-

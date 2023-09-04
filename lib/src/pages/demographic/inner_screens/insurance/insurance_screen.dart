@@ -48,88 +48,86 @@ class DemographicInsuranceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Container(
-        child: Form(
-          key: formkeyInsuranceDetail,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TitleDemographicsMainHeadingInnerPage(
-                  titleDemographicInnerScreen:
-                      StringConstants.primaryInsurance),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller: primaryInsuranceNameController,
-                  label: StringConstants.insuranceName),
-              DatePickerComponent(
-                  datePickerTitle: StringConstants.healthPlan,
-                  country: [],
-                  getCityValue: (p1) {},
-                  onDropdownFieldTapCity: () {},
-                  onDatePickerTap: onTapPrimaryInsuranceHealthPlan,
-                  selectedDate: primaryInsuranceSelectedDateHealtPlan),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller: primaryInsurancememberIdController,
-                  label: StringConstants.memberId),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller: primaryInsuranceinsuranceGroupController,
-                  label: StringConstants.insuranceGroup),
-              DatePickerComponent(
-                  datePickerTitle: StringConstants.endDate,
-                  country: [],
-                  getCityValue: (p1) {},
-                  onDropdownFieldTapCity: () {},
-                  onDatePickerTap: onTapPrimaryInsuranceEndDate,
-                  selectedDate: primaryInsuranceSelectedDateEndDate),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller: primaryInsuranceBinController,
-                  label: StringConstants.bin),
-              TitleDemographicsMainHeadingInnerPage(
-                  titleDemographicInnerScreen:
-                      StringConstants.secondaryInsurance),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller: secondaryInsuranceNameController,
-                  label: StringConstants.insuranceName),
-              DatePickerComponent(
-                  datePickerTitle: StringConstants.healthPlan,
-                  country: [],
-                  getCityValue: (p1) {},
-                  onDropdownFieldTapCity: () {},
-                  onDatePickerTap: onTapSecondaryInsuranceHealthPlan,
-                  selectedDate: secondaryInsuranceSelectedDateHealtPlan),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller: secondaryInsurancememberIdController,
-                  label: StringConstants.memberId),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller:
-                      secondaryInsuranceinsuranceGroupController,
-                  label: StringConstants.insuranceGroup),
-              DatePickerComponent(
-                  datePickerTitle: StringConstants.endDate,
-                  country: [],
-                  getCityValue: (p1) {},
-                  onDropdownFieldTapCity: () {},
-                  onDatePickerTap: onTapSecondaryInsuranceEndDate,
-                  selectedDate: secondaryInsuranceSelectedDateEndDate),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller: secondaryInsuranceBinController,
-                  label: StringConstants.bin),
-              TitleDemographicsMainHeadingInnerPage(
-                  titleDemographicInnerScreen: StringConstants.pharmacy),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller: pharmacyPayerIdController,
-                  label: StringConstants.payerId),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller: pharmacyrxBinController,
-                  label: StringConstants.rxBin),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller: pharmacyrxGroupController,
-                  label: StringConstants.rxGroup),
-              TextFormFieldComponentProfile(
-                  patientIdcontroller: pharmacyrxGroupPCNController,
-                  label: StringConstants.rxGroupPCN),
-            ],
-          ),
+      child: Form(
+        key: formkeyInsuranceDetail,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TitleDemographicsMainHeadingInnerPage(
+                titleDemographicInnerScreen:
+                    StringConstants.primaryInsurance),
+            TextFormFieldComponentProfile(
+                patientIdcontroller: primaryInsuranceNameController,
+                label: StringConstants.insuranceName),
+            DatePickerComponent(
+                datePickerTitle: StringConstants.healthPlan,
+                country: [],
+                getCityValue: (p1) {},
+                onDropdownFieldTapCity: () {},
+                onDatePickerTap: onTapPrimaryInsuranceHealthPlan,
+                selectedDate: primaryInsuranceSelectedDateHealtPlan),
+            TextFormFieldComponentProfile(
+                patientIdcontroller: primaryInsurancememberIdController,
+                label: StringConstants.memberId),
+            TextFormFieldComponentProfile(
+                patientIdcontroller: primaryInsuranceinsuranceGroupController,
+                label: StringConstants.insuranceGroup),
+            DatePickerComponent(
+                datePickerTitle: StringConstants.endDate,
+                country: [],
+                getCityValue: (p1) {},
+                onDropdownFieldTapCity: () {},
+                onDatePickerTap: onTapPrimaryInsuranceEndDate,
+                selectedDate: primaryInsuranceSelectedDateEndDate),
+            TextFormFieldComponentProfile(
+                patientIdcontroller: primaryInsuranceBinController,
+                label: StringConstants.bin),
+            TitleDemographicsMainHeadingInnerPage(
+                titleDemographicInnerScreen:
+                    StringConstants.secondaryInsurance),
+            TextFormFieldComponentProfile(
+                patientIdcontroller: secondaryInsuranceNameController,
+                label: StringConstants.insuranceName),
+            DatePickerComponent(
+                datePickerTitle: StringConstants.healthPlan,
+                country: [],
+                getCityValue: (p1) {},
+                onDropdownFieldTapCity: () {},
+                onDatePickerTap: onTapSecondaryInsuranceHealthPlan,
+                selectedDate: secondaryInsuranceSelectedDateHealtPlan),
+            TextFormFieldComponentProfile(
+                patientIdcontroller: secondaryInsurancememberIdController,
+                label: StringConstants.memberId),
+            TextFormFieldComponentProfile(
+                patientIdcontroller:
+                    secondaryInsuranceinsuranceGroupController,
+                label: StringConstants.insuranceGroup),
+            DatePickerComponent(
+                datePickerTitle: StringConstants.endDate,
+                country: [],
+                getCityValue: (p1) {},
+                onDropdownFieldTapCity: () {},
+                onDatePickerTap: onTapSecondaryInsuranceEndDate,
+                selectedDate: secondaryInsuranceSelectedDateEndDate),
+            TextFormFieldComponentProfile(
+                patientIdcontroller: secondaryInsuranceBinController,
+                label: StringConstants.bin),
+            TitleDemographicsMainHeadingInnerPage(
+                titleDemographicInnerScreen: StringConstants.pharmacy),
+            TextFormFieldComponentProfile(
+                patientIdcontroller: pharmacyPayerIdController,
+                label: StringConstants.payerId),
+            TextFormFieldComponentProfile(
+                patientIdcontroller: pharmacyrxBinController,
+                label: StringConstants.rxBin),
+            TextFormFieldComponentProfile(
+                patientIdcontroller: pharmacyrxGroupController,
+                label: StringConstants.rxGroup),
+            TextFormFieldComponentProfile(
+                patientIdcontroller: pharmacyrxGroupPCNController,
+                label: StringConstants.rxGroupPCN),
+          ],
         ),
       ),
     );

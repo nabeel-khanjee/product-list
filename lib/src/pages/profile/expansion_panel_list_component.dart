@@ -49,7 +49,6 @@ class _ExpansionPanelListComponentState
                     .asMap()
                     .entries
                     .map((e) => Container(
-                          // height: 40,
                           width: MediaQuery.of(context).size.width,
                           decoration: BoxDecoration(
                               color: getThemeStateIsLight()
