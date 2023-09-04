@@ -19,17 +19,17 @@ class IsGradientBackGround extends StatelessWidget {
         create: (context) => getIt.get<IsGradientBackgroundCubit>()
           ..updateState(color: getThemeColor(context)),
         child:
-            BlocBuilder<IsGradientBackgroundCubit, IsGradientBackgroundState>(
+        BlocBuilder<IsGradientBackgroundCubit, IsGradientBackgroundState>(
           builder: (context, state) => state.maybeWhen(
             orElse: () => Container(),
             updateStateDarkLight: (value) => Container(
               decoration:
-                  value ? BoxDecoration(gradient: linerGradientForApp()) : null,
+              value ? BoxDecoration(gradient: linerGradientForApp()) : null,
               child: MainScaffold(
                 body: body,
                 isGradient: true,
                 appBar: AppBarcomponent(
-                  
+
                   isTitleTowLines: false,
                   isBackAppBar: isBackAppBar,
                   isGradient: true,
@@ -40,8 +40,8 @@ class IsGradientBackGround extends StatelessWidget {
             updateColorState: (color) => Container(
               decoration: BoxDecoration(
                   gradient: linerGradientForApp(
-                color: color,
-              )),
+                    color: color,
+                  )),
               child: MainScaffold(
                 body: body,
                 isGradient: true,

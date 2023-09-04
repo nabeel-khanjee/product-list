@@ -4,6 +4,10 @@ class RouteConstants {
   static const String onboardingRoute = 'onboardingRoute';
   static const String settingRoute = 'settingRoute';
   static const String profileRoute = 'profileRoute';
+
+  static const String signInRoute = 'loginRoute';
+  static const String signUpRoute = 'signUpRoute';
+
   static const String changeLanguageRoute = 'changeLanguageRoute';
   static const String changeLocationRoute = 'changeLocationRoute';
   static const String demographicRoute = 'demographicRoute';

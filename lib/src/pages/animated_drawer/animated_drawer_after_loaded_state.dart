@@ -8,7 +8,7 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     BorderSide borderSide =
-        BorderSide(color: lighten(getThemeColor(context), 0.1), width: 20);
+    BorderSide(color: lighten(getThemeColor(context), 0.1), width: 20);
     return AdvancedDrawer(
         backdrop: AnimatedDrawerBackDrop(),
         controller: BlocProvider.of<AnimatedDrawerCubit>(context)
@@ -37,7 +37,7 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
           child: Scaffold(
             body: PageView(
               controller:
-                  BlocProvider.of<AnimatedDrawerCubit>(context).pageController,
+              BlocProvider.of<AnimatedDrawerCubit>(context).pageController,
               children: [HomeScreenBody(), ProfileScreen(), SettingsScreen()],
             ),
           ),

@@ -6,7 +6,7 @@ class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
 
   void getDashBoardOverview(context,
       {required PageController pageController,
-      required AdvancedDrawerController advancedDrawerController}) {
+        required AdvancedDrawerController advancedDrawerController}) {
     _advancedDrawerController = advancedDrawerController;
 
     emit(const _Loading());
@@ -16,8 +16,8 @@ class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
 
   Future<void> updateIndex(
       {required int index,
-      required bool isOpen,
-      required AdvancedDrawerController advancedDrawerController}) async {
+        required bool isOpen,
+        required AdvancedDrawerController advancedDrawerController}) async {
     _bottomNavIndex = index;
     _advancedDrawerController = advancedDrawerController;
 
@@ -28,7 +28,7 @@ class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
 
   int _bottomNavIndex = 0;
   AdvancedDrawerController _advancedDrawerController =
-      AdvancedDrawerController();
+  AdvancedDrawerController();
   PageController _pageController = PageController();
 
   int get getBottomNavIndex => _bottomNavIndex;
@@ -46,10 +46,10 @@ class AnimatedDrawerState with _$AnimatedDrawerState {
   const factory AnimatedDrawerState.error(String message) = _Error;
 
   const factory AnimatedDrawerState.loaded(PageController pageController) =
-      _Loaded;
+  _Loaded;
 
   const factory AnimatedDrawerState.animatedDrawerIndexUpdated(
-    int index,
-    bool isOpen,
-  ) = _AnimatedDrawerIndexUpdated;
+      int index,
+      bool isOpen,
+      ) = _AnimatedDrawerIndexUpdated;
 }

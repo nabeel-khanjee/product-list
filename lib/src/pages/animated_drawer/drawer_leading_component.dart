@@ -10,8 +10,8 @@ class DrawerLeadingComponent extends StatelessWidget {
     return GestureDetector(
         onTap: () => drawerStateChnageUpdateIndex(
             advancedDrawerController:
-                BlocProvider.of<AnimatedDrawerCubit>(context)
-                    .advancedDrawerController,
+            BlocProvider.of<AnimatedDrawerCubit>(context)
+                .advancedDrawerController,
             isOpen: false,
             context: context),
         child: Container(

@@ -34,7 +34,7 @@ class AppColorPicker extends StatelessWidget {
                   .updateState(color: color);
             },
             selectedColor: getThemeColor(context),
-          )
+          ),
         ],
       ),
     );

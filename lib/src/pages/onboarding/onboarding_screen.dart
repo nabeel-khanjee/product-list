@@ -21,15 +21,15 @@ class OnboardingScreen extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-              colors: [
-                darken(getThemeColor(context), 0.4),
-                darken(getThemeColor(context), 0.4),
-                darken(getThemeColor(context), 0.4).withOpacity(0.1),
-                darken(getThemeColor(context), 0.4).withOpacity(0.1),
-              ],
-            )),
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [
+                    darken(getThemeColor(context), 0.4),
+                    darken(getThemeColor(context), 0.4),
+                    darken(getThemeColor(context), 0.4).withOpacity(0.1),
+                    darken(getThemeColor(context), 0.4).withOpacity(0.1),
+                  ],
+                )),
             padding: EdgeInsets.all(AppConstants.kDefaultPadding),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,

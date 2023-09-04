@@ -12,7 +12,7 @@ class ThemeSwitchApp extends StatelessWidget {
   final String text;
   final Function(bool value) onChnage;
   final bool value;
-  
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -28,16 +28,16 @@ class ThemeSwitchApp extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         title: Container(
             child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TilesIconComponent(image: image),
-            SizedBox(
-              width: 10,
-            ),
-            Text(text),
-          ],
-        )),
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                TilesIconComponent(image: image),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(text),
+              ],
+            )),
         value: value,
         onChanged: (value) => onChnage(value),
       ),
