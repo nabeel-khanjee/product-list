@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/demographic/components/title_demographics_main_page_inner_heading.dart';
 
 class ContactDetailScreenForm extends StatelessWidget {
   const ContactDetailScreenForm({

@@ -1,5 +1,18 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
+    'secondaryInsurance':'Secondary Insurance',
+    'primaryInsurance': 'Primary Insurance',
+    'insuranceName': 'Insurance Name',
+    'healthPlan': 'Health Plan',
+    'memberId': 'Member Id',
+    'insuranceGroup': 'Insurance Group #',
+    'endDate': 'End Date',
+    'bin': 'Bin',
+    'pharmacy': 'Pharmacy',
+    'payerId': 'Payer Id',
+    'rxBin': 'Rx Bin',
+    'rxGroup': 'Rx Group',
+    'rxGroupPCN': 'Rx Group PCN',
     'contactDetails': 'Contact Details',
     'cellPhoneNumber': 'Cellphone Number',
     'residenceNumber': 'Residence Number',

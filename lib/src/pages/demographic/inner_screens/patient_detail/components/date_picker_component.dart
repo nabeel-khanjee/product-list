@@ -8,9 +8,11 @@ class DatePickerComponent extends StatelessWidget {
     required this.country,
     required this.getCityValue,
     required this.selectedDate,
+    required this.datePickerTitle,
   });
 
   final VoidCallback onDatePickerTap;
+  final String datePickerTitle;
   final VoidCallback onDropdownFieldTapCity;
   final List<String> country;
   final Function(String? p1) getCityValue;
@@ -25,7 +27,7 @@ class DatePickerComponent extends StatelessWidget {
           DropDownComponentProfile(
             onDropdownFieldTap: onDropdownFieldTapCity,
             suffixIcon: AssetsConstants.calenderIcon,
-            hintText: StringConstants.dateOfBirth,
+            hintText: datePickerTitle,
             items: country,
             selectedItem: (value) {
               getCityValue(value);

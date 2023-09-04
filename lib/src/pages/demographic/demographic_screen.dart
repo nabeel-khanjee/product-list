@@ -2,8 +2,8 @@ import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/components/appbar_component.dart';
 import 'package:provider_app/src/components/main_scaffold.dart';
 import 'package:provider_app/src/pages/demographic/components/profile_indicators_widgets.dart';
-import 'package:provider_app/src/pages/demographic/components/title_demographics_main_page_inner_heading.dart';
 import 'package:provider_app/src/pages/demographic/inner_screens/contact_detail/contact_detail_screen.dart';
+import 'package:provider_app/src/pages/demographic/inner_screens/insurance/insurance_screen.dart';
 import 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/patient_detail_screen.dart';
 
 class DemographicScreen extends StatefulWidget {
@@ -67,8 +67,35 @@ class _DemographicScreenState extends State<DemographicScreen> {
 
   final TextEditingController phoneNumberPharmacyController =
       TextEditingController();
-      
-        final TextEditingController primaryInsuranceNameController= TextEditingController();
+
+  final TextEditingController primaryInsuranceNameController =
+      TextEditingController();
+  final TextEditingController primaryInsurancememberIdController =
+      TextEditingController();
+  final TextEditingController primaryInsuranceinsuranceGroupController =
+      TextEditingController();
+  final TextEditingController primaryInsuranceBinController =
+      TextEditingController();
+  final TextEditingController secondaryInsuranceNameController =
+      TextEditingController();
+  final TextEditingController secondaryInsurancememberIdController =
+      TextEditingController();
+  final TextEditingController secondaryInsuranceinsuranceGroupController =
+      TextEditingController();
+  final TextEditingController secondaryInsuranceBinController =
+      TextEditingController();
+  final TextEditingController pharmacyPayerIdController =
+      TextEditingController();
+  final TextEditingController pharmacyrxBinController = TextEditingController();
+  final TextEditingController pharmacyrxGroupController =
+      TextEditingController();
+  final TextEditingController pharmacyrxGroupPCNController =
+      TextEditingController();
+
+  String? primaryInsuranceSelectedDateHealtPlan;
+  String? primaryInsuranceSelectedDateEndDate;
+  String? secondaryInsuranceSelectedDateHealtPlan;
+  String? secondaryInsuranceSelectedDateEndDate;
 
   @override
   Widget build(BuildContext context) {
@@ -205,19 +232,51 @@ class _DemographicScreenState extends State<DemographicScreen> {
                       selectedCity: selectedCountry,
                       states: states,
                       selectedStates: selectedStates),
-                  Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        TitleDemographicsMainHeadingInnerPage(
-                            titleDemographicInnerScreen:
-                                StringConstants.insurance),
-                        TextFormFieldComponentProfile(patientIdcontroller: primaryInsuranceNameController, label: StringConstants.insuranceName)
-
-                      ],
-                    ),
-                  )
+                  DemographicInsuranceScreen(
+                    onTapPrimaryInsuranceEndDate: () {
+                      setState(() {
+                        
+                      });
+                    },
+                    onTapPrimaryInsuranceHealthPlan: () {
+                      
+                    },
+                    onTapSecondaryInsuranceEndDate: () {
+                      
+                    },
+                    onTapSecondaryInsuranceHealthPlan: () {
+                      
+                    },
+                    formkeyInsuranceDetail: _formkeyInsuranceDetail,
+                      primaryInsuranceNameController:
+                          primaryInsuranceNameController,
+                      primaryInsuranceSelectedDateHealtPlan:
+                          primaryInsuranceSelectedDateHealtPlan,
+                      primaryInsurancememberIdController:
+                          primaryInsurancememberIdController,
+                      primaryInsuranceinsuranceGroupController:
+                          primaryInsuranceinsuranceGroupController,
+                      primaryInsuranceSelectedDateEndDate:
+                          primaryInsuranceSelectedDateEndDate,
+                      primaryInsuranceBinController:
+                          primaryInsuranceBinController,
+                      secondaryInsuranceNameController:
+                          secondaryInsuranceNameController,
+                      secondaryInsuranceSelectedDateHealtPlan:
+                          secondaryInsuranceSelectedDateHealtPlan,
+                      secondaryInsurancememberIdController:
+                          secondaryInsurancememberIdController,
+                      secondaryInsuranceinsuranceGroupController:
+                          secondaryInsuranceinsuranceGroupController,
+                      secondaryInsuranceSelectedDateEndDate:
+                          secondaryInsuranceSelectedDateEndDate,
+                      secondaryInsuranceBinController:
+                          secondaryInsuranceBinController,
+                      pharmacyPayerIdController: pharmacyPayerIdController,
+                      pharmacyrxBinController: pharmacyrxBinController,
+                      pharmacyrxGroupController: pharmacyrxGroupController,
+                      pharmacyrxGroupPCNController:
+                          pharmacyrxGroupPCNController)
                 ],
               ),
             ),
@@ -247,3 +306,4 @@ class _DemographicScreenState extends State<DemographicScreen> {
     );
   }
 }
+
