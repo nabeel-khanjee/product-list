@@ -4,6 +4,8 @@ export 'package:provider_app/src/components/text_field_component.dart';
 export 'package:provider_app/src/pages/demographic/components/dropdown_component_profile.dart';
 export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/patient_detail_screen_form.dart';
 export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/date_picker_and_dropdown_widget.dart';
+export 'package:provider_app/src/pages/demographic/components/title_demographics_main_page_inner_heading.dart';
+export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/date_picker_component.dart';
 
 export 'package:provider_app/src/pages/change_language/components/language_setting.dart';
 export 'package:provider_app/src/pages/change_language/components/language_component.dart';

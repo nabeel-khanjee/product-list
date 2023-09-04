@@ -1,5 +1,17 @@
 class ArabicConstant {
   static Map<String, String> arabicLabels = {
+    'contactDetails': 'सम्पर्क करने का विवरण',
+    'cellPhoneNumber': 'सेलफोन नंबर',
+    'residenceNumber': 'निवास क्रमांक',
+    'address': 'पता',
+    'emergancyContactInfo': 'आपातकालीन संपर्क जानकारी',
+    'name': 'नाम',
+    'relation': 'रिश्ता',
+    'contactNumber': 'संपर्क संख्या',
+    'yourPharmacyAddress': 'आपकी फार्मेसी का पता',
+    'pharmacyName': 'फार्मेसी का नाम',
+    'city': 'शहर',
+    'phoneNumber': 'फ़ोन नंबर',
     'selectCity': 'اختر مدينة',
     'zipCode': 'الرمز البريدي',
     'insurance': 'تأمين',
