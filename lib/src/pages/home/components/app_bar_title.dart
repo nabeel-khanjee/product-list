@@ -1,4 +1,4 @@
-import 'package:patient_app/src/app/app_export.dart';
+import 'package:provider_app/src/app/app_export.dart';
 
 class AppBarTitle extends StatelessWidget {
   const AppBarTitle({
@@ -17,32 +17,15 @@ class AppBarTitle extends StatelessWidget {
           children: [
             Text(
               'Hi ',
-              style: FontStylesConstants.nonito(
-                  fontSize: 10,
-                  fontWeight: FontWeight.w700,
-                  color: MyTheme.isDark
-                      ? ColorConstants.white
-                      : ColorConstants.black),
+              
             ),
             Text(
               'Nabbel ',
-              style: FontStylesConstants.nonito(
-                  fontSize: 10,
-                  fontWeight: FontWeight.w700,
-                  color: MyTheme.isDark
-                      ? ColorConstants.white
-                      : ColorConstants.black),
             ),
           ],
         ),
         Text(
           F.title,
-          style: FontStylesConstants.nonito(
-              fontSize: 10,
-              fontWeight: FontWeight.w700,
-              color: MyTheme.isDark
-                  ? ColorConstants.white
-                  : ColorConstants.black),
         ),
       ],
     );

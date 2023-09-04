@@ -1,11 +1,11 @@
-import 'package:patient_app/src/app/app_export.dart';
+import 'package:provider_app/src/app/app_export.dart';
 
 class OnboardingPage extends StatelessWidget {
   final String title;
   final String description;
   final String imagePath;
 
-  const OnboardingPage({
+  const OnboardingPage({super.key, 
     required this.title,
     required this.description,
     required this.imagePath,

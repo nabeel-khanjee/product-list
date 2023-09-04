@@ -1,55 +1,73 @@
-import 'package:patient_app/src/app/app_export.dart';
+import 'package:provider_app/src/app/app_export.dart';
 
-class OnboardingScreen extends StatefulWidget {
-  @override
-  _OnboardingScreenState createState() => _OnboardingScreenState();
-}
+class OnboardingScreen extends StatelessWidget {
+  // final OnboardingScreenArgs args;
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
-  final PageController _pageController = PageController();
-
-  double _currentPage = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    _pageController.addListener(() {
-      setState(() {
-        _currentPage = _pageController.page!;
-      });
-    });
-  }
-
+  const OnboardingScreen({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
         children: [
-          Expanded(
-            child: PageView.builder(
-              controller: _pageController,
-              itemCount: pages.length,
-              itemBuilder: (context, index) {
-                return pages[index];
-              },
+          Container(
+            height: MediaQuery.of(context).size.height,
+            child: Image.asset(
+              AssetsConstants.doctorImageOnboardingScreen,
+              fit: BoxFit.fitHeight,
             ),
           ),
-          DotsIndicator(
-            dotsCount: pages.length,
-            position: _currentPage.toInt(),
+          Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [
+                    darken(getThemeColor(context), 0.4),
+                    darken(getThemeColor(context), 0.4),
+                    darken(getThemeColor(context), 0.4).withOpacity(0.1),
+                    darken(getThemeColor(context), 0.4).withOpacity(0.1),
+                  ],
+                )),
+            padding: EdgeInsets.all(AppConstants.kDefaultPadding),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Container(
+                  child: Text(
+                    StringConstants.onboardingText,
+                    style: FontStylesConstants.gilroy(
+                      fontFamily: FontConstantc.gilroyRegular,
+                      fontSize: 30,
+                      color: ColorConstants.white,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                SizedBox(height: 40),
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          NavigationUtil.push(
+                            context,
+                            RouteConstants.homeRoute,
+                          );
+                        },
+                        child: Text(StringConstants.getStarted),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
-          SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: () {
-              // Handle button press to navigate to the next screen
-              // or complete the onboarding process.
-            },
-            child: Text('Get Started'),
-          ),
-          SizedBox(height: 20),
         ],
       ),
     );
   }
 }
-
