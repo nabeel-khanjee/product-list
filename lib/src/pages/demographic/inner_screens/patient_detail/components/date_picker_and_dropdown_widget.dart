@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/date_picker_component.dart';
 
 class DatePickerAndDropDownWidget extends StatelessWidget {
   const DatePickerAndDropDownWidget({
@@ -33,6 +32,7 @@ class DatePickerAndDropDownWidget extends StatelessWidget {
         children: [
           Expanded(
             child: DatePickerComponent(
+                datePickerTitle: StringConstants.dateOfBirth,
                 onDatePickerTap: onDatePickerTap,
                 onDropdownFieldTapCity: onDropdownFieldTapCity,
                 country: country,

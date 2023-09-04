@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 
 class TitleDemographicsMainHeadingInnerPage extends StatelessWidget {
@@ -13,6 +12,7 @@ class TitleDemographicsMainHeadingInnerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(height: 10),
         Container(
             child: Text(
           titleDemographicInnerScreen,

@@ -1,7 +1,8 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/demographic/inner_screens/contact_detail/components/contact_details_form.dart';
 
-class PatientDetailScreen extends StatelessWidget {
-  const PatientDetailScreen({
+class ContactDetailScreen extends StatelessWidget {
+  const ContactDetailScreen({
     super.key,
     required this.formkey,
     required this.patientIdController,
@@ -30,9 +31,30 @@ class PatientDetailScreen extends StatelessWidget {
     required this.titleDemographicInnerScreen,
     required this.selectCityController,
     required this.zipCodeController,
+    required this.subHeadingTwoDemographicInnerScreen,
+    required this.subHeadingOneDemographicInnerScreen,
+    required this.addressController,
+    required this.cellPhoneNumberController,
+    required this.residenceNumberController,
+    required this.selectStateController,
+    required this.nameContactDetailController,
+    required this.relationContactController,
+    required this.contactNumberContactDetailController,
+    required this.pharmacyNamePharmacyConroller,
+    required this.addressPharmacyController,
+    required this.cityPharmacyController,
+    required this.zipCodePharmacyController, required this.phoneNumberPharmacyController,
   });
 
   final GlobalKey<FormState> formkey;
+  final TextEditingController phoneNumberPharmacyController;
+  final TextEditingController nameContactDetailController;
+  final TextEditingController relationContactController;
+  final TextEditingController contactNumberContactDetailController;
+  final TextEditingController pharmacyNamePharmacyConroller;
+  final TextEditingController addressPharmacyController;
+  final TextEditingController cityPharmacyController;
+  final TextEditingController zipCodePharmacyController;
   final TextEditingController zipCodeController;
   final TextEditingController selectCityController;
   final TextEditingController patientIdController;
@@ -40,6 +62,10 @@ class PatientDetailScreen extends StatelessWidget {
   final TextEditingController middleNameController;
   final TextEditingController lastNameController;
   final TextEditingController suffixController;
+  final TextEditingController addressController;
+  final TextEditingController cellPhoneNumberController;
+  final TextEditingController residenceNumberController;
+  final TextEditingController selectStateController;
   final List<String> country;
   final String? selectedDate;
   final List<String> gender;
@@ -50,6 +76,8 @@ class PatientDetailScreen extends StatelessWidget {
   final String? selectedStates;
   final String? selectedCountry;
   final String titleDemographicInnerScreen;
+  final String subHeadingTwoDemographicInnerScreen;
+  final String subHeadingOneDemographicInnerScreen;
   final VoidCallback onDatePickerTap;
   final VoidCallback onDropdownFieldTapCity;
   final VoidCallback onDropdownFieldTapGender;
@@ -71,14 +99,26 @@ class PatientDetailScreen extends StatelessWidget {
           children: [
             TitleDemographicsMainHeadingInnerPage(
                 titleDemographicInnerScreen: titleDemographicInnerScreen),
-            PatientDetailScreenForm(
+            ContactDetailScreenForm(
                 formkey: formkey,
+                addressPharmacyController: addressPharmacyController,
+                cityPharmacyController: cityPharmacyController,
+                contactNumberContactDetailController: contactNumberContactDetailController,
+                nameContactDetailController: nameContactDetailController,
+                pharmacyNamePharmacyConroller: pharmacyNamePharmacyConroller,
+                phoneNumberPharmacyController: phoneNumberPharmacyController,
+                relationContactController: relationContactController,
+                zipCodePharmacyController: zipCodePharmacyController,
+                subHeadingOneDemographicInnerScreen:
+                    subHeadingOneDemographicInnerScreen,
+                subHeadingTwoDemographicInnerScreen:
+                    subHeadingTwoDemographicInnerScreen,
                 selectCityController: selectCityController,
                 zipCodeController: zipCodeController,
-                patientIdController: patientIdController,
-                firstNameController: firstNameController,
-                middleNameController: middleNameController,
-                lastNameController: lastNameController,
+                addressController: addressController,
+                cellPhoneNumberController: cellPhoneNumberController,
+                residenceNumberController: residenceNumberController,
+                selectStateController: selectStateController,
                 suffixController: suffixController,
                 onDatePickerTap: onDatePickerTap,
                 onDropdownFieldTapCity: onDropdownFieldTapCity,
