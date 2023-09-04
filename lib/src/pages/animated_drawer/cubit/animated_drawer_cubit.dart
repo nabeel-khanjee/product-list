@@ -1,17 +1,12 @@
 import 'package:provider_app/src/app/app_export.dart';
-
 part 'animated_drawer_cubit.freezed.dart';
 
 class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
   AnimatedDrawerCubit() : super(const _Initial());
 
-<<<<<<< HEAD
-  getDashBoardOverview(context, {required PageController pageController, required AdvancedDrawerController advancedDrawerController}) {
-=======
   void getDashBoardOverview(context,
       {required PageController pageController,
-      required AdvancedDrawerController advancedDrawerController}) {
->>>>>>> d402a254026e1230d98f14ee0de1c04a126af532
+        required AdvancedDrawerController advancedDrawerController}) {
     _advancedDrawerController = advancedDrawerController;
 
     emit(const _Loading());
@@ -19,11 +14,10 @@ class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
     return;
   }
 
-  Future<void> updateIndex({
-    required int index,
-    required bool isOpen,
-    required AdvancedDrawerController advancedDrawerController,
-  }) async {
+  Future<void> updateIndex(
+      {required int index,
+        required bool isOpen,
+        required AdvancedDrawerController advancedDrawerController}) async {
     _bottomNavIndex = index;
     _advancedDrawerController = advancedDrawerController;
 
@@ -33,13 +27,13 @@ class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
   }
 
   int _bottomNavIndex = 0;
-  AdvancedDrawerController _advancedDrawerController = AdvancedDrawerController();
+  AdvancedDrawerController _advancedDrawerController =
+  AdvancedDrawerController();
   PageController _pageController = PageController();
 
   int get getBottomNavIndex => _bottomNavIndex;
-
-  AdvancedDrawerController get advancedDrawerController => _advancedDrawerController;
-
+  AdvancedDrawerController get advancedDrawerController =>
+      _advancedDrawerController;
   PageController get pageController => _pageController;
 }
 
@@ -52,10 +46,10 @@ class AnimatedDrawerState with _$AnimatedDrawerState {
   const factory AnimatedDrawerState.error(String message) = _Error;
 
   const factory AnimatedDrawerState.loaded(PageController pageController) =
-      _Loaded;
+  _Loaded;
 
   const factory AnimatedDrawerState.animatedDrawerIndexUpdated(
-    int index,
-    bool isOpen,
-  ) = _AnimatedDrawerIndexUpdated;
+      int index,
+      bool isOpen,
+      ) = _AnimatedDrawerIndexUpdated;
 }

@@ -9,7 +9,6 @@ class IsGradientBackGround extends StatelessWidget {
     required this.isBackAppBar,
     required this.appbarText,
   });
-
   final Widget body;
   final bool isBackAppBar;
   final String appbarText;
@@ -20,17 +19,17 @@ class IsGradientBackGround extends StatelessWidget {
         create: (context) => getIt.get<IsGradientBackgroundCubit>()
           ..updateState(color: getThemeColor(context)),
         child:
-            BlocBuilder<IsGradientBackgroundCubit, IsGradientBackgroundState>(
+        BlocBuilder<IsGradientBackgroundCubit, IsGradientBackgroundState>(
           builder: (context, state) => state.maybeWhen(
             orElse: () => Container(),
             updateStateDarkLight: (value) => Container(
               decoration:
-                  value ? BoxDecoration(gradient: linerGradientForApp()) : null,
+              value ? BoxDecoration(gradient: linerGradientForApp()) : null,
               child: MainScaffold(
                 body: body,
                 isGradient: true,
                 appBar: AppBarcomponent(
-                  
+
                   isTitleTowLines: false,
                   isBackAppBar: isBackAppBar,
                   isGradient: true,
@@ -41,25 +40,9 @@ class IsGradientBackGround extends StatelessWidget {
             updateColorState: (color) => Container(
               decoration: BoxDecoration(
                   gradient: linerGradientForApp(
-                color: color,
-              )),
-<<<<<<< HEAD
-              child: Scaffold(
-                backgroundColor: getThemeStateIsLight()
-                    ? Colors.transparent
-                    : Theme.of(context).scaffoldBackgroundColor,
-                appBar: AppBar(
-                    actions: [],
-                    backgroundColor: getThemeStateIsLight()
-                        ? Colors.transparent
-                        : Theme.of(context).scaffoldBackgroundColor,
-                    leading: DrawerLeadingComponent(),
-                    title: Text(
-                      StringConstants.settings,
-                    )),
-=======
+                    color: color,
+                  )),
               child: MainScaffold(
->>>>>>> d402a254026e1230d98f14ee0de1c04a126af532
                 body: body,
                 isGradient: true,
                 appBar: AppBarcomponent(

@@ -18,7 +18,6 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.settingRoute:
       return materialRoute(SettingsScreen());
     case RouteConstants.splashRoute:
-<<<<<<< HEAD
       return materialRoute(
         SplashScreen(),
       );
@@ -31,19 +30,12 @@ Route onGenerateRoute(RouteSettings settings) {
       return materialRoute(
         SignUpScreen(),
       );
-=======
-      return materialRoute(SplashScreen());
->>>>>>> d402a254026e1230d98f14ee0de1c04a126af532
+
     case RouteConstants.onboardingRoute:
       return materialRoute(OnboardingScreen());
     default:
-<<<<<<< HEAD
       return materialRoute(
         SplashScreen(),
-
       );
-=======
-      return materialRoute(SplashScreen());
->>>>>>> d402a254026e1230d98f14ee0de1c04a126af532
   }
 }

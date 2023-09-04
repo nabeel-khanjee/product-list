@@ -11,12 +11,8 @@ class ThemeSwitchApp extends StatelessWidget {
   final String image;
   final String text;
   final Function(bool value) onChnage;
-<<<<<<< HEAD
-
-=======
   final bool value;
-  
->>>>>>> d402a254026e1230d98f14ee0de1c04a126af532
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -32,56 +28,19 @@ class ThemeSwitchApp extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         title: Container(
             child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TilesIconComponent(image: image),
-            SizedBox(
-              width: 10,
-            ),
-            Text(text),
-          ],
-        )),
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                TilesIconComponent(image: image),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(text),
+              ],
+            )),
         value: value,
         onChanged: (value) => onChnage(value),
       ),
-<<<<<<< HEAD
-      tileColor: getThemeStateIsLight()
-          ? lighten(getThemeColor(context), 0.1)
-          : darken(getThemeColor(context), 0.5),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      title: Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: lighten(getThemeColor(context), 0.5)),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset(
-                    image,
-                    height: 30,
-                    fit: BoxFit.fill,
-                    color: darken(
-                      getThemeColor(context),
-                      0.3,
-                    ),
-                  ),
-                )),
-            SizedBox(
-              width: 10,
-            ),
-            Text(text),
-          ],
-        ),
-      ),
-      value: Theme.of(context).brightness == Brightness.light,
-      onChanged: (value) => onChnage(value),
-=======
->>>>>>> d402a254026e1230d98f14ee0de1c04a126af532
     );
   }
 }

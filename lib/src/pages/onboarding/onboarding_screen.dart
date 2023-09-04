@@ -6,10 +6,6 @@ class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({
     super.key,
   });
-<<<<<<< HEAD
-
-=======
->>>>>>> d402a254026e1230d98f14ee0de1c04a126af532
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,15 +21,15 @@ class OnboardingScreen extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-              colors: [
-                darken(getThemeColor(context), 0.4),
-                darken(getThemeColor(context), 0.4),
-                darken(getThemeColor(context), 0.4).withOpacity(0.1),
-                darken(getThemeColor(context), 0.4).withOpacity(0.1),
-              ],
-            )),
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [
+                    darken(getThemeColor(context), 0.4),
+                    darken(getThemeColor(context), 0.4),
+                    darken(getThemeColor(context), 0.4).withOpacity(0.1),
+                    darken(getThemeColor(context), 0.4).withOpacity(0.1),
+                  ],
+                )),
             padding: EdgeInsets.all(AppConstants.kDefaultPadding),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -57,14 +53,9 @@ class OnboardingScreen extends StatelessWidget {
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {
-                          // NavigationUtil.push(
-                          //   context,
-                          //   RouteConstants.homeRoute,
-                          // );
-
                           NavigationUtil.push(
                             context,
-                            RouteConstants.signInRoute,
+                            RouteConstants.homeRoute,
                           );
                         },
                         child: Text(StringConstants.getStarted),
@@ -75,30 +66,6 @@ class OnboardingScreen extends StatelessWidget {
               ],
             ),
           ),
-<<<<<<< HEAD
-          Align(
-            alignment: Alignment.topRight,
-            child: Padding(
-              padding: const EdgeInsets.all(
-                AppConstants.kDefaultPadding + AppConstants.kDefaultPadding,
-              ),
-              child: InkWell(
-                onTap: () {
-                  NavigationUtil.push(
-                    context,
-                    RouteConstants.settingRoute,
-                  );
-                },
-                child: Icon(
-                  Icons.settings,
-                  color: ColorConstants.white,
-                  size: 40,
-                ),
-              ),
-            ),
-          ),
-=======
->>>>>>> d402a254026e1230d98f14ee0de1c04a126af532
         ],
       ),
     );
