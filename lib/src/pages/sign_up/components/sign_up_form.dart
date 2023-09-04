@@ -146,6 +146,7 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           child: DropdownButton<Country>(
             value: selectedCountry,
+            dropdownColor: darken(getThemeColor(context), 0.25),
             onChanged: (Country? newValue) {
               setState(() {
                 selectedCountry = newValue!;
@@ -157,7 +158,10 @@ class _SignUpFormState extends State<SignUpForm> {
                     value: country,
                     child: Row(
                       children: [
-                        SvgPicture.asset(country.flag, height: 20),
+                        SvgPicture.asset(
+                          country.flag,
+                          height: 25,
+                        ),
                       ],
                     ),
                   ),

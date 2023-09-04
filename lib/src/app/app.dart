@@ -5,6 +5,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RestartWidget(
+      
       child: Consumer<MyTheme>(
         child: Container(),
         builder: (context, theme, _) {

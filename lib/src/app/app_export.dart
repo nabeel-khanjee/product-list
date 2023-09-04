@@ -1,6 +1,12 @@
 export 'package:easy_localization/easy_localization.dart' hide TextDirection;
-export 'package:provider_app/src/pages/setting/components/language_setting.dart';
-export 'package:provider_app/src/pages/setting/components/language_component.dart';
+export 'package:provider_app/src/components/card_formater.dart';
+export 'package:provider_app/src/components/text_field_component.dart';
+export 'package:provider_app/src/pages/demographic/components/dropdown_component_profile.dart';
+export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/patient_detail_screen_form.dart';
+export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/date_picker_and_dropdown_widget.dart';
+
+export 'package:provider_app/src/pages/change_language/components/language_setting.dart';
+export 'package:provider_app/src/pages/change_language/components/language_component.dart';
 export 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 export 'package:provider_app/src/pages/is_gradient_background_component/liner_gradient_for_app.dart';
 export 'package:provider_app/src/pages/setting/components/setting_screen_body.dart';
@@ -8,23 +14,39 @@ export 'package:provider_app/src/pages/is_gradient_background_component/cubit/is
 export 'package:provider_app/src/theme/switch_theme.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
 export 'dart:io';
+export 'package:provider_app/src/pages/home/components/upcomming_appointment_home_card.dart';
+export 'package:provider_app/src/pages/home/components/doctor_card_rating_home_widget.dart';
+export 'package:provider_app/src/pages/home/components/doctor_detail_and_book_now_widget.dart';
+export 'package:provider_app/src/pages/home/components/top_rated_doctors_home_card.dart';
+export 'package:provider_app/src/pages/home/components/upcomming_appointment_list.dart';
+export 'package:provider_app/src/pages/home/components/pulse_temp_weight_widget.dart';
+export 'package:provider_app/src/pages/home/components/home_widget_heading.dart';
+export 'package:provider_app/src/pages/home/components/blood_pressure_widget.dart';
+export 'package:provider_app/src/constant/font_constants.dart';
+export 'package:provider_app/src/pages/home/components/top_rated_doctors_list_args.dart';
+export 'package:provider_app/src/pages/home/components/top_rated_doctor_bg_image_component.dart';
+export 'package:provider_app/src/pages/home/components/top_rated_doctor_front_element_gradient.dart';
+
+export 'package:provider_app/src/pages/home/components/home_title_component.dart';
+export 'package:provider_app/src/pages/profile/health_profile_list.dart';
+export 'package:provider_app/src/pages/profile/expansion_panel_list_component.dart';
+export 'package:provider_app/src/pages/profile/user_profile_component.dart';
+export 'package:provider_app/src/pages/change_language/components/language_list.dart';
+export 'package:provider_app/src/pages/setting/components/app_tile_component.dart';
+export 'package:provider_app/src/pages/setting/components/text_component_setting_main.dart';
 export 'package:provider_app/src/pages/is_gradient_background_component/is_gradient_background_component.dart';
 export 'package:provider_app/src/theme/dark_theme_data.dart';
 export 'package:provider_app/src/theme/light_theme_data.dart';
 export 'package:provider_app/src/theme/switch_color_app.dart';
-
 export 'package:provider_app/src/components/app_loader.dart';
 export 'package:provider_app/src/components/retry_button.dart';
 export 'package:provider_app/src/pages/animated_drawer/animated_drawer_after_loaded_state.dart';
 export 'package:provider_app/src/pages/animated_drawer/drawer_leading_component.dart';
-
 export 'package:provider_app/src/di/injector.dart';
 export 'package:pretty_dio_logger/pretty_dio_logger.dart';
 export 'package:provider_app/src/pages/animated_drawer/animated_drawer_back_drop.dart';
 export 'package:provider_app/src/pages/profile/profile_screen.dart';
-
 export 'package:freezed_annotation/freezed_annotation.dart';
-
 export 'package:dio/dio.dart';
 export 'package:provider_app/src/app/app_cubit/app_cubit.dart';
 export 'package:provider_app/src/constant/http_constants.dart';
@@ -41,13 +63,12 @@ export 'package:provider_app/src/util/shared_preferences_util.dart';
 export 'package:uuid/uuid.dart';
 export 'package:get_it/get_it.dart';
 export 'package:provider_app/src/core/log_filter.dart';
-
 export 'package:provider_app/src/pages/animated_drawer/drawer_actions.dart';
 export 'package:provider_app/src/theme/get_theme_state.dart';
 export 'package:provider_app/src/pages/animated_drawer/advanced_drawer_child_componetn.dart';
 export 'package:provider_app/src/constant/language_constants/get_current_language_text_direction.dart';
 export 'package:provider_app/src/app/app_export.dart';
-export 'package:provider_app/src/pages/setting/components/select_languages.dart';
+export 'package:provider_app/src/pages/change_language/components/select_languages.dart';
 export 'package:logger/logger.dart';
 export 'package:provider_app/src/constant/shared_preference_constants.dart';
 export 'package:shared_preferences/shared_preferences.dart';

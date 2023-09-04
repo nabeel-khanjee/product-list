@@ -1,4 +1,6 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/animated_drawer/drawer_element_tile_widget.dart';
+import 'package:provider_app/src/pages/animated_drawer/route_list_app_args.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({
@@ -38,6 +40,7 @@ class AppDrawer extends StatelessWidget {
         children: drawerElements
             .asMap()
             .entries
+<<<<<<< HEAD
             .map((e) => Container(
                   padding: EdgeInsets.all(20),
                   child: InkWell(
@@ -77,24 +80,13 @@ class AppDrawer extends StatelessWidget {
                     ),
                   ),
                 ))
+=======
+            .map((element) => DrawerElementTileWidget(element: element))
+>>>>>>> d402a254026e1230d98f14ee0de1c04a126af532
             .toList(),
       ),
     );
   }
 }
 
-class RouteListApp {
-  final String name;
-  final String route;
-  final String icon;
-  final bool isInnerPage;
-  final int pageIndex;
 
-  RouteListApp({
-    required this.isInnerPage,
-    required this.pageIndex,
-    required this.name,
-    required this.route,
-    required this.icon,
-  });
-}

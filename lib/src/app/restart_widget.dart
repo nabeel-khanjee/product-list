@@ -1,7 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class RestartWidget extends StatefulWidget {
-  RestartWidget({required this.child});
+  RestartWidget({super.key, required this.child});
 
   final Widget child;
 

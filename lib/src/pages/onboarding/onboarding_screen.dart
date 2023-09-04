@@ -6,7 +6,10 @@ class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({
     super.key,
   });
+<<<<<<< HEAD
 
+=======
+>>>>>>> d402a254026e1230d98f14ee0de1c04a126af532
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +42,8 @@ class OnboardingScreen extends StatelessWidget {
                 Container(
                   child: Text(
                     StringConstants.onboardingText,
-                    style: FontStylesConstants.nonito(
+                    style: FontStylesConstants.gilroy(
+                      fontFamily: FontConstantc.gilroyRegular,
                       fontSize: 30,
                       color: ColorConstants.white,
                       fontWeight: FontWeight.w400,
@@ -71,6 +75,7 @@ class OnboardingScreen extends StatelessWidget {
               ],
             ),
           ),
+<<<<<<< HEAD
           Align(
             alignment: Alignment.topRight,
             child: Padding(
@@ -92,6 +97,8 @@ class OnboardingScreen extends StatelessWidget {
               ),
             ),
           ),
+=======
+>>>>>>> d402a254026e1230d98f14ee0de1c04a126af532
         ],
       ),
     );

@@ -1,4 +1,10 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/components/appbar_component.dart';
+import 'package:provider_app/src/components/main_scaffold.dart';
+import 'package:provider_app/src/pages/home/components/health_condition_widget.dart';
+import 'package:provider_app/src/pages/home/components/search_component_home.dart';
+import 'package:provider_app/src/pages/home/components/top_rated_doctors_widget.dart';
+import 'package:provider_app/src/pages/home/components/upcomming_appointment_widget_home.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({
@@ -7,11 +13,25 @@ class HomeScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: <Widget>[
-        HomePageAppBar(),
-        HomePageListView(),
-      ],
-    );
+    return MainScaffold(
+        body: SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(12),
+            child: Column(
+              children: [
+                SearchCompoentHome(),
+                HealthConditionsWidget(),
+                UpcommingAppointmentWidgetHome(),
+                TopDatedDoctorsWidget()
+              ],
+            ),
+          ),
+        ),
+        isGradient: false,
+        appBar: AppBarcomponent(
+            isTitleTowLines: true,
+            isGradient: false,
+            title: StringConstants.home,
+            isBackAppBar: false));
   }
 }

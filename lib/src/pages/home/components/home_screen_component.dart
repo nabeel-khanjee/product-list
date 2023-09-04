@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-
 class HomeScreenComponent extends StatelessWidget {
   HomeScreenComponent({
     super.key,
@@ -21,9 +20,8 @@ class HomeScreenComponent extends StatelessWidget {
         builder: (context, state) => state.maybeWhen(
           loaded: (
             pageControllerLoaded,
-          ) {
-            return AnimatedDrawerAfterLoadedState();
-          },
+          ) =>
+              AnimatedDrawerAfterLoadedState(),
           animatedDrawerIndexUpdated: (
             index,
             isOpen,
@@ -53,4 +51,12 @@ class HomeScreenComponent extends StatelessWidget {
       ),
     );
   }
+}
+
+class TopBarList {
+  final String icon;
+  final String text;
+  final int pageIndex;
+
+  TopBarList({required this.icon, required this.text, required this.pageIndex});
 }
