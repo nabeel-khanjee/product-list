@@ -82,56 +82,7 @@ class _SignUpFormState extends State<SignUpForm> {
   }
 
   Widget _mobileNumberField(BuildContext context) {
-    // return TextFormField(
-    //   decoration: InputDecoration(
-    //     fillColor: darken(getThemeColor(context), 0.25),
-    //     filled: true,
-    //     contentPadding:
-    //     EdgeInsets.symmetric(vertical: 14, horizontal: 20),
-    //     border: OutlineInputBorder(
-    //       borderRadius: BorderRadius.circular(15),
-    //
-    //       // borderRadius: BorderRadius.only(
-    //       //   topRight: Radius.circular(15),
-    //       //   bottomRight: Radius.circular(15),
-    //       // ),
-    //       borderSide: BorderSide.none,
-    //     ),
-    //     labelText: 'Contact No',
-    //     labelStyle: TextStyle(color: ColorConstants.white),
-    //
-    //     prefixIcon: Container(
-    //       padding: EdgeInsets.symmetric(horizontal: 10),
-    //       decoration: BoxDecoration(
-    //         color: darken(getThemeColor(context), 0.25),
-    //         borderRadius: BorderRadius.only(
-    //           topLeft: Radius.circular(15),
-    //           bottomLeft: Radius.circular(15),
-    //         ),
-    //       ),
-    //       child: DropdownButton<Country>(
-    //         value: selectedCountry,
-    //         onChanged: (Country? newValue) {
-    //           setState(() {
-    //             selectedCountry = newValue!;
-    //           });
-    //         },
-    //         items: countries
-    //             .map<DropdownMenuItem<Country>>(
-    //               (Country country) => DropdownMenuItem<Country>(
-    //             value: country,
-    //             child: Row(
-    //               children: [
-    //                 SvgPicture.asset(country.flag, height: 20),
-    //               ],
-    //             ),
-    //           ),
-    //         )
-    //             .toList(),
-    //       ),
-    //     ),
-    //   ),
-    // );
+ 
     return Row(
       children: [
         Container(
@@ -246,6 +197,7 @@ class _SignUpFormState extends State<SignUpForm> {
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,
         ),
+        
         prefixIcon: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/password.svg'),
@@ -282,13 +234,6 @@ class _SignUpFormState extends State<SignUpForm> {
   }
 }
 
-// class Country {
-//   final String name;
-//   final String code;
-//   final String flag;
-//
-//   Country({required this.name, required this.code, required this.flag});
-// }
 
 @freezed
 class Country with _$Country {

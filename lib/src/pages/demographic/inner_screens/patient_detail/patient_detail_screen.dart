@@ -63,42 +63,39 @@ class PatientDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Container(
-        margin: EdgeInsets.symmetric(vertical: 10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TitleDemographicsMainHeadingInnerPage(
-                titleDemographicInnerScreen: titleDemographicInnerScreen),
-            PatientDetailScreenForm(
-                formkey: formkey,
-                selectCityController: selectCityController,
-                zipCodeController: zipCodeController,
-                patientIdController: patientIdController,
-                firstNameController: firstNameController,
-                middleNameController: middleNameController,
-                lastNameController: lastNameController,
-                suffixController: suffixController,
-                onDatePickerTap: onDatePickerTap,
-                onDropdownFieldTapCity: onDropdownFieldTapCity,
-                country: country,
-                getCityValue: getCityValue,
-                selectedDate: selectedDate,
-                onDropdownFieldTapGender: onDropdownFieldTapGender,
-                gender: gender,
-                getGenderValue: getGenderValue,
-                selectedGender: selectedGender,
-                ssnController: ssnController,
-                onDropdownFieldTapCountry: onDropdownFieldTapCountry,
-                getCountryValue: getCountryValue,
-                selectedCountry: selectedCountry,
-                onDropdownFieldTapState: onDropdownFieldTapState,
-                states: states,
-                getStateValue: getStateValue,
-                selectedStates: selectedStates)
-          ],
-        ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TitleDemographicsMainHeadingInnerPage(
+              titleDemographicInnerScreen: titleDemographicInnerScreen),
+          PatientDetailScreenForm(
+              formkey: formkey,
+              selectCityController: selectCityController,
+              zipCodeController: zipCodeController,
+              patientIdController: patientIdController,
+              firstNameController: firstNameController,
+              middleNameController: middleNameController,
+              lastNameController: lastNameController,
+              suffixController: suffixController,
+              onDatePickerTap: onDatePickerTap,
+              onDropdownFieldTapCity: onDropdownFieldTapCity,
+              country: country,
+              getCityValue: getCityValue,
+              selectedDate: selectedDate,
+              onDropdownFieldTapGender: onDropdownFieldTapGender,
+              gender: gender,
+              getGenderValue: getGenderValue,
+              selectedGender: selectedGender,
+              ssnController: ssnController,
+              onDropdownFieldTapCountry: onDropdownFieldTapCountry,
+              getCountryValue: getCountryValue,
+              selectedCountry: selectedCountry,
+              onDropdownFieldTapState: onDropdownFieldTapState,
+              states: states,
+              getStateValue: getStateValue,
+              selectedStates: selectedStates)
+        ],
       ),
     );
   }
