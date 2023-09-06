@@ -2,6 +2,12 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class StringConstants {
   static String language = 'ur_PK';
+
+  static String get mgPerDl=> _getLang('mgPerDl');
+  static String get anxiety => _getLang('anxiety');
+  static String get depression => _getLang('depression');
+  static String get mild => _getLang('mild');
+  static String get moderate => _getLang('moderate');
   static String get circumference => _getLang('circumference');
   static String get waist => _getLang('waist');
   static String get head => _getLang('head');

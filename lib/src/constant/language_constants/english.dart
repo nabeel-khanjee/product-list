@@ -1,5 +1,10 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
+    'mgPerDl': 'mg/dl',
+    'anxiety': 'Anxiety',
+    'depression': 'Depression',
+    'mild': 'Mild',
+    'moderate': 'Moderate',
     'circumference': 'Circumference',
     'waist': 'Waist',
     'head': 'Head',
@@ -8,7 +13,7 @@ class EnglishConstant {
     'diabetic': 'Diabetic',
     'sugarFasting': 'Sugar (Fasting)',
     'sugarRandom': 'Sugar (Random)',
-    'inches':'inches',
+    'inches': 'inches',
     'bmi': 'BMI',
     'height': 'Height',
     'healthTracker': 'Health Tracker',
