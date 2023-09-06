@@ -41,101 +41,210 @@ class StringConstants {
   static String get medications => _getLang('medications');
   static String get edit => _getLang('edit');
   static String get secondaryInsurance => _getLang('secondaryInsurance');
+
   static String get primaryInsurance => _getLang('primaryInsurance');
+
   static String get insuranceName => _getLang('insuranceName');
+
   static String get healthPlan => _getLang('healthPlan');
+
   static String get memberId => _getLang('memberId');
+
   static String get insuranceGroup => _getLang('insuranceGroup');
+
   static String get endDate => _getLang('endDate');
+
   static String get bin => _getLang('bin');
+
   static String get pharmacy => _getLang('pharmacy');
+
   static String get payerId => _getLang('payerId');
+
   static String get rxBin => _getLang('rxBin');
+
   static String get rxGroup => _getLang('rxGroup');
+
   static String get rxGroupPCN => _getLang('rxGroupPCN');
 
   static String get contactDetails => _getLang('contactDetails');
+
   static String get cellPhoneNumber => _getLang('cellPhoneNumber');
+
   static String get residenceNumber => _getLang('residenceNumber');
+
   static String get address => _getLang('address');
+
   static String get emergancyContactInfo => _getLang('emergancyContactInfo');
+
   static String get name => _getLang('name');
+
   static String get relation => _getLang('relation');
+
   static String get contactNumber => _getLang('contactNumber');
+
   static String get yourPharmacyAddress => _getLang('yourPharmacyAddress');
+
   static String get pharmacyName => _getLang('pharmacyName');
+
   static String get city => _getLang('city');
+
   static String get phoneNumber => _getLang('phoneNumber');
+
   static String get selectCity => _getLang('selectCity');
+
   static String get zipCode => _getLang('zipCode');
+
   static String get insurance => _getLang('insurance');
+
   static String get male => _getLang('male');
+
   static String get female => _getLang('female');
+
   static String get contact => _getLang('contact');
+
   static String get personal => _getLang('personal');
+
   static String get patientDetails => _getLang('patientDetails');
+
   static String get patientID => _getLang('patientID');
+
   static String get firstName => _getLang('firstName');
+
   static String get middleName => _getLang('middleName');
+
   static String get lastName => _getLang('lastName');
+
   static String get suffix => _getLang('suffix');
+
   static String get dateOfBirth => _getLang('dateOfBirth');
+
   static String get gender => _getLang('gender');
+
   static String get ssn => _getLang('ssn');
+
   static String get selectCountry => _getLang('selectCountry');
+
   static String get selectState => _getLang('selectState');
+
   static String get onboardingText => _getLang('onboardingText');
+
   static String get demographic => _getLang('demographic');
+
   static String get searchDoctorOrAnything =>
       _getLang('searchDoctorOrAnything');
+
   static String get healthConditions => _getLang('healthConditions');
+
   static String get seeAll => _getLang('seeAll');
+
   static String get bloodPressure => _getLang('bloodPressure');
+
   static String get pulse => _getLang('pulse');
+
   static String get perMin => _getLang('perMin');
+
   static String get checkup => _getLang('checkup');
+
   static String get temp => _getLang('temp');
+
   static String get weight => _getLang('weight');
+
   static String get normal => _getLang('normal');
+
   static String get mmHg => _getLang('mmHg');
+
   static String get oF => _getLang('oF');
+
   static String get kg => _getLang('kg');
+
   static String get upcomingAppointments => _getLang('upcomingAppointments');
+
   static String get eightMar0920am => _getLang('8Mar0920am');
+
   static String get videoConsultation => _getLang('videoConsultation');
+
   static String get waitingForCall => _getLang('waitingForCall');
+
   static String get audioConsultation => _getLang('audioConsultation');
+
   static String get drRachelBrown => _getLang('drRachelBrown');
+
   static String get diagnosticTests => _getLang('diagnosticTests');
+
   static String get topDoctors => _getLang('topDoctors');
+
   static String get drLouisaJackson => _getLang('drLouisaJackson');
+
   static String get heartSpecialist => _getLang('heartSpecialist');
+
   static String get bookNow => _getLang('bookNow');
+
   static String get fourPointThree => _getLang('fourPointThree');
+
   static String get howAreYouFeelingToday => _getLang('howAreYouFeelingToday');
+
   static String get demographicProfile => _getLang('demographicProfile');
+
   static String get healthProfile => _getLang('healthProfile');
+
   static String get socialHealth => _getLang('socialHealth');
+
   static String get mentalHealth => _getLang('mentalHealth');
+
   static String get familyHealthProfile => _getLang('familyHealthProfile');
+
   static String get physicalHealth => _getLang('physicalHealth');
+
   static String get saveChanges => _getLang('saveChanges');
+
   static String get save => _getLang('save');
+
   static String get otherSettings => _getLang('otherSettings');
+
   static String get selectLanguage => _getLang('selectLanguage');
+
   static String get themeDarkLight => _getLang('themeDarkLight');
+
   static String get receiveNotifications => _getLang('receiveNotifications');
+
   static String get settings => _getLang('settings');
+
   static String get profile => _getLang('profile');
+
   static String get home => _getLang('home');
+
   static String get generalSettings => _getLang('generalSettings');
+
   static String get selectColor => _getLang('selectColor');
+
   static String get getStarted => _getLang('getStarted');
+
   static String get changeLanguage => _getLang('changeLanguage');
+
   static String get changeLocation => _getLang('changeLocation');
+
   static String get notification => _getLang('notification');
+
   static String get newsletters => _getLang('newsletters');
+
   static String get offersAndPromotions => _getLang('offersAndPromotions');
+
+  // signIn screen
+  static String get account => _getLang('account');
+
+  static String get email => _getLang('email');
+
+  static String get password => _getLang('password');
+
+  static String get forgot => _getLang('forgot');
+
+  static String get signIn => _getLang('signIn');
+
+  static String get newAccount => _getLang('newAccount');
+
+  static String get createAccount => _getLang('createAccount');
+
+  // signUp screen
 
   static String _getLang(String s) {
     return languageSelector(s);

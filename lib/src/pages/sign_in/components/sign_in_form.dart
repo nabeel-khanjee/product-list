@@ -8,15 +8,23 @@ class SignInForm extends StatelessWidget {
     return Column(
       children: [
         const SizedBox(height: 50),
-        const Text('Login to your Account'),
+        Text(StringConstants.account),
         const SizedBox(height: 25),
         _buildEmailField(context),
         const SizedBox(height: 20),
         _buildPasswordField(context),
         const SizedBox(height: 10),
-        const Align(
-          alignment: Alignment.centerRight,
-          child: Text('Forgot Password ?'),
+        GestureDetector(
+          onTap: () {
+            NavigationUtil.push(
+              context,
+              RouteConstants.forgotPasswordRoute,
+            );
+          },
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: Text(StringConstants.forgot),
+          ),
         ),
         const SizedBox(height: 40),
         _signInButton(context),
@@ -41,7 +49,7 @@ class SignInForm extends StatelessWidget {
           child: SvgPicture.asset('assets/icon/email.svg'),
         ),
         prefixIconConstraints: const BoxConstraints(minHeight: 20),
-        labelText: 'Email',
+        labelText: StringConstants.email,
         labelStyle: const TextStyle(color: ColorConstants.white),
       ),
     );
@@ -62,7 +70,7 @@ class SignInForm extends StatelessWidget {
           child: SvgPicture.asset('assets/icon/password.svg'),
         ),
         prefixIconConstraints: const BoxConstraints(minHeight: 20),
-        labelText: 'Password',
+        labelText: StringConstants.password,
         labelStyle: const TextStyle(color: ColorConstants.white),
         suffixIcon: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
@@ -90,7 +98,7 @@ class SignInForm extends StatelessWidget {
           ),
         ),
         child: Text(
-          'Sign In',
+          StringConstants.signIn,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
       ),

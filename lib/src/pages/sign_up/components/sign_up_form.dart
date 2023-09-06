@@ -98,6 +98,7 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           child: DropdownButton<Country>(
             value: selectedCountry,
+            underline: Container(),
             dropdownColor: darken(getThemeColor(context), 0.25),
             onChanged: (Country? newValue) {
               setState(() {
@@ -234,7 +235,6 @@ class _SignUpFormState extends State<SignUpForm> {
     );
   }
 }
-
 
 @freezed
 class Country with _$Country {
