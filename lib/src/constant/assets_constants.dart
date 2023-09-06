@@ -51,4 +51,14 @@ class AssetsConstants {
 static const String isEnableIconMedications =  'assets/icon/is_enable_icon_medications.png';
 static const String isDisableIconMedications =  'assets/icon/is_disable_icon_medication.png';
 
+  static String housingAndUtilitiesIcon='assets/icon/housing_and_utilities_icon.png';
+
+  static String foodIcon='assets/icon/food_icon.png';
+
+  static String transportationAndChildCareIcon='assets/icon/transportation_and_child_care.png';
+
+  static String educationAndEmploymentAndFinanceIcon='assets/icon/education_and_employment_and_finances.png';
+
+  static String personalSafetyIcon='assets/icon/personal_safety.png';
+
 }

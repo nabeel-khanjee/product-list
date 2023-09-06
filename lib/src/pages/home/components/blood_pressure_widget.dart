@@ -62,7 +62,7 @@ class BloodPressureWidget extends StatelessWidget {
                     ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 6, left: 5),
+                padding: const EdgeInsets.only(bottom: 0, left: 5),
                 child: Text(
                   StringConstants.mmHg,
                 ),

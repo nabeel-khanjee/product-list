@@ -1,14 +1,19 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/change_location/change_location.dart';
-import 'package:provider_app/src/pages/change_language/chnage_language_screen.dart';
-import 'package:provider_app/src/pages/demographic/demographic_screen.dart';
-import 'package:provider_app/src/pages/mental_health/mentail_health_screen.dart';
-import 'package:provider_app/src/pages/physical_health/physical_health_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
   switch (settings.name) {
+    case RouteConstants.housingAndUtilitiesRoute:
+      return materialRoute(const HousingAndUtilitiesScreen());
+    case RouteConstants.foodRoute:
+      return materialRoute(const FoodScreen());
+    case RouteConstants.transportationAndChildCareRoute:
+      return materialRoute(const TransportationAndChildCareScreen());
+    case RouteConstants.educationAndEmploymentAndFinanceRoute:
+      return materialRoute(const EducationAndEmploymentAndFinanceScreen());
+    case RouteConstants.personalSafetyRoute:
+      return materialRoute(const PersonalSafetyScreen());
     case RouteConstants.homeRoute:
       return materialRoute(const HomeScreen());
     case RouteConstants.demographicRoute:
@@ -26,7 +31,7 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.mentalHealthRoute:
       return materialRoute((const MentailHealthScreen()));
     case RouteConstants.socialHealthRoute:
-      return materialRoute(const PhysicalHealthScreen());
+      return materialRoute(const SocialHealthScreen());
     case RouteConstants.signInRoute:
       return materialRoute(const SignInScreen());
     case RouteConstants.signUpRoute:

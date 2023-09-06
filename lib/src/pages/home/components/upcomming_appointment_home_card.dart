@@ -12,7 +12,7 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
     return Container(
       height: 186,
       width: 160,
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -65,14 +65,12 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
                 height: 0),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset(
                 element.value.docImage,
                 height: 24,
                 width: 24,
-              ),
-              const SizedBox(
-                width: 7,
               ),
               Text(
                 element.value.docName,

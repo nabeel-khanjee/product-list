@@ -1,11 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/components/appbar_component.dart';
-import 'package:provider_app/src/components/main_scaffold.dart';
-import 'package:provider_app/src/pages/demographic/components/indicator_widgets.dart';
-import 'package:provider_app/src/pages/demographic/components/profile_indicators_widgets.dart';
-import 'package:provider_app/src/pages/demographic/inner_screens/contact_detail/contact_detail_screen.dart';
-import 'package:provider_app/src/pages/demographic/inner_screens/insurance/insurance_screen.dart';
-import 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/patient_detail_screen.dart';
 
 class DemographicScreen extends StatefulWidget {
   const DemographicScreen({super.key});
