@@ -28,6 +28,11 @@ class _PhysicalHealthScreenState extends State<PhysicalHealthScreen> {
                   onTap: () {},
                   child: Row(
                     children: [
+                      Image.asset(
+                        AssetsConstants.editTextIcon,
+                        color: getThemeColor(context),
+                        height: 22,
+                      ),
                       Text(
                         StringConstants.edit,
                         style: Theme.of(context).textTheme.titleLarge!.copyWith(

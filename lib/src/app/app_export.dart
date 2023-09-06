@@ -6,6 +6,14 @@ export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/
 export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/date_picker_and_dropdown_widget.dart';
 export 'package:provider_app/src/pages/demographic/components/title_demographics_main_page_inner_heading.dart';
 export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/date_picker_component.dart';
+export  'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/health_track_reading_widget.dart';
+export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/blood_pressure_and_bmi_widget.dart';
+export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/temp_pulserate_respiratory_widget.dart';
+export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/mental_health_tracking_widget.dart';
+export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/tracking_overview_widget.dart';
+export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/circumference_widget.dart';
+export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/diabetic_widget.dart';
+export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/is_selected_checkbox_heading.dart';
 
 export 'package:provider_app/src/pages/change_language/components/language_setting.dart';
 export 'package:provider_app/src/pages/change_language/components/language_component.dart';

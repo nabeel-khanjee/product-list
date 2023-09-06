@@ -45,5 +45,5 @@ class AssetsConstants {
   static const String diabeticIcon = 'assets/icon/diabetic_icon.png';
   static const String depressionIcon = 'assets/icon/depression_icon.png';
   static const String anxietyIcon = 'assets/icon/anxiety_icon.png';
-  
+ static const String editTextIcon = 'assets/icon/edit_text_icon.png';
 }
