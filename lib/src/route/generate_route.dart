@@ -1,4 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/forgot_password/forgot_password_screen.dart';
+import 'package:provider_app/src/pages/new_password/new_password_screen.dart';
+import 'package:provider_app/src/pages/otp/otp_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -16,31 +19,41 @@ Route onGenerateRoute(RouteSettings settings) {
       return materialRoute(const PersonalSafetyScreen());
     case RouteConstants.homeRoute:
       return materialRoute(const HomeScreen());
+
     case RouteConstants.demographicRoute:
       return materialRoute(const DemographicScreen());
+
     case RouteConstants.changeLanguageRoute:
       return materialRoute(const ChangeLanguageScreen());
+
     case RouteConstants.changeLocationRoute:
       return materialRoute(const ChangeLocationScreen());
+
     case RouteConstants.settingRoute:
       return materialRoute(const SettingsScreen());
+
     case RouteConstants.splashRoute:
       return materialRoute(const SplashScreen());
-    case RouteConstants.physicalHealthRoute:
-      return materialRoute(const PhysicalHealthScreen());
-    case RouteConstants.mentalHealthRoute:
-      return materialRoute((const MentailHealthScreen()));
-    case RouteConstants.socialHealthRoute:
-      return materialRoute(const SocialHealthScreen());
+
     case RouteConstants.signInRoute:
       return materialRoute(const SignInScreen());
+
     case RouteConstants.signUpRoute:
       return materialRoute(const SignUpScreen());
+
+    case RouteConstants.otpRoute:
+      return materialRoute(const OTPScreen());
+
+    case RouteConstants.newPasswordRoute:
+      return materialRoute(const NewPasswordScreen());
+
+    case RouteConstants.forgotPasswordRoute:
+      return materialRoute(const ForgotPasswordScreen());
+
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
+
     default:
-      return materialRoute(
-        const SplashScreen(),
-      );
+      return materialRoute(const SplashScreen());
   }
 }

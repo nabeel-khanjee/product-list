@@ -167,3 +167,8 @@ export 'package:flutter_svg/flutter_svg.dart';
 export 'package:provider_app/src/pages/sign_up/components/sign_up_form.dart';
 export 'package:provider_app/src/pages/sign_up/components/terms_conditions.dart';
 export 'package:provider_app/src/pages/sign_up/components/already_account.dart';
+export 'package:provider_app/src/pages/otp/components/otp_body.dart';
+export 'package:provider_app/src/pages/otp/components/otp_header.dart';
+export 'package:pin_code_fields/pin_code_fields.dart';
+export 'package:provider_app/src/pages/otp/components/otp_button.dart';
+export 'package:provider_app/src/pages/otp/components/otp_fields.dart';
