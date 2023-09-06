@@ -1,12 +1,15 @@
 export 'package:easy_localization/easy_localization.dart' hide TextDirection;
 export 'package:provider_app/src/components/card_formater.dart';
+export 'package:provider_app/src/pages/physical_health/inner_pages/medications/components/medication_tile_widget.dart';
+export 'package:provider_app/src/pages/physical_health/inner_pages/medications/model/medication.dart';
+
 export 'package:provider_app/src/components/text_field_component.dart';
 export 'package:provider_app/src/pages/demographic/components/dropdown_component_profile.dart';
 export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/patient_detail_screen_form.dart';
 export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/date_picker_and_dropdown_widget.dart';
 export 'package:provider_app/src/pages/demographic/components/title_demographics_main_page_inner_heading.dart';
 export 'package:provider_app/src/pages/demographic/inner_screens/patient_detail/components/date_picker_component.dart';
-export  'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/health_track_reading_widget.dart';
+export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/health_track_reading_widget.dart';
 export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/blood_pressure_and_bmi_widget.dart';
 export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/temp_pulserate_respiratory_widget.dart';
 export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/mental_health_tracking_widget.dart';
