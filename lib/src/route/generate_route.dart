@@ -1,7 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/forgot_password/forgot_password_screen.dart';
-import 'package:provider_app/src/pages/new_password/new_password_screen.dart';
-import 'package:provider_app/src/pages/otp/otp_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -9,14 +6,19 @@ Route onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
     case RouteConstants.housingAndUtilitiesRoute:
       return materialRoute(const HousingAndUtilitiesScreen());
+
     case RouteConstants.foodRoute:
       return materialRoute(const FoodScreen());
+
     case RouteConstants.transportationAndChildCareRoute:
       return materialRoute(const TransportationAndChildCareScreen());
+
     case RouteConstants.educationAndEmploymentAndFinanceRoute:
       return materialRoute(const EducationAndEmploymentAndFinanceScreen());
+
     case RouteConstants.personalSafetyRoute:
       return materialRoute(const PersonalSafetyScreen());
+
     case RouteConstants.homeRoute:
       return materialRoute(const HomeScreen());
 

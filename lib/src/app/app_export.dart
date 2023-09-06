@@ -172,3 +172,6 @@ export 'package:provider_app/src/pages/otp/components/otp_header.dart';
 export 'package:pin_code_fields/pin_code_fields.dart';
 export 'package:provider_app/src/pages/otp/components/otp_button.dart';
 export 'package:provider_app/src/pages/otp/components/otp_fields.dart';
+export 'package:provider_app/src/pages/forgot_password/forgot_password_screen.dart';
+export 'package:provider_app/src/pages/new_password/new_password_screen.dart';
+export 'package:provider_app/src/pages/otp/otp_screen.dart';
