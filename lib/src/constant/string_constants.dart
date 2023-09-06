@@ -3,7 +3,11 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
-  static String get mgPerDl=> _getLang('mgPerDl');
+  static String get tablet => _getLang('tablet');
+
+  static String get hrs => _getLang('hrs');
+  static String get every => _getLang('every');
+  static String get mgPerDl => _getLang('mgPerDl');
   static String get anxiety => _getLang('anxiety');
   static String get depression => _getLang('depression');
   static String get mild => _getLang('mild');

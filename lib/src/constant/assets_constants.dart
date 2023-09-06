@@ -45,5 +45,10 @@ class AssetsConstants {
   static const String diabeticIcon = 'assets/icon/diabetic_icon.png';
   static const String depressionIcon = 'assets/icon/depression_icon.png';
   static const String anxietyIcon = 'assets/icon/anxiety_icon.png';
- static const String editTextIcon = 'assets/icon/edit_text_icon.png';
+  static const String editTextIcon = 'assets/icon/edit_text_icon.png';
+  static const String capsuleIcon = 'assets/icon/capsule_icon.png';
+  static const String tabletIcon = 'assets/icon/tablet_icon.png';
+static const String isEnableIconMedications =  'assets/icon/is_enable_icon_medications.png';
+static const String isDisableIconMedications =  'assets/icon/is_disable_icon_medication.png';
+
 }
