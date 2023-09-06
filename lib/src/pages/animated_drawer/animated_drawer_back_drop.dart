@@ -10,12 +10,12 @@ class AnimatedDrawerBackDrop extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      child: AdvancedDrawerChildComponent(),
       decoration: BoxDecoration(
         gradient: linerGradientForApp(
           color: getThemeColor(context),
         ),
       ),
+      child: const AdvancedDrawerChildComponent(),
     );
   }
 }

@@ -9,7 +9,7 @@ class SettingScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -55,7 +55,7 @@ class SettingScreenBody extends StatelessWidget {
                       .updateStateDarkLight(value: value);
                 },
                 text: StringConstants.themeDarkLight),
-            AppColorPicker(),
+            const AppColorPicker(),
           ],
         ),
       ),

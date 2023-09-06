@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void _navigateAfterDelay() {
-    Timer(Duration(seconds: 0), () async {
+    Timer(const Duration(seconds: 0), () async {
       await NavigationUtil.push(
         context,
         RouteConstants.onboardingRoute,
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
         this.theme = theme;
         return Scaffold(
           backgroundColor: darken(getThemeColor(context), 0.4),
-          body: Center(
+          body: const Center(
             child: FlutterLogo(
               size: 100,
             ),

@@ -48,11 +48,11 @@ Future<void> _initializeData({bool enableLogging = true}) async {
   final dio = Dio(
     BaseOptions(
       baseUrl: HttpConstants.base,
-      receiveTimeout: Duration(seconds: 60000),
+      receiveTimeout: const Duration(seconds: 60000),
       // 1 minute
-      connectTimeout: Duration(seconds: 60000),
+      connectTimeout: const Duration(seconds: 60000),
       // 1 minute
-      sendTimeout: Duration(seconds: 60000),
+      sendTimeout: const Duration(seconds: 60000),
       // 1 minute
       contentType: 'application/json',
     ),

@@ -14,7 +14,7 @@ class HealthConditionsWidget extends StatelessWidget {
             topPadding: 22,
             isSeeAll: true,
             title: StringConstants.healthConditions),
-        Container(
+        const SizedBox(
           height: 190,
           child: Row(children: [
             BloodPressureWidget(),

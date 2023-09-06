@@ -3,7 +3,28 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
-  static String get  secondaryInsurance=> _getLang('secondaryInsurance');
+  static String get mgPerDl=> _getLang('mgPerDl');
+  static String get anxiety => _getLang('anxiety');
+  static String get depression => _getLang('depression');
+  static String get mild => _getLang('mild');
+  static String get moderate => _getLang('moderate');
+  static String get circumference => _getLang('circumference');
+  static String get waist => _getLang('waist');
+  static String get head => _getLang('head');
+  static String get pulseRate => _getLang('pulseRate');
+  static String get respiratory => _getLang('respiratory');
+  static String get diabetic => _getLang('diabetic');
+  static String get sugarFasting => _getLang('sugarFasting');
+  static String get sugarRandom => _getLang('sugarRandom');
+  static String get inches => _getLang('inches');
+  static String get bmi => _getLang('bmi');
+  static String get height => _getLang('height');
+  static String get kgPerMerterSquare => _getLang('kgPerMerterSquare');
+  static String get merterSquare => _getLang('merterSquare');
+  static String get healthTracker => _getLang('healthTracker');
+  static String get medications => _getLang('medications');
+  static String get edit => _getLang('edit');
+  static String get secondaryInsurance => _getLang('secondaryInsurance');
   static String get primaryInsurance => _getLang('primaryInsurance');
   static String get insuranceName => _getLang('insuranceName');
   static String get healthPlan => _getLang('healthPlan');
@@ -16,9 +37,6 @@ class StringConstants {
   static String get rxBin => _getLang('rxBin');
   static String get rxGroup => _getLang('rxGroup');
   static String get rxGroupPCN => _getLang('rxGroupPCN');
-  
-  
-  
 
   static String get contactDetails => _getLang('contactDetails');
   static String get cellPhoneNumber => _getLang('cellPhoneNumber');

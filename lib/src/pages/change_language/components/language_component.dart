@@ -14,46 +14,45 @@ class LanguageConponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => onTap(true),
-      child: Container(
-          child: Column(
+      child: Column(
         children: [
-          Row(children: [
-            Container(
-              height: 20,
-              width: 20,
-              child: Container(
-                margin: EdgeInsets.all(2),
-                height: 10,
-                width: 10,
-                decoration: isSelected
-                    ? BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                        color: darken(getThemeColor(context), 0.15))
-                    : BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                        color: lighten(getThemeColor(context), 0.3),
-                      ),
-              ),
-              decoration: isSelected
-                  ? BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: darken(getThemeColor(context), 0.1))
-                  : BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: lighten(getThemeColor(context), 0.3),
-                    ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: Text(text),
-            ),
-          ]),
-          Container(
-            height: 0.5,
-            color: lighten(getThemeColor(context), 0.2),
-          )
+      Row(children: [
+        Container(
+          height: 20,
+          width: 20,
+          decoration: isSelected
+              ? BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  color: darken(getThemeColor(context), 0.1))
+              : BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  color: lighten(getThemeColor(context), 0.3),
+                ),
+          child: Container(
+            margin: const EdgeInsets.all(2),
+            height: 10,
+            width: 10,
+            decoration: isSelected
+                ? BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: darken(getThemeColor(context), 0.15))
+                : BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: lighten(getThemeColor(context), 0.3),
+                  ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Text(text),
+        ),
+      ]),
+      Container(
+        height: 0.5,
+        color: lighten(getThemeColor(context), 0.2),
+      )
         ],
-      )),
+      ),
     );
   }
 }

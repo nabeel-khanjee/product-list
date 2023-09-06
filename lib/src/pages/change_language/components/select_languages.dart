@@ -29,7 +29,7 @@ class _SelecRadioListComponentState extends State<SelectRadioListComponent> {
         children: [
           ListView.builder(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: widget.isLanguage
                 ? languageSetting.length
                 : locationSetting.length,
@@ -60,7 +60,7 @@ class _SelecRadioListComponentState extends State<SelectRadioListComponent> {
                   : locationSetting[index].name,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           ElevatedButton(
               onPressed: widget.isLanguage
                   ? languageCode != null
@@ -70,8 +70,8 @@ class _SelecRadioListComponentState extends State<SelectRadioListComponent> {
                               languageCode!,
                               region!,
                             ),
-                          );
-                          RestartWidget.restartApp(context);
+                          ).then((value) => RestartWidget.restartApp(context));
+                          
                         }
                       : null
                   : null,

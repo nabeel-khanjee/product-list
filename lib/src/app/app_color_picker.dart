@@ -19,7 +19,7 @@ class AppColorPicker extends StatelessWidget {
           Text(
             StringConstants.selectColor,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           MaterialColorPicker(

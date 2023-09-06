@@ -8,10 +8,10 @@ class ProfileScreen extends StatelessWidget {
     return IsGradientBackGround(
         body: Column(
           children: [
-            UserProfileComponent(),
+            const UserProfileComponent(),
             Container(
-              padding: EdgeInsets.all(3),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.all(3),
+              decoration: const BoxDecoration(
                   color: ColorConstants.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20),
@@ -26,7 +26,7 @@ class ProfileScreen extends StatelessWidget {
                         context, RouteConstants.demographicRoute);
                   },
                 ),
-                ExpansionPanelListComponent(),
+                const ExpansionPanelListComponent(),
                 AppTileComponent(
                   isExpandable: false,
                   test: StringConstants.familyHealthProfile,

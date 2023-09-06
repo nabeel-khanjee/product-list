@@ -1,4 +1,5 @@
-import '../../../app/app_export.dart';
+
+import 'package:provider_app/src/app/app_export.dart';
 
 part 'sign_up_form.freezed.dart';
 
@@ -11,30 +12,30 @@ class SignUpForm extends StatefulWidget {
 
 class _SignUpFormState extends State<SignUpForm> {
   var selectedCountry =
-      Country(name: "Pakistan", code: "+92", flag: "assets/icon/pk.svg");
+      const Country(name: "Pakistan", code: "+92", flag: "assets/icon/pk.svg");
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 30),
+        const SizedBox(height: 30),
         _usernameField(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         _emailField(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         _mobileNumberField(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         _locationField(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         _passwordField(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         _confirmPasswordField(context),
-        SizedBox(height: 20),
-        TermsConditions(),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
+        const TermsConditions(),
+        const SizedBox(height: 20),
         _signUpButton(context),
-        SizedBox(height: 20),
-        AlreadyAccount(),
+        const SizedBox(height: 20),
+        const AlreadyAccount(),
       ],
     );
   }
@@ -44,7 +45,7 @@ class _SignUpFormState extends State<SignUpForm> {
       decoration: InputDecoration(
         fillColor: darken(getThemeColor(context), 0.25),
         filled: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,
@@ -53,9 +54,9 @@ class _SignUpFormState extends State<SignUpForm> {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/person.svg'),
         ),
-        prefixIconConstraints: BoxConstraints(minHeight: 20),
+        prefixIconConstraints: const BoxConstraints(minHeight: 20),
         labelText: 'Name',
-        labelStyle: TextStyle(color: ColorConstants.white),
+        labelStyle: const TextStyle(color: ColorConstants.white),
       ),
     );
   }
@@ -65,7 +66,7 @@ class _SignUpFormState extends State<SignUpForm> {
       decoration: InputDecoration(
         fillColor: darken(getThemeColor(context), 0.25),
         filled: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,
@@ -74,9 +75,9 @@ class _SignUpFormState extends State<SignUpForm> {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/email.svg'),
         ),
-        prefixIconConstraints: BoxConstraints(minHeight: 20),
+        prefixIconConstraints: const BoxConstraints(minHeight: 20),
         labelText: 'Email',
-        labelStyle: TextStyle(color: ColorConstants.white),
+        labelStyle: const TextStyle(color: ColorConstants.white),
       ),
     );
   }
@@ -86,11 +87,11 @@ class _SignUpFormState extends State<SignUpForm> {
     return Row(
       children: [
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           decoration: BoxDecoration(
             color: darken(getThemeColor(context), 0.25),
             border: Border.all(color: ColorConstants.white),
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(15),
               bottomLeft: Radius.circular(15),
             ),
@@ -126,8 +127,8 @@ class _SignUpFormState extends State<SignUpForm> {
               fillColor: darken(getThemeColor(context), 0.25),
               filled: true,
               contentPadding:
-                  EdgeInsets.symmetric(vertical: 14, horizontal: 20),
-              border: OutlineInputBorder(
+                  const EdgeInsets.symmetric(vertical: 14, horizontal: 20),
+              border: const OutlineInputBorder(
                 // borderRadius: BorderRadius.circular(15),
 
                 borderRadius: BorderRadius.only(
@@ -137,7 +138,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 borderSide: BorderSide.none,
               ),
               labelText: 'Contact No',
-              labelStyle: TextStyle(color: ColorConstants.white),
+              labelStyle: const TextStyle(color: ColorConstants.white),
             ),
           ),
         ),
@@ -150,7 +151,7 @@ class _SignUpFormState extends State<SignUpForm> {
       decoration: InputDecoration(
         fillColor: darken(getThemeColor(context), 0.25),
         filled: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,
@@ -159,9 +160,9 @@ class _SignUpFormState extends State<SignUpForm> {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/location.svg'),
         ),
-        prefixIconConstraints: BoxConstraints(minHeight: 20),
+        prefixIconConstraints: const BoxConstraints(minHeight: 20),
         labelText: 'Location',
-        labelStyle: TextStyle(color: ColorConstants.white),
+        labelStyle: const TextStyle(color: ColorConstants.white),
       ),
     );
   }
@@ -171,7 +172,7 @@ class _SignUpFormState extends State<SignUpForm> {
       decoration: InputDecoration(
         fillColor: darken(getThemeColor(context), 0.25),
         filled: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,
@@ -180,9 +181,9 @@ class _SignUpFormState extends State<SignUpForm> {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/password.svg'),
         ),
-        prefixIconConstraints: BoxConstraints(minHeight: 20),
+        prefixIconConstraints: const BoxConstraints(minHeight: 20),
         labelText: 'Password',
-        labelStyle: TextStyle(color: ColorConstants.white),
+        labelStyle: const TextStyle(color: ColorConstants.white),
       ),
     );
   }
@@ -192,7 +193,7 @@ class _SignUpFormState extends State<SignUpForm> {
       decoration: InputDecoration(
         fillColor: darken(getThemeColor(context), 0.25),
         filled: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,
@@ -202,9 +203,9 @@ class _SignUpFormState extends State<SignUpForm> {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/password.svg'),
         ),
-        prefixIconConstraints: BoxConstraints(minHeight: 20),
+        prefixIconConstraints: const BoxConstraints(minHeight: 20),
         labelText: 'Confirm Password',
-        labelStyle: TextStyle(color: ColorConstants.white),
+        labelStyle: const TextStyle(color: ColorConstants.white),
       ),
     );
   }
@@ -245,7 +246,7 @@ class Country with _$Country {
 }
 
 List<Country> countries = [
-  Country(name: "Pakistan", code: "+92", flag: "assets/icon/pk.svg"),
-  Country(name: "USA", code: "+1", flag: "assets/icon/us.svg"),
-  Country(name: "UAE", code: "+971", flag: "assets/icon/ae.svg"),
+  const Country(name: "Pakistan", code: "+92", flag: "assets/icon/pk.svg"),
+  const Country(name: "USA", code: "+1", flag: "assets/icon/us.svg"),
+  const Country(name: "UAE", code: "+971", flag: "assets/icon/ae.svg"),
 ];

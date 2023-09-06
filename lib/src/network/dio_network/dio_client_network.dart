@@ -58,13 +58,13 @@ class DioClientNetwork {
         LoggerUtil.logs('New token: $token');
       } else {
         /// Get token from shared pref
-        final _oldToken = await getIt<SharedPreferencesUtil>()
+        final oldToken = await getIt<SharedPreferencesUtil>()
             .getString(SharedPreferenceConstants.apiAuthToken);
-        LoggerUtil.logs('SharedPreferenceConstants.apiAuthToken: $_oldToken');
-        if (_oldToken != '') {
+        LoggerUtil.logs('SharedPreferenceConstants.apiAuthToken: $oldToken');
+        if (oldToken != '') {
           /// Save token in Dio class
-          getIt<DioApiServices>().authToken = _oldToken;
-          dio.options.headers['Authorization'] = _oldToken;
+          getIt<DioApiServices>().authToken = oldToken;
+          dio.options.headers['Authorization'] = oldToken;
         }
       }
     }
@@ -74,17 +74,17 @@ class DioClientNetwork {
 
   BaseOptions setBaseOptions() {
     return BaseOptions(
-      connectTimeout: Duration(seconds: 300000),
+      connectTimeout: const Duration(seconds: 300000),
       baseUrl: HttpConstants.base,
     );
   }
 
   dynamic requestInterceptor(RequestOptions options) async {
     if (getAuthToken() == null) {
-      final _token = await getIt<SharedPreferencesUtil>()
+      final token = await getIt<SharedPreferencesUtil>()
           .getString(SharedPreferenceConstants.apiAuthToken);
-      if (_token != null) {
-        getIt<DioApiServices>().authToken = _token;
+      if (token != null) {
+        getIt<DioApiServices>().authToken = token;
         // dio.options.headers[WebHeadersEnum.token] =
         //     getIt<DioApiServices>().authToken = _token;
       } else {}

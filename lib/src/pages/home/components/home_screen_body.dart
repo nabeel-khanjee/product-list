@@ -16,8 +16,8 @@ class HomeScreenBody extends StatelessWidget {
     return MainScaffold(
         body: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.all(12),
-            child: Column(
+            padding: const EdgeInsets.all(12),
+            child: const Column(
               children: [
                 SearchCompoentHome(),
                 HealthConditionsWidget(),

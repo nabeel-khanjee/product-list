@@ -10,7 +10,7 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
     BorderSide borderSide =
     BorderSide(color: lighten(getThemeColor(context), 0.1), width: 20);
     return AdvancedDrawer(
-        backdrop: AnimatedDrawerBackDrop(),
+        backdrop: const AnimatedDrawerBackDrop(),
         controller: BlocProvider.of<AnimatedDrawerCubit>(context)
             .advancedDrawerController,
         animationCurve: Curves.easeInOut,
@@ -31,14 +31,14 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
                 top: borderSide,
                 left: borderSide,
                 right: borderSide)),
-        drawer: AppDrawer(),
+        drawer: const AppDrawer(),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: Scaffold(
             body: PageView(
               controller:
               BlocProvider.of<AnimatedDrawerCubit>(context).pageController,
-              children: [HomeScreenBody(), ProfileScreen(), SettingsScreen()],
+              children: const [HomeScreenBody(), ProfileScreen(), SettingsScreen()],
             ),
           ),
         ));

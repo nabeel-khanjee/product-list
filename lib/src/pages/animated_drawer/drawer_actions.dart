@@ -5,7 +5,7 @@ Future<AnimatedDrawerCubit> drawerStateChnageUpdateIndex(
         required bool isOpen,
         required AdvancedDrawerController advancedDrawerController,
         required BuildContext context}) async =>
-    await BlocProvider.of<AnimatedDrawerCubit>(context)
+    BlocProvider.of<AnimatedDrawerCubit>(context)
       ..updateIndex(
         advancedDrawerController: advancedDrawerController,
           index: index ??

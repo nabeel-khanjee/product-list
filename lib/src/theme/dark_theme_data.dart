@@ -3,15 +3,15 @@ import 'package:provider_app/src/app/app_export.dart';
 ThemeData darkThemeData(MyTheme theme) {
   return ThemeData(
     drawerTheme:
-        DrawerThemeData(backgroundColor: Colors.transparent, elevation: 0),
+        const DrawerThemeData(backgroundColor: Colors.transparent, elevation: 0),
     useMaterial3: true,
     colorSchemeSeed: theme.getColor(),
     brightness: Brightness.dark,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-          fixedSize: MaterialStatePropertyAll(Size.fromHeight(60)),
-          maximumSize: MaterialStatePropertyAll(Size.fromHeight(60)),
-          minimumSize: MaterialStatePropertyAll(Size.fromHeight(60)),
+          fixedSize: const MaterialStatePropertyAll(Size.fromHeight(60)),
+          maximumSize: const MaterialStatePropertyAll(Size.fromHeight(60)),
+          minimumSize: const MaterialStatePropertyAll(Size.fromHeight(60)),
           shape: MaterialStatePropertyAll(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)))),
     ),

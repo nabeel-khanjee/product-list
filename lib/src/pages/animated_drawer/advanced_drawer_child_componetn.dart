@@ -39,7 +39,7 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 3, right: 5),
+                      margin: const EdgeInsets.only(left: 3, right: 5),
                       height: 50,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -75,9 +75,9 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                           ? lighten(getThemeColor(context))
                           : darken(getThemeColor(context), 0.5),
                     ),
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     child: Container(
-                        padding: EdgeInsets.all(2),
+                        padding: const EdgeInsets.all(2),
                         decoration: BoxDecoration(
                           border: Border.all(
                               color: lighten(getThemeColor(context), 0.3)),

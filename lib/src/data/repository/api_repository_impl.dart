@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:logger/logger.dart';
 import 'package:provider_app/src/data/common/object_mapper.dart';
 import 'package:provider_app/src/data/datasource/api/at_care_api.dart';
@@ -55,7 +54,7 @@ class ApiRepositoryImpl extends ApiRepository {
 
   @override
   Future<Result<List<Appointment>>> getPastAppointments(
-      String endDate, String startDate) async {
+      String startDate, String endDate) async {
     try {
       final response = await atCareApi.getPastAppointments(
           endDate: endDate, startDate: startDate);
@@ -162,10 +161,10 @@ class ApiRepositoryImpl extends ApiRepository {
 
   @override
   Future<Result<List<MedicalRecords>>> getMedicalRecordsHistoryB(
-      String startFrom, String endedTo) async {
+      String a, String b) async {
     try {
       final response =
-          await atCareApi.getMedicalRecordsHistoryB(startFrom, endedTo);
+          await atCareApi.getMedicalRecordsHistoryB(a, b);
       return Result.success(objectMapper.toMedicalRecordsHistory(response));
     } on Exception catch (e) {
       logger.e(e);

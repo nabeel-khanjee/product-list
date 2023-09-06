@@ -2,32 +2,40 @@ import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/change_location/change_location.dart';
 import 'package:provider_app/src/pages/change_language/chnage_language_screen.dart';
 import 'package:provider_app/src/pages/demographic/demographic_screen.dart';
+import 'package:provider_app/src/pages/mental_health/mentail_health_screen.dart';
+import 'package:provider_app/src/pages/physical_health/physical_health_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
   switch (settings.name) {
     case RouteConstants.homeRoute:
-      return materialRoute(HomeScreen());
+      return materialRoute(const HomeScreen());
     case RouteConstants.demographicRoute:
-      return materialRoute(DemographicScreen());
+      return materialRoute(const DemographicScreen());
     case RouteConstants.changeLanguageRoute:
-      return materialRoute(ChangeLanguageScreen());
+      return materialRoute(const ChangeLanguageScreen());
     case RouteConstants.changeLocationRoute:
-      return materialRoute(ChangeLocationScreen());
+      return materialRoute(const ChangeLocationScreen());
     case RouteConstants.settingRoute:
-      return materialRoute(SettingsScreen());
+      return materialRoute(const SettingsScreen());
     case RouteConstants.splashRoute:
-      return materialRoute(SplashScreen());
+      return materialRoute(const SplashScreen());
+    case RouteConstants.physicalHealthRoute:
+      return materialRoute(const PhysicalHealthScreen());
+    case RouteConstants.mentalHealthRoute:
+      return materialRoute((const MentailHealthScreen()));
+    case RouteConstants.socialHealthRoute:
+      return materialRoute(const PhysicalHealthScreen());
     case RouteConstants.signInRoute:
-      return materialRoute(SignInScreen());
+      return materialRoute(const SignInScreen());
     case RouteConstants.signUpRoute:
-      return materialRoute(SignUpScreen());
+      return materialRoute(const SignUpScreen());
     case RouteConstants.onboardingRoute:
-      return materialRoute(OnboardingScreen());
+      return materialRoute(const OnboardingScreen());
     default:
       return materialRoute(
-        SplashScreen(),
+        const SplashScreen(),
       );
   }
 }

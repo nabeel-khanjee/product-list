@@ -29,7 +29,7 @@ class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
   int _bottomNavIndex = 0;
   AdvancedDrawerController _advancedDrawerController =
   AdvancedDrawerController();
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
 
   int get getBottomNavIndex => _bottomNavIndex;
   AdvancedDrawerController get advancedDrawerController =>

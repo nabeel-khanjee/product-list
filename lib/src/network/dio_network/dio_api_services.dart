@@ -187,13 +187,13 @@ class DioApiServices {
 abstract class NetworkExceptions {
   static Future<Map<String, dynamic>> getDioException(
     Object error,
-    Function() _onAPIErrorDetection,
+    Function() onAPIErrorDetection,
   ) async {
     try {
       if (error is DioException && error.error is! SocketException) {
         switch (error.response?.statusCode) {
           case 403:
-            await _onAPIErrorDetection();
+            await onAPIErrorDetection();
             return {
               'status': false,
               'message': "StringConstants.loginExpired",

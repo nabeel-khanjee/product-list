@@ -17,7 +17,7 @@ class TextFormFieldComponentProfile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: TextFormField(
-        strutStyle: StrutStyle(
+        strutStyle: const StrutStyle(
           height: 1.3,
         ),
         validator: (value) {
@@ -47,7 +47,7 @@ class TextFormFieldComponentProfile extends StatelessWidget {
                       color: ColorConstants.greyText,
                     )),
             border: UnderlineInputBorder(
-                borderSide: BorderSide(color: ColorConstants.white, width: 0),
+                borderSide: const BorderSide(color: ColorConstants.white, width: 0),
                 borderRadius: BorderRadius.circular(15))),
       ),
     );

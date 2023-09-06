@@ -62,7 +62,7 @@ class DemographicInsuranceScreen extends StatelessWidget {
                 label: StringConstants.insuranceName),
             DatePickerComponent(
                 datePickerTitle: StringConstants.healthPlan,
-                country: [],
+                country: const [],
                 getCityValue: (p1) {},
                 onDropdownFieldTapCity: () {},
                 onDatePickerTap: onTapPrimaryInsuranceHealthPlan,
@@ -75,7 +75,7 @@ class DemographicInsuranceScreen extends StatelessWidget {
                 label: StringConstants.insuranceGroup),
             DatePickerComponent(
                 datePickerTitle: StringConstants.endDate,
-                country: [],
+                country: const [],
                 getCityValue: (p1) {},
                 onDropdownFieldTapCity: () {},
                 onDatePickerTap: onTapPrimaryInsuranceEndDate,
@@ -91,7 +91,7 @@ class DemographicInsuranceScreen extends StatelessWidget {
                 label: StringConstants.insuranceName),
             DatePickerComponent(
                 datePickerTitle: StringConstants.healthPlan,
-                country: [],
+                country: const [],
                 getCityValue: (p1) {},
                 onDropdownFieldTapCity: () {},
                 onDatePickerTap: onTapSecondaryInsuranceHealthPlan,
@@ -105,7 +105,7 @@ class DemographicInsuranceScreen extends StatelessWidget {
                 label: StringConstants.insuranceGroup),
             DatePickerComponent(
                 datePickerTitle: StringConstants.endDate,
-                country: [],
+                country: const [],
                 getCityValue: (p1) {},
                 onDropdownFieldTapCity: () {},
                 onDatePickerTap: onTapSecondaryInsuranceEndDate,

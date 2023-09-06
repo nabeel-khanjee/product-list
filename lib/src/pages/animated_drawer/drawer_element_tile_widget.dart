@@ -11,7 +11,7 @@ class DrawerElementTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: InkWell(
         onTap: () {
           if (element.value.isInnerPage) {
@@ -35,7 +35,7 @@ class DrawerElementTileWidget extends StatelessWidget {
               element.value.icon,
               height: 20,
             ),
-            SizedBox(
+            const SizedBox(
               width: 5,
             ),
             Text(

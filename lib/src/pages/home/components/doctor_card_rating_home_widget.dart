@@ -14,36 +14,34 @@ class DoctorCardRatingHomeWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Container(
-          child: Container(
-            margin: EdgeInsets.all(10),
-            padding:
-                EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-            decoration: new BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.grey.shade200.withOpacity(0.7)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  AssetsConstants.ratingIcon,
-                  width: 13,
-                  height: 13,
+          margin: const EdgeInsets.all(10),
+          padding:
+              const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.grey.shade200.withOpacity(0.7)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                AssetsConstants.ratingIcon,
+                width: 13,
+                height: 13,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 4.0),
+                child: Text(
+                  element.value.rating,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium!
+                      .copyWith(
+                          color: ColorConstants.black,
+                          fontFamily: FontConstantc.gilroyMedium),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 4.0),
-                  child: Text(
-                    element.value.rating,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium!
-                        .copyWith(
-                            color: ColorConstants.black,
-                            fontFamily: FontConstantc.gilroyMedium),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         )
       ],
