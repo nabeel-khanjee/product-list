@@ -1,11 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/components/appbar_component.dart';
-import 'package:provider_app/src/components/main_scaffold.dart';
-import 'package:provider_app/src/pages/demographic/components/indicator_widgets.dart';
-import 'package:provider_app/src/pages/demographic/components/profile_indicators_widgets.dart';
-import 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/health_tracker_screen.dart';
-import 'package:provider_app/src/pages/physical_health/inner_pages/medications/medications_screen.dart';
-
 class PhysicalHealthScreen extends StatefulWidget {
   const PhysicalHealthScreen({super.key});
 

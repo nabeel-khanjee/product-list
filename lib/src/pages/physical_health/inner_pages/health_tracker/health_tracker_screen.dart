@@ -35,9 +35,3 @@ class _HealthTrackerScreemState extends State<HealthTrackerScreem> {
     );
   }
 }
-
-
-
-
-
-

@@ -21,7 +21,6 @@ class AppBarcomponent extends StatelessWidget {
     return PreferredSize(
       preferredSize: const Size.fromHeight(kToolbarHeight),
       child: AppBar(
-        
           centerTitle: isBackAppBar,
           actions: !isBackAppBar
               ? [
@@ -47,12 +46,17 @@ class AppBarcomponent extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 3.0, right: 3),
-                    child: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
+                    child: IconButton(
+                        onPressed: () {}, icon: const Icon(Icons.menu)),
                   )
                 ]
               : actionTextButton != null
                   ? [actionTextButton!]
-                  : null,
+                  : [
+                      Container(
+                        width: 50,
+                      )
+                    ],
           backgroundColor: getThemeStateIsLight()
               ? isGradient
                   ? Colors.transparent
@@ -73,8 +77,13 @@ class AppBarcomponent extends StatelessWidget {
                 )
               : const DrawerLeadingComponent(),
           title: !isTitleTowLines
-              ? Text(
-                  title,
+              ? SizedBox(
+                  // width: MediaQuery.of(context).size.width / 1,
+                  child: Text(
+                    title,
+                    maxLines: 2,
+                    textAlign: TextAlign.center,
+                  ),
                 )
               : const HomeTitleComponent()),
     );

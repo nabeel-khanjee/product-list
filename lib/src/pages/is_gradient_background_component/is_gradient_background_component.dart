@@ -1,6 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/components/appbar_component.dart';
-import 'package:provider_app/src/components/main_scaffold.dart';
 
 class IsGradientBackGround extends StatelessWidget {
   const IsGradientBackGround({
