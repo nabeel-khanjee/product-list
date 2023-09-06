@@ -10,15 +10,15 @@ class ForgotPasswordHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 40),
-          Align(
+          const SizedBox(height: 40),
+          const Align(
             alignment: Alignment.centerLeft,
             child: Icon(
               Icons.arrow_back,
               color: ColorConstants.white,
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             'Forgot Password',
             style: Theme.of(context)
@@ -26,7 +26,7 @@ class ForgotPasswordHeader extends StatelessWidget {
                 .labelMedium!
                 .copyWith(fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             'Please enter your email address to receive a verification code',
             textAlign: TextAlign.center,

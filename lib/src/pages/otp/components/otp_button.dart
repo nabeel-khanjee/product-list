@@ -31,7 +31,7 @@ class OTPButton extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 40),
+        const SizedBox(height: 40),
         RichText(
           text: TextSpan(
             text: 'Problem with code? ',
