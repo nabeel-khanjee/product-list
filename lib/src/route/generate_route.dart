@@ -1,53 +1,62 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/change_location/change_location.dart';
-import 'package:provider_app/src/pages/change_language/chnage_language_screen.dart';
-import 'package:provider_app/src/pages/demographic/demographic_screen.dart';
-import 'package:provider_app/src/pages/forgot_password/forgot_password_screen.dart';
-import 'package:provider_app/src/pages/new_password/new_password_screen.dart';
-import 'package:provider_app/src/pages/otp/otp_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
   switch (settings.name) {
+    case RouteConstants.housingAndUtilitiesRoute:
+      return materialRoute(const HousingAndUtilitiesScreen());
+
+    case RouteConstants.foodRoute:
+      return materialRoute(const FoodScreen());
+
+    case RouteConstants.transportationAndChildCareRoute:
+      return materialRoute(const TransportationAndChildCareScreen());
+
+    case RouteConstants.educationAndEmploymentAndFinanceRoute:
+      return materialRoute(const EducationAndEmploymentAndFinanceScreen());
+
+    case RouteConstants.personalSafetyRoute:
+      return materialRoute(const PersonalSafetyScreen());
+
     case RouteConstants.homeRoute:
-      return materialRoute(HomeScreen());
+      return materialRoute(const HomeScreen());
 
     case RouteConstants.demographicRoute:
-      return materialRoute(DemographicScreen());
+      return materialRoute(const DemographicScreen());
 
     case RouteConstants.changeLanguageRoute:
-      return materialRoute(ChangeLanguageScreen());
+      return materialRoute(const ChangeLanguageScreen());
 
     case RouteConstants.changeLocationRoute:
-      return materialRoute(ChangeLocationScreen());
+      return materialRoute(const ChangeLocationScreen());
 
     case RouteConstants.settingRoute:
-      return materialRoute(SettingsScreen());
+      return materialRoute(const SettingsScreen());
 
     case RouteConstants.splashRoute:
-      return materialRoute(SplashScreen());
+      return materialRoute(const SplashScreen());
 
     case RouteConstants.signInRoute:
-      return materialRoute(SignInScreen());
+      return materialRoute(const SignInScreen());
 
     case RouteConstants.signUpRoute:
-      return materialRoute(SignUpScreen());
+      return materialRoute(const SignUpScreen());
 
     case RouteConstants.otpRoute:
-      return materialRoute(OTPScreen());
+      return materialRoute(const OTPScreen());
 
     case RouteConstants.newPasswordRoute:
-      return materialRoute(NewPasswordScreen());
+      return materialRoute(const NewPasswordScreen());
 
     case RouteConstants.forgotPasswordRoute:
-      return materialRoute(ForgotPasswordScreen());
+      return materialRoute(const ForgotPasswordScreen());
 
     case RouteConstants.onboardingRoute:
-      return materialRoute(OnboardingScreen());
+      return materialRoute(const OnboardingScreen());
 
     default:
-      return materialRoute(SplashScreen());
-      // return materialRoute(ForgotPasswordScreen());
+      return materialRoute(const SplashScreen());
+    // return materialRoute(ForgotPasswordScreen());
   }
 }

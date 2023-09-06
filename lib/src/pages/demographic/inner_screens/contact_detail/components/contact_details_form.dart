@@ -120,6 +120,7 @@ class ContactDetailScreenForm extends StatelessWidget {
                 value: selectedCountry,
               ),
               TitleDemographicsMainHeadingInnerPage(
+                
                   titleDemographicInnerScreen:
                       subHeadingOneDemographicInnerScreen),
               TextFormFieldComponentProfile(

@@ -20,7 +20,7 @@ class AppTileComponent extends StatelessWidget {
       onTap: onTap,
       child: Container(
         margin: !isExpandable
-            ? EdgeInsets.symmetric(vertical: 10)
+            ? const EdgeInsets.symmetric(vertical: 10)
             : EdgeInsets.zero,
         padding: const EdgeInsets.all(10),
         width: double.infinity,
@@ -34,7 +34,7 @@ class AppTileComponent extends StatelessWidget {
         child: Row(
           children: [
             TilesIconComponent(image: image),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Text(test),

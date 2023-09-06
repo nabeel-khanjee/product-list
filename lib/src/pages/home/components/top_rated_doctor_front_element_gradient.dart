@@ -15,7 +15,7 @@ class TopRatedDoctorFrontElementGradient extends StatelessWidget {
       width: 303,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter,
               colors: [
@@ -27,7 +27,7 @@ class TopRatedDoctorFrontElementGradient extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           DoctorCardRatingHomeWidget(element: element),
-          DoctorDetailAndBookNowWidget()
+          const DoctorDetailAndBookNowWidget()
         ],
       ),
     );

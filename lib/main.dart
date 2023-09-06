@@ -17,7 +17,7 @@ FutureOr<void> main() async {
       fallbackLocale: const Locale('en', 'US'),
       path: 'assets/translations',
       child: ChangeNotifierProvider<MyTheme>(
-        create: (_) => new MyTheme(),
+        create: (_) => MyTheme(),
         child: const App(),
       ),
     ),

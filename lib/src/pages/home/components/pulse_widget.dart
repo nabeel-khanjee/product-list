@@ -8,7 +8,7 @@ class PulseWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 3),
+      padding: const EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 3),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: getThemeColor(context)),
@@ -23,7 +23,7 @@ class PulseWidget extends StatelessWidget {
                 height: 20,
                 width: 20,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 5,
               ),
               Text(

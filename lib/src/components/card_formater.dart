@@ -6,13 +6,12 @@ class CardFormatter extends TextInputFormatter {
   CardFormatter({
     required this.sample,
     required this.separator,
-  }) {
-  }
+  });
 
   @override
   TextEditingValue formatEditUpdate(
       TextEditingValue oldValue, TextEditingValue newValue) {
-    if (newValue.text.length > 0) {
+    if (newValue.text.isNotEmpty) {
       if (newValue.text.length > oldValue.text.length) {
         if (newValue.text.length > sample.length) return oldValue;
         if (newValue.text.length < sample.length &&

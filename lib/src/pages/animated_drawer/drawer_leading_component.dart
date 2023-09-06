@@ -15,8 +15,8 @@ class DrawerLeadingComponent extends StatelessWidget {
             isOpen: false,
             context: context),
         child: Container(
-          margin: EdgeInsets.only(left: 12, top: 9, bottom: 9, right: 6),
-          padding: EdgeInsets.all(9),
+          margin: const EdgeInsets.only(left: 12, top: 9, bottom: 9, right: 6),
+          padding: const EdgeInsets.all(9),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               color: darken(getThemeColor(context), 0.3)),

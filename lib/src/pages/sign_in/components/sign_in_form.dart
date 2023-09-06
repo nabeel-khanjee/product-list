@@ -7,13 +7,13 @@ class SignInForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 50),
+        const SizedBox(height: 50),
         Text(StringConstants.account),
-        SizedBox(height: 25),
+        const SizedBox(height: 25),
         _buildEmailField(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         _buildPasswordField(context),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         GestureDetector(
           onTap: () {
             NavigationUtil.push(
@@ -26,10 +26,10 @@ class SignInForm extends StatelessWidget {
             child: Text(StringConstants.forgot),
           ),
         ),
-        SizedBox(height: 40),
+        const SizedBox(height: 40),
         _signInButton(context),
-        SizedBox(height: 50),
-        SocialLogin(),
+        const SizedBox(height: 50),
+        const SocialLogin(),
       ],
     );
   }

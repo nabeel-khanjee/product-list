@@ -13,19 +13,19 @@ ThemeData lightThemeData(MyTheme theme) {
       style: ButtonStyle(
         shape: MaterialStatePropertyAll(
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
-        fixedSize: MaterialStatePropertyAll(Size.fromHeight(60)),
-        maximumSize: MaterialStatePropertyAll(Size.fromHeight(60)),
-        minimumSize: MaterialStatePropertyAll(Size.fromHeight(60)),
+        fixedSize: const MaterialStatePropertyAll(Size.fromHeight(60)),
+        maximumSize: const MaterialStatePropertyAll(Size.fromHeight(60)),
+        minimumSize: const MaterialStatePropertyAll(Size.fromHeight(60)),
         backgroundColor: MaterialStatePropertyAll(
           theme.getColor(),
         ),
-        foregroundColor: MaterialStatePropertyAll(
+        foregroundColor: const MaterialStatePropertyAll(
           ColorConstants.white,
         ),
       ),
     ),
     drawerTheme:
-        DrawerThemeData(backgroundColor: Colors.transparent, elevation: 0),
+        const DrawerThemeData(backgroundColor: Colors.transparent, elevation: 0),
     buttonTheme: ButtonThemeData(
       buttonColor: theme.getColor(),
       textTheme: ButtonTextTheme.accent,

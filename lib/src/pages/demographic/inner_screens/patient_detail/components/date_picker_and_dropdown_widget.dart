@@ -39,7 +39,7 @@ class DatePickerAndDropDownWidget extends StatelessWidget {
                 getCityValue: getCityValue,
                 selectedDate: selectedDate),
           ),
-          SizedBox(
+          const SizedBox(
             width: 5,
           ),
           Expanded(

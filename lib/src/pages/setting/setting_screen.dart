@@ -10,7 +10,7 @@ class SettingsScreen extends StatelessWidget {
     return IsGradientBackGround(
       appbarText: StringConstants.settings,
       isBackAppBar: false,
-      body: SettingScreenBody(),
+      body: const SettingScreenBody(),
     );
   }
 }

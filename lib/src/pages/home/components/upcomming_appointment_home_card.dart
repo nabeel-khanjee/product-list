@@ -12,8 +12,8 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
     return Container(
       height: 186,
       width: 160,
-      padding: EdgeInsets.all(15),
-      margin: EdgeInsets.only(right: 5),
+      padding: const EdgeInsets.all(10),
+      margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: lighten(getThemeColor(context),
@@ -23,7 +23,7 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.all(5),
+            padding: const EdgeInsets.all(5),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: Theme.of(context).scaffoldBackgroundColor),
@@ -65,14 +65,12 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
                 height: 0),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset(
                 element.value.docImage,
                 height: 24,
                 width: 24,
-              ),
-              SizedBox(
-                width: 7,
               ),
               Text(
                 element.value.docName,

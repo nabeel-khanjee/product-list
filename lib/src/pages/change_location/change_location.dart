@@ -8,7 +8,7 @@ class ChangeLocationScreen extends StatelessWidget {
     return IsGradientBackGround(
       isBackAppBar: true,
       appbarText: StringConstants.changeLocation,
-      body: SelectRadioListComponent(isLanguage: false),
+      body: const SelectRadioListComponent(isLanguage: false),
     );
   }
 }

@@ -1,4 +1,4 @@
-import '../../../app/app_export.dart';
+import 'package:provider_app/src/app/app_export.dart';
 
 class SocialLogin extends StatelessWidget {
   const SocialLogin({Key? key}) : super(key: key);
@@ -24,7 +24,7 @@ class SocialLogin extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         RichText(
           text: TextSpan(
             text: StringConstants.newAccount,

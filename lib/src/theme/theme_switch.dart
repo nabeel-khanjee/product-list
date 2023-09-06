@@ -18,7 +18,7 @@ class ThemeSwitchApp extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: SwitchListTile.adaptive(
-        contentPadding: EdgeInsets.only(
+        contentPadding: const EdgeInsets.only(
           left: 10,
           right: 10,
         ),
@@ -26,18 +26,17 @@ class ThemeSwitchApp extends StatelessWidget {
             ? lighten(getThemeColor(context), 0.1)
             : darken(getThemeColor(context), 0.5),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        title: Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                TilesIconComponent(image: image),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(text),
-              ],
-            )),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            TilesIconComponent(image: image),
+            const SizedBox(
+              width: 10,
+            ),
+            Text(text),
+          ],
+        ),
         value: value,
         onChanged: (value) => onChnage(value),
       ),

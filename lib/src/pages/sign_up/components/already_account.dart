@@ -1,4 +1,4 @@
-import '../../../app/app_export.dart';
+import 'package:provider_app/src/app/app_export.dart';
 
 class AlreadyAccount extends StatelessWidget {
   const AlreadyAccount({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ class AlreadyAccount extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 40),
+        const SizedBox(height: 40),
       ],
     );
   }

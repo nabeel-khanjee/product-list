@@ -8,7 +8,7 @@ class ChangeLanguageScreen extends StatelessWidget {
     return IsGradientBackGround(
       isBackAppBar: true,
       appbarText: StringConstants.changeLanguage,
-      body: SelectRadioListComponent(isLanguage: true,),
+      body: const SelectRadioListComponent(isLanguage: true,),
     );
   }
 }

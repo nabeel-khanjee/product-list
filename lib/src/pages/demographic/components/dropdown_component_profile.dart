@@ -22,8 +22,8 @@ class DropDownComponentProfile extends StatelessWidget {
     String? value = this.value;
 
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      margin: EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      margin: const EdgeInsets.symmetric(vertical: 8),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15), color: ColorConstants.white),
       child: Stack(
@@ -34,7 +34,7 @@ class DropDownComponentProfile extends StatelessWidget {
           value != null
               ? InkWell(
                   onTap: onDropdownFieldTap,
-                  child: Container(
+                  child: SizedBox(
                     width: double.maxFinite,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -86,7 +86,7 @@ class DropDownComponentProfile extends StatelessWidget {
                   onChanged: (_) => selectedItem(_),
                 ),
           Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
+              margin: const EdgeInsets.symmetric(vertical: 10),
               child: Image.asset(
                 suffixIcon ?? AssetsConstants.arrowDownDropdownIcon,
                 height: 24,

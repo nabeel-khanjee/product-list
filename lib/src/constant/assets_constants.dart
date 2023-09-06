@@ -40,4 +40,25 @@ class AssetsConstants {
   static const String healthProfile = 'assets/icon/health_profile_icon.png';
   static const String arrowDownDropdownIcon =
       'assets/icon/arrow_down_dropdown_icon.png';
+  static const String headIcon = 'assets/icon/head_icon.png';
+  static const String waistIcon = 'assets/icon/waist_icon.png';
+  static const String diabeticIcon = 'assets/icon/diabetic_icon.png';
+  static const String depressionIcon = 'assets/icon/depression_icon.png';
+  static const String anxietyIcon = 'assets/icon/anxiety_icon.png';
+  static const String editTextIcon = 'assets/icon/edit_text_icon.png';
+  static const String capsuleIcon = 'assets/icon/capsule_icon.png';
+  static const String tabletIcon = 'assets/icon/tablet_icon.png';
+static const String isEnableIconMedications =  'assets/icon/is_enable_icon_medications.png';
+static const String isDisableIconMedications =  'assets/icon/is_disable_icon_medication.png';
+
+  static String housingAndUtilitiesIcon='assets/icon/housing_and_utilities_icon.png';
+
+  static String foodIcon='assets/icon/food_icon.png';
+
+  static String transportationAndChildCareIcon='assets/icon/transportation_and_child_care.png';
+
+  static String educationAndEmploymentAndFinanceIcon='assets/icon/education_and_employment_and_finances.png';
+
+  static String personalSafetyIcon='assets/icon/personal_safety.png';
+
 }

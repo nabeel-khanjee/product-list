@@ -10,7 +10,7 @@ class BloodPressureWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: getThemeColor(context)),
@@ -27,7 +27,7 @@ class BloodPressureWidget extends StatelessWidget {
                 height: 20,
                 width: 20,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 5,
               ),
               Text(
@@ -39,13 +39,16 @@ class BloodPressureWidget extends StatelessWidget {
               )
             ],
           ),
-          BloodPressureImageWidget(),
+          const BloodPressureImageWidget(),
           Text(
             StringConstants.normal,
             style: Theme.of(context).textTheme.bodySmall!.copyWith(
                 color: ColorConstants.yellowGolden,
                 fontWeight: FontWeight.w600,
                 height: 0),
+          ),
+          const SizedBox(
+            height: 10,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -59,7 +62,7 @@ class BloodPressureWidget extends StatelessWidget {
                     ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 6, left: 5),
+                padding: const EdgeInsets.only(bottom: 0, left: 5),
                 child: Text(
                   StringConstants.mmHg,
                 ),

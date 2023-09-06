@@ -20,7 +20,7 @@ class HealthComditionThirdWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        padding: EdgeInsets.only(top: 10, bottom: 3, right: 10, left: 10),
+        padding: const EdgeInsets.only(top: 10, bottom: 3, right: 10, left: 10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: getThemeColor(context))),

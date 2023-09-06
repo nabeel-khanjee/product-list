@@ -19,9 +19,8 @@ class AppBarcomponent extends StatelessWidget {
   @override
   PreferredSize build(BuildContext context) {
     return PreferredSize(
-      preferredSize: Size.fromHeight(kToolbarHeight),
+      preferredSize: const Size.fromHeight(kToolbarHeight),
       child: AppBar(
-        
           centerTitle: isBackAppBar,
           actions: !isBackAppBar
               ? [
@@ -47,12 +46,17 @@ class AppBarcomponent extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 3.0, right: 3),
-                    child: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+                    child: IconButton(
+                        onPressed: () {}, icon: const Icon(Icons.menu)),
                   )
                 ]
               : actionTextButton != null
                   ? [actionTextButton!]
-                  : null,
+                  : [
+                      Container(
+                        width: 50,
+                      )
+                    ],
           backgroundColor: getThemeStateIsLight()
               ? isGradient
                   ? Colors.transparent
@@ -62,21 +66,26 @@ class AppBarcomponent extends StatelessWidget {
               ? GestureDetector(
                   onTap: () => NavigationUtil.pop(context),
                   child: Container(
-                      margin: EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           color: ColorConstants.white),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back,
                         color: ColorConstants.black,
                       )),
                 )
-              : DrawerLeadingComponent(),
+              : const DrawerLeadingComponent(),
           title: !isTitleTowLines
-              ? Text(
-                  title,
+              ? SizedBox(
+                  // width: MediaQuery.of(context).size.width / 1,
+                  child: Text(
+                    title,
+                    maxLines: 2,
+                    textAlign: TextAlign.center,
+                  ),
                 )
-              : HomeTitleComponent()),
+              : const HomeTitleComponent()),
     );
   }
 }

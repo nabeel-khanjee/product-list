@@ -11,7 +11,7 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height,
             child: Image.asset(
               AssetsConstants.doctorImageOnboardingScreen,
@@ -21,33 +21,31 @@ class OnboardingScreen extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.topCenter,
-                  colors: [
-                    darken(getThemeColor(context), 0.4),
-                    darken(getThemeColor(context), 0.4),
-                    darken(getThemeColor(context), 0.4).withOpacity(0.1),
-                    darken(getThemeColor(context), 0.4).withOpacity(0.1),
-                  ],
-                )),
-            padding: EdgeInsets.all(AppConstants.kDefaultPadding),
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+              colors: [
+                darken(getThemeColor(context), 0.4),
+                darken(getThemeColor(context), 0.4),
+                darken(getThemeColor(context), 0.4).withOpacity(0.1),
+                darken(getThemeColor(context), 0.4).withOpacity(0.1),
+              ],
+            )),
+            padding: const EdgeInsets.all(AppConstants.kDefaultPadding),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Container(
-                  child: Text(
-                    StringConstants.onboardingText,
-                    style: FontStylesConstants.gilroy(
-                      fontFamily: FontConstantc.gilroyRegular,
-                      fontSize: 30,
-                      color: ColorConstants.white,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    textAlign: TextAlign.center,
+                Text(
+                  StringConstants.onboardingText,
+                  style: FontStylesConstants.gilroy(
+                    fontFamily: FontConstantc.gilroyRegular,
+                    fontSize: 30,
+                    color: ColorConstants.white,
+                    fontWeight: FontWeight.w400,
                   ),
+                  textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 Row(
                   children: [
                     Expanded(
@@ -64,6 +62,22 @@ class OnboardingScreen extends StatelessWidget {
                           );
                         },
                         child: Text(StringConstants.getStarted),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          NavigationUtil.push(
+                            context,
+                            RouteConstants.signInRoute,
+                          );
+                        },
+                        child: const Text('Signup/SignInView'),
                       ),
                     ),
                   ],
