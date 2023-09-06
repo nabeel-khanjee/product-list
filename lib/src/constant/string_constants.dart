@@ -3,6 +3,8 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
+  static String get whatIsYourHousingSituationToday=>_getLang('whatIsYourHousingSituationToday');
+
   static String get housingAndUtilities=> _getLang('housingAndUtilities');
 
   static String get food=> _getLang('food');
