@@ -30,6 +30,7 @@ class EnglishConstant {
     'edit': 'Edit',
     'kgPerMerterSquare': 'Kg/m²',
     'merterSquare': 'm²',
+
     'secondaryInsurance': 'Secondary Insurance',
     'primaryInsurance': 'Primary Insurance',
     'insuranceName': 'Insurance Name',
