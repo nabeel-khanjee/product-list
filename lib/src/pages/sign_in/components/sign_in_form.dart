@@ -1,4 +1,4 @@
-import '../../../app/app_export.dart';
+import 'package:provider_app/src/app/app_export.dart';
 
 class SignInForm extends StatelessWidget {
   const SignInForm({Key? key}) : super(key: key);
@@ -7,21 +7,21 @@ class SignInForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 50),
-        Text('Login to your Account'),
-        SizedBox(height: 25),
+        const SizedBox(height: 50),
+        const Text('Login to your Account'),
+        const SizedBox(height: 25),
         _buildEmailField(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         _buildPasswordField(context),
-        SizedBox(height: 10),
-        Align(
+        const SizedBox(height: 10),
+        const Align(
           alignment: Alignment.centerRight,
           child: Text('Forgot Password ?'),
         ),
-        SizedBox(height: 40),
+        const SizedBox(height: 40),
         _signInButton(context),
-        SizedBox(height: 50),
-        SocialLogin(),
+        const SizedBox(height: 50),
+        const SocialLogin(),
       ],
     );
   }
@@ -31,7 +31,7 @@ class SignInForm extends StatelessWidget {
       decoration: InputDecoration(
         fillColor: darken(getThemeColor(context), 0.25),
         filled: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,
@@ -40,9 +40,9 @@ class SignInForm extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/email.svg'),
         ),
-        prefixIconConstraints: BoxConstraints(minHeight: 20),
+        prefixIconConstraints: const BoxConstraints(minHeight: 20),
         labelText: 'Email',
-        labelStyle: TextStyle(color: ColorConstants.white),
+        labelStyle: const TextStyle(color: ColorConstants.white),
       ),
     );
   }
@@ -52,7 +52,7 @@ class SignInForm extends StatelessWidget {
       decoration: InputDecoration(
         fillColor: darken(getThemeColor(context), 0.25),
         filled: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,
@@ -61,14 +61,14 @@ class SignInForm extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/password.svg'),
         ),
-        prefixIconConstraints: BoxConstraints(minHeight: 20),
+        prefixIconConstraints: const BoxConstraints(minHeight: 20),
         labelText: 'Password',
-        labelStyle: TextStyle(color: ColorConstants.white),
+        labelStyle: const TextStyle(color: ColorConstants.white),
         suffixIcon: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/eye.svg'),
         ),
-        suffixIconConstraints: BoxConstraints(minHeight: 20),
+        suffixIconConstraints: const BoxConstraints(minHeight: 20),
       ),
     );
   }

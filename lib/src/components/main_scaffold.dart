@@ -23,7 +23,8 @@ class MainScaffold extends StatelessWidget {
           : Theme.of(context).scaffoldBackgroundColor,
       appBar: appBar != null
           ? PreferredSize(
-              child: appBar!, preferredSize: Size.fromHeight(kToolbarHeight))
+              preferredSize: const Size.fromHeight(kToolbarHeight),
+              child: appBar!)
           : null,
       body: body,
     );

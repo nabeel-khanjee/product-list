@@ -12,8 +12,8 @@ class PulseTempWeightWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: Column(children: [
-      Expanded(child: PulseWidget()),
-      SizedBox(
+      const Expanded(child: PulseWidget()),
+      const SizedBox(
         height: 5,
       ),
       Expanded(

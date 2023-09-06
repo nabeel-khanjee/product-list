@@ -13,13 +13,13 @@ class BloodPressureImageWidget extends StatelessWidget {
       child: Stack(
         children: [
           Opacity(
+              opacity: 1,
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Image.asset(
                     AssetsConstants.bloodPressureCardInnerImage,
                     color: Colors.black),
-              ),
-              opacity: 1),
+              )),
           ClipRect(
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 1.0, sigmaY: 2.0),

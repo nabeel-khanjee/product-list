@@ -11,7 +11,7 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height,
             child: Image.asset(
               AssetsConstants.doctorImageOnboardingScreen,
@@ -30,24 +30,22 @@ class OnboardingScreen extends StatelessWidget {
                 darken(getThemeColor(context), 0.4).withOpacity(0.1),
               ],
             )),
-            padding: EdgeInsets.all(AppConstants.kDefaultPadding),
+            padding: const EdgeInsets.all(AppConstants.kDefaultPadding),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Container(
-                  child: Text(
-                    StringConstants.onboardingText,
-                    style: FontStylesConstants.gilroy(
-                      fontFamily: FontConstantc.gilroyRegular,
-                      fontSize: 30,
-                      color: ColorConstants.white,
-                      fontWeight: FontWeight.w400,
-                    ),
-                    textAlign: TextAlign.center,
+                Text(
+                  StringConstants.onboardingText,
+                  style: FontStylesConstants.gilroy(
+                    fontFamily: FontConstantc.gilroyRegular,
+                    fontSize: 30,
+                    color: ColorConstants.white,
+                    fontWeight: FontWeight.w400,
                   ),
+                  textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 Row(
                   children: [
                     Expanded(
@@ -63,7 +61,7 @@ class OnboardingScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Row(
                   children: [
                     Expanded(
@@ -74,7 +72,7 @@ class OnboardingScreen extends StatelessWidget {
                             RouteConstants.signInRoute,
                           );
                         },
-                        child: Text('Signup/SignInView'),
+                        child: const Text('Signup/SignInView'),
                       ),
                     ),
                   ],

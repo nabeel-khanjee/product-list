@@ -33,7 +33,7 @@ class DoctorDetailAndBookNowWidget extends StatelessWidget {
                           color: ColorConstants.greyText)),
             ],
           ),
-          Container(
+          SizedBox(
               height: 38,
               width: 96,
               child: ElevatedButton(
@@ -46,7 +46,7 @@ class DoctorDetailAndBookNowWidget extends StatelessWidget {
                               RoundedRectangleBorder(
                                   borderRadius:
                                       BorderRadius.circular(100))),
-                          padding: MaterialStatePropertyAll(
+                          padding: const MaterialStatePropertyAll(
                               EdgeInsets.all(0)),
                           textStyle: MaterialStatePropertyAll(
                               Theme.of(context)

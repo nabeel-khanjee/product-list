@@ -12,15 +12,14 @@ class TitleDemographicsMainHeadingInnerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 10),
-        Container(
-            child: Text(
+        const SizedBox(height: 10),
+        Text(
           titleDemographicInnerScreen,
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
-              color: getThemeColor(context),
-              fontFamily: FontConstantc.gilroySemiBold),
-        )),
-        SizedBox(height: 10),
+          color: getThemeColor(context),
+          fontFamily: FontConstantc.gilroySemiBold),
+        ),
+        const SizedBox(height: 10),
       ],
     );
   }

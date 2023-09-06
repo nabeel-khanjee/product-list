@@ -1,4 +1,4 @@
-import '../../../app/app_export.dart';
+import 'package:provider_app/src/app/app_export.dart';
 
 class TermsConditions extends StatefulWidget {
   const TermsConditions({Key? key}) : super(key: key);

@@ -21,7 +21,7 @@ class HomeScreenComponent extends StatelessWidget {
           loaded: (
             pageControllerLoaded,
           ) =>
-              AnimatedDrawerAfterLoadedState(),
+              const AnimatedDrawerAfterLoadedState(),
           animatedDrawerIndexUpdated: (
             index,
             isOpen,
@@ -36,7 +36,7 @@ class HomeScreenComponent extends StatelessWidget {
                 : BlocProvider.of<AnimatedDrawerCubit>(context)
                     .advancedDrawerController
                     .showDrawer();
-            return AnimatedDrawerAfterLoadedState();
+            return const AnimatedDrawerAfterLoadedState();
           },
           error: (error) => RetryButton(
             onTap: () => context
@@ -45,7 +45,7 @@ class HomeScreenComponent extends StatelessWidget {
                     pageController: PageController(initialPage: 0),
                     advancedDrawerController: _advancedDrawerController),
           ),
-          loading: () => AppProgressIndicator(),
+          loading: () => const AppProgressIndicator(),
           orElse: () => const SizedBox.shrink(),
         ),
       ),

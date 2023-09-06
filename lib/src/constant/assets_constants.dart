@@ -40,4 +40,7 @@ class AssetsConstants {
   static const String healthProfile = 'assets/icon/health_profile_icon.png';
   static const String arrowDownDropdownIcon =
       'assets/icon/arrow_down_dropdown_icon.png';
+  static const String headIcon = 'assets/icon/head_icon.png';
+  static const String waistIcon = 'assets/icon/waist_icon.png';
+  static const String diabeticIcon = 'assets/icon/diabetic_icon.png';
 }

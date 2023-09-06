@@ -13,15 +13,15 @@ class HomePageAppBar extends StatelessWidget {
       floating: true,
       expandedHeight: 160.0,
       centerTitle: true,
-      title: AppBarTitle(),
-      flexibleSpace: Center(
+      title: const AppBarTitle(),
+      flexibleSpace: const Center(
         child: FlexibleSpaceBar(
           expandedTitleScale: 10,
           centerTitle: true,
-          background: const FlutterLogo(),
+          background: FlutterLogo(),
         ),
       ),
-      actions: [
+      actions: const [
         Icon(
           Icons.chat,
         ),

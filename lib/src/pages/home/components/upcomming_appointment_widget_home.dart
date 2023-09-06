@@ -35,26 +35,24 @@ class UpcommingAppointmentWidgetHome extends StatelessWidget {
           docName: StringConstants.drRachelBrown,
           docImage: AssetsConstants.upcommingAppointmentCardDoctorImage)
     ];
-    return Container(
-      child: Column(children: [
-        HomeWidgetHeading(
-          title: StringConstants.upcomingAppointments,
-          isSeeAll: false,
-          bottonPadding: 10,
-          topPadding: 22,
+    return Column(children: [
+      HomeWidgetHeading(
+        title: StringConstants.upcomingAppointments,
+        isSeeAll: false,
+        bottonPadding: 10,
+        topPadding: 22,
+      ),
+      SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: upcommingAppointment
+              .asMap()
+              .entries
+              .map(
+                  (element) => UpcommingAppointmentHomeCard(element: element))
+              .toList(),
         ),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: upcommingAppointment
-                .asMap()
-                .entries
-                .map(
-                    (element) => UpcommingAppointmentHomeCard(element: element))
-                .toList(),
-          ),
-        )
-      ]),
-    );
+      )
+    ]);
   }
 }

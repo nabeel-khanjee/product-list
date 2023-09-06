@@ -10,7 +10,7 @@ class SearchCompoentHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 54,
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: darken(getThemeColor(context), 0.3)),
