@@ -1,6 +1,6 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
-    'secondaryInsurance':'Secondary Insurance',
+    'secondaryInsurance': 'Secondary Insurance',
     'primaryInsurance': 'Primary Insurance',
     'insuranceName': 'Insurance Name',
     'healthPlan': 'Health Plan',
@@ -95,5 +95,14 @@ class EnglishConstant {
     'heartSpecialist': 'Heart Specialist',
     'bookNow': 'Book Now',
     'fourPointThree': '4.3',
+
+    // signIn screen
+    'account': 'Login to your Account',
+    'email': 'Email Address',
+    'password': 'Password',
+    'forgot': 'Forgot Password?',
+    'signIn': 'Sign In',
+    'newAccount': 'Don’t have an account? ',
+    'createAccount': 'Create Account',
   };
 }

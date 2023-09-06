@@ -53,9 +53,14 @@ class OnboardingScreen extends StatelessWidget {
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {
+                          // NavigationUtil.push(
+                          //   context,
+                          //   RouteConstants.homeRoute,
+                          // );
+
                           NavigationUtil.push(
                             context,
-                            RouteConstants.homeRoute,
+                            RouteConstants.signInRoute,
                           );
                         },
                         child: Text(StringConstants.getStarted),

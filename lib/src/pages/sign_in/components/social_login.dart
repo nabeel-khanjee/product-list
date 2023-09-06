@@ -27,10 +27,10 @@ class SocialLogin extends StatelessWidget {
         SizedBox(height: 20),
         RichText(
           text: TextSpan(
-            text: 'Don\'t have an account? ',
+            text: StringConstants.newAccount,
             children: [
               TextSpan(
-                text: 'Create Account',
+                text: StringConstants.createAccount,
                 style: Theme.of(context)
                     .textTheme
                     .bodySmall!
