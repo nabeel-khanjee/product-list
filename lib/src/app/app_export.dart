@@ -183,3 +183,5 @@ export 'package:provider_app/src/pages/emergency/components/emergency_address.da
 export 'package:provider_app/src/pages/emergency/components/emergency_button.dart';
 export 'package:provider_app/src/pages/emergency/components/emergency_header.dart';
 export 'package:provider_app/src/pages/emergency/components/emergency_details.dart';
+export 'package:provider_app/src/pages/mental_health/model/indications_model.dart';
+

@@ -76,5 +76,6 @@ Route onGenerateRoute(RouteSettings settings) {
 
     default:
       return materialRoute(const SplashScreen());
+
   }
 }
