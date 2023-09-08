@@ -6,7 +6,7 @@ export 'package:provider_app/src/pages/education_and_employment_and_finance/educ
 export 'package:provider_app/src/pages/food/food_screen.dart';
 export 'package:provider_app/src/pages/mental_health/data_list/indications_list_data.dart';
 export 'package:provider_app/src/pages/mental_health/model/mentail_health_model.dart';
-export 'package:provider_app/src/pages/social_health_inner_pages/social_health_inner_pages_screen.dart';
+export 'package:provider_app/src/pages/social_health/social_health_inner_pages/social_health_inner_pages_screen.dart';
 export 'package:provider_app/src/pages/mental_health/mentail_health_screen.dart';
 export 'package:provider_app/src/pages/personal_safety/personal_safety_screen.dart';
 export 'package:provider_app/src/pages/physical_health/physical_health_screen.dart';

@@ -18,5 +18,17 @@ class RouteConstants {
   static const String socialHealthRoute = 'socialHealthRoute';
   static const String mentalHealthRoute = 'mentalHealthRoute';
   static const String familyHealthProfileRoute = 'familyHealthProfileRoute';
-  static const String socailHealthInnerPageRoute='socailHealthInnerPageRoute';
+  static const String socailHealthInnerPageRoute = 'socailHealthInnerPageRoute';
+
+  static const String domesticViolenceChecklist = 'domesticViolenceChecklist';
+
+  static const String cageAid = 'cageAid';
+
+  static const String bFTQuestionnaire = 'bFTQuestionnaire';
+
+  static const String gAD7 = 'gAD7';
+
+  static const String developmentDisabilityIDD = 'developmentDisabilityIDD';
+
+  static const String pHQ9 = 'pHQ9';
 }

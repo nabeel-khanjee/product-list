@@ -2,6 +2,13 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class StringConstants {
   static String language = 'ur_PK';
+
+  static String get status => _getLang('status');
+
+  static String
+      get noteIfYouAnswerYesForAnEventPleaseAnswerAnyAdditionalQuestionsThatAreListedIfYouAnswerNoForAnEventGoOnToTheNextEvent =>
+          _getLang(
+              'noteIfYouAnswerYesForAnEventPleaseAnswerAnyAdditionalQuestionsThatAreListedIfYouAnswerNoForAnEventGoOnToTheNextEvent');
   static String get identified => _getLang('identified');
   static String get unidentified => _getLang('unidentified');
   static String get score => _getLang('score');
