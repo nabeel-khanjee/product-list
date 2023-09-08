@@ -1,5 +1,15 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
+    'identified': 'Identified',
+    'unidentified': 'Unidentified',
+    'score': 'Score',
+    'bFTQuestionnaire': 'BFT Questionnaire',
+    'pHQ9': 'PHQ - 9',
+    'gAD7': 'GAD - 7',
+    'cageAid': 'Cage-Aid',
+    'developmentDisabilityIDD': 'Development Disability (IDD) 		',
+    'domesticViolenceChecklist': 'Domestic Violence Checklist',
+    'mMSE': 'MMSE',
     'severe': 'Severe',
     'iDoNotHaveHousing': 'I do not have housing',
     'iHaveHousingTodayButIAmWorriedAboutLosingHousingInTheFuture':

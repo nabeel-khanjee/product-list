@@ -2,8 +2,26 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class StringConstants {
   static String language = 'ur_PK';
+  static String get identified => _getLang('identified');
+  static String get unidentified => _getLang('unidentified');
+  static String get score => _getLang('score');
+  static String get bFTQuestionnaire => _getLang('bFTQuestionnaire');
 
-  static String get severe=>_getLang('severe') ;
+  static String get pHQ9 => _getLang('pHQ9');
+
+  static String get gAD7 => _getLang('gAD7');
+
+  static String get cageAid => _getLang('cageAid');
+
+  static String get developmentDisabilityIDD =>
+      _getLang('developmentDisabilityIDD');
+
+  static String get domesticViolenceChecklist =>
+      _getLang('domesticViolenceChecklist');
+
+  static String get mMSE => _getLang('mMSE');
+
+  static String get severe => _getLang('severe');
 
   static String get iDoNotHaveHousing => _getLang('iDoNotHaveHousing');
 
