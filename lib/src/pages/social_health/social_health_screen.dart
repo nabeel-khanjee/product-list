@@ -1,37 +1,11 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/social_health/data_list/social_health_list_data.dart';
 
 class SocialHealthScreen extends StatelessWidget {
   const SocialHealthScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<SocialHealthListData> socialHealthListData = [
-      SocialHealthListData(
-          route: RouteConstants.housingAndUtilitiesRoute,
-          icon: AssetsConstants.housingAndUtilitiesIcon,
-          isCompleted: true,
-          title: StringConstants.housingAndUtilities),
-      SocialHealthListData(
-          route: RouteConstants.foodRoute,
-          icon: AssetsConstants.foodIcon,
-          isCompleted: false,
-          title: StringConstants.food),
-      SocialHealthListData(
-          icon: AssetsConstants.transportationAndChildCareIcon,
-          isCompleted: false,
-          route: RouteConstants.transportationAndChildCareRoute,
-          title: StringConstants.transportationAndChildCare),
-      SocialHealthListData(
-          route: RouteConstants.educationAndEmploymentAndFinanceRoute,
-          icon: AssetsConstants.educationAndEmploymentAndFinanceIcon,
-          isCompleted: true,
-          title: StringConstants.educationAndEmploymentAndFinance),
-      SocialHealthListData(
-          route: RouteConstants.personalSafetyRoute,
-          icon: AssetsConstants.personalSafetyIcon,
-          isCompleted: true,
-          title: StringConstants.personalSafety),
-    ];
     return MainScaffold(
       body: Container(
         width: MediaQuery.of(context).size.width,
