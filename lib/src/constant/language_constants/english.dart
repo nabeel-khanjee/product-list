@@ -1,6 +1,56 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
-    'whatIsYourHousingSituationToday':'What is your housing situation today?',
+    'severe': 'Severe',
+    'iDoNotHaveHousing': 'I do not have housing',
+    'iHaveHousingTodayButIAmWorriedAboutLosingHousingInTheFuture':
+        'I have housing today, but I am worried about losing housing in the future',
+    'iHaveHousing': 'I have housing',
+    'bugInfestation': 'Bug infestation',
+    'thinkAboutThePlaceYouLiveDoYouHaveProblemsWithAnyOfTheFollowing':
+        'Think about the place you live. Do you have problems with any of the following?',
+    'mold': 'Mold',
+    'leadPaintOrPipes': 'Lead paint or pipes',
+    'inadequateHeat': 'Inadequate heat',
+    'ovenOrStoveNotWorking': 'Oven or stove not working',
+    'noOrNotWorkingSmokeDetectors': 'No or not working smoke detectors',
+    'waterLeaks': 'Water leaks',
+    'noneOfTheAbove': 'None of the above',
+    'inThePastTwelveMonthsHasTheElectricGasOilOrWaterCompanyThreatenedToShutOffServicesInYourHome':
+        'In the past 12 months has the electric, gas, oil, or water company threatened to shut off services in your home?',
+    'yes': 'Yes',
+    'no': 'No',
+    'alreadyShutOff': 'Already shut off',
+    'withinThePastTwelveMonthsYouWorriedThatYourFoodWouldRunOutBeforeYouGotMoneyToBuyMore':
+        'Within the past 12 months, you worried that your food would run out before you got money to buy more.',
+    'oftenTrue': 'Often true',
+    'sometimesTrue': 'Sometimes true',
+    'neverTrue': 'Never true',
+    'withinThePastTwelveMonthsTheFoodYouBoughtJustDidntLastAndYouDidntHaveMoneyToGetMore':
+        'Within the past 12 months, the food you bought just didn’t last and you didn’t have money to get more.',
+    'inThePastTwelveMonthsHasLackOfTransportationKeptYouFromMedicalAppointmentsMeetingsWorkOrFromGettingThingsNeededForDailyLiving':
+        'In the past 12 months, has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?',
+    'yesItHasKeptMeFromMedicalAppointmentsOrGettingMedications':
+        'Yes,it has kept me from medical appointments or getting medications',
+    'yesItHasKeptMeFromNonMedicalMeetingsAppointmentsWorkOrGettingThingsThatINeed':
+        'Yes, it has kept me from non-medical meetings, appointments, work, or getting things that I need',
+    'doProblemsGettingChildCareMakeItDifficultForYouToWorkOrStudy':
+        'Do problems getting child care make it difficult for you to work or study?',
+    'doYouHaveAHighSchoolDiploma': 'Do you have a high school diploma?',
+    'doYouHaveAJob': 'Do you have a job?',
+    'iDontHaveEnoughMoneyToPayMyBills':
+        'I don’t have enough money to pay my bills:',
+    'never': 'Never',
+    'rarely': 'Rarely',
+    'sometimes': 'Sometimes',
+    'fairlyOften': 'Fairly often',
+    'frequently': 'Frequently',
+    'howOftenDoesAnyoneIncludingFamilyPhysicallyHurtYou':
+        'How often does anyone, including family, physically hurt you?',
+    'howOftenDoesAnyoneIncludingFamilyInsultOrTalkDownToYou':
+        'How often does anyone, including family, insult or talk down to you?',
+    'howOftenDoesAnyoneIncludingFamilyThreatenYouWithHarm':
+        'How often does anyone, including family, threaten you with harm?',
+    'whatIsYourHousingSituationToday': 'What is your housing situation today?',
     'housingAndUtilities': 'Housing & Utilities',
     'food': 'Food',
     'transportationAndChildCare': 'Transportation & Child Care',

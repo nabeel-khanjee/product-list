@@ -10,7 +10,7 @@ class SocialHealthTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        NavigationUtil.push(context, element.value.route);
+        NavigationUtil.push(context, element.value.route, args: element);
       },
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 5),
@@ -48,7 +48,6 @@ class SocialHealthTile extends StatelessWidget {
                       : Colors.transparent,
                   borderRadius: BorderRadius.circular(100)),
               margin: const EdgeInsets.all(8),
-              // padding: EdgeInsets.all(8),
               child: Center(
                   child: Icon(
                 Icons.check,

@@ -9,4 +9,5 @@ class SharedPreferenceConstants {
   static const String userId = 'user-id';
   static const String continuePress='continue-press';
   static const String scanComplete='scan-complete';
+
 }

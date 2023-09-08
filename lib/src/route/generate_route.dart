@@ -4,20 +4,17 @@ Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
   switch (settings.name) {
-    case RouteConstants.housingAndUtilitiesRoute:
-      return materialRoute(const HousingAndUtilitiesScreen());
-
-    case RouteConstants.foodRoute:
-      return materialRoute(const FoodScreen());
-
-    case RouteConstants.transportationAndChildCareRoute:
-      return materialRoute(const TransportationAndChildCareScreen());
-
-    case RouteConstants.educationAndEmploymentAndFinanceRoute:
-      return materialRoute(const EducationAndEmploymentAndFinanceScreen());
-
-    case RouteConstants.personalSafetyRoute:
-      return materialRoute(const PersonalSafetyScreen());
+    case RouteConstants.mentalHealthRoute:
+      return materialRoute(const MentalHealthScreen());
+    case RouteConstants.socialHealthRoute:
+      return materialRoute(const SocialHealthScreen());
+    case RouteConstants.physicalHealthRoute:
+      return materialRoute(const PhysicalHealthScreen());
+    case RouteConstants.socailHealthInnerPageRoute:
+      final args = settings.arguments as MapEntry<int, SocialHealthListData>;
+      return materialRoute(SocailHealthInnerPage(
+        element: args,
+      ));
 
     case RouteConstants.homeRoute:
       return materialRoute(const HomeScreen());
