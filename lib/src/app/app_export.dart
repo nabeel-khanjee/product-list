@@ -4,7 +4,9 @@ export 'package:provider_app/src/pages/change_language/chnage_language_screen.da
 export 'package:provider_app/src/pages/demographic/demographic_screen.dart';
 export 'package:provider_app/src/pages/education_and_employment_and_finance/education_and_employment_and_finance_screen.dart';
 export 'package:provider_app/src/pages/food/food_screen.dart';
-export 'package:provider_app/src/pages/housing_and_utilities/housing_and_utilities_screen.dart';
+export 'package:provider_app/src/pages/mental_health/data_list/indications_list_data.dart';
+export 'package:provider_app/src/pages/mental_health/model/mentail_health_model.dart';
+export 'package:provider_app/src/pages/social_health_inner_pages/social_health_inner_pages_screen.dart';
 export 'package:provider_app/src/pages/mental_health/mentail_health_screen.dart';
 export 'package:provider_app/src/pages/personal_safety/personal_safety_screen.dart';
 export 'package:provider_app/src/pages/physical_health/physical_health_screen.dart';
@@ -172,9 +174,6 @@ export 'package:provider_app/src/pages/otp/components/otp_header.dart';
 export 'package:pin_code_fields/pin_code_fields.dart';
 export 'package:provider_app/src/pages/otp/components/otp_button.dart';
 export 'package:provider_app/src/pages/otp/components/otp_fields.dart';
-export 'package:provider_app/src/pages/change_location/change_location.dart';
-export 'package:provider_app/src/pages/change_language/chnage_language_screen.dart';
-export 'package:provider_app/src/pages/demographic/demographic_screen.dart';
 export 'package:provider_app/src/pages/forgot_password/forgot_password_screen.dart';
 export 'package:provider_app/src/pages/new_password/new_password_screen.dart';
 export 'package:provider_app/src/pages/otp/otp_screen.dart';
@@ -183,3 +182,5 @@ export 'package:provider_app/src/pages/emergency/components/emergency_address.da
 export 'package:provider_app/src/pages/emergency/components/emergency_button.dart';
 export 'package:provider_app/src/pages/emergency/components/emergency_header.dart';
 export 'package:provider_app/src/pages/emergency/components/emergency_details.dart';
+export 'package:provider_app/src/pages/mental_health/model/indications_model.dart';
+

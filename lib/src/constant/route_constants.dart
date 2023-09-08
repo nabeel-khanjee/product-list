@@ -19,6 +19,7 @@ class RouteConstants {
   static const String socialHealthRoute = 'socialHealthRoute';
   static const String mentalHealthRoute = 'mentalHealthRoute';
   static const String familyHealthProfileRoute = 'familyHealthProfileRoute';
+  static const String socailHealthInnerPageRoute='socailHealthInnerPageRoute';
 
   static const String housingAndUtilitiesRoute = 'housingAndUtilitiesRoute';
 

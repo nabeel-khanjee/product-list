@@ -2,20 +2,139 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class StringConstants {
   static String language = 'ur_PK';
+  static String get identified => _getLang('identified');
+  static String get unidentified => _getLang('unidentified');
+  static String get score => _getLang('score');
+  static String get bFTQuestionnaire => _getLang('bFTQuestionnaire');
 
+  static String get pHQ9 => _getLang('pHQ9');
 
-  static String get housingAndUtilities=> _getLang('housingAndUtilities');
+  static String get gAD7 => _getLang('gAD7');
 
-  static String get food=> _getLang('food');
+  static String get cageAid => _getLang('cageAid');
 
-  static String get transportationAndChildCare=> _getLang('transportationAndChildCare');
+  static String get developmentDisabilityIDD =>
+      _getLang('developmentDisabilityIDD');
 
-  static String get educationAndEmploymentAndFinance=> _getLang('educationAndEmploymentAndFinance');
+  static String get domesticViolenceChecklist =>
+      _getLang('domesticViolenceChecklist');
 
-  static String get personalSafety=> _getLang('personalSafety');
+  static String get mMSE => _getLang('mMSE');
 
+  static String get severe => _getLang('severe');
+
+  static String get iDoNotHaveHousing => _getLang('iDoNotHaveHousing');
+
+  static String
+      get iHaveHousingTodayButIAmWorriedAboutLosingHousingInTheFuture =>
+          _getLang(
+              'iHaveHousingTodayButIAmWorriedAboutLosingHousingInTheFuture');
+
+  static String get iHaveHousing => _getLang('iHaveHousing');
+
+  static String get bugInfestation => _getLang('bugInfestation');
+
+  static String
+      get thinkAboutThePlaceYouLiveDoYouHaveProblemsWithAnyOfTheFollowing =>
+          _getLang(
+              'thinkAboutThePlaceYouLiveDoYouHaveProblemsWithAnyOfTheFollowing');
+
+  static String get mold => _getLang('mold');
+
+  static String get leadPaintOrPipes => _getLang('leadPaintOrPipes');
+
+  static String get inadequateHeat => _getLang('inadequateHeat');
+
+  static String get ovenOrStoveNotWorking => _getLang('ovenOrStoveNotWorking');
+
+  static String get noOrNotWorkingSmokeDetectors =>
+      _getLang('noOrNotWorkingSmokeDetectors');
+
+  static String get waterLeaks => _getLang('waterLeaks');
+
+  static String get noneOfTheAbove => _getLang('noneOfTheAbove');
+
+  static String
+      get inThePastTwelveMonthsHasTheElectricGasOilOrWaterCompanyThreatenedToShutOffServicesInYourHome =>
+          _getLang(
+              'inThePastTwelveMonthsHasTheElectricGasOilOrWaterCompanyThreatenedToShutOffServicesInYourHome');
+
+  static String get yes => _getLang('yes');
+
+  static String get no => _getLang('no');
+
+  static String get alreadyShutOff => _getLang('alreadyShutOff');
+
+  static String
+      get withinThePastTwelveMonthsYouWorriedThatYourFoodWouldRunOutBeforeYouGotMoneyToBuyMore =>
+          _getLang(
+              'withinThePastTwelveMonthsYouWorriedThatYourFoodWouldRunOutBeforeYouGotMoneyToBuyMore');
+
+  static String get oftenTrue => _getLang('oftenTrue');
+
+  static String get sometimesTrue => _getLang('sometimesTrue');
+
+  static String get neverTrue => _getLang('neverTrue');
+
+  static String
+      get withinThePastTwelveMonthsTheFoodYouBoughtJustDidntLastAndYouDidntHaveMoneyToGetMore =>
+          _getLang(
+              'withinThePastTwelveMonthsTheFoodYouBoughtJustDidntLastAndYouDidntHaveMoneyToGetMore');
+
+  static String
+      get inThePastTwelveMonthsHasLackOfTransportationKeptYouFromMedicalAppointmentsMeetingsWorkOrFromGettingThingsNeededForDailyLiving =>
+          _getLang(
+              'inThePastTwelveMonthsHasLackOfTransportationKeptYouFromMedicalAppointmentsMeetingsWorkOrFromGettingThingsNeededForDailyLiving');
+
+  static String get yesItHasKeptMeFromMedicalAppointmentsOrGettingMedications =>
+      _getLang('yesItHasKeptMeFromMedicalAppointmentsOrGettingMedications');
+
+  static String
+      get yesItHasKeptMeFromNonMedicalMeetingsAppointmentsWorkOrGettingThingsThatINeed =>
+          _getLang(
+              'yesItHasKeptMeFromNonMedicalMeetingsAppointmentsWorkOrGettingThingsThatINeed');
+
+  static String
+      get doProblemsGettingChildCareMakeItDifficultForYouToWorkOrStudy =>
+          _getLang(
+              'doProblemsGettingChildCareMakeItDifficultForYouToWorkOrStudy');
+
+  static String get doYouHaveAHighSchoolDiploma =>
+      _getLang('doYouHaveAHighSchoolDiploma');
+
+  static String get doYouHaveAJob => _getLang('doYouHaveAJob');
+
+  static String get iDontHaveEnoughMoneyToPayMyBills =>
+      _getLang('iDontHaveEnoughMoneyToPayMyBills');
+
+  static String get never => _getLang('never');
+
+  static String get rarely => _getLang('rarely');
+
+  static String get sometimes => _getLang('sometimes');
+
+  static String get fairlyOften => _getLang('fairlyOften');
+
+  static String get frequently => _getLang('frequently');
+
+  static String get howOftenDoesAnyoneIncludingFamilyPhysicallyHurtYou =>
+      _getLang('howOftenDoesAnyoneIncludingFamilyPhysicallyHurtYou');
+
+  static String get howOftenDoesAnyoneIncludingFamilyInsultOrTalkDownToYou =>
+      _getLang('howOftenDoesAnyoneIncludingFamilyInsultOrTalkDownToYou');
+
+  static String get howOftenDoesAnyoneIncludingFamilyThreatenYouWithHarm =>
+      _getLang('howOftenDoesAnyoneIncludingFamilyThreatenYouWithHarm');
+  static String get whatIsYourHousingSituationToday =>
+      _getLang('whatIsYourHousingSituationToday');
+  static String get housingAndUtilities => _getLang('housingAndUtilities');
+  static String get food => _getLang('food');
+  static String get transportationAndChildCare =>
+      _getLang('transportationAndChildCare');
+  static String get educationAndEmploymentAndFinance =>
+      _getLang('educationAndEmploymentAndFinance');
+  static String get personalSafety => _getLang('personalSafety');
   static String get tablet => _getLang('tablet');
-
   static String get hrs => _getLang('hrs');
   static String get every => _getLang('every');
   static String get mgPerDl => _getLang('mgPerDl');

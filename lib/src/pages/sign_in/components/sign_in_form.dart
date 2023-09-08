@@ -48,9 +48,9 @@ class SignInForm extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/email.svg'),
         ),
-        prefixIconConstraints: BoxConstraints(minHeight: 20),
+        prefixIconConstraints: const BoxConstraints(minHeight: 20),
         labelText: StringConstants.email,
-        labelStyle: TextStyle(color: ColorConstants.white),
+        labelStyle: const TextStyle(color: ColorConstants.white),
       ),
     );
   }
@@ -60,7 +60,7 @@ class SignInForm extends StatelessWidget {
       decoration: InputDecoration(
         fillColor: darken(getThemeColor(context), 0.25),
         filled: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,

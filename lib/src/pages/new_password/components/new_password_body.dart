@@ -8,13 +8,13 @@ class NewPasswordBody extends StatelessWidget {
     return Column(
       children: [
         _newPasswordField(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         _confirmPasswordField(context),
-        SizedBox(height: 40),
+        const SizedBox(height: 40),
         _newPasswordButton(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         _rememberPassword(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
       ],
     );
   }
@@ -24,7 +24,7 @@ class NewPasswordBody extends StatelessWidget {
       decoration: InputDecoration(
         fillColor: darken(getThemeColor(context), 0.25),
         filled: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,
@@ -33,9 +33,9 @@ class NewPasswordBody extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/password.svg'),
         ),
-        prefixIconConstraints: BoxConstraints(minHeight: 20),
+        prefixIconConstraints: const BoxConstraints(minHeight: 20),
         labelText: 'New Password',
-        labelStyle: TextStyle(color: ColorConstants.white),
+        labelStyle: const TextStyle(color: ColorConstants.white),
       ),
     );
   }
@@ -45,7 +45,7 @@ class NewPasswordBody extends StatelessWidget {
       decoration: InputDecoration(
         fillColor: darken(getThemeColor(context), 0.25),
         filled: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 14),
+        contentPadding: const EdgeInsets.symmetric(vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,
@@ -54,9 +54,9 @@ class NewPasswordBody extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/password.svg'),
         ),
-        prefixIconConstraints: BoxConstraints(minHeight: 20),
+        prefixIconConstraints: const BoxConstraints(minHeight: 20),
         labelText: 'Confirm Password',
-        labelStyle: TextStyle(color: ColorConstants.white),
+        labelStyle: const TextStyle(color: ColorConstants.white),
       ),
     );
   }

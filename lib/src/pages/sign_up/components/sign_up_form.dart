@@ -236,7 +236,6 @@ class _SignUpFormState extends State<SignUpForm> {
   }
 }
 
-
 @freezed
 class Country with _$Country {
   const factory Country({

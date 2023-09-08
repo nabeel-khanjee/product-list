@@ -10,15 +10,15 @@ class OTPHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 40),
-          Align(
+          const SizedBox(height: 40),
+          const Align(
             alignment: Alignment.centerLeft,
             child: Icon(
               Icons.arrow_back,
               color: ColorConstants.white,
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             'Verify your email',
             style: Theme.of(context)
@@ -26,7 +26,7 @@ class OTPHeader extends StatelessWidget {
                 .labelLarge!
                 .copyWith(fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             'Please enter the 4 digit code sent to',
             style: Theme.of(context)
@@ -34,8 +34,8 @@ class OTPHeader extends StatelessWidget {
                 .bodySmall!
                 .copyWith(color: ColorConstants.greyText),
           ),
-          SizedBox(height: 5),
-          Text('atriatech@gmail.com'),
+          const SizedBox(height: 5),
+          const Text('atriatech@gmail.com'),
         ],
       ),
     );
