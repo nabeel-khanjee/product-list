@@ -6,7 +6,7 @@ export 'package:provider_app/src/pages/education_and_employment_and_finance/educ
 export 'package:provider_app/src/pages/food/food_screen.dart';
 export 'package:provider_app/src/pages/mental_health/data_list/indications_list_data.dart';
 export 'package:provider_app/src/pages/mental_health/model/mentail_health_model.dart';
-export 'package:provider_app/src/pages/social_health_inner_pages/social_health_inner_pages_screen.dart';
+export 'package:provider_app/src/pages/social_health/social_health_inner_pages/social_health_inner_pages_screen.dart';
 export 'package:provider_app/src/pages/mental_health/mentail_health_screen.dart';
 export 'package:provider_app/src/pages/personal_safety/personal_safety_screen.dart';
 export 'package:provider_app/src/pages/physical_health/physical_health_screen.dart';
@@ -178,3 +178,8 @@ export 'package:provider_app/src/pages/otp/components/otp_fields.dart';
 export 'package:provider_app/src/pages/forgot_password/forgot_password_screen.dart';
 export 'package:provider_app/src/pages/new_password/new_password_screen.dart';
 export 'package:provider_app/src/pages/otp/otp_screen.dart';
+export 'package:provider_app/src/components/custom_gradient_bg.dart';
+export 'package:provider_app/src/pages/emergency/components/emergency_address.dart';
+export 'package:provider_app/src/pages/emergency/components/emergency_button.dart';
+export 'package:provider_app/src/pages/emergency/components/emergency_header.dart';
+export 'package:provider_app/src/pages/emergency/components/emergency_details.dart';

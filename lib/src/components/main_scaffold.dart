@@ -4,12 +4,14 @@ class MainScaffold extends StatelessWidget {
   final bool isGradient;
   final Widget? appBar;
   final Widget? bottomNavigationBar;
+  final double? preferredSizeAppBar;
 
   const MainScaffold({
     super.key,
     required this.body,
     required this.isGradient,
-    this.appBar, this.bottomNavigationBar,
+    this.appBar,
+    this.bottomNavigationBar, this.preferredSizeAppBar,
   });
 
   final Widget body;
@@ -25,7 +27,7 @@ class MainScaffold extends StatelessWidget {
           : Theme.of(context).scaffoldBackgroundColor,
       appBar: appBar != null
           ? PreferredSize(
-              preferredSize: const Size.fromHeight(kToolbarHeight),
+              preferredSize:  Size.fromHeight(preferredSizeAppBar?? kToolbarHeight),
               child: appBar!)
           : null,
       body: body,
