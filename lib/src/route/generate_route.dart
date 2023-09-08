@@ -5,6 +5,7 @@ import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/d
 import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/domestic_violence_checklist/domestic_violence_checklist.dart';
 import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/gad_7/gad_7_screen.dart';
 import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/phq_9_screen.dart';
+import 'package:provider_app/src/pages/emergency/emergency_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -66,6 +67,9 @@ Route onGenerateRoute(RouteSettings settings) {
 
     case RouteConstants.forgotPasswordRoute:
       return materialRoute(const ForgotPasswordScreen());
+
+    case RouteConstants.emergencyRoute:
+      return materialRoute(const EmergencyScreen());
 
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
