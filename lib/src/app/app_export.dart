@@ -6,7 +6,7 @@ export 'package:provider_app/src/pages/education_and_employment_and_finance/educ
 export 'package:provider_app/src/pages/food/food_screen.dart';
 export 'package:provider_app/src/pages/mental_health/data_list/indications_list_data.dart';
 export 'package:provider_app/src/pages/mental_health/model/mentail_health_model.dart';
-export 'package:provider_app/src/pages/social_health_inner_pages/social_health_inner_pages_screen.dart';
+export 'package:provider_app/src/pages/social_health/social_health_inner_pages/social_health_inner_pages_screen.dart';
 export 'package:provider_app/src/pages/mental_health/mentail_health_screen.dart';
 export 'package:provider_app/src/pages/personal_safety/personal_safety_screen.dart';
 export 'package:provider_app/src/pages/physical_health/physical_health_screen.dart';
@@ -44,6 +44,7 @@ export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracke
 export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/circumference_widget.dart';
 export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/diabetic_widget.dart';
 export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/is_selected_checkbox_heading.dart';
+export 'package:provider_app/src/pages/mental_health/model/indications_model.dart';
 
 export 'package:provider_app/src/pages/change_language/components/language_setting.dart';
 export 'package:provider_app/src/pages/change_language/components/language_component.dart';

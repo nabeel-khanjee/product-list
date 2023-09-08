@@ -1,9 +1,12 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
+    'status':'Status',
+    'noteIfYouAnswerYesForAnEventPleaseAnswerAnyAdditionalQuestionsThatAreListedIfYouAnswerNoForAnEventGoOnToTheNextEvent':
+        '(Note: If you answer “Yes” for an event , please answer any additional questions that are listed, if you answer “No” for an event, go on to the next event)',
     'identified': 'Identified',
     'unidentified': 'Unidentified',
     'score': 'Score',
-    'bFTQuestionnaire': 'BFT Questionnaire',
+    'bFTQuestionnaire': 'Brief Trauma Questionnaire',
     'pHQ9': 'PHQ - 9',
     'gAD7': 'GAD - 7',
     'cageAid': 'Cage-Aid',

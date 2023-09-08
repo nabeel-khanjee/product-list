@@ -1,0 +1,19 @@
+import 'package:provider_app/src/app/app_export.dart';
+
+class QuestionFormHeading extends StatelessWidget {
+  const QuestionFormHeading({
+    super.key,
+    required this.questions,
+  });
+  final MapEntry<int, Question> questions;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(12),
+      child: Text('${questions.key + 1}. ${questions.value.question}',
+          style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+              fontSize: 16, fontFamily: FontConstantc.gilroySemiBold)),
+    );
+  }
+}
