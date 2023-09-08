@@ -10,6 +10,7 @@ class RouteConstants {
   static const String otpRoute = 'otpRoute';
   static const String newPasswordRoute = 'newPasswordRoute';
   static const String forgotPasswordRoute = 'forgotPasswordRoute';
+  static const String emergencyRoute = 'emergencyRoute';
 
   static const String changeLanguageRoute = 'changeLanguageRoute';
   static const String changeLocationRoute = 'changeLocationRoute';
@@ -19,13 +20,15 @@ class RouteConstants {
   static const String mentalHealthRoute = 'mentalHealthRoute';
   static const String familyHealthProfileRoute = 'familyHealthProfileRoute';
 
-  static const String housingAndUtilitiesRoute='housingAndUtilitiesRoute';
+  static const String housingAndUtilitiesRoute = 'housingAndUtilitiesRoute';
 
-  static const String foodRoute='foodRoute';
+  static const String foodRoute = 'foodRoute';
 
-  static const String transportationAndChildCareRoute='transportationAndChildCareRoute';
+  static const String transportationAndChildCareRoute =
+      'transportationAndChildCareRoute';
 
-  static const String educationAndEmploymentAndFinanceRoute='educationAndEmploymentAndFinanceRoute';
+  static const String educationAndEmploymentAndFinanceRoute =
+      'educationAndEmploymentAndFinanceRoute';
 
-  static const String personalSafetyRoute='personalSafetyRoute';
+  static const String personalSafetyRoute = 'personalSafetyRoute';
 }

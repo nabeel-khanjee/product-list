@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/emergency/emergency_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -52,11 +53,14 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.forgotPasswordRoute:
       return materialRoute(const ForgotPasswordScreen());
 
+    case RouteConstants.emergencyRoute:
+      return materialRoute(const EmergencyScreen());
+
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
 
     default:
-      return materialRoute(const SplashScreen());
-    // return materialRoute(ForgotPasswordScreen());
+      // return materialRoute(const SplashScreen());
+      return materialRoute(const EmergencyScreen());
   }
 }

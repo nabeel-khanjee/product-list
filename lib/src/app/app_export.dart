@@ -178,3 +178,8 @@ export 'package:provider_app/src/pages/demographic/demographic_screen.dart';
 export 'package:provider_app/src/pages/forgot_password/forgot_password_screen.dart';
 export 'package:provider_app/src/pages/new_password/new_password_screen.dart';
 export 'package:provider_app/src/pages/otp/otp_screen.dart';
+export 'package:provider_app/src/components/custom_gradient_bg.dart';
+export 'package:provider_app/src/pages/emergency/components/emergency_address.dart';
+export 'package:provider_app/src/pages/emergency/components/emergency_button.dart';
+export 'package:provider_app/src/pages/emergency/components/emergency_header.dart';
+export 'package:provider_app/src/pages/emergency/components/emergency_details.dart';
