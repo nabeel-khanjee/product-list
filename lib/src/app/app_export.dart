@@ -183,7 +183,6 @@ export 'package:provider_app/src/pages/emergency/components/emergency_address.da
 export 'package:provider_app/src/pages/emergency/components/emergency_button.dart';
 export 'package:provider_app/src/pages/emergency/components/emergency_header.dart';
 export 'package:provider_app/src/pages/emergency/components/emergency_details.dart';
-export 'package:provider_app/src/pages/mental_health/model/indications_model.dart';
 
 export 'package:provider_app/src/pages/emergency_types/emergency_types_screen.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/bft_questionnaire/bft_questionnaire/bft_questionnaire_screen.dart';
