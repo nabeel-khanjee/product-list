@@ -11,6 +11,7 @@ class RouteConstants {
   static const String newPasswordRoute = 'newPasswordRoute';
   static const String forgotPasswordRoute = 'forgotPasswordRoute';
   static const String emergencyRoute = 'emergencyRoute';
+  static const String emergencyTypesRoute = 'emergencyTypesRoute';
 
   static const String changeLanguageRoute = 'changeLanguageRoute';
   static const String changeLocationRoute = 'changeLocationRoute';

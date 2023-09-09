@@ -5,8 +5,16 @@ class EmergencyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Image(
-      image: AssetImage("assets/images/emergency_button.png"),
+    return GestureDetector(
+      onTap: () {
+        NavigationUtil.push(
+          context,
+          RouteConstants.emergencyTypesRoute,
+        );
+      },
+      child: const Image(
+        image: AssetImage("assets/images/emergency_button.png"),
+      ),
     );
   }
 }
