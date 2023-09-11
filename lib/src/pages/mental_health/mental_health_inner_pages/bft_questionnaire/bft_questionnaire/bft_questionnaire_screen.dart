@@ -1,16 +1,68 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/bft_questionnaire/bft_questionnaire/components/bft_questionnaire_appbar.dart';
 
 class BFTQuestionnaireScreen extends StatelessWidget {
   const BFTQuestionnaireScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<Question> questions = [
+      Question(
+          isSelected: false,
+          question: StringConstants
+              .haveYouEverServedInAWarZoneOrHaveYouEverServedInANoncombatJobThatExposedYouToWarRelatedCasualties,
+          options: [
+            Option(option: StringConstants.hasThisEverHappenedToYou),
+            Option(
+                option: StringConstants
+                    .ifTheEventHappenedDidYouThinkYourLifeWasInDangerOrYouMightBeSeriouslyInjured),
+            Option(
+                option:
+                    StringConstants.ifTheEventHappenedWereYouSeriouslyInjured)
+          ]),
+      Question(
+          isSelected: false,
+          question: StringConstants
+              .haveYouEverBeenInASeriousCarAccidentOrASeriousAccidentAtWorkOrSomewhereElse,
+          options: [
+            Option(option: StringConstants.hasThisEverHappenedToYou),
+            Option(
+                option: StringConstants
+                    .ifTheEventHappenedDidYouThinkYourLifeWasInDangerOrYouMightBeSeriouslyInjured),
+            Option(
+                option:
+                    StringConstants.ifTheEventHappenedWereYouSeriouslyInjured)
+          ]),
+      Question(
+          isSelected: false,
+          question: StringConstants
+              .haveYouEverBeenInAMajorNaturalOrTechnologicalDisaster,
+          options: [
+            Option(option: StringConstants.hasThisEverHappenedToYou),
+            Option(
+                option: StringConstants
+                    .ifTheEventHappenedDidYouThinkYourLifeWasInDangerOrYouMightBeSeriouslyInjured),
+            Option(
+                option:
+                    StringConstants.ifTheEventHappenedWereYouSeriouslyInjured)
+          ]),
+    ];
     return MainScaffold(
-      body: Container(padding: const EdgeInsets.all(12), child: Container()),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: questions
+              .asMap()
+              .entries
+              .map((question) => BFTQuestionnaireWidget(question: question))
+              .toList(),
+        ),
+      ),
       isGradient: false,
       preferredSizeAppBar: kToolbarHeight * 3.5,
       appBar: const BFTQuestionnaireAppBar(),
     );
   }
 }
+
+

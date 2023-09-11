@@ -3,6 +3,51 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
+  static var feelingDownDepressedOrHopeless;
+
+  static var littleInterestOrPleasureInDoingThings;
+
+  static var notAtAll;
+
+  static var severalDays;
+
+  static var moreThanHalfTheDays;
+
+  static var nearlyEveryDay;
+
+  static var troubleFallingOrStayingAsleepOrSleepingTooMuch;
+
+  static String
+      get theLastTwoWeeksHowOftenHaveYouBeenBotheredByAnyOfTheFollowingProblemsUseToIndicateYourAnswer =>
+          _getLang(
+              'theLastTwoWeeksHowOftenHaveYouBeenBotheredByAnyOfTheFollowingProblemsUseToIndicateYourAnswer');
+
+  static String get totalScore => _getLang('totalScore');
+
+  static String
+      get haveYouEverServedInAWarZoneOrHaveYouEverServedInANoncombatJobThatExposedYouToWarRelatedCasualties =>
+          _getLang(
+              'haveYouEverServedInAWarZoneOrHaveYouEverServedInANoncombatJobThatExposedYouToWarRelatedCasualties');
+
+  static String get hasThisEverHappenedToYou =>
+      _getLang('hasThisEverHappenedToYou');
+
+  static String
+      get ifTheEventHappenedDidYouThinkYourLifeWasInDangerOrYouMightBeSeriouslyInjured =>
+          _getLang(
+              'ifTheEventHappenedDidYouThinkYourLifeWasInDangerOrYouMightBeSeriouslyInjured');
+
+  static String get ifTheEventHappenedWereYouSeriouslyInjured =>
+      _getLang('ifTheEventHappenedWereYouSeriouslyInjured');
+
+  static String
+      get haveYouEverBeenInASeriousCarAccidentOrASeriousAccidentAtWorkOrSomewhereElse =>
+          _getLang(
+              'haveYouEverBeenInASeriousCarAccidentOrASeriousAccidentAtWorkOrSomewhereElse');
+
+  static String get haveYouEverBeenInAMajorNaturalOrTechnologicalDisaster =>
+      _getLang('haveYouEverBeenInAMajorNaturalOrTechnologicalDisaster');
+
   static String get status => _getLang('status');
 
   static String

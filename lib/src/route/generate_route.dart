@@ -1,11 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/bft_questionnaire/bft_questionnaire/bft_questionnaire_screen.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/cage_aid_screen.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/development_disability/development_disablity_screen.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/domestic_violence_checklist/domestic_violence_checklist.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/gad_7/gad_7_screen.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/phq_9_screen.dart';
-import 'package:provider_app/src/pages/emergency/emergency_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -71,11 +64,13 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.emergencyRoute:
       return materialRoute(const EmergencyScreen());
 
+    case RouteConstants.emergencyTypesRoute:
+      return materialRoute(const EmergencyTypesScreen());
+
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
 
     default:
       return materialRoute(const SplashScreen());
-
   }
 }

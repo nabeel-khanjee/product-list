@@ -6,6 +6,7 @@ class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({
     super.key,
   });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,7 +73,25 @@ class OnboardingScreen extends StatelessWidget {
                             RouteConstants.signInRoute,
                           );
                         },
-                        child: const Text('Signup/SignInView'),
+                        child: Text(
+                          'Registration',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          NavigationUtil.push(
+                            context,
+                            RouteConstants.emergencyRoute,
+                          );
+                        },
+                        child: Text(
+                          'Emergency',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
                       ),
                     ),
                   ],
