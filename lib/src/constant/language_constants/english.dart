@@ -1,6 +1,22 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
-    'status':'Status',
+    'totalScore': 'Total Score',
+    "theLastTwoWeeksHowOftenHaveYouBeenBotheredByAnyOfTheFollowingProblemsUseToIndicateYourAnswer":
+        'the last 2 weeks, how often have you been bothered by any of the following problems? (Use “✔” to indicate your answer)',
+
+    'haveYouEverServedInAWarZoneOrHaveYouEverServedInANoncombatJobThatExposedYouToWarRelatedCasualties':
+        'Have you ever served in a war zone, or have you ever served in a noncombat job that exposed you to war-related casualties?',
+    'hasThisEverHappenedToYou': 'Has this ever happened to you?',
+    'ifTheEventHappenedDidYouThinkYourLifeWasInDangerOrYouMightBeSeriouslyInjured':
+        'If the event happened, did you think your life was in danger or you might be seriously injured?',
+    'ifTheEventHappenedWereYouSeriouslyInjured':
+        'If the event happened, were you  seriously injured?',
+    'haveYouEverBeenInASeriousCarAccidentOrASeriousAccidentAtWorkOrSomewhereElse':
+        'Have you ever been in a serious car accident, or a serious accident at work or somewhere else?',
+    'haveYouEverBeenInAMajorNaturalOrTechnologicalDisaster':
+        'Have you ever been in a major natural or technological disaster?',
+
+    'status': 'Status',
     'noteIfYouAnswerYesForAnEventPleaseAnswerAnyAdditionalQuestionsThatAreListedIfYouAnswerNoForAnEventGoOnToTheNextEvent':
         '(Note: If you answer “Yes” for an event , please answer any additional questions that are listed, if you answer “No” for an event, go on to the next event)',
     'identified': 'Identified',
@@ -10,7 +26,7 @@ class EnglishConstant {
     'pHQ9': 'PHQ - 9',
     'gAD7': 'GAD - 7',
     'cageAid': 'Cage-Aid',
-    'developmentDisabilityIDD': 'Development Disability (IDD) 		',
+    'developmentDisabilityIDD': 'Development Disability (IDD)',
     'domesticViolenceChecklist': 'Domestic Violence Checklist',
     'mMSE': 'MMSE',
     'severe': 'Severe',

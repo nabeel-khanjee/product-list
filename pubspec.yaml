@@ -62,6 +62,8 @@ dev_dependencies:
   freezed: ^2.4.2
   json_serializable: ^6.7.1
 
+# flutter run --flavor <flavorName> -t lib/main_<flavorName>.dart
+#  fvm flutter build apk --release --flavor prod -t lib/src/flavors/main_prod.dart
 flavorizr:
   flavors:
     prod:
