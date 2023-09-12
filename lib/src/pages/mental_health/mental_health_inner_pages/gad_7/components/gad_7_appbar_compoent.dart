@@ -48,7 +48,7 @@ class GAD7AppbarComponent extends StatelessWidget {
                             .copyWith(fontFamily: FontConstantc.gilroyMedium),
                       ),
                       Text(
-                        '$score/27',
+                        '$score/21',
                         style: Theme.of(context)
                             .textTheme
                             .headlineMedium!
