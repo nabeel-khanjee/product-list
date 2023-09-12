@@ -3,6 +3,32 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
+  static String get feelingTiredOrHavingLittleEnergy =>
+      _getLang('feelingTiredOrHavingLittleEnergy');
+
+  static String get poorAppetiteOrOverEating =>
+      _getLang('poorAppetiteOrOverEating');
+
+  static String
+      get feelBadAboutYourSelfOrThatYouAreAFalierOrHaveLetYourselfOrYourFamilyDown =>
+          _getLang(
+              'feelBadAboutYourSelfOrThatYouAreAFalierOrHaveLetYourselfOrYourFamilyDown');
+
+  static String
+      get troubleConcentrationOnThingsSuchAsReadingTheNewsoaoerOrWatchingTelevision =>
+          _getLang(
+              'troubleConcentrationOnThingsSuchAsReadingTheNewsoaoerOrWatchingTelevision');
+
+  static String
+      get movingOrSpeakingSoSlowlyThatOtherPeopleCouldHaveNoticedOrTheOppositeBeingSoFidgetyOrRestlessThatYouHaveBeenMovingAroundALotMoreThatUsual =>
+          _getLang(
+              'movingOrSpeakingSoSlowlyThatOtherPeopleCouldHaveNoticedOrTheOppositeBeingSoFidgetyOrRestlessThatYouHaveBeenMovingAroundALotMoreThatUsual');
+
+  static String
+      get thingsThatYouWouldBeBetterOffDeadorHurtingYourselfInSomeway =>
+          _getLang(
+              'thingsThatYouWouldBeBetterOffDeadorHurtingYourselfInSomeway');
+
   static String get feelingDownDepressedOrHopeless =>
       _getLang('feelingDownDepressedOrHopeless');
 

@@ -27,6 +27,7 @@ void _injectUtilities({
 void _injectBlocsAndCubits() {
   getIt.registerFactory(() => AnimatedDrawerCubit());
   getIt.registerFactory(() => IsGradientBackgroundCubit());
+  getIt.registerFactory(() => PHQ9Cubit());
 }
 
 Future<void> _initializeData({bool enableLogging = true}) async {

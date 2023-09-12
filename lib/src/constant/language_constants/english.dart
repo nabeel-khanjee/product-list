@@ -1,6 +1,16 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
-    
+    'feelingTiredOrHavingLittleEnergy': 'Feeling tired or having little energy',
+    'poorAppetiteOrOverEating': 'Poor pppetite or overeating',
+    'feelBadAboutYourSelfOrThatYouAreAFalierOrHaveLetYourselfOrYourFamilyDown':
+        'Feel bad about yourself - or that you are a falier or have tet yourself or your family down',
+    'troubleConcentrationOnThingsSuchAsReadingTheNewsoaoerOrWatchingTelevision':
+        'Trouble concentration on things such as reading the newsoaoer or watching television',
+    'movingOrSpeakingSoSlowlyThatOtherPeopleCouldHaveNoticedOrTheOppositeBeingSoFidgetyOrRestlessThatYouHaveBeenMovingAroundALotMoreThatUsual':
+        'Moving or speaking so slowly that other people could have noticed or the opposite - being so fidgety or restless that you have been moving around a lot more that usual',
+
+    'thingsThatYouWouldBeBetterOffDeadorHurtingYourselfInSomeway':
+        'Things that you would be better off dead or of hurting yourself in some way',
     'totalScore': 'Total Score',
     "theLastTwoWeeksHowOftenHaveYouBeenBotheredByAnyOfTheFollowingProblemsUseToIndicateYourAnswer":
         'the last 2 weeks, how often have you been bothered by any of the following problems? (Use “✔” to indicate your answer)',

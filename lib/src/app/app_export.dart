@@ -1,4 +1,10 @@
 export 'package:easy_localization/easy_localization.dart' hide TextDirection;
+export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/cubit/phq_9_cubit.dart';
+export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/data_list/phq_9_data_list.dart';
+export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/compoents/phq_9_appbar_component.dart';
+export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/compoents/phq_9_widget.dart';
+export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/functions/get_scores.dart';
+
 export 'package:provider_app/src/pages/social_health/social_health_inner_pages/components/question_form_heading.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/bft_questionnaire/bft_questionnaire/components/bft_questionnaire_appbar.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/bft_questionnaire/bft_questionnaire/components/btf_questionnaire_widget.dart';
