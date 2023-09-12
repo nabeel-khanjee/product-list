@@ -3,19 +3,22 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
-  static var feelingDownDepressedOrHopeless;
+  static String get feelingDownDepressedOrHopeless =>
+      _getLang('feelingDownDepressedOrHopeless');
 
-  static var littleInterestOrPleasureInDoingThings;
+  static String get littleInterestOrPleasureInDoingThings =>
+      _getLang('littleInterestOrPleasureInDoingThings');
 
-  static var notAtAll;
+  static String get notAtAll => _getLang('notAtAll');
 
-  static var severalDays;
+  static String get severalDays => _getLang('severalDays');
 
-  static var moreThanHalfTheDays;
+  static String get moreThanHalfTheDays => _getLang('moreThanHalfTheDays');
 
-  static var nearlyEveryDay;
+  static String get nearlyEveryDay => _getLang('nearlyEveryDay');
 
-  static var troubleFallingOrStayingAsleepOrSleepingTooMuch;
+  static String get troubleFallingOrStayingAsleepOrSleepingTooMuch =>
+      _getLang('troubleFallingOrStayingAsleepOrSleepingTooMuch');
 
   static String
       get theLastTwoWeeksHowOftenHaveYouBeenBotheredByAnyOfTheFollowingProblemsUseToIndicateYourAnswer =>

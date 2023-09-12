@@ -1,9 +1,18 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
+    
     'totalScore': 'Total Score',
     "theLastTwoWeeksHowOftenHaveYouBeenBotheredByAnyOfTheFollowingProblemsUseToIndicateYourAnswer":
         'the last 2 weeks, how often have you been bothered by any of the following problems? (Use “✔” to indicate your answer)',
-
+    'feelingDownDepressedOrHopeless': 'Feeling down, depressed, or hopeless',
+    'littleInterestOrPleasureInDoingThings':
+        'Little interest or pleasure in doing things',
+    'notAtAll': 'Not at all',
+    'severalDays': 'Several Days',
+    'moreThanHalfTheDays': 'More than half the days',
+    'nearlyEveryDay': 'Nearly every day',
+    'troubleFallingOrStayingAsleepOrSleepingTooMuch':
+        'Trouble falling or staying asleep, or sleeping too much',
     'haveYouEverServedInAWarZoneOrHaveYouEverServedInANoncombatJobThatExposedYouToWarRelatedCasualties':
         'Have you ever served in a war zone, or have you ever served in a noncombat job that exposed you to war-related casualties?',
     'hasThisEverHappenedToYou': 'Has this ever happened to you?',
