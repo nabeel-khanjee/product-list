@@ -3,6 +3,12 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
+  static var feelingNervousAnxiousOrOnEdge;
+
+  static var notBeingAbleToStopOrControlWorrying;
+
+  static var worryingTooMuchAboutDifferentThings;
+
   static String get feelingTiredOrHavingLittleEnergy =>
       _getLang('feelingTiredOrHavingLittleEnergy');
 
