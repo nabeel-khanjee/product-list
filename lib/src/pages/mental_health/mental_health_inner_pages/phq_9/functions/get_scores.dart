@@ -6,12 +6,12 @@ int getScores({
     int getScore = 0;
 
     for (var indexOfQuestions = 0;
-        indexOfQuestions < questions.length;
+        indexOfQuestions < questionsPHQ7.length;
         indexOfQuestions++) {
       for (var indexOfOptions = 0;
-          indexOfOptions < questions[indexOfQuestions].options.length;
+          indexOfOptions < questionsPHQ7[indexOfQuestions].options.length;
           indexOfOptions++) {
-        if (questions[indexOfQuestions].options[indexOfOptions].isSelected ==
+        if (questionsPHQ7[indexOfQuestions].options[indexOfOptions].isSelected ==
             true) {
           getScore += indexOfOptions;
         }

@@ -1,9 +1,9 @@
     import 'package:provider_app/src/app/app_export.dart';
 
-final List<Question> questionsPHQ7 = [
+final List<Question> questionsGAD7 = [
       Question(
           isSelected: false,
-          question: StringConstants.littleInterestOrPleasureInDoingThings,
+          question: StringConstants.feelingNervousAnxiousOrOnEdge,
           options: [
             Option(option: StringConstants.notAtAll),
             Option(option: StringConstants.severalDays),
@@ -12,7 +12,7 @@ final List<Question> questionsPHQ7 = [
           ]),
       Question(
           isSelected: false,
-          question: StringConstants.feelingDownDepressedOrHopeless,
+          question: StringConstants.notBeingAbleToStopOrControlWorrying,
           options: [
             Option(option: StringConstants.notAtAll),
             Option(option: StringConstants.severalDays),
@@ -22,7 +22,7 @@ final List<Question> questionsPHQ7 = [
       Question(
           isSelected: false,
           question:
-              StringConstants.troubleFallingOrStayingAsleepOrSleepingTooMuch,
+              StringConstants.worryingTooMuchAboutDifferentThings,
           options: [
             Option(option: StringConstants.notAtAll),
             Option(option: StringConstants.severalDays),

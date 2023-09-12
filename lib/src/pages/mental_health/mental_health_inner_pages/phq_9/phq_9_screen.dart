@@ -17,7 +17,7 @@ class PHQ9Screen extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: questions
+                          children: questionsPHQ7
                               .asMap()
                               .entries
                               .map((question) => PHQ9Widget(question: question))
