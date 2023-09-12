@@ -3,19 +3,48 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
-  static var feelingDownDepressedOrHopeless;
+  static String get feelingTiredOrHavingLittleEnergy =>
+      _getLang('feelingTiredOrHavingLittleEnergy');
 
-  static var littleInterestOrPleasureInDoingThings;
+  static String get poorAppetiteOrOverEating =>
+      _getLang('poorAppetiteOrOverEating');
 
-  static var notAtAll;
+  static String
+      get feelBadAboutYourSelfOrThatYouAreAFalierOrHaveLetYourselfOrYourFamilyDown =>
+          _getLang(
+              'feelBadAboutYourSelfOrThatYouAreAFalierOrHaveLetYourselfOrYourFamilyDown');
 
-  static var severalDays;
+  static String
+      get troubleConcentrationOnThingsSuchAsReadingTheNewsoaoerOrWatchingTelevision =>
+          _getLang(
+              'troubleConcentrationOnThingsSuchAsReadingTheNewsoaoerOrWatchingTelevision');
 
-  static var moreThanHalfTheDays;
+  static String
+      get movingOrSpeakingSoSlowlyThatOtherPeopleCouldHaveNoticedOrTheOppositeBeingSoFidgetyOrRestlessThatYouHaveBeenMovingAroundALotMoreThatUsual =>
+          _getLang(
+              'movingOrSpeakingSoSlowlyThatOtherPeopleCouldHaveNoticedOrTheOppositeBeingSoFidgetyOrRestlessThatYouHaveBeenMovingAroundALotMoreThatUsual');
 
-  static var nearlyEveryDay;
+  static String
+      get thingsThatYouWouldBeBetterOffDeadorHurtingYourselfInSomeway =>
+          _getLang(
+              'thingsThatYouWouldBeBetterOffDeadorHurtingYourselfInSomeway');
 
-  static var troubleFallingOrStayingAsleepOrSleepingTooMuch;
+  static String get feelingDownDepressedOrHopeless =>
+      _getLang('feelingDownDepressedOrHopeless');
+
+  static String get littleInterestOrPleasureInDoingThings =>
+      _getLang('littleInterestOrPleasureInDoingThings');
+
+  static String get notAtAll => _getLang('notAtAll');
+
+  static String get severalDays => _getLang('severalDays');
+
+  static String get moreThanHalfTheDays => _getLang('moreThanHalfTheDays');
+
+  static String get nearlyEveryDay => _getLang('nearlyEveryDay');
+
+  static String get troubleFallingOrStayingAsleepOrSleepingTooMuch =>
+      _getLang('troubleFallingOrStayingAsleepOrSleepingTooMuch');
 
   static String
       get theLastTwoWeeksHowOftenHaveYouBeenBotheredByAnyOfTheFollowingProblemsUseToIndicateYourAnswer =>

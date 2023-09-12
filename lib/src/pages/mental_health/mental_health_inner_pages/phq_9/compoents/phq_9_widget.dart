@@ -5,9 +5,10 @@ import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/p
 class PHQ9Widget extends StatelessWidget {
   const PHQ9Widget({
     super.key,
-    required this.question,
+    required this.question, 
   });
   final MapEntry<int, Question> question;
+  
   @override
   Widget build(BuildContext context) {
     return Column(

@@ -11,9 +11,19 @@ class QuestionFormHeading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(12),
-      child: Text('${questions.key + 1}. ${questions.value.question}',
-          style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-              fontSize: 16, fontFamily: FontConstantc.gilroySemiBold)),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('${questions.key + 1}. ',
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  fontSize: 16, fontFamily: FontConstantc.gilroySemiBold)),
+          Expanded(
+            child: Text(questions.value.question,
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    fontSize: 16, fontFamily: FontConstantc.gilroySemiBold)),
+          ),
+        ],
+      ),
     );
   }
 }
