@@ -4,6 +4,9 @@ export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/p
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/compoents/phq_9_appbar_component.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/compoents/phq_9_widget.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/functions/get_scores.dart';
+export 'package:provider_app/src/pages/mental_health/components/mental_health_indicator_component.dart';
+export 'package:provider_app/src/pages/mental_health/components/mental_health_list_element_widget.dart';
+export 'package:provider_app/src/pages/mental_health/data_list/mental_health_list_data.dart';
 
 export 'package:provider_app/src/pages/social_health/social_health_inner_pages/components/question_form_heading.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/bft_questionnaire/bft_questionnaire/components/bft_questionnaire_appbar.dart';
