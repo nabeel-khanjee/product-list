@@ -1,5 +1,12 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
+'feelingNervousAnxiousOrOnEdge':'Feeling nervous, anxious or on edge',
+'notBeingAbleToStopOrControlWorrying':'Not being able to stop or control worrying',
+'worryingTooMuchAboutDifferentThings':'Worrying too much about different things',
+'troubleRelexing':'Trouble relexing',
+'biengSoRestlessThatItIsHardToSitStill':'Bieng so restless that it is hard to sit still',
+'beingEasyAnnoyedOrIrritable':'Being easy annoyed or irritable',
+'feelingAfraidAsIfSomethingAwfulMightHappen':'Feeling afraid as if something awful might happen',
     'feelingTiredOrHavingLittleEnergy': 'Feeling tired or having little energy',
     'poorAppetiteOrOverEating': 'Poor pppetite or overeating',
     'feelBadAboutYourSelfOrThatYouAreAFalierOrHaveLetYourselfOrYourFamilyDown':

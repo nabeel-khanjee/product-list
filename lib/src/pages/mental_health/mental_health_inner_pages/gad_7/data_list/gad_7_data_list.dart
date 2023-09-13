@@ -31,7 +31,7 @@ final List<Question> questionsGAD7 = [
           ]),
       Question(
           isSelected: false,
-          question: StringConstants.feelingTiredOrHavingLittleEnergy,
+          question: StringConstants.troubleRelexing,
           options: [
             Option(option: StringConstants.notAtAll),
             Option(option: StringConstants.severalDays),
@@ -40,17 +40,7 @@ final List<Question> questionsGAD7 = [
           ]),
       Question(
           isSelected: false,
-          question: StringConstants.poorAppetiteOrOverEating,
-          options: [
-            Option(option: StringConstants.notAtAll),
-            Option(option: StringConstants.severalDays),
-            Option(option: StringConstants.moreThanHalfTheDays),
-            Option(option: StringConstants.nearlyEveryDay)
-          ]),
-      Question(
-          isSelected: false,
-          question: StringConstants
-              .feelBadAboutYourSelfOrThatYouAreAFalierOrHaveLetYourselfOrYourFamilyDown,
+          question: StringConstants.biengSoRestlessThatItIsHardToSitStill,
           options: [
             Option(option: StringConstants.notAtAll),
             Option(option: StringConstants.severalDays),
@@ -60,7 +50,7 @@ final List<Question> questionsGAD7 = [
       Question(
           isSelected: false,
           question: StringConstants
-              .troubleConcentrationOnThingsSuchAsReadingTheNewsoaoerOrWatchingTelevision,
+              .beingEasyAnnoyedOrIrritable,
           options: [
             Option(option: StringConstants.notAtAll),
             Option(option: StringConstants.severalDays),
@@ -70,17 +60,7 @@ final List<Question> questionsGAD7 = [
       Question(
           isSelected: false,
           question: StringConstants
-              .movingOrSpeakingSoSlowlyThatOtherPeopleCouldHaveNoticedOrTheOppositeBeingSoFidgetyOrRestlessThatYouHaveBeenMovingAroundALotMoreThatUsual,
-          options: [
-            Option(option: StringConstants.notAtAll),
-            Option(option: StringConstants.severalDays),
-            Option(option: StringConstants.moreThanHalfTheDays),
-            Option(option: StringConstants.nearlyEveryDay)
-          ]),
-      Question(
-          isSelected: false,
-          question: StringConstants
-              .thingsThatYouWouldBeBetterOffDeadorHurtingYourselfInSomeway,
+              .feelingAfraidAsIfSomethingAwfulMightHappen,
           options: [
             Option(option: StringConstants.notAtAll),
             Option(option: StringConstants.severalDays),
