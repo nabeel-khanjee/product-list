@@ -3,6 +3,45 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
+  static String get result => _getLang('result');
+  static String get haveYouContactedAnyAgencyForServices =>
+      _getLang('haveYouContactedAnyAgencyForServices');
+  static String get haveYouEverFeltYouAughtToCutDownOnYourDrinkingOrDrugUse =>
+      _getLang('haveYouEverFeltYouAughtToCutDownOnYourDrinkingOrDrugUse');
+  static String get haveYoufeltBadOrGuiltyAboutYourDrinkingOrDrugUser =>
+      _getLang('haveYoufeltBadOrGuiltyAboutYourDrinkingOrDrugUser');
+  static String get havePeopleAnnoyedYouByCriticizingYourDrinkingOrDrugUse =>
+      _getLang('havePeopleAnnoyedYouByCriticizingYourDrinkingOrDrugUse');
+
+  static String
+      get haveYouEverHadAdrinkOrUsedDrugFirstTimeInTheMorningToSteadyYourNervesOrToGetRidOdAHangoverEyeOpener =>
+          _getLang(
+              'haveYouEverHadAdrinkOrUsedDrugFirstTimeInTheMorningToSteadyYourNervesOrToGetRidOdAHangoverEyeOpener');
+
+  static String
+      get patientDoesNotMeetTheIdentifyingCriteriaForSUDServicesNoReferralWasMade =>
+          _getLang(
+              'patientDoesNotMeetTheIdentifyingCriteriaForSUDServicesNoReferralWasMade');
+
+  static String get patientMeetsCriteriaForSUDServicesReferralWasMade =>
+      _getLang('patientMeetsCriteriaForSUDServicesReferralWasMade');
+
+  static String
+      get patientIsAMinorAndNoAlcoholOrDrugUseIsSuspectedNoFurtherActionIsRequired =>
+          _getLang(
+              'patientIsAMinorAndNoAlcoholOrDrugUseIsSuspectedNoFurtherActionIsRequired');
+
+  static String get patientDeniesNnyAlcoholOrDrugUseNoFurtherActionIsRequired =>
+      _getLang('patientDeniesNnyAlcoholOrDrugUseNoFurtherActionIsRequired');
+
+  static String
+      get patientDeclinesScreeningForAlcoholOrDrugUseNoFurtherActionIsRequired =>
+          _getLang(
+              'patientDeclinesScreeningForAlcoholOrDrugUseNoFurtherActionIsRequired');
+
+  static String get patientIsCurrentlyReceivingSUDTreatmentAgencyPOC =>
+      _getLang('patientIsCurrentlyReceivingSUDTreatmentAgencyPOC');
+
   static String get feelingNervousAnxiousOrOnEdge =>
       _getLang('feelingNervousAnxiousOrOnEdge');
 

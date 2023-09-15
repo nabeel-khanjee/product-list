@@ -1,12 +1,39 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
-'feelingNervousAnxiousOrOnEdge':'Feeling nervous, anxious or on edge',
-'notBeingAbleToStopOrControlWorrying':'Not being able to stop or control worrying',
-'worryingTooMuchAboutDifferentThings':'Worrying too much about different things',
-'troubleRelexing':'Trouble relexing',
-'biengSoRestlessThatItIsHardToSitStill':'Bieng so restless that it is hard to sit still',
-'beingEasyAnnoyedOrIrritable':'Being easy annoyed or irritable',
-'feelingAfraidAsIfSomethingAwfulMightHappen':'Feeling afraid as if something awful might happen',
+    'result': 'Result:',
+    'haveYouContactedAnyAgencyForServices':
+        'Have you contacted any agency for services?',
+    'haveYouEverFeltYouAughtToCutDownOnYourDrinkingOrDrugUse':
+        'Have you ever felt you aught to cut down on your drinking or drug use?',
+    'haveYoufeltBadOrGuiltyAboutYourDrinkingOrDrugUser':
+        'Have you felt bad or guilty about your drinking or drug use?',
+    'havePeopleAnnoyedYouByCriticizingYourDrinkingOrDrugUse':
+        'Have people annoyed you by criticizing your drinking or drug use?',
+    'haveYouEverHadAdrinkOrUsedDrugFirstTimeInTheMorningToSteadyYourNervesOrToGetRidOdAHangoverEyeOpener':
+        'Have you ever had a drink or used drug first time in the morning to steady your nerves or to get rid of a hangover (eye-opener)?',
+    'patientDoesNotMeetTheIdentifyingCriteriaForSUDServicesNoReferralWasMade':
+        'Patient does not meet the identifying criteria for SUD services, no referral was made',
+    'patientMeetsCriteriaForSUDServicesReferralWasMade':
+        'Patient meets criteria for SUD services referral was made',
+    'patientIsAMinorAndNoAlcoholOrDrugUseIsSuspectedNoFurtherActionIsRequired':
+        'Patient is a minor and no alcohol or drug use is suspected; no further action is required.',
+    'patientDeniesNnyAlcoholOrDrugUseNoFurtherActionIsRequired':
+        'Patient is a minor and no alcohol or drug use is suspected; no further action is required.',
+    'patientDeclinesScreeningForAlcoholOrDrugUseNoFurtherActionIsRequired':
+        'Patient declines screening for alcohol or drug use; no further action is required. ',
+    'patientIsCurrentlyReceivingSUDTreatmentAgencyPOC':
+        'Patient is currently receiving SUD treatment. Agency/POC:',
+    'feelingNervousAnxiousOrOnEdge': 'Feeling nervous, anxious or on edge',
+    'notBeingAbleToStopOrControlWorrying':
+        'Not being able to stop or control worrying',
+    'worryingTooMuchAboutDifferentThings':
+        'Worrying too much about different things',
+    'troubleRelexing': 'Trouble relexing',
+    'biengSoRestlessThatItIsHardToSitStill':
+        'Bieng so restless that it is hard to sit still',
+    'beingEasyAnnoyedOrIrritable': 'Being easy annoyed or irritable',
+    'feelingAfraidAsIfSomethingAwfulMightHappen':
+        'Feeling afraid as if something awful might happen',
     'feelingTiredOrHavingLittleEnergy': 'Feeling tired or having little energy',
     'poorAppetiteOrOverEating': 'Poor pppetite or overeating',
     'feelBadAboutYourSelfOrThatYouAreAFalierOrHaveLetYourselfOrYourFamilyDown':

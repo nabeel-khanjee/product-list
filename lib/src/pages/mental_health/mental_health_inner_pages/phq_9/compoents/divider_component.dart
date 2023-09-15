@@ -7,13 +7,14 @@ class DividerComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(12),
+    return Padding(
+      padding: const EdgeInsets.all(12),
       child: Row(
         children: [
           Expanded(
               child: Divider(
-            thickness: 1.5,
+            color: lighten(getThemeColor(context), 0.2),
+            thickness: 0.5,
           )),
         ],
       ),
