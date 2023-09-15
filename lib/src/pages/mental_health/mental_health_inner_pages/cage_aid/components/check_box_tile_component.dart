@@ -3,9 +3,10 @@ import 'package:provider_app/src/app/app_export.dart';
 class CheckBoxTileComponent extends StatefulWidget {
   const CheckBoxTileComponent({
     super.key,
-    required this.item,
+    required this.item, required this.textStyle,
   });
-  final MapEntry<int, CageAidAppBarOptions> item;
+  final MapEntry<int, CheckBoxListData> item;
+  final TextStyle textStyle;
 
   @override
   State<CheckBoxTileComponent> createState() => _CheckBoxTileComponentState();
@@ -20,6 +21,8 @@ class _CheckBoxTileComponentState extends State<CheckBoxTileComponent> {
       child: Container(
         padding: const EdgeInsets.all(10),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               height: 22,
@@ -38,7 +41,9 @@ class _CheckBoxTileComponentState extends State<CheckBoxTileComponent> {
               ),
             ),
             const SizedBox(width: 10),
-            Expanded(child: Text(widget.item.value.name))
+            Expanded(child: Text(widget.item.value.name,
+            style: widget.textStyle,
+            ))
           ],
         ),
       ),

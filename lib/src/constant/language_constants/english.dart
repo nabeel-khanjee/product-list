@@ -1,5 +1,30 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
+    'lookOverTheFollowingQuestionsAndThinkAboutHowYouAreBeingTreatedAndHowYouTreatYourPartner':
+        'Look over the following questions and think about how you are being treated and how you treat your partner. ',
+    'pATIENTDENIESANYHISTORYOFDOMESTICVIOLENCESCREENINGNOTAPPLICABLEATTHISTIME':
+        'PATIENT DENIES ANY HISTORY OF DOMESTIC VIOLENCE, SCREENING NOT APPLICABLE AT THIS TIME. ',
+    'embarrassYouWithBadNamesAndPutDowns':
+        'Embarrass you with bad names and put-downs?',
+    'lookAtYouOrActInWaysThatScareYou':
+        'Look at your act in ways that scare you?',
+    'controlWhatYouDoWhoYouSeeOrTalkToOrWhereToGo':
+        'Control what you do, who you see or talk to, or where to go?',
+    'stopYouFromSeeingOrTalkingToFriendsOrFamily':
+        'Stop you from seeing or talking to friends or family?',
+    'takeYourMoneyOrSocialSecurityMakeYouAskForMoneyOrRefuseToGiveYouMoney':
+        'Take your money or social security, make you ask for money, or refuse to give you money?',
+    'makeAllTheDecisions': 'Make all the decisions?',
+    'tellYouThatYouAreABadParentOrThreatenToTakeAwayOrHurtYourChildren':
+        'Tell you that you are a bad parent or threaten to take away or hurt your children?',
+    'actLikeTheAbuseIsNoBigDealItsYourFaultOrEvenDeniesDoingIt':
+        'Act like the abuse is no big deal, it’s your fault, or even denies doing it?',
+    'destroyYourPropertyOrThreatenToKillYourPets':
+        'Destroy your property or threaten to kill your pets?',
+    'intimidateYouWithGunKnivesOrOtherWeapons':
+        'Intimidate you with gun, knives, or other weapons?',
+    'threatenToCommitSucide': 'Threaten to commit sucide',
+    'threatenToKillYou': 'Threaten to kill you',
     'result': 'Result:',
     'haveYouContactedAnyAgencyForServices':
         'Have you contacted any agency for services?',

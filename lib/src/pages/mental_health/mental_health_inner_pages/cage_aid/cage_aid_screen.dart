@@ -1,11 +1,12 @@
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/components/result_identified_row_component.dart';
+import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/data_list/cage_aid_appbar_options_data_list.dart';
 
-class CageAidAppBarOptions {
+class CheckBoxListData {
   bool isSelected;
   String name;
 
-  CageAidAppBarOptions(this.isSelected, this.name);
+  CheckBoxListData(this.isSelected, this.name);
 }
 
 class CageAidScreen extends StatelessWidget {
@@ -14,16 +15,18 @@ class CageAidScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MainScaffold(
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            CheckBoxListTileComponent(),
-            DividerComponent(),
-            ListOfMainQuestions(),
-            DividerComponent(),
-            ResultIdentifiedRow(),
-            DividerComponent(),
-            AfterResultQuestionComponent()
+            CheckBoxListTileComponent(
+                textStyle: Theme.of(context).textTheme.bodySmall!,
+                checkBoxListData: cageAidCheckBoxList),
+            const DividerComponent(),
+            const ListOfMainQuestions(),
+            const DividerComponent(),
+            const ResultIdentifiedRow(),
+            const DividerComponent(),
+            const AfterResultQuestionComponent()
           ],
         ),
       ),
@@ -36,6 +39,3 @@ class CageAidScreen extends StatelessWidget {
     );
   }
 }
-
-
-

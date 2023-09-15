@@ -1,18 +1,18 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-List<CageAidAppBarOptions> cageAidAppBarOptions = [
-  CageAidAppBarOptions(
+List<CheckBoxListData> cageAidCheckBoxList = [
+  CheckBoxListData(
       false,
       StringConstants
           .patientIsAMinorAndNoAlcoholOrDrugUseIsSuspectedNoFurtherActionIsRequired),
-  CageAidAppBarOptions(
+  CheckBoxListData(
       false,
       StringConstants
           .patientDeniesNnyAlcoholOrDrugUseNoFurtherActionIsRequired),
-  CageAidAppBarOptions(
+  CheckBoxListData(
       false,
       StringConstants
           .patientDeclinesScreeningForAlcoholOrDrugUseNoFurtherActionIsRequired),
-  CageAidAppBarOptions(
+  CheckBoxListData(
       false, StringConstants.patientIsCurrentlyReceivingSUDTreatmentAgencyPOC),
 ];

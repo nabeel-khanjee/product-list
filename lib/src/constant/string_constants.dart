@@ -3,6 +3,54 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
+  static String
+      get lookOverTheFollowingQuestionsAndThinkAboutHowYouAreBeingTreatedAndHowYouTreatYourPartner =>
+          _getLang(
+              'lookOverTheFollowingQuestionsAndThinkAboutHowYouAreBeingTreatedAndHowYouTreatYourPartner');
+
+  static String
+      get pATIENTDENIESANYHISTORYOFDOMESTICVIOLENCESCREENINGNOTAPPLICABLEATTHISTIME =>
+          _getLang(
+              'pATIENTDENIESANYHISTORYOFDOMESTICVIOLENCESCREENINGNOTAPPLICABLEATTHISTIME');
+
+  static String get embarrassYouWithBadNamesAndPutDowns =>
+      _getLang('embarrassYouWithBadNamesAndPutDowns');
+
+  static String get lookAtYouOrActInWaysThatScareYou =>
+      _getLang('lookAtYouOrActInWaysThatScareYou');
+
+  static String get controlWhatYouDoWhoYouSeeOrTalkToOrWhereToGo =>
+      _getLang('controlWhatYouDoWhoYouSeeOrTalkToOrWhereToGo');
+
+  static String get stopYouFromSeeingOrTalkingToFriendsOrFamily =>
+      _getLang('stopYouFromSeeingOrTalkingToFriendsOrFamily');
+
+  static String
+      get takeYourMoneyOrSocialSecurityMakeYouAskForMoneyOrRefuseToGiveYouMoney =>
+          _getLang(
+              'takeYourMoneyOrSocialSecurityMakeYouAskForMoneyOrRefuseToGiveYouMoney');
+
+  static String get makeAllTheDecisions => _getLang('makeAllTheDecisions');
+
+  static String
+      get tellYouThatYouAreABadParentOrThreatenToTakeAwayOrHurtYourChildren =>
+          _getLang(
+              'tellYouThatYouAreABadParentOrThreatenToTakeAwayOrHurtYourChildren');
+
+  static String get actLikeTheAbuseIsNoBigDealItsYourFaultOrEvenDeniesDoingIt =>
+      _getLang('actLikeTheAbuseIsNoBigDealItsYourFaultOrEvenDeniesDoingIt');
+
+  static String get destroyYourPropertyOrThreatenToKillYourPets =>
+      _getLang('destroyYourPropertyOrThreatenToKillYourPets');
+
+  static String get intimidateYouWithGunKnivesOrOtherWeapons =>
+      _getLang('intimidateYouWithGunKnivesOrOtherWeapons');
+
+  static String get threatenToCommitSucide =>
+      _getLang('threatenToCommitSucide');
+
+  static String get threatenToKillYou => _getLang('threatenToKillYou');
+
   static String get result => _getLang('result');
   static String get haveYouContactedAnyAgencyForServices =>
       _getLang('haveYouContactedAnyAgencyForServices');
