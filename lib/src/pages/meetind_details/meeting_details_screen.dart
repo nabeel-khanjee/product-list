@@ -15,7 +15,7 @@ class MeetingDetailsScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const MeetingDetailsBody(),
+                MeetingDetailsBody(),
                 MeetingDetailsStepper(),
               ],
             ),

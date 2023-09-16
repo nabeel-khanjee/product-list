@@ -7,10 +7,10 @@ class PastRecordsPageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         PastRecordsMonths(),
-        const PastRecordsBody(),
+        PastRecordsBody(),
       ],
     );
   }

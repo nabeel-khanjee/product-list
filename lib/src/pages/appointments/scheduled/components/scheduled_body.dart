@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/components/doctor_component.dart';
 
 class ScheduledBody extends StatelessWidget {
   const ScheduledBody({Key? key}) : super(key: key);
