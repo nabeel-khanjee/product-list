@@ -22,6 +22,14 @@ class AssetsConstants {
   static const String settingIcon = 'assets/icon/setting_icon.png';
   static const String homeIcon = 'assets/icon/home_icon.png';
   static const String profileIcon = 'assets/icon/profile_icon.png';
+
+  static const String appointmentsIcon = 'assets/icon/appointments.png';
+  static const String communicationIcon = 'assets/icon/communication.png';
+  static const String documentsIcon = 'assets/icon/documents.png';
+  static const String medicationsIcon = 'assets/icon/medications.png';
+  static const String billsIcon = 'assets/icon/bills.png';
+
+
   static const String drawerIcon = 'assets/icon/drawer_image_icon.png';
   static const String lightDarkIcon = 'assets/icon/light_dark_icon.png';
   static const String notificationAppBarIcon =

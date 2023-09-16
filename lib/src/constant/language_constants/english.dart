@@ -246,6 +246,12 @@ class EnglishConstant {
     'selectLanguage': 'Select Language',
     'home': 'Home',
     'profile': 'Profile',
+
+    'appointments': 'Appointments',
+    'communication': 'Communication',
+    'documents': 'Documents',
+    'billings': 'Billings & Payment',
+
     'otherSettings': 'Other Settings',
     'changeLanguage': 'Change language',
     'changeLocation': 'Change Location',
@@ -296,5 +302,12 @@ class EnglishConstant {
     'signIn': 'Sign In',
     'newAccount': 'Don’t have an account? ',
     'createAccount': 'Create Account',
+
+    // appointment
+    'bookAppointment': 'Book Appointment',
+    'scheduled': 'Scheduled',
+    'clinicalBookings': 'Clinical Bookings',
+    'telehealthAppointments': 'Telehealth Appointments',
+    'ePrescriptions': 'E-Prescriptions',
   };
 }

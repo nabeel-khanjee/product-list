@@ -31,6 +31,42 @@ class AppDrawer extends StatelessWidget {
         route: RouteConstants.settingRoute,
         icon: AssetsConstants.settingIcon,
       ),
+      RouteListApp(
+        isInnerPage: true,
+        pageIndex: 3,
+        name: StringConstants.appointments,
+        route: RouteConstants.appointmentsRoute,
+        icon: AssetsConstants.appointmentsIcon,
+      ),
+      RouteListApp(
+        isInnerPage: true,
+        pageIndex: 4,
+        name: StringConstants.communication,
+        route: RouteConstants.appointmentsRoute,
+        icon: AssetsConstants.communicationIcon,
+      ),
+
+      // RouteListApp(
+      //   isInnerPage: true,
+      //   pageIndex: 5,
+      //   name: StringConstants.documents,
+      //   route: RouteConstants.appointmentsRoute,
+      //   icon: AssetsConstants.documentsIcon,
+      // ),
+      // RouteListApp(
+      //   isInnerPage: true,
+      //   pageIndex: 6,
+      //   name: StringConstants.medications,
+      //   route: RouteConstants.appointmentsRoute,
+      //   icon: AssetsConstants.medicationsIcon,
+      // ),
+      // RouteListApp(
+      //   isInnerPage: true,
+      //   pageIndex: 7,
+      //   name: StringConstants.billings,
+      //   route: RouteConstants.appointmentsRoute,
+      //   icon: AssetsConstants.billsIcon,
+      // ),
     ];
     return Drawer(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),

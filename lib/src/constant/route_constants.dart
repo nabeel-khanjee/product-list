@@ -4,6 +4,10 @@ class RouteConstants {
   static const String onboardingRoute = 'onboardingRoute';
   static const String settingRoute = 'settingRoute';
   static const String profileRoute = 'profileRoute';
+  static const String appointmentsRoute = 'appointmentsRoute';
+  static const String communicationRoute = 'communicationRoute';
+  static const String meetingDetailsRoute = 'meetingDetailsRoute';
+  static const String videoCallingRoute = 'videoCallingRoute';
 
   static const String signInRoute = 'loginRoute';
   static const String signUpRoute = 'signUpRoute';
@@ -12,6 +16,7 @@ class RouteConstants {
   static const String forgotPasswordRoute = 'forgotPasswordRoute';
   static const String emergencyRoute = 'emergencyRoute';
   static const String emergencyTypesRoute = 'emergencyTypesRoute';
+  static const String allEmergenciesRoute = 'allEmergenciesRoute';
 
   static const String changeLanguageRoute = 'changeLanguageRoute';
   static const String changeLocationRoute = 'changeLocationRoute';

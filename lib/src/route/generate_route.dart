@@ -1,5 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/family_health_profile/family_health_profile_screen.dart';
+import 'package:provider_app/src/pages/meetind_details/meeting_details_screen.dart';
+import 'package:provider_app/src/pages/video_calling/video_calling_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -70,10 +72,27 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.emergencyTypesRoute:
       return materialRoute(const EmergencyTypesScreen());
 
+    case RouteConstants.allEmergenciesRoute:
+      return materialRoute(const AllEmergenciesScreen());
+
+    case RouteConstants.appointmentsRoute:
+      return materialRoute(const AppointmentsScreen());
+
+    case RouteConstants.communicationRoute:
+      return materialRoute(const CommunicationScreen());
+
+    case RouteConstants.meetingDetailsRoute:
+      return materialRoute(const MeetingDetailsScreen());
+
+    case RouteConstants.videoCallingRoute:
+      return materialRoute(const VideoCallingScreen());
+
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
 
     default:
-      return materialRoute(const SplashScreen());
+      // return materialRoute(const SplashScreen());
+
+      return materialRoute(const VideoCallingScreen());
   }
 }
