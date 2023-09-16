@@ -3,6 +3,101 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
+  static String get toBeCompletedByProvider=> _getLang('toBeCompletedByProvider');
+
+  static String get obervationQuestions=> _getLang('obervationQuestions');
+
+  static String get ifSoForWhat => _getLang('ifSoForWhat') ;
+
+  static String get doesYourPartner => _getLang('doesYourPartner') ;
+
+  static String
+      get lookOverTheFollowingQuestionsAndThinkAboutHowYouAreBeingTreatedAndHowYouTreatYourPartner =>
+          _getLang(
+              'lookOverTheFollowingQuestionsAndThinkAboutHowYouAreBeingTreatedAndHowYouTreatYourPartner');
+
+  static String
+      get pATIENTDENIESANYHISTORYOFDOMESTICVIOLENCESCREENINGNOTAPPLICABLEATTHISTIME =>
+          _getLang(
+              'pATIENTDENIESANYHISTORYOFDOMESTICVIOLENCESCREENINGNOTAPPLICABLEATTHISTIME');
+
+  static String get embarrassYouWithBadNamesAndPutDowns =>
+      _getLang('embarrassYouWithBadNamesAndPutDowns');
+
+  static String get lookAtYouOrActInWaysThatScareYou =>
+      _getLang('lookAtYouOrActInWaysThatScareYou');
+
+  static String get controlWhatYouDoWhoYouSeeOrTalkToOrWhereToGo =>
+      _getLang('controlWhatYouDoWhoYouSeeOrTalkToOrWhereToGo');
+
+  static String get stopYouFromSeeingOrTalkingToFriendsOrFamily =>
+      _getLang('stopYouFromSeeingOrTalkingToFriendsOrFamily');
+
+  static String
+      get takeYourMoneyOrSocialSecurityMakeYouAskForMoneyOrRefuseToGiveYouMoney =>
+          _getLang(
+              'takeYourMoneyOrSocialSecurityMakeYouAskForMoneyOrRefuseToGiveYouMoney');
+
+  static String get makeAllTheDecisions => _getLang('makeAllTheDecisions');
+
+  static String
+      get tellYouThatYouAreABadParentOrThreatenToTakeAwayOrHurtYourChildren =>
+          _getLang(
+              'tellYouThatYouAreABadParentOrThreatenToTakeAwayOrHurtYourChildren');
+
+  static String get actLikeTheAbuseIsNoBigDealItsYourFaultOrEvenDeniesDoingIt =>
+      _getLang('actLikeTheAbuseIsNoBigDealItsYourFaultOrEvenDeniesDoingIt');
+
+  static String get destroyYourPropertyOrThreatenToKillYourPets =>
+      _getLang('destroyYourPropertyOrThreatenToKillYourPets');
+
+  static String get intimidateYouWithGunKnivesOrOtherWeapons =>
+      _getLang('intimidateYouWithGunKnivesOrOtherWeapons');
+
+  static String get threatenToCommitSucide =>
+      _getLang('threatenToCommitSucide');
+
+  static String get threatenToKillYou => _getLang('threatenToKillYou');
+
+  static String get result => _getLang('result');
+  static String get haveYouContactedAnyAgencyForServices =>
+      _getLang('haveYouContactedAnyAgencyForServices');
+  static String get haveYouEverFeltYouAughtToCutDownOnYourDrinkingOrDrugUse =>
+      _getLang('haveYouEverFeltYouAughtToCutDownOnYourDrinkingOrDrugUse');
+  static String get haveYoufeltBadOrGuiltyAboutYourDrinkingOrDrugUser =>
+      _getLang('haveYoufeltBadOrGuiltyAboutYourDrinkingOrDrugUser');
+  static String get havePeopleAnnoyedYouByCriticizingYourDrinkingOrDrugUse =>
+      _getLang('havePeopleAnnoyedYouByCriticizingYourDrinkingOrDrugUse');
+
+  static String
+      get haveYouEverHadAdrinkOrUsedDrugFirstTimeInTheMorningToSteadyYourNervesOrToGetRidOdAHangoverEyeOpener =>
+          _getLang(
+              'haveYouEverHadAdrinkOrUsedDrugFirstTimeInTheMorningToSteadyYourNervesOrToGetRidOdAHangoverEyeOpener');
+
+  static String
+      get patientDoesNotMeetTheIdentifyingCriteriaForSUDServicesNoReferralWasMade =>
+          _getLang(
+              'patientDoesNotMeetTheIdentifyingCriteriaForSUDServicesNoReferralWasMade');
+
+  static String get patientMeetsCriteriaForSUDServicesReferralWasMade =>
+      _getLang('patientMeetsCriteriaForSUDServicesReferralWasMade');
+
+  static String
+      get patientIsAMinorAndNoAlcoholOrDrugUseIsSuspectedNoFurtherActionIsRequired =>
+          _getLang(
+              'patientIsAMinorAndNoAlcoholOrDrugUseIsSuspectedNoFurtherActionIsRequired');
+
+  static String get patientDeniesNnyAlcoholOrDrugUseNoFurtherActionIsRequired =>
+      _getLang('patientDeniesNnyAlcoholOrDrugUseNoFurtherActionIsRequired');
+
+  static String
+      get patientDeclinesScreeningForAlcoholOrDrugUseNoFurtherActionIsRequired =>
+          _getLang(
+              'patientDeclinesScreeningForAlcoholOrDrugUseNoFurtherActionIsRequired');
+
+  static String get patientIsCurrentlyReceivingSUDTreatmentAgencyPOC =>
+      _getLang('patientIsCurrentlyReceivingSUDTreatmentAgencyPOC');
+
   static String get feelingNervousAnxiousOrOnEdge =>
       _getLang('feelingNervousAnxiousOrOnEdge');
 
@@ -103,9 +198,13 @@ class StringConstants {
       get noteIfYouAnswerYesForAnEventPleaseAnswerAnyAdditionalQuestionsThatAreListedIfYouAnswerNoForAnEventGoOnToTheNextEvent =>
           _getLang(
               'noteIfYouAnswerYesForAnEventPleaseAnswerAnyAdditionalQuestionsThatAreListedIfYouAnswerNoForAnEventGoOnToTheNextEvent');
+
   static String get identified => _getLang('identified');
+
   static String get unidentified => _getLang('unidentified');
+
   static String get score => _getLang('score');
+
   static String get bFTQuestionnaire => _getLang('bFTQuestionnaire');
 
   static String get pHQ9 => _getLang('pHQ9');
@@ -226,39 +325,70 @@ class StringConstants {
 
   static String get howOftenDoesAnyoneIncludingFamilyThreatenYouWithHarm =>
       _getLang('howOftenDoesAnyoneIncludingFamilyThreatenYouWithHarm');
+
   static String get whatIsYourHousingSituationToday =>
       _getLang('whatIsYourHousingSituationToday');
+
   static String get housingAndUtilities => _getLang('housingAndUtilities');
+
   static String get food => _getLang('food');
+
   static String get transportationAndChildCare =>
       _getLang('transportationAndChildCare');
+
   static String get educationAndEmploymentAndFinance =>
       _getLang('educationAndEmploymentAndFinance');
+
   static String get personalSafety => _getLang('personalSafety');
+
   static String get tablet => _getLang('tablet');
+
   static String get hrs => _getLang('hrs');
+
   static String get every => _getLang('every');
+
   static String get mgPerDl => _getLang('mgPerDl');
+
   static String get anxiety => _getLang('anxiety');
+
   static String get depression => _getLang('depression');
+
   static String get mild => _getLang('mild');
+
   static String get moderate => _getLang('moderate');
+
   static String get circumference => _getLang('circumference');
+
   static String get waist => _getLang('waist');
+
   static String get head => _getLang('head');
+
   static String get pulseRate => _getLang('pulseRate');
+
   static String get respiratory => _getLang('respiratory');
+
   static String get diabetic => _getLang('diabetic');
+
   static String get sugarFasting => _getLang('sugarFasting');
+
   static String get sugarRandom => _getLang('sugarRandom');
+
   static String get inches => _getLang('inches');
+
   static String get bmi => _getLang('bmi');
+
   static String get height => _getLang('height');
+
   static String get kgPerMerterSquare => _getLang('kgPerMerterSquare');
+
   static String get merterSquare => _getLang('merterSquare');
+
   static String get healthTracker => _getLang('healthTracker');
+
   static String get medications => _getLang('medications');
+
   static String get edit => _getLang('edit');
+
   static String get secondaryInsurance => _getLang('secondaryInsurance');
 
   static String get primaryInsurance => _getLang('primaryInsurance');
@@ -432,6 +562,14 @@ class StringConstants {
 
   static String get home => _getLang('home');
 
+  static String get appointments => _getLang('appointments');
+
+  static String get communication => _getLang('communication');
+
+  static String get documents => _getLang('documents');
+
+  static String get billings => _getLang('billings');
+
   static String get generalSettings => _getLang('generalSettings');
 
   static String get selectColor => _getLang('selectColor');
@@ -463,7 +601,18 @@ class StringConstants {
 
   static String get createAccount => _getLang('createAccount');
 
-  // signUp screen
+  // appointments screen
+
+  static String get bookAppointment => _getLang('bookAppointment');
+
+  static String get scheduled => _getLang('scheduled');
+
+  static String get clinicalBookings => _getLang('clinicalBookings');
+
+  static String get telehealthAppointments =>
+      _getLang('telehealthAppointments');
+
+  static String get ePrescriptions => _getLang('ePrescriptions');
 
   static String _getLang(String s) {
     return languageSelector(s);

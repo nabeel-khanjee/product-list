@@ -1,8 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/emergency_types/components/emergency_types_buttons.dart';
-import 'package:provider_app/src/pages/emergency_types/components/emergency_types_details.dart';
-import 'package:provider_app/src/pages/emergency_types/components/emergency_types_doctor.dart';
-import 'package:provider_app/src/pages/emergency_types/components/emergency_types_header.dart';
 
 class EmergencyTypesScreen extends StatelessWidget {
   const EmergencyTypesScreen({Key? key}) : super(key: key);
