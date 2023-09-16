@@ -3,6 +3,14 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
+  static String get toBeCompletedByProvider=> _getLang('toBeCompletedByProvider');
+
+  static String get obervationQuestions=> _getLang('obervationQuestions');
+
+  static String get ifSoForWhat => _getLang('ifSoForWhat') ;
+
+  static String get doesYourPartner => _getLang('doesYourPartner') ;
+
   static String
       get lookOverTheFollowingQuestionsAndThinkAboutHowYouAreBeingTreatedAndHowYouTreatYourPartner =>
           _getLang(

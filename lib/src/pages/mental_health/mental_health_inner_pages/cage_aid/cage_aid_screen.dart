@@ -1,6 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/components/result_identified_row_component.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/data_list/cage_aid_appbar_options_data_list.dart';
+
 
 class CheckBoxListData {
   bool isSelected;
@@ -23,10 +22,7 @@ class CageAidScreen extends StatelessWidget {
                 checkBoxListData: cageAidCheckBoxList),
             const DividerComponent(),
             const ListOfMainQuestions(),
-            const DividerComponent(),
-            const ResultIdentifiedRow(),
-            const DividerComponent(),
-            const AfterResultQuestionComponent()
+            const BottomResultIdentifierWidget()
           ],
         ),
       ),
@@ -39,3 +35,4 @@ class CageAidScreen extends StatelessWidget {
     );
   }
 }
+

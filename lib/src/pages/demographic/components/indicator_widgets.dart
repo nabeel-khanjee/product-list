@@ -21,7 +21,7 @@ class IndicatorWidget extends StatelessWidget {
         width: 111,
         decoration: isSelected
             ? BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(15),
                 color: getThemeColor(context))
             : null,
         child: Center(

@@ -1,6 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/components/check_box_tile_component.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/components/result_identified_row_component.dart';
 import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/domestic_violence_checklist/data_list/domestic_violence_check_box_list.dart';
 import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/domestic_violence_checklist/data_list/domestic_violence_top_questions.dart';
 
@@ -20,7 +19,7 @@ class DomesticViolenceCheckListScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Text(
-                    'Does your Partner:',
+                    StringConstants.doesYourPartner,
                     style: Theme.of(context)
                         .textTheme
                         .titleLarge!
@@ -30,10 +29,7 @@ class DomesticViolenceCheckListScreen extends StatelessWidget {
                 CheckBoxListTileComponent(
                     textStyle: Theme.of(context).textTheme.bodySmall!,
                     checkBoxListData: domesticViolenceCheckBoxList),
-                const DividerComponent(),
-                const ResultIdentifiedRow(),
-                const DividerComponent(),
-                const AfterResultQuestionComponent()
+                const BottomResultIdentifierWidget()
               ],
             )),
       ),

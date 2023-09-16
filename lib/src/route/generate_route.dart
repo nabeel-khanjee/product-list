@@ -1,9 +1,12 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/family_health_profile/family_health_profile_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
   switch (settings.name) {
+    case RouteConstants.familyHealthProfileRoute:
+      return materialRoute(const FamilyHealthProfileScreen());
     case RouteConstants.domesticViolenceChecklist:
       return materialRoute(const DomesticViolenceCheckListScreen());
     case RouteConstants.cageAid:

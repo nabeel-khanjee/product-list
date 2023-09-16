@@ -59,7 +59,7 @@ class PatientDetailScreenForm extends StatelessWidget {
     return Form(
         key: formkey,
         child: Column(children: [
-          TextFormFieldComponentProfile(  
+          TextFormFieldComponentProfile(
               label: StringConstants.patientID,
               patientIdcontroller: patientIdController,
               listTextInputFormatter: [
@@ -94,6 +94,13 @@ class PatientDetailScreenForm extends StatelessWidget {
           TextFormFieldComponentProfile(
             label: StringConstants.ssn,
             patientIdcontroller: ssnController,
+          ),
+          DropDownComponentProfile(
+            onDropdownFieldTap: onDropdownFieldTapCountry,
+            hintText: 'Disability/Impairment',
+            items: country,
+            selectedItem: (value) => getCountryValue(value),
+            value: selectedCountry,
           ),
           DropDownComponentProfile(
             onDropdownFieldTap: onDropdownFieldTapCountry,

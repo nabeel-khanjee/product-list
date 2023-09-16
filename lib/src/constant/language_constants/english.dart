@@ -1,5 +1,9 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
+    'toBeCompletedByProvider': '(To be completed by provider)',
+    'obervationQuestions': 'Obervation Questions:',
+    'ifSoForWhat': 'If so, for what?',
+    'doesYourPartner': 'Does your Partner:',
     'lookOverTheFollowingQuestionsAndThinkAboutHowYouAreBeingTreatedAndHowYouTreatYourPartner':
         'Look over the following questions and think about how you are being treated and how you treat your partner. ',
     'pATIENTDENIESANYHISTORYOFDOMESTICVIOLENCESCREENINGNOTAPPLICABLEATTHISTIME':

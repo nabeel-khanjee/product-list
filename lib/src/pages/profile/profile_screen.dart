@@ -31,8 +31,11 @@ class ProfileScreen extends StatelessWidget {
                   isExpandable: false,
                   test: StringConstants.familyHealthProfile,
                   image: AssetsConstants.familyHealthProfile,
-                  onTap: () {},
-                ),
+                      onTap: () {
+                    NavigationUtil.push(
+                        context, RouteConstants.familyHealthProfileRoute);
+                  },
+            ),
               ]),
             ),
           ],
