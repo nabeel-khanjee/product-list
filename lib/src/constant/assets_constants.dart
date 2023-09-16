@@ -21,6 +21,14 @@ class AssetsConstants {
   static const String settingIcon = 'assets/icon/setting_icon.png';
   static const String homeIcon = 'assets/icon/home_icon.png';
   static const String profileIcon = 'assets/icon/profile_icon.png';
+
+  static const String appointmentsIcon = 'assets/icon/appointments.png';
+  static const String communicationIcon = 'assets/icon/communication.png';
+  static const String documentsIcon = 'assets/icon/documents.png';
+  static const String medicationsIcon = 'assets/icon/medications.png';
+  static const String billsIcon = 'assets/icon/bills.png';
+
+
   static const String drawerIcon = 'assets/icon/drawer_image_icon.png';
   static const String lightDarkIcon = 'assets/icon/light_dark_icon.png';
   static const String notificationAppBarIcon =
@@ -48,17 +56,21 @@ class AssetsConstants {
   static const String editTextIcon = 'assets/icon/edit_text_icon.png';
   static const String capsuleIcon = 'assets/icon/capsule_icon.png';
   static const String tabletIcon = 'assets/icon/tablet_icon.png';
-static const String isEnableIconMedications =  'assets/icon/is_enable_icon_medications.png';
-static const String isDisableIconMedications =  'assets/icon/is_disable_icon_medication.png';
+  static const String isEnableIconMedications =
+      'assets/icon/is_enable_icon_medications.png';
+  static const String isDisableIconMedications =
+      'assets/icon/is_disable_icon_medication.png';
 
-  static String housingAndUtilitiesIcon='assets/icon/housing_and_utilities_icon.png';
+  static String housingAndUtilitiesIcon =
+      'assets/icon/housing_and_utilities_icon.png';
 
-  static String foodIcon='assets/icon/food_icon.png';
+  static String foodIcon = 'assets/icon/food_icon.png';
 
-  static String transportationAndChildCareIcon='assets/icon/transportation_and_child_care.png';
+  static String transportationAndChildCareIcon =
+      'assets/icon/transportation_and_child_care.png';
 
-  static String educationAndEmploymentAndFinanceIcon='assets/icon/education_and_employment_and_finances.png';
+  static String educationAndEmploymentAndFinanceIcon =
+      'assets/icon/education_and_employment_and_finances.png';
 
-  static String personalSafetyIcon='assets/icon/personal_safety.png';
-
+  static String personalSafetyIcon = 'assets/icon/personal_safety.png';
 }

@@ -193,3 +193,23 @@ export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/d
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/gad_7/gad_7_screen.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/phq_9_screen.dart';
 export 'package:provider_app/src/pages/emergency/emergency_screen.dart';
+
+export 'package:provider_app/src/pages/emergency_types/components/emergency_types_buttons.dart';
+export 'package:provider_app/src/pages/emergency_types/components/emergency_types_details.dart';
+export 'package:provider_app/src/pages/emergency_types/components/emergency_types_doctor.dart';
+export 'package:provider_app/src/pages/emergency_types/components/emergency_types_header.dart';
+export 'package:provider_app/src/pages/all_emergencies/components/all_emergencies_container.dart';
+export 'package:provider_app/src/pages/all_emergencies/components/all_emergencies_body.dart';
+export 'package:provider_app/src/pages/all_emergencies/components/all_emergencies_header.dart';
+export 'package:provider_app/src/pages/all_emergencies/components/all_emergencies_search_bar.dart';
+export 'package:provider_app/src/pages/all_emergencies/components/all_emergency_button.dart';
+export 'package:provider_app/src/pages/all_emergencies/all_emergencies_screen.dart';
+export 'package:provider_app/src/pages/appointments/appointments_screen.dart';
+export 'package:provider_app/src/pages/communication/communication_screen.dart';
+export 'package:provider_app/src/pages/communication/components/communication_body.dart';
+export 'package:provider_app/src/components/doctor_component.dart';
+export 'package:provider_app/src/pages/meetind_details/components/meeting_details_body.dart';
+export 'package:provider_app/src/components/custom_app_bar.dart';
+export 'package:provider_app/src/pages/video_calling/components/video_calling_bottom_icons.dart';
+export 'package:provider_app/src/pages/video_calling/components/video_calling_top_icons.dart';
+export 'package:provider_app/src/pages/video_calling/components/video_calling_body.dart';

@@ -1,6 +1,6 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
-    'status':'Status',
+    'status': 'Status',
     'noteIfYouAnswerYesForAnEventPleaseAnswerAnyAdditionalQuestionsThatAreListedIfYouAnswerNoForAnEventGoOnToTheNextEvent':
         '(Note: If you answer “Yes” for an event , please answer any additional questions that are listed, if you answer “No” for an event, go on to the next event)',
     'identified': 'Identified',
@@ -148,6 +148,13 @@ class EnglishConstant {
     'selectLanguage': 'Select Language',
     'home': 'Home',
     'profile': 'Profile',
+
+    'appointments': 'Appointments',
+    'communication': 'Communication',
+    'documents': 'Documents',
+    'medications': 'Medications',
+    'billings': 'Billings & Payment',
+
     'otherSettings': 'Other Settings',
     'changeLanguage': 'Change language',
     'changeLocation': 'Change Location',
@@ -198,5 +205,12 @@ class EnglishConstant {
     'signIn': 'Sign In',
     'newAccount': 'Don’t have an account? ',
     'createAccount': 'Create Account',
+
+    // appointment
+    'bookAppointment': 'Book Appointment',
+    'scheduled': 'Scheduled',
+    'clinicalBookings': 'Clinical Bookings',
+    'telehealthAppointments': 'Telehealth Appointments',
+    'ePrescriptions': 'E-Prescriptions',
   };
 }
