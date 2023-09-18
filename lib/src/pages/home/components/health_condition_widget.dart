@@ -14,15 +14,14 @@ class HealthConditionsWidget extends StatelessWidget {
             topPadding: 22,
             isSeeAll: true,
             title: StringConstants.healthConditions),
-        const SizedBox(
-          height: 190,
-          child: Row(children: [
-            BloodPressureWidget(),
-            SizedBox(width: 5),
-            PulseTempWeightWidget()
-          ]),
-        )
+        const HealthConditionComponent()
       ],
     );
   }
 }
+
+
+
+
+
+

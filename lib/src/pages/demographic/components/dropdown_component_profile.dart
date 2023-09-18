@@ -9,6 +9,9 @@ class DropDownComponentProfile extends StatelessWidget {
     required this.hintText,
     this.suffixIcon,
     required this.onDropdownFieldTap,
+    this.bgColor = ColorConstants.white,
+    this.textColor = ColorConstants.greyText,
+    this.iconColor = ColorConstants.greyText,
   });
   final String? value;
   final String? suffixIcon;
@@ -16,6 +19,9 @@ class DropDownComponentProfile extends StatelessWidget {
   final List<String> items;
   final Function(String?) selectedItem;
   final VoidCallback onDropdownFieldTap;
+  final Color bgColor;
+  final Color textColor;
+  final Color iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +31,7 @@ class DropDownComponentProfile extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       margin: const EdgeInsets.symmetric(vertical: 8),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15), color: ColorConstants.white),
+          borderRadius: BorderRadius.circular(15), color: bgColor),
       child: Stack(
         alignment: getCurrentLanguageDirection()
             ? Alignment.centerLeft
@@ -45,7 +51,7 @@ class DropDownComponentProfile extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .labelSmall!
-                              .copyWith(color: ColorConstants.greyText),
+                              .copyWith(color: textColor),
                         ),
                         Text(
                           value,
@@ -53,13 +59,14 @@ class DropDownComponentProfile extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .bodySmall!
-                              .copyWith(color: ColorConstants.greyText),
+                              .copyWith(color: textColor),
                         )
                       ],
                     ),
                   ),
                 )
               : DropdownButton<String>(
+                  dropdownColor: bgColor,
                   value: value,
                   isExpanded: true,
                   hint: Text(
@@ -67,7 +74,7 @@ class DropDownComponentProfile extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .bodySmall!
-                        .copyWith(color: ColorConstants.greyText),
+                        .copyWith(color: textColor),
                   ),
                   icon: Container(),
                   underline: Container(),
@@ -91,7 +98,7 @@ class DropDownComponentProfile extends StatelessWidget {
                 suffixIcon ?? AssetsConstants.arrowDownDropdownIcon,
                 height: 24,
                 width: 24,
-                color: ColorConstants.greyText,
+                color: iconColor,
               )),
         ],
       ),

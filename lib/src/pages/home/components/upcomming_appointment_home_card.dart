@@ -11,7 +11,7 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 186,
-      width: 160,
+      width: MediaQuery.of(context).size.width / 2.7,
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(

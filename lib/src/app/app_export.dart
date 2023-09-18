@@ -1,9 +1,19 @@
+export 'package:provider_app/src/pages/home/components/health_condition_third_widget.dart';
+export 'package:provider_app/src/pages/home/components/anxiety_depression_home_widget.dart';
+export 'package:provider_app/src/pages/home/components/anxiety_depression_bmi_home_widget.dart';
+export 'package:provider_app/src/pages/home/components/pulse_temp_blood_pressure_widget.dart';
+export 'package:provider_app/src/pages/home/components/blood_pressure_widget_home.dart';
+export 'package:provider_app/src/pages/home/components/pulse_temp_widget.dart';
+
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/data_list/main_questions_list.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/data_list/family_members_other_specift_list.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/components/family_members_list_component.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/components/other_family_members_list_components.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/components/other_specified_heading.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/components/relation_and_status_of_alive_heading.dart';
+export 'package:provider_app/src/pages/home/components/bmi_home_widget.dart';
+export 'package:provider_app/src/pages/home/components/health_condition_component.dart';
+export 'package:provider_app/src/pages/home/components/pulse_widget.dart';
 
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/gad_7/components/score_selection_widget_gad_7.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/compoents/score_selection_widget.dart';

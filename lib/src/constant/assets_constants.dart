@@ -29,7 +29,6 @@ class AssetsConstants {
   static const String medicationsIcon = 'assets/icon/medications.png';
   static const String billsIcon = 'assets/icon/bills.png';
 
-
   static const String drawerIcon = 'assets/icon/drawer_image_icon.png';
   static const String lightDarkIcon = 'assets/icon/light_dark_icon.png';
   static const String notificationAppBarIcon =
@@ -74,4 +73,11 @@ class AssetsConstants {
       'assets/icon/education_and_employment_and_finances.png';
 
   static String personalSafetyIcon = 'assets/icon/personal_safety.png';
+  static String passwordChangedIcon = 'assets/icon/password_changed_icon.png';
+  static String schedualChangedIcon = 'assets/icon/schedual_change_icon.png';
+  static String rateExperienceIcon = 'assets/icon/rate_experience_icon.png';
+  static String paymentConfirmedIcon = 'assets/icon/payment_confirmed_icon.png';
+  static String disputeCreatedIcon = 'assets/icon/dispute_created_icon.png';
+  static String appointmentCancleIcon =
+      'assets/icon/appointment_cancle_icon.png';
 }

@@ -32,6 +32,42 @@ class TopDatedDoctorsWidget extends StatelessWidget {
             isSeeAll: true,
             bottonPadding: 10,
             topPadding: 22),
+        DropDownComponentProfile(
+          bgColor: darken(getThemeColor(context), 0.3),
+          items: const [
+            'Internal medicine',
+            'Pediatrics',
+            'Family medicine',
+            'Neurology',
+            'Orthopedics',
+            'Urology',
+            'Obstetrics and gynaecology',
+            'Psychiatry',
+            'General practitioner',
+            'Ophthalmology',
+            'Dermatology',
+            'Pathology',
+            'Gastroenterology',
+            'Emergency medicine',
+            'General surgery',
+            'Otorhinolaryngology',
+            'Cardiology',
+            'Urologist',
+            'Anesthesiology',
+            'Neurosurgery',
+            'Oncology',
+            'Pediatrician',
+            'Rheumatology',
+            'Surgeon',
+          ],
+          selectedItem: (p0) {
+
+          },
+          
+          hintText: 'Specialist',
+          onDropdownFieldTap: () {},
+        ),
+        const SizedBox(height: 10),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(

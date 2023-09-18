@@ -1,12 +1,15 @@
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/family_health_profile/family_health_profile_screen.dart';
 import 'package:provider_app/src/pages/meetind_details/meeting_details_screen.dart';
+import 'package:provider_app/src/pages/notification/notification_screen.dart';
 import 'package:provider_app/src/pages/video_calling/video_calling_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
   switch (settings.name) {
+    case RouteConstants.notificationRoute:
+      return materialRoute(const NotificationScreen());
     case RouteConstants.familyHealthProfileRoute:
       return materialRoute(const FamilyHealthProfileScreen());
     case RouteConstants.domesticViolenceChecklist:
@@ -91,8 +94,8 @@ Route onGenerateRoute(RouteSettings settings) {
       return materialRoute(const OnboardingScreen());
 
     default:
-      // return materialRoute(const SplashScreen());
+      return materialRoute(const SplashScreen());
 
-      return materialRoute(const VideoCallingScreen());
+    // return materialRoute(const VideoCallingScreen());
   }
 }
