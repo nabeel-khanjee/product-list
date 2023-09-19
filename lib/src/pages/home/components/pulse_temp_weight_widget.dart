@@ -1,7 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/home/components/pulse_widget.dart';
 
-import 'package:provider_app/src/pages/home/components/health_condition_third_widget.dart';
 
 class PulseTempWeightWidget extends StatelessWidget {
   const PulseTempWeightWidget({

@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 
 class TopRatedDoctorHomeCard extends StatelessWidget {
@@ -10,16 +9,18 @@ class TopRatedDoctorHomeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 8.0),
-      child: Stack(
-        children: [
-          TopRatedDoctorBGImage(element: element),
-          TopRatedDoctorFrontElementGradient(element: element),
-        ],
+    return InkWell(
+      onTap: () =>
+          NavigationUtil.push(context, RouteConstants.doctorDetailRoute),
+      child: Padding(
+        padding: const EdgeInsets.only(right: 8.0),
+        child: Stack(
+          children: [
+            TopRatedDoctorBGImage(element: element),
+            TopRatedDoctorFrontElementGradient(element: element),
+          ],
+        ),
       ),
     );
   }
 }
-
-

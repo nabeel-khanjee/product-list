@@ -24,25 +24,29 @@ class AppBarcomponent extends StatelessWidget {
           centerTitle: isBackAppBar,
           actions: !isBackAppBar
               ? [
-                  Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Stack(alignment: Alignment.topRight, children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 6.0, right: 3),
-                        child: Image.asset(
-                          AssetsConstants.notificationAppBarIcon,
+                  InkWell(
+                    onTap: () => NavigationUtil.push(
+                        context, RouteConstants.notificationRoute),
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Stack(alignment: Alignment.topRight, children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 6.0, right: 3),
+                          child: Image.asset(
+                            AssetsConstants.notificationAppBarIcon,
+                          ),
                         ),
-                      ),
-                      Container(
-                        height: 12,
-                        width: 12,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            border: Border.all(
-                                width: 1, color: getThemeColor(context)),
-                            color: ColorConstants.green),
-                      ),
-                    ]),
+                        Container(
+                          height: 12,
+                          width: 12,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(100),
+                              border: Border.all(
+                                  width: 1, color: getThemeColor(context)),
+                              color: ColorConstants.green),
+                        ),
+                      ]),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 3.0, right: 3),

@@ -49,4 +49,8 @@ class RouteConstants {
       'educationAndEmploymentAndFinanceRoute';
 
   static const String personalSafetyRoute = 'personalSafetyRoute';
+
+  static const String notificationRoute = 'notificationRoute';
+
+  static const String doctorDetailRoute = 'doctorDetailRoute';
 }
