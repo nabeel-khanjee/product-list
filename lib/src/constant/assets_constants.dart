@@ -1,5 +1,7 @@
 class AssetsConstants {
   //Images
+  static String doctorDetailImage = 'assets/images/doctor_profile_image.jpg';
+
   static const String doctorImageOnboardingScreen =
       'assets/images/doctor_image_onboarding_screen.png';
   static const String bloodPressureCardInnerImage =
