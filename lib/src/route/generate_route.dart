@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/book_appointment/book_appointment_screen.dart';
 import 'package:provider_app/src/pages/doctor_detail/doctor_detail_screen.dart';
 import 'package:provider_app/src/pages/family_health_profile/family_health_profile_screen.dart';
 import 'package:provider_app/src/pages/meetind_details/meeting_details_screen.dart';
@@ -9,7 +10,6 @@ Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
   switch (settings.name) {
-
     case RouteConstants.notificationRoute:
       return materialRoute(const NotificationScreen());
     case RouteConstants.doctorDetailRoute:
@@ -93,7 +93,8 @@ Route onGenerateRoute(RouteSettings settings) {
 
     case RouteConstants.videoCallingRoute:
       return materialRoute(const VideoCallingScreen());
-
+    case RouteConstants.bookAppontmentRoute:
+      return materialRoute(const BookAppointmentScreen());
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
 

@@ -5,6 +5,7 @@ ThemeData lightThemeData(MyTheme theme) {
     useMaterial3: true,
     colorSchemeSeed: theme.getColor(),
     brightness: Brightness.light,
+    
     scaffoldBackgroundColor: darken(theme.getColor(), 0.35),
     appBarTheme: AppBarTheme(
         backgroundColor: darken(theme.getColor(), 0.35),
@@ -24,8 +25,8 @@ ThemeData lightThemeData(MyTheme theme) {
         ),
       ),
     ),
-    drawerTheme:
-        const DrawerThemeData(backgroundColor: Colors.transparent, elevation: 0),
+    drawerTheme: const DrawerThemeData(
+        backgroundColor: Colors.transparent, elevation: 0),
     buttonTheme: ButtonThemeData(
       buttonColor: theme.getColor(),
       textTheme: ButtonTextTheme.accent,

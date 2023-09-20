@@ -9,6 +9,8 @@ class AvaliableTimingComponentDoctorDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         DoctorDetailHeadingOne(
             heading: 'Avaliable Timings',

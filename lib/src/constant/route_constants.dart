@@ -53,4 +53,8 @@ class RouteConstants {
   static const String notificationRoute = 'notificationRoute';
 
   static const String doctorDetailRoute = 'doctorDetailRoute';
+
+  static const String bookAppontmentRoute = 'bookAppontmentRoute';
+
+  static const String bookAppontmentTwoRoute = 'bookAppontmentTwoRoute';
 }
