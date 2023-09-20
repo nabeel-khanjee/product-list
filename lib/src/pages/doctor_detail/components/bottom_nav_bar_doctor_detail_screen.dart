@@ -8,48 +8,56 @@ class BottomNavBarDoctorDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
-      color: Colors.transparent,
-      height: 90,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: ColorConstants.white),
-              padding: const EdgeInsets.all(20),
-              child: Text(
-                'Contact Dr.',
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                    color: darken(getThemeColor(context), 0.4),
-                    height: 1,
-                    fontFamily: FontConstantc.gilroyMedium),
-              ),
-            ),
+        padding: const EdgeInsets.all(10),
+        color: Colors.transparent,
+        height: 90,
+        child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          DoctorDetailScreenBottonNavBarButton(
+            onTap: () {
+              
+            },
+              text: 'Contact Dr.',
+              bgColor: ColorConstants.white,
+              textColor: darken(getThemeColor(context), 0.4)),
+          const SizedBox(width: 10),
+          DoctorDetailScreenBottonNavBarButton(
+            onTap: () => NavigationUtil.push(context, RouteConstants.bookAppontmentRoute),
+              text: StringConstants.bookNow,
+              bgColor: getThemeColor(context),
+              textColor: ColorConstants.white)
+        ]));
+  }
+}
+
+class DoctorDetailScreenBottonNavBarButton extends StatelessWidget {
+  const DoctorDetailScreenBottonNavBarButton({
+    super.key,
+    required this.bgColor,
+    required this.textColor,
+    required this.text, required this.onTap,
+  });
+  final Color bgColor;
+  final Color textColor;
+  final String text;
+final VoidCallback onTap;
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: InkWell(
+        onTap:onTap ,
+        child: Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20), color: bgColor),
+          padding: const EdgeInsets.all(20),
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                color: textColor,
+                height: 1,
+                fontFamily: FontConstantc.gilroySemiBold),
           ),
-          const SizedBox(
-            width: 10,
-          ),
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: getThemeColor(context)),
-              padding: const EdgeInsets.all(20),
-              child: Text(
-                'Book Now',
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                    color: ColorConstants.white,
-                    height: 1,
-                    fontFamily: FontConstantc.gilroyMedium),
-              ),
-            ),
-          )
-        ],
+        ),
       ),
     );
   }
