@@ -82,4 +82,6 @@ class AssetsConstants {
   static String disputeCreatedIcon = 'assets/icon/dispute_created_icon.png';
   static String appointmentCancleIcon =
       'assets/icon/appointment_cancle_icon.png';
+     static String timeInputFieldIcon =
+      'assets/icon/time_inputfield_icon.png';
 }
