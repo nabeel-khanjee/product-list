@@ -2,8 +2,10 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class BottomNavBarAppointmentBookScreen extends StatelessWidget {
   const BottomNavBarAppointmentBookScreen({
-    super.key,
+    super.key, required this.text,
   });
+  final String text;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class BottomNavBarAppointmentBookScreen extends StatelessWidget {
             NavigationUtil.push(context, RouteConstants.bookAppontmentTwoRoute);
           },
           child: Text(
-            'Next',
+            text,
             style: Theme.of(context)
                 .textTheme
                 .bodyMedium!
