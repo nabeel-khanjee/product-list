@@ -8,6 +8,8 @@ class RouteConstants {
   static const String communicationRoute = 'communicationRoute';
   static const String meetingDetailsRoute = 'meetingDetailsRoute';
   static const String videoCallingRoute = 'videoCallingRoute';
+  static const String audioCallingRoute = 'audioCallingRoute';
+  static const String searchDoctorRoute = 'searchDoctorRoute';
 
   static const String signInRoute = 'loginRoute';
   static const String signUpRoute = 'signUpRoute';

@@ -1,8 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/appointments/appointments_screen.dart';
-import 'package:provider_app/src/pages/communication/communication_screen.dart';
-import 'package:provider_app/src/pages/meetind_details/meeting_details_screen.dart';
-import 'package:provider_app/src/pages/video_calling/video_calling_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -86,12 +82,16 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.videoCallingRoute:
       return materialRoute(const VideoCallingScreen());
 
+    case RouteConstants.audioCallingRoute:
+      return materialRoute(const AudioCallingScreen());
+
+    case RouteConstants.searchDoctorRoute:
+      return materialRoute(const SearchDoctorScreen());
+
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
 
     default:
-      // return materialRoute(const SplashScreen());
-
-      return materialRoute(const VideoCallingScreen());
+      return materialRoute(const SplashScreen());
   }
 }

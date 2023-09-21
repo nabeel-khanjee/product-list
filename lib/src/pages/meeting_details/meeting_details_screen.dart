@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/meetind_details/components/meeting_details_stepper.dart';
 
 class MeetingDetailsScreen extends StatelessWidget {
   const MeetingDetailsScreen({Key? key}) : super(key: key);
@@ -15,7 +14,7 @@ class MeetingDetailsScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const MeetingDetailsBody(),
+                MeetingDetailsBody(),
                 MeetingDetailsStepper(),
               ],
             ),

@@ -183,7 +183,6 @@ export 'package:provider_app/src/pages/emergency/components/emergency_address.da
 export 'package:provider_app/src/pages/emergency/components/emergency_button.dart';
 export 'package:provider_app/src/pages/emergency/components/emergency_header.dart';
 export 'package:provider_app/src/pages/emergency/components/emergency_details.dart';
-export 'package:provider_app/src/pages/mental_health/model/indications_model.dart';
 
 export 'package:provider_app/src/pages/emergency_types/emergency_types_screen.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/bft_questionnaire/bft_questionnaire/bft_questionnaire_screen.dart';
@@ -208,8 +207,15 @@ export 'package:provider_app/src/pages/appointments/appointments_screen.dart';
 export 'package:provider_app/src/pages/communication/communication_screen.dart';
 export 'package:provider_app/src/pages/communication/components/communication_body.dart';
 export 'package:provider_app/src/components/doctor_component.dart';
-export 'package:provider_app/src/pages/meetind_details/components/meeting_details_body.dart';
+export 'package:provider_app/src/pages/meeting_details/components/meeting_details_body.dart';
 export 'package:provider_app/src/components/custom_app_bar.dart';
 export 'package:provider_app/src/pages/video_calling/components/video_calling_bottom_icons.dart';
 export 'package:provider_app/src/pages/video_calling/components/video_calling_top_icons.dart';
 export 'package:provider_app/src/pages/video_calling/components/video_calling_body.dart';
+export 'package:provider_app/src/pages/meeting_details/components/meeting_details_stepper.dart';
+export 'package:provider_app/src/pages/audio_calling/audio_calling_screen.dart';
+export 'package:provider_app/src/pages/meeting_details/meeting_details_screen.dart';
+export 'package:provider_app/src/pages/search_doctor/search_doctor_screen.dart';
+export 'package:provider_app/src/pages/video_calling/video_calling_screen.dart';
+export 'package:provider_app/src/pages/forgot_password/components/forgot_password_body.dart';
+export 'package:provider_app/src/pages/forgot_password/components/forgot_password_header.dart';

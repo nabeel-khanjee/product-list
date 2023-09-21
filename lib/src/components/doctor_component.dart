@@ -48,7 +48,15 @@ class DoctorComponent extends StatelessWidget {
               ),
             ],
           ),
-          SvgPicture.asset("assets/icon/call.svg")
+          GestureDetector(
+            onTap: () {
+              NavigationUtil.push(
+                context,
+                RouteConstants.videoCallingRoute,
+              );
+            },
+            child: SvgPicture.asset("assets/icon/call.svg"),
+          ),
         ],
       ),
     );
