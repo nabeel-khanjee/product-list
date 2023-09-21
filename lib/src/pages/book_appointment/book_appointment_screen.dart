@@ -28,9 +28,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
   @override
   Widget build(BuildContext context) {
     return MainScaffold(
-        bottomNavigationBar:  BottomNavBarAppointmentBookScreen(
-          text: 'Next',
-        ),
+        bottomNavigationBar: const BottomNavBarAppointmentBookScreen(text: 'Next'),
         body: SingleChildScrollView(
             child: Container(
                 padding: const EdgeInsets.all(0),

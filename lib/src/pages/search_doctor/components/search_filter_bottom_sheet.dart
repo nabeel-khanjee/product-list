@@ -53,7 +53,7 @@ class SearchFilterBottomSheet extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  BottomSheetRatings(),
+                  const BottomSheetRatings(),
 
                   const BottomSheetButtons(),
                 ],

@@ -33,7 +33,7 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
     ];
     return MainScaffold(
         bottomNavigationBar:
-            BottomNavBarAppointmentBookScreen(text: 'Book Appointment'),
+            const BottomNavBarAppointmentBookScreen(text: 'Book Appointment'),
         body: SingleChildScrollView(
           child: Container(
               padding: const EdgeInsets.all(10),
