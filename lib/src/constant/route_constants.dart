@@ -10,6 +10,7 @@ class RouteConstants {
   static const String videoCallingRoute = 'videoCallingRoute';
   static const String audioCallingRoute = 'audioCallingRoute';
   static const String searchDoctorRoute = 'searchDoctorRoute';
+  static const String visitClinicRoute = 'visitClinicRoute';
 
   static const String signInRoute = 'loginRoute';
   static const String signUpRoute = 'signUpRoute';

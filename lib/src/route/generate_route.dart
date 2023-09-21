@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/visit_clinic/visit_clinic_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -88,10 +89,15 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.searchDoctorRoute:
       return materialRoute(const SearchDoctorScreen());
 
+    case RouteConstants.visitClinicRoute:
+      return materialRoute(const VisitClinicScreen());
+
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
 
     default:
-      return materialRoute(const SplashScreen());
+      // return materialRoute(const SplashScreen());
+
+      return materialRoute(const VisitClinicScreen());
   }
 }
