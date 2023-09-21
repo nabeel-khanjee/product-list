@@ -3,9 +3,7 @@ import 'package:provider_app/src/pages/book_appointment/book_appointment_screen.
 import 'package:provider_app/src/pages/book_appointment_two/bool_appointmnet_two_screen.dart';
 import 'package:provider_app/src/pages/doctor_detail/doctor_detail_screen.dart';
 import 'package:provider_app/src/pages/family_health_profile/family_health_profile_screen.dart';
-import 'package:provider_app/src/pages/meetind_details/meeting_details_screen.dart';
 import 'package:provider_app/src/pages/notification/notification_screen.dart';
-import 'package:provider_app/src/pages/video_calling/video_calling_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -97,6 +95,13 @@ Route onGenerateRoute(RouteSettings settings) {
       return materialRoute(const BookAppointmentScreen());
     case RouteConstants.bookAppontmentTwoRoute:
       return materialRoute(const BookAppointmentTwoScreen());
+
+    case RouteConstants.audioCallingRoute:
+      return materialRoute(const AudioCallingScreen());
+
+    case RouteConstants.searchDoctorRoute:
+      return materialRoute(const SearchDoctorScreen());
+
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
 

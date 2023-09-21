@@ -1,7 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class SocialLogin extends StatelessWidget {
-  const SocialLogin({Key? key}) : super(key: key);
+  const SocialLogin({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +33,7 @@ class SocialLogin extends StatelessWidget {
                 text: StringConstants.createAccount,
                 style: Theme.of(context)
                     .textTheme
+
                     .bodySmall!
                     .copyWith(color: Colors.lightBlue),
                 recognizer: TapGestureRecognizer()

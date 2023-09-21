@@ -8,23 +8,31 @@ class SearchCompoentHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 54,
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: darken(getThemeColor(context), 0.3)),
-      child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(StringConstants.searchDoctorOrAnything),
-            Image.asset(
-              AssetsConstants.searchIcon,
-              height: 20,
-              width: 20,
-            )
-          ]),
+    return GestureDetector(
+      onTap: (){
+        NavigationUtil.push(
+          context,
+          RouteConstants.searchDoctorRoute,
+        );
+      },
+      child: Container(
+        height: 54,
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: darken(getThemeColor(context), 0.3)),
+        child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(StringConstants.searchDoctorOrAnything),
+              Image.asset(
+                AssetsConstants.searchIcon,
+                height: 20,
+                width: 20,
+              )
+            ]),
+      ),
     );
   }
 }
