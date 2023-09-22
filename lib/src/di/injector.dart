@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/gad_7/cubit/gad_7_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -27,6 +28,9 @@ void _injectUtilities({
 void _injectBlocsAndCubits() {
   getIt.registerFactory(() => AnimatedDrawerCubit());
   getIt.registerFactory(() => IsGradientBackgroundCubit());
+  getIt.registerFactory(() => PHQ9Cubit());
+  getIt.registerFactory(() => GAD7Cubit());
+  
 }
 
 Future<void> _initializeData({bool enableLogging = true}) async {

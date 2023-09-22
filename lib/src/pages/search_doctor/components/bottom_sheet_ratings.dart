@@ -1,8 +1,11 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class BottomSheetRatings extends StatelessWidget {
-  BottomSheetRatings({super.key});
+  const BottomSheetRatings({super.key});
 
+ 
+  @override
+  Widget build(BuildContext context) {
   List<String> ratings = [
     "1",
     "2",
@@ -10,10 +13,7 @@ class BottomSheetRatings extends StatelessWidget {
     "4",
     "5",
   ];
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
+   return SizedBox(
       height: 40,
       child: ListView.builder(
         itemCount: ratings.length,

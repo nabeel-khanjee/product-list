@@ -25,5 +25,6 @@ class Question {
 
 class Option {
   final String option;
-  Option({required this.option});
+  bool? isSelected;
+  Option({this.isSelected, required this.option});
 }

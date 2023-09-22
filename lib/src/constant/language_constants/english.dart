@@ -1,5 +1,103 @@
 class EnglishConstant {
   static Map<String, String> englishLabels = {
+    'toBeCompletedByProvider': '(To be completed by provider)',
+    'obervationQuestions': 'Obervation Questions:',
+    'ifSoForWhat': 'If so, for what?',
+    'doesYourPartner': 'Does your Partner:',
+    'lookOverTheFollowingQuestionsAndThinkAboutHowYouAreBeingTreatedAndHowYouTreatYourPartner':
+        'Look over the following questions and think about how you are being treated and how you treat your partner. ',
+    'pATIENTDENIESANYHISTORYOFDOMESTICVIOLENCESCREENINGNOTAPPLICABLEATTHISTIME':
+        'PATIENT DENIES ANY HISTORY OF DOMESTIC VIOLENCE, SCREENING NOT APPLICABLE AT THIS TIME. ',
+    'embarrassYouWithBadNamesAndPutDowns':
+        'Embarrass you with bad names and put-downs?',
+    'lookAtYouOrActInWaysThatScareYou':
+        'Look at your act in ways that scare you?',
+    'controlWhatYouDoWhoYouSeeOrTalkToOrWhereToGo':
+        'Control what you do, who you see or talk to, or where to go?',
+    'stopYouFromSeeingOrTalkingToFriendsOrFamily':
+        'Stop you from seeing or talking to friends or family?',
+    'takeYourMoneyOrSocialSecurityMakeYouAskForMoneyOrRefuseToGiveYouMoney':
+        'Take your money or social security, make you ask for money, or refuse to give you money?',
+    'makeAllTheDecisions': 'Make all the decisions?',
+    'tellYouThatYouAreABadParentOrThreatenToTakeAwayOrHurtYourChildren':
+        'Tell you that you are a bad parent or threaten to take away or hurt your children?',
+    'actLikeTheAbuseIsNoBigDealItsYourFaultOrEvenDeniesDoingIt':
+        'Act like the abuse is no big deal, it’s your fault, or even denies doing it?',
+    'destroyYourPropertyOrThreatenToKillYourPets':
+        'Destroy your property or threaten to kill your pets?',
+    'intimidateYouWithGunKnivesOrOtherWeapons':
+        'Intimidate you with gun, knives, or other weapons?',
+    'threatenToCommitSucide': 'Threaten to commit sucide',
+    'threatenToKillYou': 'Threaten to kill you',
+    'result': 'Result:',
+    'haveYouContactedAnyAgencyForServices':
+        'Have you contacted any agency for services?',
+    'haveYouEverFeltYouAughtToCutDownOnYourDrinkingOrDrugUse':
+        'Have you ever felt you aught to cut down on your drinking or drug use?',
+    'haveYoufeltBadOrGuiltyAboutYourDrinkingOrDrugUser':
+        'Have you felt bad or guilty about your drinking or drug use?',
+    'havePeopleAnnoyedYouByCriticizingYourDrinkingOrDrugUse':
+        'Have people annoyed you by criticizing your drinking or drug use?',
+    'haveYouEverHadAdrinkOrUsedDrugFirstTimeInTheMorningToSteadyYourNervesOrToGetRidOdAHangoverEyeOpener':
+        'Have you ever had a drink or used drug first time in the morning to steady your nerves or to get rid of a hangover (eye-opener)?',
+    'patientDoesNotMeetTheIdentifyingCriteriaForSUDServicesNoReferralWasMade':
+        'Patient does not meet the identifying criteria for SUD services, no referral was made',
+    'patientMeetsCriteriaForSUDServicesReferralWasMade':
+        'Patient meets criteria for SUD services referral was made',
+    'patientIsAMinorAndNoAlcoholOrDrugUseIsSuspectedNoFurtherActionIsRequired':
+        'Patient is a minor and no alcohol or drug use is suspected; no further action is required.',
+    'patientDeniesNnyAlcoholOrDrugUseNoFurtherActionIsRequired':
+        'Patient is a minor and no alcohol or drug use is suspected; no further action is required.',
+    'patientDeclinesScreeningForAlcoholOrDrugUseNoFurtherActionIsRequired':
+        'Patient declines screening for alcohol or drug use; no further action is required. ',
+    'patientIsCurrentlyReceivingSUDTreatmentAgencyPOC':
+        'Patient is currently receiving SUD treatment. Agency/POC:',
+    'feelingNervousAnxiousOrOnEdge': 'Feeling nervous, anxious or on edge',
+    'notBeingAbleToStopOrControlWorrying':
+        'Not being able to stop or control worrying',
+    'worryingTooMuchAboutDifferentThings':
+        'Worrying too much about different things',
+    'troubleRelexing': 'Trouble relexing',
+    'biengSoRestlessThatItIsHardToSitStill':
+        'Bieng so restless that it is hard to sit still',
+    'beingEasyAnnoyedOrIrritable': 'Being easy annoyed or irritable',
+    'feelingAfraidAsIfSomethingAwfulMightHappen':
+        'Feeling afraid as if something awful might happen',
+    'feelingTiredOrHavingLittleEnergy': 'Feeling tired or having little energy',
+    'poorAppetiteOrOverEating': 'Poor pppetite or overeating',
+    'feelBadAboutYourSelfOrThatYouAreAFalierOrHaveLetYourselfOrYourFamilyDown':
+        'Feel bad about yourself - or that you are a falier or have tet yourself or your family down',
+    'troubleConcentrationOnThingsSuchAsReadingTheNewsoaoerOrWatchingTelevision':
+        'Trouble concentration on things such as reading the newsoaoer or watching television',
+    'movingOrSpeakingSoSlowlyThatOtherPeopleCouldHaveNoticedOrTheOppositeBeingSoFidgetyOrRestlessThatYouHaveBeenMovingAroundALotMoreThatUsual':
+        'Moving or speaking so slowly that other people could have noticed or the opposite - being so fidgety or restless that you have been moving around a lot more that usual',
+
+    'thingsThatYouWouldBeBetterOffDeadorHurtingYourselfInSomeway':
+        'Things that you would be better off dead or of hurting yourself in some way',
+    'totalScore': 'Total Score',
+    "theLastTwoWeeksHowOftenHaveYouBeenBotheredByAnyOfTheFollowingProblemsUseToIndicateYourAnswer":
+        'the last 2 weeks, how often have you been bothered by any of the following problems? (Use “✔” to indicate your answer)',
+    'feelingDownDepressedOrHopeless': 'Feeling down, depressed, or hopeless',
+    'littleInterestOrPleasureInDoingThings':
+        'Little interest or pleasure in doing things',
+    'notAtAll': 'Not at all',
+    'severalDays': 'Several Days',
+    'moreThanHalfTheDays': 'More than half the days',
+    'nearlyEveryDay': 'Nearly every day',
+    'troubleFallingOrStayingAsleepOrSleepingTooMuch':
+        'Trouble falling or staying asleep, or sleeping too much',
+    'haveYouEverServedInAWarZoneOrHaveYouEverServedInANoncombatJobThatExposedYouToWarRelatedCasualties':
+        'Have you ever served in a war zone, or have you ever served in a noncombat job that exposed you to war-related casualties?',
+    'hasThisEverHappenedToYou': 'Has this ever happened to you?',
+    'ifTheEventHappenedDidYouThinkYourLifeWasInDangerOrYouMightBeSeriouslyInjured':
+        'If the event happened, did you think your life was in danger or you might be seriously injured?',
+    'ifTheEventHappenedWereYouSeriouslyInjured':
+        'If the event happened, were you  seriously injured?',
+    'haveYouEverBeenInASeriousCarAccidentOrASeriousAccidentAtWorkOrSomewhereElse':
+        'Have you ever been in a serious car accident, or a serious accident at work or somewhere else?',
+    'haveYouEverBeenInAMajorNaturalOrTechnologicalDisaster':
+        'Have you ever been in a major natural or technological disaster?',
+
     'status': 'Status',
     'noteIfYouAnswerYesForAnEventPleaseAnswerAnyAdditionalQuestionsThatAreListedIfYouAnswerNoForAnEventGoOnToTheNextEvent':
         '(Note: If you answer “Yes” for an event , please answer any additional questions that are listed, if you answer “No” for an event, go on to the next event)',
@@ -10,7 +108,7 @@ class EnglishConstant {
     'pHQ9': 'PHQ - 9',
     'gAD7': 'GAD - 7',
     'cageAid': 'Cage-Aid',
-    'developmentDisabilityIDD': 'Development Disability (IDD) 		',
+    'developmentDisabilityIDD': 'Development Disability (IDD)',
     'domesticViolenceChecklist': 'Domestic Violence Checklist',
     'mMSE': 'MMSE',
     'severe': 'Severe',
@@ -152,7 +250,6 @@ class EnglishConstant {
     'appointments': 'Appointments',
     'communication': 'Communication',
     'documents': 'Documents',
-    'medications': 'Medications',
     'billings': 'Billings & Payment',
 
     'otherSettings': 'Other Settings',

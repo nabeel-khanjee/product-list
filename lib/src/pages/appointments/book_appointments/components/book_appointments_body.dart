@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/components/doctor_component.dart';
 import 'package:provider_app/src/pages/appointments/book_appointments/components/book_appointments_component.dart';
 
 class BookAppointmentsBody extends StatelessWidget {
@@ -19,16 +18,32 @@ class BookAppointmentsBody extends StatelessWidget {
               .copyWith(fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 15),
-        const BookAppointmentComponent(
-          imageUrl: "assets/icon/doctor.svg",
-          title: "Office Visit",
-          subTitle: "Face to Face Appointment",
+        GestureDetector(
+          onTap: () {
+            NavigationUtil.push(
+              context,
+              RouteConstants.visitClinicRoute,
+            );
+          },
+          child: const BookAppointmentComponent(
+            imageUrl: "assets/icon/doctor.svg",
+            title: "Office Visit",
+            subTitle: "Face to Face Appointment",
+          ),
         ),
         const SizedBox(height: 10),
-        const BookAppointmentComponent(
-          imageUrl: "assets/icon/microscope.svg",
-          title: "Diagnostic Test",
-          subTitle: "Visit Lab for Test",
+        GestureDetector(
+          onTap: (){
+            NavigationUtil.push(
+              context,
+              RouteConstants.labTestRoute,
+            );
+          },
+          child: const BookAppointmentComponent(
+            imageUrl: "assets/icon/microscope.svg",
+            title: "Diagnostic Test",
+            subTitle: "Visit Lab for Test",
+          ),
         ),
         const SizedBox(height: 15),
         Text(
@@ -39,7 +54,10 @@ class BookAppointmentsBody extends StatelessWidget {
               .copyWith(fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 15),
-        const DoctorComponent(title: "Dr. Rachel McAdams",imageUrl: "assets/icon/dr_profile.png",),
+        const DoctorComponent(
+          title: "Dr. Rachel McAdams",
+          imageUrl: "assets/icon/dr_profile.png",
+        ),
       ],
     );
   }

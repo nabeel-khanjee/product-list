@@ -1,9 +1,12 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class SearchDoctorCategories extends StatelessWidget {
-  SearchDoctorCategories({super.key, this.fillColor});
+  const SearchDoctorCategories({super.key, this.fillColor});
 
-  Color? fillColor;
+  final  Color? fillColor;
+ 
+  @override
+  Widget build(BuildContext context) {
 
   List<String> doctorCategories = [
     "All",
@@ -13,10 +16,7 @@ class SearchDoctorCategories extends StatelessWidget {
     "Heart Specialist",
     "Eye Specialist",
   ];
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
+   return SizedBox(
       height: 40,
       child: ListView.builder(
         itemCount: doctorCategories.length,

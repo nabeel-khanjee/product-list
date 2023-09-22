@@ -1,8 +1,11 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class ScheduledMonths extends StatelessWidget {
-  ScheduledMonths({super.key});
+  const ScheduledMonths({super.key});
 
+
+  @override
+  Widget build(BuildContext context) {
   List<String> months = [
     "Jan",
     "Feb",
@@ -17,9 +20,6 @@ class ScheduledMonths extends StatelessWidget {
     "Nov",
     "Dec",
   ];
-
-  @override
-  Widget build(BuildContext context) {
     return SizedBox(
       height: 40,
       child: ListView.builder(

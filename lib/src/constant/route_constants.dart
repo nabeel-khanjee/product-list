@@ -11,6 +11,8 @@ class RouteConstants {
   static const String audioCallingRoute = 'audioCallingRoute';
   static const String searchDoctorRoute = 'searchDoctorRoute';
   static const String visitClinicRoute = 'visitClinicRoute';
+  static const String labTestRoute = 'labTestRoute';
+  static const String viewLabTestRoute = 'viewLabTestRoute';
 
   static const String signInRoute = 'loginRoute';
   static const String signUpRoute = 'signUpRoute';
@@ -52,4 +54,12 @@ class RouteConstants {
       'educationAndEmploymentAndFinanceRoute';
 
   static const String personalSafetyRoute = 'personalSafetyRoute';
+
+  static const String notificationRoute = 'notificationRoute';
+
+  static const String doctorDetailRoute = 'doctorDetailRoute';
+
+  static const String bookAppontmentRoute = 'bookAppontmentRoute';
+
+  static const String bookAppontmentTwoRoute = 'bookAppontmentTwoRoute';
 }

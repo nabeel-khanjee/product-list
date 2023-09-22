@@ -1,33 +1,54 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/visit_clinic/visit_clinic_screen.dart';
+import 'package:provider_app/src/pages/lab_test/lab_test_screen.dart';
+import 'package:provider_app/src/pages/view_lab_test/view_lab_test_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
   switch (settings.name) {
+    case RouteConstants.notificationRoute:
+      return materialRoute(const NotificationScreen());
+
+    case RouteConstants.doctorDetailRoute:
+      return materialRoute(const DoctorDetailScreen());
+
+    case RouteConstants.familyHealthProfileRoute:
+      return materialRoute(const FamilyHealthProfileScreen());
+
     case RouteConstants.domesticViolenceChecklist:
       return materialRoute(const DomesticViolenceCheckListScreen());
+
     case RouteConstants.cageAid:
       return materialRoute(const CageAidScreen());
+
     case RouteConstants.bFTQuestionnaire:
       return materialRoute(const BFTQuestionnaireScreen());
+
     case RouteConstants.gAD7:
       return materialRoute(const GAD7Screen());
+
     case RouteConstants.developmentDisabilityIDD:
       return materialRoute(const DevlopmentDiabilityScreen());
+
     case RouteConstants.pHQ9:
       return materialRoute(const PHQ9Screen());
+
     case RouteConstants.mentalHealthRoute:
       return materialRoute(const MentalHealthScreen());
+
     case RouteConstants.socialHealthRoute:
       return materialRoute(const SocialHealthScreen());
+
     case RouteConstants.physicalHealthRoute:
       return materialRoute(const PhysicalHealthScreen());
+
     case RouteConstants.socailHealthInnerPageRoute:
       final args = settings.arguments as MapEntry<int, SocialHealthListData>;
-      return materialRoute(SocailHealthInnerPage(
-        element: args,
-      ));
+      return materialRoute(
+        SocailHealthInnerPage(
+          element: args,
+        ),
+      );
 
     case RouteConstants.homeRoute:
       return materialRoute(const HomeScreen());
@@ -92,12 +113,17 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.visitClinicRoute:
       return materialRoute(const VisitClinicScreen());
 
+    case RouteConstants.labTestRoute:
+      return materialRoute(const LabTestScreen());
+
+    case RouteConstants.viewLabTestRoute:
+      return materialRoute(const ViewLabTestScreen());
+
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
 
     default:
-      // return materialRoute(const SplashScreen());
-
-      return materialRoute(const VisitClinicScreen());
+      return materialRoute(const SplashScreen());
+    // return materialRoute(const LabTestScreen());
   }
 }

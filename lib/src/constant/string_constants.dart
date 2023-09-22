@@ -3,6 +3,195 @@ import 'package:provider_app/src/app/app_export.dart';
 class StringConstants {
   static String language = 'ur_PK';
 
+  static String get toBeCompletedByProvider=> _getLang('toBeCompletedByProvider');
+
+  static String get obervationQuestions=> _getLang('obervationQuestions');
+
+  static String get ifSoForWhat => _getLang('ifSoForWhat') ;
+
+  static String get doesYourPartner => _getLang('doesYourPartner') ;
+
+  static String
+      get lookOverTheFollowingQuestionsAndThinkAboutHowYouAreBeingTreatedAndHowYouTreatYourPartner =>
+          _getLang(
+              'lookOverTheFollowingQuestionsAndThinkAboutHowYouAreBeingTreatedAndHowYouTreatYourPartner');
+
+  static String
+      get pATIENTDENIESANYHISTORYOFDOMESTICVIOLENCESCREENINGNOTAPPLICABLEATTHISTIME =>
+          _getLang(
+              'pATIENTDENIESANYHISTORYOFDOMESTICVIOLENCESCREENINGNOTAPPLICABLEATTHISTIME');
+
+  static String get embarrassYouWithBadNamesAndPutDowns =>
+      _getLang('embarrassYouWithBadNamesAndPutDowns');
+
+  static String get lookAtYouOrActInWaysThatScareYou =>
+      _getLang('lookAtYouOrActInWaysThatScareYou');
+
+  static String get controlWhatYouDoWhoYouSeeOrTalkToOrWhereToGo =>
+      _getLang('controlWhatYouDoWhoYouSeeOrTalkToOrWhereToGo');
+
+  static String get stopYouFromSeeingOrTalkingToFriendsOrFamily =>
+      _getLang('stopYouFromSeeingOrTalkingToFriendsOrFamily');
+
+  static String
+      get takeYourMoneyOrSocialSecurityMakeYouAskForMoneyOrRefuseToGiveYouMoney =>
+          _getLang(
+              'takeYourMoneyOrSocialSecurityMakeYouAskForMoneyOrRefuseToGiveYouMoney');
+
+  static String get makeAllTheDecisions => _getLang('makeAllTheDecisions');
+
+  static String
+      get tellYouThatYouAreABadParentOrThreatenToTakeAwayOrHurtYourChildren =>
+          _getLang(
+              'tellYouThatYouAreABadParentOrThreatenToTakeAwayOrHurtYourChildren');
+
+  static String get actLikeTheAbuseIsNoBigDealItsYourFaultOrEvenDeniesDoingIt =>
+      _getLang('actLikeTheAbuseIsNoBigDealItsYourFaultOrEvenDeniesDoingIt');
+
+  static String get destroyYourPropertyOrThreatenToKillYourPets =>
+      _getLang('destroyYourPropertyOrThreatenToKillYourPets');
+
+  static String get intimidateYouWithGunKnivesOrOtherWeapons =>
+      _getLang('intimidateYouWithGunKnivesOrOtherWeapons');
+
+  static String get threatenToCommitSucide =>
+      _getLang('threatenToCommitSucide');
+
+  static String get threatenToKillYou => _getLang('threatenToKillYou');
+
+  static String get result => _getLang('result');
+  static String get haveYouContactedAnyAgencyForServices =>
+      _getLang('haveYouContactedAnyAgencyForServices');
+  static String get haveYouEverFeltYouAughtToCutDownOnYourDrinkingOrDrugUse =>
+      _getLang('haveYouEverFeltYouAughtToCutDownOnYourDrinkingOrDrugUse');
+  static String get haveYoufeltBadOrGuiltyAboutYourDrinkingOrDrugUser =>
+      _getLang('haveYoufeltBadOrGuiltyAboutYourDrinkingOrDrugUser');
+  static String get havePeopleAnnoyedYouByCriticizingYourDrinkingOrDrugUse =>
+      _getLang('havePeopleAnnoyedYouByCriticizingYourDrinkingOrDrugUse');
+
+  static String
+      get haveYouEverHadAdrinkOrUsedDrugFirstTimeInTheMorningToSteadyYourNervesOrToGetRidOdAHangoverEyeOpener =>
+          _getLang(
+              'haveYouEverHadAdrinkOrUsedDrugFirstTimeInTheMorningToSteadyYourNervesOrToGetRidOdAHangoverEyeOpener');
+
+  static String
+      get patientDoesNotMeetTheIdentifyingCriteriaForSUDServicesNoReferralWasMade =>
+          _getLang(
+              'patientDoesNotMeetTheIdentifyingCriteriaForSUDServicesNoReferralWasMade');
+
+  static String get patientMeetsCriteriaForSUDServicesReferralWasMade =>
+      _getLang('patientMeetsCriteriaForSUDServicesReferralWasMade');
+
+  static String
+      get patientIsAMinorAndNoAlcoholOrDrugUseIsSuspectedNoFurtherActionIsRequired =>
+          _getLang(
+              'patientIsAMinorAndNoAlcoholOrDrugUseIsSuspectedNoFurtherActionIsRequired');
+
+  static String get patientDeniesNnyAlcoholOrDrugUseNoFurtherActionIsRequired =>
+      _getLang('patientDeniesNnyAlcoholOrDrugUseNoFurtherActionIsRequired');
+
+  static String
+      get patientDeclinesScreeningForAlcoholOrDrugUseNoFurtherActionIsRequired =>
+          _getLang(
+              'patientDeclinesScreeningForAlcoholOrDrugUseNoFurtherActionIsRequired');
+
+  static String get patientIsCurrentlyReceivingSUDTreatmentAgencyPOC =>
+      _getLang('patientIsCurrentlyReceivingSUDTreatmentAgencyPOC');
+
+  static String get feelingNervousAnxiousOrOnEdge =>
+      _getLang('feelingNervousAnxiousOrOnEdge');
+
+  static String get notBeingAbleToStopOrControlWorrying =>
+      _getLang('notBeingAbleToStopOrControlWorrying');
+
+  static String get worryingTooMuchAboutDifferentThings =>
+      _getLang('worryingTooMuchAboutDifferentThings');
+
+  static String get troubleRelexing => _getLang('troubleRelexing');
+
+  static String get biengSoRestlessThatItIsHardToSitStill =>
+      _getLang('biengSoRestlessThatItIsHardToSitStill');
+
+  static String get beingEasyAnnoyedOrIrritable =>
+      _getLang('beingEasyAnnoyedOrIrritable');
+
+  static String get feelingAfraidAsIfSomethingAwfulMightHappen =>
+      _getLang('feelingAfraidAsIfSomethingAwfulMightHappen');
+
+  static String get feelingTiredOrHavingLittleEnergy =>
+      _getLang('feelingTiredOrHavingLittleEnergy');
+
+  static String get poorAppetiteOrOverEating =>
+      _getLang('poorAppetiteOrOverEating');
+
+  static String
+      get feelBadAboutYourSelfOrThatYouAreAFalierOrHaveLetYourselfOrYourFamilyDown =>
+          _getLang(
+              'feelBadAboutYourSelfOrThatYouAreAFalierOrHaveLetYourselfOrYourFamilyDown');
+
+  static String
+      get troubleConcentrationOnThingsSuchAsReadingTheNewsoaoerOrWatchingTelevision =>
+          _getLang(
+              'troubleConcentrationOnThingsSuchAsReadingTheNewsoaoerOrWatchingTelevision');
+
+  static String
+      get movingOrSpeakingSoSlowlyThatOtherPeopleCouldHaveNoticedOrTheOppositeBeingSoFidgetyOrRestlessThatYouHaveBeenMovingAroundALotMoreThatUsual =>
+          _getLang(
+              'movingOrSpeakingSoSlowlyThatOtherPeopleCouldHaveNoticedOrTheOppositeBeingSoFidgetyOrRestlessThatYouHaveBeenMovingAroundALotMoreThatUsual');
+
+  static String
+      get thingsThatYouWouldBeBetterOffDeadorHurtingYourselfInSomeway =>
+          _getLang(
+              'thingsThatYouWouldBeBetterOffDeadorHurtingYourselfInSomeway');
+
+  static String get feelingDownDepressedOrHopeless =>
+      _getLang('feelingDownDepressedOrHopeless');
+
+  static String get littleInterestOrPleasureInDoingThings =>
+      _getLang('littleInterestOrPleasureInDoingThings');
+
+  static String get notAtAll => _getLang('notAtAll');
+
+  static String get severalDays => _getLang('severalDays');
+
+  static String get moreThanHalfTheDays => _getLang('moreThanHalfTheDays');
+
+  static String get nearlyEveryDay => _getLang('nearlyEveryDay');
+
+  static String get troubleFallingOrStayingAsleepOrSleepingTooMuch =>
+      _getLang('troubleFallingOrStayingAsleepOrSleepingTooMuch');
+
+  static String
+      get theLastTwoWeeksHowOftenHaveYouBeenBotheredByAnyOfTheFollowingProblemsUseToIndicateYourAnswer =>
+          _getLang(
+              'theLastTwoWeeksHowOftenHaveYouBeenBotheredByAnyOfTheFollowingProblemsUseToIndicateYourAnswer');
+
+  static String get totalScore => _getLang('totalScore');
+
+  static String
+      get haveYouEverServedInAWarZoneOrHaveYouEverServedInANoncombatJobThatExposedYouToWarRelatedCasualties =>
+          _getLang(
+              'haveYouEverServedInAWarZoneOrHaveYouEverServedInANoncombatJobThatExposedYouToWarRelatedCasualties');
+
+  static String get hasThisEverHappenedToYou =>
+      _getLang('hasThisEverHappenedToYou');
+
+  static String
+      get ifTheEventHappenedDidYouThinkYourLifeWasInDangerOrYouMightBeSeriouslyInjured =>
+          _getLang(
+              'ifTheEventHappenedDidYouThinkYourLifeWasInDangerOrYouMightBeSeriouslyInjured');
+
+  static String get ifTheEventHappenedWereYouSeriouslyInjured =>
+      _getLang('ifTheEventHappenedWereYouSeriouslyInjured');
+
+  static String
+      get haveYouEverBeenInASeriousCarAccidentOrASeriousAccidentAtWorkOrSomewhereElse =>
+          _getLang(
+              'haveYouEverBeenInASeriousCarAccidentOrASeriousAccidentAtWorkOrSomewhereElse');
+
+  static String get haveYouEverBeenInAMajorNaturalOrTechnologicalDisaster =>
+      _getLang('haveYouEverBeenInAMajorNaturalOrTechnologicalDisaster');
+
   static String get status => _getLang('status');
 
   static String
