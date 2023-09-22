@@ -1,7 +1,9 @@
 class AssetsConstants {
   //Images
   static String doctorDetailImage = 'assets/images/doctor_profile_image.jpg';
-
+  static String visaPaymentImage = 'assets/images/visa_payment_image.png';
+  static String masterCardPaymentImage =
+      'assets/images/master_card_payment_image.png';
   static const String doctorImageOnboardingScreen =
       'assets/images/doctor_image_onboarding_screen.png';
   static const String bloodPressureCardInnerImage =
@@ -82,6 +84,8 @@ class AssetsConstants {
   static String disputeCreatedIcon = 'assets/icon/dispute_created_icon.png';
   static String appointmentCancleIcon =
       'assets/icon/appointment_cancle_icon.png';
-     static String timeInputFieldIcon =
-      'assets/icon/time_inputfield_icon.png';
+  static String timeInputFieldIcon = 'assets/icon/time_inputfield_icon.png';
+  static String editIcon ='assets/icon/edit_icon.png';
+  static String checkIcon ='assets/icon/check_icon.png';
+  static String unSelectedCheckIcon ='assets/icon/unselected_check_icon.png';
 }

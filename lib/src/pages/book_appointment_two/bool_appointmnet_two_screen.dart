@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/constant/bottom_sheet_component.dart';
 import 'package:provider_app/src/pages/book_appointment/components/book_navbar_appointment_book_screen.dart';
 import 'package:provider_app/src/pages/book_appointment_two/components/blood_group_list_component.dart';
 import 'package:provider_app/src/pages/book_appointment_two/components/gender_component.dart';
@@ -23,12 +24,34 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
 
   @override
   Widget build(BuildContext context) {
+    List<PaymentMethod> paymentMethods = [
+      PaymentMethod(
+          name: 'Visa',
+          cardNumber: '****  ****  **** 0817',
+          date: '15-02-2017',
+          paymentImage: AssetsConstants.visaPaymentImage),
+      PaymentMethod(
+          name: 'MasterCard',
+          cardNumber: '****  ****  **** 0817',
+          date: '15-02-2017',
+          paymentImage: AssetsConstants.masterCardPaymentImage),
+    ];
     TextEditingController problemController = TextEditingController();
     TextEditingController fullNameController = TextEditingController();
     TextEditingController mobileNumberController = TextEditingController();
     return MainScaffold(
-        bottomNavigationBar:
-            const BottomNavBarAppointmentBookScreen(text: 'Book Appointment'),
+        bottomNavigationBar: BottomNavBarAppointmentBookScreen(
+          text: 'Book Appointment',
+          onTap: () {
+            ShowBottomSheetComponent().showBottomSheet(
+                isControlled: true,
+                removeHeight: true,
+                removePadding: true,
+                content:
+                    PaymentMethodBottomSheet(paymentMethods: paymentMethods),
+                context: context);
+          },
+        ),
         body: SingleChildScrollView(
           child: Container(
               padding: const EdgeInsets.all(10),
@@ -102,6 +125,168 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
   }
 }
 
+class PaymentMethodBottomSheet extends StatefulWidget {
+  const PaymentMethodBottomSheet({
+    super.key,
+    required this.paymentMethods,
+  });
 
+  final List<PaymentMethod> paymentMethods;
 
+  @override
+  State<PaymentMethodBottomSheet> createState() =>
+      _PaymentMethodBottomSheetState();
+}
 
+class _PaymentMethodBottomSheetState extends State<PaymentMethodBottomSheet> {
+  String? selectedPaymentMethod;
+
+  @override
+  Widget build(BuildContext context) {
+    return StatefulBuilder(
+      builder: (context, setState) => Container(
+          decoration: BoxDecoration(
+              color: lighten(getThemeColor(context), 0.4),
+              borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(16), topRight: Radius.circular(16))),
+          child: Column(children: [
+            const SizedBox(height: 25),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Payment Details",
+                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                          color: darken(getThemeColor(context), 0.25),
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  SvgPicture.asset("assets/icon/cross.svg"),
+                ],
+              ),
+            ),
+            const SizedBox(height: 10),
+            const Divider(color: ColorConstants.grey),
+            const SizedBox(height: 10),
+            Column(
+              children: widget.paymentMethods
+                  .asMap()
+                  .entries
+                  .map((paymentMethod) => Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 10),
+                        child: Container(
+                          height: 143,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: ColorConstants.white),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  height: 96.6,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                        paymentMethod.value.paymentImage,
+                                        height: 23,
+                                      ),
+                                      Text(
+                                        paymentMethod.value.cardNumber,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyMedium!
+                                            .copyWith(
+                                                color: ColorConstants.grey),
+                                      ),
+                                      Text('Added ${paymentMethod.value.date}',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .labelSmall!
+                                              .copyWith(
+                                                color: ColorConstants.greyText,
+                                              ))
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                child: Container(
+                                  margin: EdgeInsets.only(right: 22),
+                                  alignment: Alignment.centerRight,
+                                  height: 96.6,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      InkWell(
+                                        onTap: () {
+                                          setState(() {
+                                            selectedPaymentMethod =
+                                                paymentMethod.value.name;
+                                          });
+                                        },
+                                        child: Image.asset(
+                                          selectedPaymentMethod ==
+                                                  paymentMethod.value.name
+                                              ? AssetsConstants.checkIcon
+                                              : AssetsConstants
+                                                  .unSelectedCheckIcon,
+                                          height: 24,
+                                          width: 24,
+                                        ),
+                                      ),
+                                      Image.asset(
+                                        AssetsConstants.editIcon,
+                                        height: 18,
+                                        width: 18,
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ))
+                  .toList(),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: BottomNavBarAppointmentBookScreen(
+                text: 'Pay Now',
+                onTap: () {
+                  if (selectedPaymentMethod == 'Visa') {
+                    
+                  } else if (selectedPaymentMethod == 'MasterCard') {}
+                },
+              ),
+            )
+          ])),
+    );
+  }
+}
+
+class PaymentMethod {
+  final String paymentImage;
+  final String cardNumber;
+  final String date;
+  final String name;
+
+  PaymentMethod(
+      {required this.name,
+      required this.paymentImage,
+      required this.cardNumber,
+      required this.date});
+}
