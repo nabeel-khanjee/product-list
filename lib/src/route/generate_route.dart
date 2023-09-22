@@ -1,9 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/book_appointment/book_appointment_screen.dart';
-import 'package:provider_app/src/pages/book_appointment_two/bool_appointmnet_two_screen.dart';
-import 'package:provider_app/src/pages/doctor_detail/doctor_detail_screen.dart';
-import 'package:provider_app/src/pages/family_health_profile/family_health_profile_screen.dart';
-import 'package:provider_app/src/pages/notification/notification_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>

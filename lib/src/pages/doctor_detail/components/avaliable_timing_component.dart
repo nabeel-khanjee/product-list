@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/doctor_detail/doctor_detail_screen.dart';
 
 class AvaliableTimingComponentDoctorDetailScreen extends StatelessWidget {
   const AvaliableTimingComponentDoctorDetailScreen({

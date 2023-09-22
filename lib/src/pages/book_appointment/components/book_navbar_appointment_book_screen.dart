@@ -2,10 +2,11 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class BottomNavBarAppointmentBookScreen extends StatelessWidget {
   const BottomNavBarAppointmentBookScreen({
-    super.key, required this.text,
+    super.key,
+    required this.text, required this.onTap,
   });
   final String text;
-  
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +17,7 @@ class BottomNavBarAppointmentBookScreen extends StatelessWidget {
           style: Theme.of(context).elevatedButtonTheme.style!.copyWith(
               shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18)))),
-          onPressed: () {
-            NavigationUtil.push(context, RouteConstants.bookAppontmentTwoRoute);
-          },
+          onPressed: onTap,
           child: Text(
             text,
             style: Theme.of(context)

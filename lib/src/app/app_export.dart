@@ -1,9 +1,25 @@
+export 'package:provider_app/src/pages/doctor_detail/components/about_doctor_component.dart';
+export 'package:provider_app/src/pages/doctor_detail/components/app_bar_doctor_detail_screen.dart';
+export 'package:provider_app/src/pages/doctor_detail/components/avaliable_timing_component.dart';
+export 'package:provider_app/src/pages/doctor_detail/components/doctor_rating_component.dart';
+export 'package:provider_app/src/pages/doctor_detail/components/faq_component_doctor_detail_screen.dart';
+export 'package:provider_app/src/pages/doctor_detail/components/review_patients_years_component.dart';
+export 'package:provider_app/src/pages/doctor_detail/components/doctor_detail_screen_payment_and_specialization_component.dart';
+export 'package:provider_app/src/pages/doctor_detail/components/expansion_panel_faq.dart';
+export 'package:provider_app/src/pages/doctor_detail/model/faq_list.dart';
 export 'package:provider_app/src/pages/home/components/health_condition_third_widget.dart';
 export 'package:provider_app/src/pages/home/components/anxiety_depression_home_widget.dart';
 export 'package:provider_app/src/pages/home/components/anxiety_depression_bmi_home_widget.dart';
 export 'package:provider_app/src/pages/home/components/pulse_temp_blood_pressure_widget.dart';
 export 'package:provider_app/src/pages/home/components/blood_pressure_widget_home.dart';
 export 'package:provider_app/src/pages/home/components/pulse_temp_widget.dart';
+export 'package:provider_app/src/pages/book_appointment_two/model/blood_group_model.dart';
+export  'package:provider_app/src/pages/book_appointment_two/bool_appointmnet_two_screen.dart';
+export 'package:provider_app/src/pages/book_appointment_two/components/time_selection_widget.dart';
+export 'package:provider_app/src/pages/book_appointment/book_appointment_screen.dart';
+export 'package:provider_app/src/pages/doctor_detail/doctor_detail_screen.dart';
+export 'package:provider_app/src/pages/family_health_profile/family_health_profile_screen.dart';
+export 'package:provider_app/src/pages/notification/notification_screen.dart';
 
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/data_list/main_questions_list.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/data_list/family_members_other_specift_list.dart';

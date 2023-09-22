@@ -1,7 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/doctor_detail/components/expansion_panel_faq.dart';
-import 'package:provider_app/src/pages/doctor_detail/doctor_detail_screen.dart';
-import 'package:provider_app/src/pages/doctor_detail/model/faq_list.dart';
 
 class FAQComponentDoctorDetailScreen extends StatelessWidget {
   const FAQComponentDoctorDetailScreen({
