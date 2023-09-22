@@ -1,3 +1,6 @@
+export 'package:provider_app/src/pages/billing_payment/billing_and_payment_screen.dart';
+export 'package:provider_app/src/pages/documents/documents_screen.dart';
+export 'package:provider_app/src/pages/medication/medication_screen.dart';
 export 'package:provider_app/src/pages/book_appointment/components/calender_appointments_book.dart';
 export 'package:provider_app/src/pages/book_appointment/components/time_component_appointment.dart';
 export 'package:provider_app/src/pages/book_appointment_two/components/card_detail_component.dart';

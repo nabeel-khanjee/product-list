@@ -18,6 +18,8 @@ class AssetsConstants {
       'assets/images/failed_dioalog_image.png';
 
   //Icons
+  static const String billingsAndPaymentIcon =
+      'assets/icon/billings_and_payment_icon.png';
   static const String checkUpIcon = 'assets/icon/check_up.svg';
   static const String checkOptionIcon = 'assets/icon/check_option_icon.png';
   static const String crossOptionIcon = 'assets/icon/cross_option_icon.png';

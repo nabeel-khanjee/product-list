@@ -41,9 +41,12 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
             children: const [
               HomeScreenBody(),
               ProfileScreen(),
-              SettingsScreen(),
               AppointmentsScreen(),
               CommunicationScreen(),
+              DocumentsScreen(),
+              MedicationsScreen(),
+              BillingsAndPaymentScreen(),
+              SettingsScreen(),
             ],
           ),
         ),
@@ -51,3 +54,6 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
     );
   }
 }
+
+
+
