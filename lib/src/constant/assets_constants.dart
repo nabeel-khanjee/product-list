@@ -12,8 +12,13 @@ class AssetsConstants {
       'assets/images/doctor_image_home_page.png';
   static const String upcommingAppointmentCardDoctorImage =
       'assets/images/upcomming_appointment_card_doctor_image.png';
+  static const String successDialogImage =
+      'assets/images/success_dialog_image.png';
+  static const String failedDialogImage =
+      'assets/images/failed_dioalog_image.png';
 
   //Icons
+  static const String checkUpIcon = 'assets/icon/check_up.svg';
   static const String checkOptionIcon = 'assets/icon/check_option_icon.png';
   static const String crossOptionIcon = 'assets/icon/cross_option_icon.png';
   static const String calenderIcon = 'assets/icon/calender_icon.png';
@@ -26,13 +31,11 @@ class AssetsConstants {
   static const String settingIcon = 'assets/icon/setting_icon.png';
   static const String homeIcon = 'assets/icon/home_icon.png';
   static const String profileIcon = 'assets/icon/profile_icon.png';
-
   static const String appointmentsIcon = 'assets/icon/appointments.png';
   static const String communicationIcon = 'assets/icon/communication.png';
   static const String documentsIcon = 'assets/icon/documents.png';
   static const String medicationsIcon = 'assets/icon/medications.png';
   static const String billsIcon = 'assets/icon/bills.png';
-
   static const String drawerIcon = 'assets/icon/drawer_image_icon.png';
   static const String lightDarkIcon = 'assets/icon/light_dark_icon.png';
   static const String notificationAppBarIcon =
@@ -64,28 +67,30 @@ class AssetsConstants {
       'assets/icon/is_enable_icon_medications.png';
   static const String isDisableIconMedications =
       'assets/icon/is_disable_icon_medication.png';
-
-  static String housingAndUtilitiesIcon =
+  static const String housingAndUtilitiesIcon =
       'assets/icon/housing_and_utilities_icon.png';
-
-  static String foodIcon = 'assets/icon/food_icon.png';
-
-  static String transportationAndChildCareIcon =
+  static const String foodIcon = 'assets/icon/food_icon.png';
+  static const String transportationAndChildCareIcon =
       'assets/icon/transportation_and_child_care.png';
-
-  static String educationAndEmploymentAndFinanceIcon =
+  static const String educationAndEmploymentAndFinanceIcon =
       'assets/icon/education_and_employment_and_finances.png';
-
-  static String personalSafetyIcon = 'assets/icon/personal_safety.png';
-  static String passwordChangedIcon = 'assets/icon/password_changed_icon.png';
-  static String schedualChangedIcon = 'assets/icon/schedual_change_icon.png';
-  static String rateExperienceIcon = 'assets/icon/rate_experience_icon.png';
-  static String paymentConfirmedIcon = 'assets/icon/payment_confirmed_icon.png';
-  static String disputeCreatedIcon = 'assets/icon/dispute_created_icon.png';
-  static String appointmentCancleIcon =
+  static const String personalSafetyIcon = 'assets/icon/personal_safety.png';
+  static const String passwordChangedIcon =
+      'assets/icon/password_changed_icon.png';
+  static const String schedualChangedIcon =
+      'assets/icon/schedual_change_icon.png';
+  static const String rateExperienceIcon =
+      'assets/icon/rate_experience_icon.png';
+  static const String paymentConfirmedIcon =
+      'assets/icon/payment_confirmed_icon.png';
+  static const String disputeCreatedIcon =
+      'assets/icon/dispute_created_icon.png';
+  static const String appointmentCancleIcon =
       'assets/icon/appointment_cancle_icon.png';
-  static String timeInputFieldIcon = 'assets/icon/time_inputfield_icon.png';
-  static String editIcon ='assets/icon/edit_icon.png';
-  static String checkIcon ='assets/icon/check_icon.png';
-  static String unSelectedCheckIcon ='assets/icon/unselected_check_icon.png';
+  static const String timeInputFieldIcon =
+      'assets/icon/time_inputfield_icon.png';
+  static const String editIcon = 'assets/icon/edit_icon.png';
+  static const String checkIcon = 'assets/icon/check_icon.png';
+  static const String unSelectedCheckIcon =
+      'assets/icon/unselected_check_icon.png';
 }
