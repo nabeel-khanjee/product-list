@@ -28,7 +28,7 @@ class AppTileComponent extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: getThemeStateIsLight()
-              ? lighten(getThemeColor(context), 0.1)
+              ? darken(lighten(getThemeColor(context), 0.2), 0.1)
               : darken(getThemeColor(context), 0.5),
         ),
         child: Row(

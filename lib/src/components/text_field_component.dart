@@ -9,17 +9,21 @@ class TextFormFieldComponentProfile extends StatelessWidget {
     required this.label,
     this.maxLines = 1,
     this.hintText = '',
+    this.verticalPadding = 8.0,  this.lableColor=ColorConstants.greyText,
   });
   final List<TextInputFormatter>? listTextInputFormatter;
   final String label;
   final TextEditingController patientIdcontroller;
   final int maxLines;
   final String hintText;
+  final double verticalPadding;
+  final Color lableColor;
+  
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      padding: EdgeInsets.symmetric(vertical: verticalPadding),
       child: TextFormField(
         strutStyle: const StrutStyle(
           height: 1.3,
@@ -51,15 +55,31 @@ class TextFormFieldComponentProfile extends StatelessWidget {
             labelStyle: Theme.of(context)
                 .textTheme
                 .bodySmall!
-                .copyWith(color: ColorConstants.greyText),
+                .copyWith(color: lableColor),
             label: Text(label,
                 style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                      color: ColorConstants.greyText,
+                      color: lableColor,
                     )),
+            enabledBorder: UnderlineInputBorder(
+                borderSide:
+                    const BorderSide(color: ColorConstants.white, width: 0),
+                borderRadius: BorderRadius.circular(20)),
+            errorBorder: UnderlineInputBorder(
+                borderSide:
+                    const BorderSide(color: ColorConstants.white, width: 0),
+                borderRadius: BorderRadius.circular(20)),
+            disabledBorder: UnderlineInputBorder(
+                borderSide:
+                    const BorderSide(color: ColorConstants.white, width: 0),
+                borderRadius: BorderRadius.circular(20)),
+            focusedBorder: UnderlineInputBorder(
+                borderSide:
+                    const BorderSide(color: ColorConstants.white, width: 0),
+                borderRadius: BorderRadius.circular(20)),
             border: UnderlineInputBorder(
                 borderSide:
                     const BorderSide(color: ColorConstants.white, width: 0),
-                borderRadius: BorderRadius.circular(15))),
+                borderRadius: BorderRadius.circular(20))),
       ),
     );
   }

@@ -59,4 +59,8 @@ class RouteConstants {
   static const String bookAppontmentRoute = 'bookAppontmentRoute';
 
   static const String bookAppontmentTwoRoute = 'bookAppontmentTwoRoute';
+
+  static const String billingRoute = 'billingRoute';
+
+  static const String paymentRoute = 'paymentRoute';
 }
