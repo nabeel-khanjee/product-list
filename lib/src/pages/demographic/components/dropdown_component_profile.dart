@@ -12,6 +12,7 @@ class DropDownComponentProfile extends StatelessWidget {
     this.bgColor = ColorConstants.white,
     this.textColor = ColorConstants.greyText,
     this.iconColor = ColorConstants.greyText,
+    this.verticalMargin = 8,
   });
   final String? value;
   final String? suffixIcon;
@@ -22,6 +23,7 @@ class DropDownComponentProfile extends StatelessWidget {
   final Color bgColor;
   final Color textColor;
   final Color iconColor;
+  final double verticalMargin;
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +31,9 @@ class DropDownComponentProfile extends StatelessWidget {
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      margin: const EdgeInsets.symmetric(vertical: 8),
+      margin: EdgeInsets.symmetric(vertical: verticalMargin),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15), color: bgColor),
+          borderRadius: BorderRadius.circular(20), color: bgColor),
       child: Stack(
         alignment: getCurrentLanguageDirection()
             ? Alignment.centerLeft
@@ -59,7 +61,7 @@ class DropDownComponentProfile extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .bodySmall!
-                              .copyWith(color: textColor),
+                              .copyWith(color: ColorConstants.greyText),
                         )
                       ],
                     ),

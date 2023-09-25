@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/billing/components/bottom_nav_bar_page_widget.dart';
 
@@ -16,7 +15,7 @@ class MyClaimSbottomBarComponent extends StatelessWidget {
         ),
         alignment: Alignment.topCenter,
         height: 90,
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.all(10),
         child: const BottomNavBarPageWidget());
   }
 }

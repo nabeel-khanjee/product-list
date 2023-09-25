@@ -1,23 +1,24 @@
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/billing/inner_page/my_claim/components/claim_detail_componet.dart';
+import 'package:provider_app/src/pages/payment/model/my_payment_model.dart';
 
-class MyClaimsScreen extends StatelessWidget {
-  const MyClaimsScreen({
+class MyPaymentsScreen extends StatelessWidget {
+  const MyPaymentsScreen({
     super.key,
-    required this.myClaimList,
+    required this.myPaymentList,
   });
 
-  final List<MyClaim> myClaimList;
+  final List<MyPayment> myPaymentList;
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
         child: Column(children: [
       Column(
-          children: myClaimList
+          children: myPaymentList
               .asMap()
               .entries
-              .map((myClaim) => Container(
+              .map((myPayment) => Container(
                     alignment: Alignment.center,
                     margin: const EdgeInsets.symmetric(vertical: 4),
                     padding: const EdgeInsets.only(left: 24),
@@ -35,19 +36,22 @@ class MyClaimsScreen extends StatelessWidget {
                           children: [
                             ClaimDetailsComponent(
                                 heading: 'Claim ID',
-                                value: myClaim.value.claimId),
+                                value: myPayment.value.claimId),
                             ClaimDetailsComponent(
-                                heading: 'Date of Service (DOS)',
-                                value: myClaim.value.dateOfService),
+                                heading: 'Total Amount Paid',
+                                value: myPayment.value.totalAmountPaid),
                           ],
                         ),
                         Row(
                           children: [
                             ClaimDetailsComponent(
-                                heading: 'Billed Amount',
-                                value: myClaim.value.billedAmount),
+                                heading: 'Due Amount',
+                                value: myPayment.value.dueAmount),
+                            ClaimDetailsComponent(
+                                heading: 'Action',
+                                value: myPayment.value.action),
                           ],
-                        ),
+                        ), 
                       ],
                     ),
                   ))
