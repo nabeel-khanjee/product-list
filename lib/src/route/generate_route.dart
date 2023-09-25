@@ -1,9 +1,16 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/payment/payment_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
   switch (settings.name) {
+    case RouteConstants.billingRoute:
+      final BillingArgs args = settings.arguments as BillingArgs;
+      return materialRoute(BillingScreen(args: args));
+    case RouteConstants.paymentRoute:
+      final BillingArgs args = settings.arguments as BillingArgs;
+      return materialRoute(PaymentScreen(args: args));
     case RouteConstants.notificationRoute:
       return materialRoute(const NotificationScreen());
     case RouteConstants.doctorDetailRoute:
