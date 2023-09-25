@@ -41,7 +41,7 @@ class _TermsConditionsState extends State<TermsConditions> {
                   ..onTap = () {
                     NavigationUtil.push(
                       context,
-                      RouteConstants.signUpRoute,
+                      RouteConstants.termsConditionsRoute,
                     );
                   },
               ),

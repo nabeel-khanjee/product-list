@@ -1,5 +1,8 @@
 
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/sign_up/components/consent_form.dart';
+import 'package:provider_app/src/pages/sign_up/components/disclaimer.dart';
+import 'package:provider_app/src/pages/sign_up/components/privacy_policy.dart';
 
 part 'sign_up_form.freezed.dart';
 
@@ -32,6 +35,12 @@ class _SignUpFormState extends State<SignUpForm> {
         _confirmPasswordField(context),
         const SizedBox(height: 20),
         const TermsConditions(),
+        const SizedBox(height: 5),
+        const PrivacyPolicy(),
+        const SizedBox(height: 5),
+        const DisClaimer(),
+        const SizedBox(height: 5),
+        const ConsentForm(),
         const SizedBox(height: 20),
         _signUpButton(context),
         const SizedBox(height: 20),

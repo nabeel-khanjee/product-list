@@ -1,6 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/lab_test/lab_test_screen.dart';
-import 'package:provider_app/src/pages/view_lab_test/view_lab_test_screen.dart';
+import 'package:provider_app/src/pages/disclaimer/disclaimer_screen.dart';
+import 'package:provider_app/src/pages/privacy_policy/privacy_policy_screen.dart';
+import 'package:provider_app/src/pages/terms_conditions/terms_conditions_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -17,38 +18,27 @@ Route onGenerateRoute(RouteSettings settings) {
 
     case RouteConstants.domesticViolenceChecklist:
       return materialRoute(const DomesticViolenceCheckListScreen());
-
     case RouteConstants.cageAid:
       return materialRoute(const CageAidScreen());
-
     case RouteConstants.bFTQuestionnaire:
       return materialRoute(const BFTQuestionnaireScreen());
-
     case RouteConstants.gAD7:
       return materialRoute(const GAD7Screen());
-
     case RouteConstants.developmentDisabilityIDD:
       return materialRoute(const DevlopmentDiabilityScreen());
-
     case RouteConstants.pHQ9:
       return materialRoute(const PHQ9Screen());
-
     case RouteConstants.mentalHealthRoute:
       return materialRoute(const MentalHealthScreen());
-
     case RouteConstants.socialHealthRoute:
       return materialRoute(const SocialHealthScreen());
-
     case RouteConstants.physicalHealthRoute:
       return materialRoute(const PhysicalHealthScreen());
-
     case RouteConstants.socailHealthInnerPageRoute:
       final args = settings.arguments as MapEntry<int, SocialHealthListData>;
-      return materialRoute(
-        SocailHealthInnerPage(
-          element: args,
-        ),
-      );
+      return materialRoute(SocailHealthInnerPage(
+        element: args,
+      ));
 
     case RouteConstants.homeRoute:
       return materialRoute(const HomeScreen());
@@ -100,9 +90,12 @@ Route onGenerateRoute(RouteSettings settings) {
 
     case RouteConstants.meetingDetailsRoute:
       return materialRoute(const MeetingDetailsScreen());
-
     case RouteConstants.videoCallingRoute:
       return materialRoute(const VideoCallingScreen());
+    case RouteConstants.bookAppontmentRoute:
+      return materialRoute(const BookAppointmentScreen());
+    case RouteConstants.bookAppontmentTwoRoute:
+      return materialRoute(const BookAppointmentTwoScreen());
 
     case RouteConstants.audioCallingRoute:
       return materialRoute(const AudioCallingScreen());
@@ -119,11 +112,36 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.viewLabTestRoute:
       return materialRoute(const ViewLabTestScreen());
 
+    case RouteConstants.prescriptionRoute:
+      return materialRoute(const PrescriptionScreen());
+
+    case RouteConstants.viewPrescriptionRoute:
+      return materialRoute(const ViewPrescriptionScreen());
+
+    case RouteConstants.reviewRoute:
+      return materialRoute(const ReviewScreen());
+
+    case RouteConstants.consentFormRoute:
+      return materialRoute(const ConsentFormScreen());
+
+    case RouteConstants.termsConditionsRoute:
+      return materialRoute(const TermsConditionsScreen());
+
+    case RouteConstants.privacyPolicyRoute:
+      return materialRoute(const PrivacyPolicyScreen());
+
+    case RouteConstants.disclaimerRoute:
+      return materialRoute(const DisClaimerScreen());
+
+    case RouteConstants.consentFormRoute:
+      return materialRoute(const ConsentFormScreen());
+
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
 
     default:
       return materialRoute(const SplashScreen());
-    // return materialRoute(const LabTestScreen());
+
+    // return materialRoute(const VideoCallingScreen());
   }
 }

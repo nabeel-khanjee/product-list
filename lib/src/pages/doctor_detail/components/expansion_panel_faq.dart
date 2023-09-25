@@ -1,6 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/doctor_detail/model/faq_list.dart';
-
 class ExpansionPanelFaqs extends StatefulWidget {
   const ExpansionPanelFaqs({
     super.key,

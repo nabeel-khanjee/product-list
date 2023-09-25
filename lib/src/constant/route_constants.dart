@@ -13,6 +13,13 @@ class RouteConstants {
   static const String visitClinicRoute = 'visitClinicRoute';
   static const String labTestRoute = 'labTestRoute';
   static const String viewLabTestRoute = 'viewLabTestRoute';
+  static const String prescriptionRoute = 'prescriptionRoute';
+  static const String viewPrescriptionRoute = 'viewPrescriptionRoute';
+  static const String reviewRoute = 'reviewRoute';
+  static const String consentFormRoute = 'consentFormRoute';
+  static const String termsConditionsRoute = 'termsConditionsRoute';
+  static const String privacyPolicyRoute = 'privacyPolicyRoute';
+  static const String disclaimerRoute = 'disclaimerRoute';
 
   static const String signInRoute = 'loginRoute';
   static const String signUpRoute = 'signUpRoute';
