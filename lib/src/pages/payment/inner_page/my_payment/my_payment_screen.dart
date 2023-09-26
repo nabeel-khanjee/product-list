@@ -51,7 +51,7 @@ class MyPaymentsScreen extends StatelessWidget {
                                 heading: 'Action',
                                 value: myPayment.value.action),
                           ],
-                        ), 
+                        ),
                       ],
                     ),
                   ))

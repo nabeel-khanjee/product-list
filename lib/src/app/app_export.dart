@@ -1,3 +1,6 @@
+export 'package:provider_app/src/pages/payment/inner_page/my_payment/components/card_payment_widget.dart';
+export 'package:provider_app/src/pages/payment/inner_page/my_payment/components/cash_payment_widget.dart';
+export 'package:provider_app/src/pages/payment/inner_page/my_payment/components/cheque_payment_widget.dart';
 export 'package:provider_app/src/pages/billing/inner_page/claim_detail/components/claim_complete_details_components.dart';
 export 'package:provider_app/src/pages/billing/inner_page/claim_detail/components/cpt_code_list_component.dart';
 export 'package:provider_app/src/pages/billing/inner_page/claim_detail/components/diagnostic_code_grid.dart';
