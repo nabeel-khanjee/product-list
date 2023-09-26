@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/chat/chat_screen.dart';
 import 'package:provider_app/src/pages/payment/payment_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
@@ -8,6 +9,8 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.billingRoute:
       final BillingArgs args = settings.arguments as BillingArgs;
       return materialRoute(BillingScreen(args: args));
+    case RouteConstants.chatRoute:
+      return materialRoute(const ChatScreen());
     case RouteConstants.paymentRoute:
       final BillingArgs args = settings.arguments as BillingArgs;
       return materialRoute(PaymentScreen(args: args));

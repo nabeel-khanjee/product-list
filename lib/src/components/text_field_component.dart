@@ -9,7 +9,7 @@ class TextFormFieldComponentProfile extends StatelessWidget {
     required this.label,
     this.maxLines = 1,
     this.hintText = '',
-    this.verticalPadding = 8.0,  this.lableColor=ColorConstants.greyText,
+    this.verticalPadding = 8.0,  this.lableColor=ColorConstants.greyText,  this.textInputType=TextInputType.text,
   });
   final List<TextInputFormatter>? listTextInputFormatter;
   final String label;
@@ -18,6 +18,7 @@ class TextFormFieldComponentProfile extends StatelessWidget {
   final String hintText;
   final double verticalPadding;
   final Color lableColor;
+  final TextInputType textInputType ;
   
 
   @override
@@ -25,10 +26,12 @@ class TextFormFieldComponentProfile extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: verticalPadding),
       child: TextFormField(
+        keyboardType: textInputType,
         strutStyle: const StrutStyle(
           height: 1.3,
         ),
         maxLines: maxLines,
+        
         validator: (value) {
           if (value == null || value.isEmpty) {
             return 'Please enter some text';
@@ -43,6 +46,7 @@ class TextFormFieldComponentProfile extends StatelessWidget {
               getThemeColor(context),
               0.4,
             )),
+
         decoration: InputDecoration(
             focusColor: getThemeColor(context),
             filled: true,

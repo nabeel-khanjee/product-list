@@ -60,7 +60,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
                           .toList())
                 ]))),
         isGradient: false,
-        appBar: const AppBarcomponent(
+        appBar:  const AppBarcomponent(
             isGradient: false,
             title: 'Book Appointment',
             isBackAppBar: true,

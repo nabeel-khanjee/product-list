@@ -9,55 +9,60 @@ class DoctorComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 96,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: darken(getThemeColor(context), 0.25),
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(
-            height: 84,
-            width: 74,
-            decoration: BoxDecoration(
-              color: ColorConstants.white,
-              borderRadius: BorderRadius.circular(15),
+    return InkWell(
+      onTap: () {
+        NavigationUtil.push(context, RouteConstants.chatRoute);
+      },
+      child: Container(
+        height: 96,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: darken(getThemeColor(context), 0.25),
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              height: 84,
+              width: 74,
+              decoration: BoxDecoration(
+                color: ColorConstants.white,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Image.asset(imageUrl),
             ),
-            child: Image.asset(imageUrl),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title),
-              Text(
-                "Voice Call",
-                style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                      color: ColorConstants.white.withOpacity(0.6),
-                    ),
-              ),
-              Row(
-                children: [
-                  appointmentSlot(context, " 28 min"),
-                  const SizedBox(width: 20),
-                  appointmentSlot(context, " Orthopaedic"),
-                ],
-              ),
-            ],
-          ),
-          GestureDetector(
-            onTap: () {
-              NavigationUtil.push(
-                context,
-                RouteConstants.videoCallingRoute,
-              );
-            },
-            child: SvgPicture.asset("assets/icon/call.svg"),
-          ),
-        ],
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(title),
+                Text(
+                  "Voice Call",
+                  style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                        color: ColorConstants.white.withOpacity(0.6),
+                      ),
+                ),
+                Row(
+                  children: [
+                    appointmentSlot(context, " 28 min"),
+                    const SizedBox(width: 20),
+                    appointmentSlot(context, " Orthopaedic"),
+                  ],
+                ),
+              ],
+            ),
+            GestureDetector(
+              onTap: () {
+                NavigationUtil.push(
+                  context,
+                  RouteConstants.videoCallingRoute,
+                );
+              },
+              child: SvgPicture.asset("assets/icon/call.svg"),
+            ),
+          ],
+        ),
       ),
     );
   }

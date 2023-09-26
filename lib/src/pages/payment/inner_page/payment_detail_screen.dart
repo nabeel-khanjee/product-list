@@ -34,7 +34,7 @@ class PaymentDetailScreen extends StatelessWidget {
                       heading: 'Insurance Amount', value: '\$150'),
                   ClaimDetailsComponent(
                       heading: 'Patient Responsibility Type',
-                      value: 'Deductable')
+                      value: 'Deductible')
                 ]),
                 SizedBox(height: 32),
                 Row(

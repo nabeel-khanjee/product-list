@@ -95,4 +95,6 @@ class AssetsConstants {
   static const String checkIcon = 'assets/icon/check_icon.png';
   static const String unSelectedCheckIcon =
       'assets/icon/unselected_check_icon.png';
+  static const String attachmentIcon = 'assets/icon/attachment_icon.png';
+  static const String sendMsgIcon = 'assets/icon/send_msg_icon.png';
 }
