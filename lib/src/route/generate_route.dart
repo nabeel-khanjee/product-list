@@ -1,5 +1,6 @@
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/chat/chat_screen.dart';
+import 'package:provider_app/src/pages/faq/faq_screen.dart';
 import 'package:provider_app/src/pages/payment/payment_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
@@ -109,6 +110,8 @@ Route onGenerateRoute(RouteSettings settings) {
 
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
+    case RouteConstants.faqRoute:
+      return materialRoute(const FaqScreen());
 
     default:
       return materialRoute(const SplashScreen());

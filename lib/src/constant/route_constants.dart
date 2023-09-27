@@ -64,5 +64,7 @@ class RouteConstants {
 
   static const String paymentRoute = 'paymentRoute';
 
-  static const String  chatRoute='chatRoute';
+  static const String chatRoute = 'chatRoute';
+
+  static const String faqRoute = 'faqRoute';
 }
