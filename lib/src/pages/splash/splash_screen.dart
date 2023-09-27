@@ -19,10 +19,10 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void _navigateAfterDelay() {
-    Timer(const Duration(seconds: 0), () async {
-      await NavigationUtil.push(
+    Timer(const Duration(seconds: 1), () async {
+      await NavigationUtil.popAllAndPush(
         context,
-        RouteConstants.onboardingRoute,
+          RouteConstants.onboardingRoute,
       );
     });
   }
@@ -34,9 +34,10 @@ class _SplashScreenState extends State<SplashScreen> {
         this.theme = theme;
         return Scaffold(
           backgroundColor: darken(getThemeColor(context), 0.4),
-          body: const Center(
-            child: FlutterLogo(
-              size: 100,
+          body: Center(
+            child: Image.asset(
+              "assets/images/logo.png",
+              height: 200,
             ),
           ),
         );

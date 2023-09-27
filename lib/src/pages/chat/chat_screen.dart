@@ -62,7 +62,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 BoxDecoration(color: Theme.of(context).scaffoldBackgroundColor),
             child: Center(
               child: Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
                     Stack(
@@ -73,7 +73,7 @@ class _ChatScreenState extends State<ChatScreen> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 color: lighten(getThemeColor(context), 0.35)),
-                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
                             height: 55,
                             width: double.infinity,
                             child: Row(
@@ -88,7 +88,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                     width: 25.5,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 15,
                                 ),
                                 Expanded(
@@ -115,7 +115,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                         border: InputBorder.none),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 15,
                                 ),
                                 InkWell(
@@ -171,69 +171,67 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ),
           ),
-          body: Container(
-            child: ListView.builder(
-              controller: messagesScrollController,
-              itemCount: messages.length,
-              // shrinkWrap: true,
-              padding: EdgeInsets.only(top: 10, bottom: 10),
-              physics: BouncingScrollPhysics(),
-              itemBuilder: (context, index) {
-                return Container(
-                  padding:
-                      EdgeInsets.only(left: 14, right: 14, top: 5, bottom: 5),
-                  child: Align(
-                    alignment: (messages[index].messageType == "receiver"
-                        ? Alignment.topLeft
-                        : Alignment.topRight),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment:
-                          messages[index].messageType != "receiver"
-                              ? CrossAxisAlignment.end
-                              : CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width / 1.6,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: (messages[index].messageType == "receiver"
-                                ? lighten(getThemeColor(context), 0.35)
-                                : Theme.of(context).scaffoldBackgroundColor),
-                          ),
-                          padding: EdgeInsets.all(16),
-                          child: Text(
-                            messages[index].messageContent,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodySmall!
-                                .copyWith(
-                                  color: (messages[index].messageType !=
-                                          "receiver"
-                                      ? lighten(getThemeColor(context), 0.35)
-                                      : Theme.of(context)
-                                          .scaffoldBackgroundColor),
-                                ),
-                          ),
+          body: ListView.builder(
+            controller: messagesScrollController,
+            itemCount: messages.length,
+            // shrinkWrap: true,
+            padding: const EdgeInsets.only(top: 10, bottom: 10),
+            physics: const BouncingScrollPhysics(),
+            itemBuilder: (context, index) {
+              return Container(
+                padding:
+                    const EdgeInsets.only(left: 14, right: 14, top: 5, bottom: 5),
+                child: Align(
+                  alignment: (messages[index].messageType == "receiver"
+                      ? Alignment.topLeft
+                      : Alignment.topRight),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment:
+                        messages[index].messageType != "receiver"
+                            ? CrossAxisAlignment.end
+                            : CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width / 1.6,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: (messages[index].messageType == "receiver"
+                              ? lighten(getThemeColor(context), 0.35)
+                              : Theme.of(context).scaffoldBackgroundColor),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Text(
-                            messages[index].date,
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleMedium!
-                                .copyWith(
-                                    color:
-                                        lighten(getThemeColor(context), 0.3)),
-                          ),
-                        )
-                      ],
-                    ),
+                        padding: const EdgeInsets.all(16),
+                        child: Text(
+                          messages[index].messageContent,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodySmall!
+                              .copyWith(
+                                color: (messages[index].messageType !=
+                                        "receiver"
+                                    ? lighten(getThemeColor(context), 0.35)
+                                    : Theme.of(context)
+                                        .scaffoldBackgroundColor),
+                              ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          messages[index].date,
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleMedium!
+                              .copyWith(
+                                  color:
+                                      lighten(getThemeColor(context), 0.3)),
+                        ),
+                      )
+                    ],
                   ),
-                );
-              },
-            ),
+                ),
+              );
+            },
           ),
           isGradient: true,
           appBar: PreferredSize(

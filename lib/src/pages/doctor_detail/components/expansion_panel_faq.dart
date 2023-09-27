@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+
 class ExpansionPanelFaqs extends StatefulWidget {
   const ExpansionPanelFaqs({
     super.key,
@@ -8,13 +9,14 @@ class ExpansionPanelFaqs extends StatefulWidget {
   @override
   State<ExpansionPanelFaqs> createState() => _ExpansionPanelFaqsState();
 }
+
 class _ExpansionPanelFaqsState extends State<ExpansionPanelFaqs> {
   bool? isExpanded;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      padding: const EdgeInsets.symmetric(vertical: 2.0),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(15),
         child: ExpansionPanelList(
@@ -86,4 +88,3 @@ class _ExpansionPanelFaqsState extends State<ExpansionPanelFaqs> {
     );
   }
 }
-
