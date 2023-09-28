@@ -9,13 +9,13 @@ class ViewLabTestScreen extends StatelessWidget {
     return const Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 20),
-              const CustomAppBar(title: "Lab Test"),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
+              CustomAppBar(title: "Lab Test"),
+              SizedBox(height: 20),
               ViewLabTestBody(),
               // const VisitClinicSearchBar(),
               // const SizedBox(height: 20),

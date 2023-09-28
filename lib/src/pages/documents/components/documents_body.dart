@@ -2,8 +2,11 @@ import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/documents/components/documents_view.dart';
 
 class DocumentsBody extends StatelessWidget {
-  DocumentsBody({super.key});
+  const DocumentsBody({super.key});
 
+
+  @override
+  Widget build(BuildContext context) {
   List<String> docsName = [
     "Health Records 2019.docx",
     "Medical History.xls",
@@ -29,9 +32,6 @@ class DocumentsBody extends StatelessWidget {
     "assets/icon/file_ppt.png",
     "assets/icon/file_ppt.png",
   ];
-
-  @override
-  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(

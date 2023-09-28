@@ -8,7 +8,7 @@ class DocumentsScreen extends StatelessWidget {
     return IsGradientBackGround(
       appbarText: StringConstants.documents,
       isBackAppBar: false,
-      body: MainScaffold(
+      body: const MainScaffold(
         isGradient: true,
         body: DocumentsBody(),
       ),
