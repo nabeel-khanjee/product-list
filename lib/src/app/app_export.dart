@@ -335,3 +335,4 @@ export 'package:provider_app/src/pages/video_calling/video_calling_screen.dart';
 export 'package:provider_app/src/pages/forgot_password/components/forgot_password_body.dart';
 export 'package:provider_app/src/pages/forgot_password/components/forgot_password_header.dart';
 export 'package:provider_app/src/pages/visit_clinic/visit_clinic_screen.dart';
+export 'package:provider_app/src/pages/forgot_password/components/forgot_password_header.dart';
