@@ -286,6 +286,18 @@ export 'package:provider_app/src/pages/emergency/components/emergency_address.da
 export 'package:provider_app/src/pages/emergency/components/emergency_button.dart';
 export 'package:provider_app/src/pages/emergency/components/emergency_header.dart';
 export 'package:provider_app/src/pages/emergency/components/emergency_details.dart';
+export 'package:provider_app/src/pages/lab_test/lab_test_screen.dart';
+export 'package:provider_app/src/pages/prescription/prescription_screen.dart';
+export 'package:provider_app/src/pages/view_lab_test/view_lab_test_screen.dart';
+export 'package:provider_app/src/pages/prescription/components/prescription_search_bar.dart';
+export 'package:provider_app/src/pages/prescription/components/prescription_body.dart';
+export 'package:provider_app/src/pages/view_prescription/components/medicine_type.dart';
+export 'package:provider_app/src/pages/view_prescription/components/medicine_view.dart';
+export 'package:provider_app/src/pages/consent_form/consent_form_screen.dart';
+export 'package:provider_app/src/pages/review/review_screen.dart';
+export 'package:provider_app/src/pages/view_prescription/view_prescription_screen.dart';
+export 'package:provider_app/src/pages/terms_conditions/components/terms_conditions_body.dart';
+
 
 export 'package:provider_app/src/pages/emergency_types/emergency_types_screen.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/bft_questionnaire/bft_questionnaire/bft_questionnaire_screen.dart';
@@ -322,3 +334,4 @@ export 'package:provider_app/src/pages/search_doctor/search_doctor_screen.dart';
 export 'package:provider_app/src/pages/video_calling/video_calling_screen.dart';
 export 'package:provider_app/src/pages/forgot_password/components/forgot_password_body.dart';
 export 'package:provider_app/src/pages/forgot_password/components/forgot_password_header.dart';
+export 'package:provider_app/src/pages/visit_clinic/visit_clinic_screen.dart';

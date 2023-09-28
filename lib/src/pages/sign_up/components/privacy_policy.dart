@@ -1,13 +1,13 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-class TermsConditions extends StatefulWidget {
-  const TermsConditions({Key? key}) : super(key: key);
+class PrivacyPolicy extends StatefulWidget {
+  const PrivacyPolicy({super.key});
 
   @override
-  State<TermsConditions> createState() => _TermsConditionsState();
+  State<PrivacyPolicy> createState() => _PrivacyPolicyState();
 }
 
-class _TermsConditionsState extends State<TermsConditions> {
+class _PrivacyPolicyState extends State<PrivacyPolicy> {
   bool isChecked = false;
 
   @override
@@ -32,7 +32,7 @@ class _TermsConditionsState extends State<TermsConditions> {
             text: '  I agree to the ',
             children: [
               TextSpan(
-                text: 'Terms & Conditions',
+                text: 'Privacy Policy',
                 style: Theme.of(context)
                     .textTheme
                     .bodySmall!
@@ -41,7 +41,7 @@ class _TermsConditionsState extends State<TermsConditions> {
                   ..onTap = () {
                     NavigationUtil.push(
                       context,
-                      RouteConstants.termsConditionsRoute,
+                      RouteConstants.privacyPolicyRoute,
                     );
                   },
               ),

@@ -1,4 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/book_appointment/components/book_navbar_appointment_book_screen.dart';
+import 'package:provider_app/src/pages/book_appointment/components/calender_appointments_book.dart';
+import 'package:provider_app/src/pages/book_appointment/components/time_component_appointment.dart';
 
 int selectedTimeAppointment = 0;
 
@@ -26,10 +29,9 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
   Widget build(BuildContext context) {
     return MainScaffold(
         bottomNavigationBar: BottomNavBarAppointmentBookScreen(
-
-            text: 'Next',
-            onTap: () => NavigationUtil.push(
-                context, RouteConstants.bookAppontmentTwoRoute)),
+          text: 'Next',
+          onTap: () {},
+        ),
         body: SingleChildScrollView(
             child: Container(
                 padding: const EdgeInsets.all(0),
