@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/review/components/review_dialog.dart';
 
 class ReviewSubmit extends StatelessWidget {
   const ReviewSubmit({super.key});
@@ -71,7 +72,14 @@ class ReviewSubmit extends StatelessWidget {
                         height: 44,
                         width: 200,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (_) {
+                                return const ReviewDialog();
+                              },
+                            );
+                          },
                           child: Text(
                             "Submit Feedback",
                             style: Theme.of(context).textTheme.bodySmall,

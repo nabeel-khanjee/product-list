@@ -20,6 +20,8 @@ class RouteConstants {
   static const String termsConditionsRoute = 'termsConditionsRoute';
   static const String privacyPolicyRoute = 'privacyPolicyRoute';
   static const String disclaimerRoute = 'disclaimerRoute';
+  static const String allReviewsRoute = 'allReviewsRoute';
+  static const String requestDocumentRoute = 'requestDocumentRoute';
 
   static const String signInRoute = 'loginRoute';
   static const String signUpRoute = 'signUpRoute';

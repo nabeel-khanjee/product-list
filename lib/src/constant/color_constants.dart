@@ -15,5 +15,7 @@ class ColorConstants {
   static const Color lightGrey = Color(0xffF4F4F4);
   static const Color disableDark = Color(0xffB7C4CB);
   static const Color niceBlue = Color(0xff127CC0);
+  static const Color lightBlue = Color(0xff57A5D8);
+
   static const Color grey = Color(0xff9D9D9D);
 }
