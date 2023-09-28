@@ -8,10 +8,11 @@ class EmergencyCallButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20.0),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          NavigationUtil.push(context, RouteConstants.emergencyRoute);
+        },
         style: ElevatedButton.styleFrom(
-          backgroundColor: ColorConstants.redIndicatorColor
-        ),
+            backgroundColor: ColorConstants.redIndicatorColor),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

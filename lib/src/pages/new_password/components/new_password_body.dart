@@ -101,7 +101,13 @@ class NewPasswordBody extends StatelessWidget {
                 .textTheme
                 .bodySmall!
                 .copyWith(color: Colors.lightBlue),
-            recognizer: TapGestureRecognizer()..onTap = () {},
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                NavigationUtil.popAllAndPush(
+                  context,
+                  RouteConstants.signInRoute,
+                );
+              },
           ),
         ],
       ),

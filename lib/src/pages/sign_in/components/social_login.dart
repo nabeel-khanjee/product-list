@@ -12,15 +12,15 @@ class SocialLogin extends StatelessWidget {
           children: [
             SvgPicture.asset(
               "assets/icon/apple_icon.svg",
-              height: 62,
+              //height: 62,
             ),
             SvgPicture.asset(
               "assets/icon/facebook_icon.svg",
-              height: 62,
+              //height: 62,
             ),
             SvgPicture.asset(
               "assets/icon/google_icon.svg",
-              height: 48,
+              //height: 62,
             ),
           ],
         ),

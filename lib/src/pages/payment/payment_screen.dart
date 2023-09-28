@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/billing/inner_page/claim_detail/components/claim_details_bottom_nav_bar.dart';
 import 'package:provider_app/src/pages/payment/data_list/my_payment_list.dart';
 import 'package:provider_app/src/pages/payment/inner_page/my_payment/my_payment_screen.dart';
 import 'package:provider_app/src/pages/payment/inner_page/payment_detail_screen.dart';

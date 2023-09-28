@@ -1,6 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/billing/components/bottom_nav_bar_page_widget.dart';
-import 'package:provider_app/src/pages/billing/inner_page/my_claim/components/claim_detail_componet.dart';
 
 class PaymentDetailScreen extends StatelessWidget {
   const PaymentDetailScreen({

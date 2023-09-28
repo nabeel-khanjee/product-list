@@ -1,5 +1,6 @@
 import 'package:provider_app/src/app/app_export.dart';
 
+
 class PaymentResponsibilityComponent extends StatelessWidget {
   const PaymentResponsibilityComponent({
     super.key,

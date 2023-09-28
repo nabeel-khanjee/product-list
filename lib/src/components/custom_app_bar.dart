@@ -10,14 +10,17 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          height: 38,
-          width: 38,
-          decoration: BoxDecoration(
-            color: ColorConstants.white,
-            borderRadius: BorderRadius.circular(15),
+        GestureDetector(
+          onTap: () => NavigationUtil.pop(context),
+          child: Container(
+            height: 38,
+            width: 38,
+            decoration: BoxDecoration(
+              color: ColorConstants.white,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: const Icon(Icons.arrow_back),
           ),
-          child: const Icon(Icons.arrow_back),
         ),
         Text(
           title,

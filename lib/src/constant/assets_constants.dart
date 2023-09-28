@@ -1,5 +1,7 @@
 class AssetsConstants {
   //Images
+    static const String logoutImage=  'assets/images/logout_image.png';
+
   static String doctorDetailImage = 'assets/images/doctor_profile_image.jpg';
   static String visaPaymentImage = 'assets/images/visa_payment_image.png';
   static String masterCardPaymentImage =

@@ -70,7 +70,7 @@ class ForgotPasswordBody extends StatelessWidget {
       text: TextSpan(
         text: 'Remember Password? ',
         style:
-        Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.grey),
+            Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.grey),
         children: [
           TextSpan(
             text: 'Sign In',
@@ -78,7 +78,13 @@ class ForgotPasswordBody extends StatelessWidget {
                 .textTheme
                 .bodySmall!
                 .copyWith(color: Colors.lightBlue),
-            recognizer: TapGestureRecognizer()..onTap = () {},
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                NavigationUtil.popAllAndPush(
+                  context,
+                  RouteConstants.signInRoute,
+                );
+              },
           ),
         ],
       ),

@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/billing/inner_page/my_claim/components/claim_detail_componet.dart';
 import 'package:provider_app/src/pages/payment/model/my_payment_model.dart';
 
 class MyPaymentsScreen extends StatelessWidget {
