@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/video_calling/bottom_sheet/attach_files_bottom_sheet.dart';
 
 class VideoCallingTopIcons extends StatelessWidget {
   const VideoCallingTopIcons({super.key});
@@ -17,7 +18,18 @@ class VideoCallingTopIcons extends StatelessWidget {
         children: [
           videoIcon("assets/icon/cross.svg"),
           videoIcon("assets/icon/ellipse.svg"),
-          videoIcon("assets/icon/file.svg"),
+          GestureDetector(
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                builder: (_) {
+                  return const AttachFilesBottomSheet();
+                },
+              );
+            },
+            child: videoIcon("assets/icon/file.svg"),
+          ),
           videoIcon("assets/icon/add_person.svg"),
           videoIcon("assets/icon/pencil.svg"),
         ],
