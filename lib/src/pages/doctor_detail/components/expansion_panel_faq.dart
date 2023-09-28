@@ -30,7 +30,7 @@ class _ExpansionPanelFaqsState extends State<ExpansionPanelFaqs> {
           dividerColor: ColorConstants.black,
           children: [
             ExpansionPanel(
-              // hasIcon: false,
+              hasIcon: false,
               backgroundColor: ColorConstants.white,
               isExpanded: isExpanded ?? false,
               canTapOnHeader: true,

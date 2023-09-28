@@ -31,7 +31,7 @@ class ReviewProfile extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Dr. Rachel McAdams"),
+                    const Text("Dr. Rachel McAdams"),
                     Text(
                       "General Physician",
                       style: Theme.of(context).textTheme.bodySmall!.copyWith(
