@@ -4,7 +4,9 @@ class FAQComponentDoctorDetailScreen extends StatelessWidget {
   const FAQComponentDoctorDetailScreen({
     super.key,
     required this.faqList,
+    this.isHeading = true,
   });
+  final bool isHeading;
 
   final List<FaqList> faqList;
 
@@ -14,11 +16,30 @@ class FAQComponentDoctorDetailScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const DoctorDetailHeadingOne(
-            heading: 'Frequently Asked Questions',
-            headingColor: ColorConstants.white,
-            fontFamily: FontConstantc.gilroySemiBold),
-        const SizedBox(height: 10),
+        if (isHeading)
+          Column(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const DoctorDetailHeadingOne(
+                      heading: 'Frequently Asked Questions',
+                      headingColor: ColorConstants.white,
+                      fontFamily: FontConstantc.gilroySemiBold),
+                  InkWell(
+                    onTap: () {
+                      NavigationUtil.push(context, RouteConstants.faqRoute);
+                    },
+                    child: const DoctorDetailHeadingTwo(
+                      text: 'View All',
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+            ],
+          ),
         Column(
           children: faqList
               .asMap()

@@ -99,7 +99,7 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
                           hintText: 'Write your Problem',
                           label: '')
                     ]))),
-        appBar: const AppBarcomponent(
+        appBar:  const AppBarcomponent(
             isGradient: false,
             title: "Book Appointment",
             isBackAppBar: true,

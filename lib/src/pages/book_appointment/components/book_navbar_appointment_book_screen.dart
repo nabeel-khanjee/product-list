@@ -7,16 +7,22 @@ class BottomNavBarAppointmentBookScreen extends StatelessWidget {
     required this.onTap,
     this.bgColor,
     this.fgColor,
+    this.horizontalPadding = 10,
+    this.verticalPadding = 15,
   });
   final String text;
   final VoidCallback onTap;
   final Color? bgColor;
   final Color? fgColor;
 
+  final double horizontalPadding;
+  final double verticalPadding;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+      padding: EdgeInsets.symmetric(
+          horizontal: horizontalPadding, vertical: verticalPadding),
       height: kToolbarHeight + kToolbarHeight / 2,
       child: ElevatedButton(
           style: Theme.of(context).elevatedButtonTheme.style!.copyWith(

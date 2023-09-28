@@ -6,10 +6,12 @@ class IsGradientBackGround extends StatelessWidget {
     required this.body,
     required this.isBackAppBar,
     required this.appbarText,
+    this.isAppBar = true,
   });
   final Widget body;
   final bool isBackAppBar;
   final String appbarText;
+  final bool isAppBar;
 
   @override
   Widget build(BuildContext context) {
@@ -17,38 +19,42 @@ class IsGradientBackGround extends StatelessWidget {
         create: (context) => getIt.get<IsGradientBackgroundCubit>()
           ..updateState(color: getThemeColor(context)),
         child:
-        BlocBuilder<IsGradientBackgroundCubit, IsGradientBackgroundState>(
+            BlocBuilder<IsGradientBackgroundCubit, IsGradientBackgroundState>(
           builder: (context, state) => state.maybeWhen(
             orElse: () => Container(),
             updateStateDarkLight: (value) => Container(
               decoration:
-              value ? BoxDecoration(gradient: linerGradientForApp()) : null,
+                  value ? BoxDecoration(gradient: linerGradientForApp()) : null,
               child: MainScaffold(
                 body: body,
                 isGradient: true,
-                appBar: AppBarcomponent(
-
-                  isTitleTowLines: false,
-                  isBackAppBar: isBackAppBar,
-                  isGradient: true,
-                  title: appbarText,
-                ),
+                appBar: isAppBar
+                    ? AppBarcomponent(
+                        isTitleTowLines: false,
+                        isBackAppBar: isBackAppBar,
+                        isGradient: true,
+                        title: appbarText,
+                      )
+                    : null,
               ),
             ),
             updateColorState: (color) => Container(
               decoration: BoxDecoration(
                   gradient: linerGradientForApp(
-                    color: color,
-                  )),
+                color: color,
+              )),
               child: MainScaffold(
                 body: body,
                 isGradient: true,
-                appBar: AppBarcomponent(
-                  isTitleTowLines: false,
-                  isBackAppBar: isBackAppBar,
-                  isGradient: true,
-                  title: appbarText,
-                ),
+                appBar: isAppBar
+                    ? AppBarcomponent(
+                      
+                        isTitleTowLines: false,
+                        isBackAppBar: isBackAppBar,
+                        isGradient: true,
+                        title: appbarText,
+                      )
+                    : null,
               ),
             ),
           ),

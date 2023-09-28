@@ -25,7 +25,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Image(
-                image: AssetImage("assets/images/company_logo.png"),
+                image: AssetImage("assets/images/logo.png"),
                 height: 70,
                 width: double.infinity,
                 alignment: Alignment.center,

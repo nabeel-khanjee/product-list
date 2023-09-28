@@ -44,10 +44,6 @@ export 'package:provider_app/src/pages/book_appointment/book_appointment_screen.
 export 'package:provider_app/src/pages/doctor_detail/doctor_detail_screen.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_profile_screen.dart';
 export 'package:provider_app/src/pages/notification/notification_screen.dart';
-export 'package:provider_app/src/pages/all_reviews/components/users_review.dart';
-export 'package:provider_app/src/pages/documents/components/documents_body.dart';
-export 'package:provider_app/src/pages/request_document/components/request_document_body.dart';
-
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/data_list/main_questions_list.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/data_list/family_members_other_specift_list.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/components/family_members_list_component.dart';
@@ -57,7 +53,6 @@ export 'package:provider_app/src/pages/family_health_profile/family_health_inner
 export 'package:provider_app/src/pages/home/components/bmi_home_widget.dart';
 export 'package:provider_app/src/pages/home/components/health_condition_component.dart';
 export 'package:provider_app/src/pages/home/components/pulse_widget.dart';
-
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/gad_7/components/score_selection_widget_gad_7.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/compoents/score_selection_widget.dart';
 export 'package:provider_app/src/pages/social_health/social_health_inner_pages/components/social_health_inner_page_body.dart';
@@ -69,7 +64,6 @@ export 'package:provider_app/src/pages/social_health/social_health_inner_pages/c
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/components/result_identified_row_component.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/components/bottom_result_identifier_widget.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/data_list/cage_aid_appbar_options_data_list.dart';
-
 export 'package:easy_localization/easy_localization.dart' hide TextDirection;
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/cubit/phq_9_cubit.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/data_list/phq_9_data_list.dart';
@@ -81,7 +75,6 @@ export 'package:provider_app/src/pages/mental_health/components/mental_health_li
 export 'package:provider_app/src/pages/mental_health/data_list/mental_health_list_data.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/components/check_box_list_tile_component.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/phq_9/compoents/divider_component.dart';
-
 export 'package:provider_app/src/pages/social_health/social_health_inner_pages/components/question_form_heading.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/bft_questionnaire/bft_questionnaire/components/bft_questionnaire_appbar.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/bft_questionnaire/bft_questionnaire/components/btf_questionnaire_widget.dart';
@@ -133,7 +126,6 @@ export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracke
 export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/diabetic_widget.dart';
 export 'package:provider_app/src/pages/physical_health/inner_pages/health_tracker/components/is_selected_checkbox_heading.dart';
 export 'package:provider_app/src/pages/mental_health/model/indications_model.dart';
-
 export 'package:provider_app/src/pages/change_language/components/language_setting.dart';
 export 'package:provider_app/src/pages/change_language/components/language_component.dart';
 export 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
@@ -282,12 +274,6 @@ export 'package:provider_app/src/pages/consent_form/consent_form_screen.dart';
 export 'package:provider_app/src/pages/review/review_screen.dart';
 export 'package:provider_app/src/pages/view_prescription/view_prescription_screen.dart';
 export 'package:provider_app/src/pages/terms_conditions/components/terms_conditions_body.dart';
-export 'package:provider_app/src/pages/consent_form/components/consent_form_terms_conditions.dart';
-export 'package:provider_app/src/pages/consent_form/components/consent_form_body.dart';
-export 'package:provider_app/src/pages/consent_form/components/consent_form_button.dart';
-export 'package:provider_app/src/pages/video_calling/bottom_sheet/bottom_sheet_fields.dart';
-export 'package:provider_app/src/pages/video_calling/bottom_sheet/bottom_sheet_files_icons.dart';
-export 'package:provider_app/src/pages/all_reviews/components/write_review.dart';
 
 export 'package:provider_app/src/pages/emergency_types/emergency_types_screen.dart';
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/bft_questionnaire/bft_questionnaire/bft_questionnaire_screen.dart';
@@ -325,3 +311,47 @@ export 'package:provider_app/src/pages/video_calling/video_calling_screen.dart';
 export 'package:provider_app/src/pages/forgot_password/components/forgot_password_body.dart';
 export 'package:provider_app/src/pages/forgot_password/components/forgot_password_header.dart';
 export 'package:provider_app/src/pages/visit_clinic/visit_clinic_screen.dart';
+export 'package:provider_app/src/pages/all_reviews/components/users_review.dart';
+export 'package:provider_app/src/pages/all_reviews/components/write_review.dart';
+export 'package:provider_app/src/pages/consent_form/components/consent_form_body.dart';
+export 'package:provider_app/src/pages/consent_form/components/consent_form_button.dart';
+export 'package:provider_app/src/pages/consent_form/components/consent_form_terms_conditions.dart';
+export 'package:provider_app/src/pages/documents/components/documents_body.dart';
+export 'package:provider_app/src/pages/request_document/components/request_document_body.dart';
+export 'package:provider_app/src/pages/request_document/components/request_document_button.dart';
+export 'package:provider_app/src/pages/video_calling/bottom_sheet/bottom_sheet_fields.dart';
+export 'package:provider_app/src/pages/video_calling/bottom_sheet/bottom_sheet_files_icons.dart';
+export 'package:provider_app/src/pages/billing/billing_screen.dart';
+export 'package:provider_app/src/pages/billing_payment/args/billing_args.dart';
+export 'package:provider_app/src/pages/chat/chat_screen.dart';
+export 'package:provider_app/src/pages/faq/faq_screen.dart';
+export 'package:provider_app/src/pages/payment/payment_screen.dart';
+export 'package:provider_app/src/pages/all_reviews/all_reviews_screen.dart';
+export 'package:provider_app/src/pages/disclaimer/disclaimer_screen.dart';
+export 'package:provider_app/src/pages/privacy_policy/privacy_policy_screen.dart';
+export 'package:provider_app/src/pages/request_document/request_document_screen.dart';
+export 'package:provider_app/src/pages/terms_conditions/terms_conditions_screen.dart';
+export 'package:provider_app/src/pages/billing_payment/components/billing_payments_expansion_panel_component.dart';
+export 'package:provider_app/src/pages/billing_payment/model/billing_list_model.dart';
+export 'package:provider_app/src/pages/billing_payment/data_list/billing_data_list.dart';
+export 'package:provider_app/src/pages/billing_payment/data_list/payment_data_list.dart';
+export 'package:provider_app/src/pages/billing/inner_page/claim_detail/claim_detail_screen.dart';
+export 'package:provider_app/src/pages/billing/inner_page/claim_detail/components/claim_details_bottom_nav_bar.dart';
+export 'package:provider_app/src/pages/billing/data_list/cpt_code_list.dart';
+export 'package:provider_app/src/pages/billing/data_list/diagnosis_code_list.dart';
+export 'package:provider_app/src/pages/billing/data_list/my_claim_list.dart';
+export 'package:provider_app/src/pages/billing/inner_page/my_claim/components/my_claim_bottom_bar_components.dart';
+export 'package:provider_app/src/pages/billing/inner_page/my_claim/my_claim_screen.dart';
+export 'package:provider_app/src/pages/billing/inner_page/my_claim/components/claim_detail_componet.dart';
+export 'package:provider_app/src/pages/billing/model/my_claim_model.dart';
+export 'package:provider_app/src/pages/billing/inner_page/claim_detail/components/claim_complete_details_components.dart';
+export 'package:provider_app/src/pages/billing/inner_page/claim_detail/components/cpt_code_list_component.dart';
+export 'package:provider_app/src/pages/billing/inner_page/claim_detail/components/diagnostic_code_grid.dart';
+export 'package:provider_app/src/pages/billing/inner_page/claim_detail/components/secondary_heading.dart';
+export 'package:provider_app/src/pages/billing/model/ctp_code.dart';
+export 'package:provider_app/src/pages/billing/inner_page/my_claim/components/next_widget.dart';
+export 'package:provider_app/src/pages/billing/inner_page/my_claim/components/page_number_widget.dart';
+export 'package:provider_app/src/pages/billing/inner_page/my_claim/components/pervious_widget.dart';
+export 'package:provider_app/src/pages/payment/inner_page/my_payment/components/card_payment_widget.dart';
+export 'package:provider_app/src/pages/payment/inner_page/my_payment/components/cash_payment_widget.dart';
+export 'package:provider_app/src/pages/payment/inner_page/my_payment/components/cheque_payment_widget.dart';

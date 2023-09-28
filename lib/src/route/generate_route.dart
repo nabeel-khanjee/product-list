@@ -1,14 +1,17 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/all_reviews/all_reviews_screen.dart';
-import 'package:provider_app/src/pages/disclaimer/disclaimer_screen.dart';
-import 'package:provider_app/src/pages/privacy_policy/privacy_policy_screen.dart';
-import 'package:provider_app/src/pages/request_document/request_document_screen.dart';
-import 'package:provider_app/src/pages/terms_conditions/terms_conditions_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
   switch (settings.name) {
+    case RouteConstants.billingRoute:
+      final BillingArgs args = settings.arguments as BillingArgs;
+      return materialRoute(BillingScreen(args: args));
+    case RouteConstants.chatRoute:
+      return materialRoute(const ChatScreen());
+    case RouteConstants.paymentRoute:
+      final BillingArgs args = settings.arguments as BillingArgs;
+      return materialRoute(PaymentScreen(args: args));
     case RouteConstants.notificationRoute:
       return materialRoute(const NotificationScreen());
 
@@ -135,14 +138,13 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.disclaimerRoute:
       return materialRoute(const DisClaimerScreen());
 
-    case RouteConstants.allReviewsRoute:
-      return materialRoute(const AllReviewsScreen());
-
-    case RouteConstants.requestDocumentRoute:
-      return materialRoute(const RequestDocumentScreen());
+    case RouteConstants.consentFormRoute:
+      return materialRoute(const ConsentFormScreen());
 
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
+    case RouteConstants.faqRoute:
+      return materialRoute(const FaqScreen());
 
     default:
       return materialRoute(const SplashScreen());
