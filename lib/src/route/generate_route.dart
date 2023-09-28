@@ -2,6 +2,9 @@ import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/chat/chat_screen.dart';
 import 'package:provider_app/src/pages/faq/faq_screen.dart';
 import 'package:provider_app/src/pages/payment/payment_screen.dart';
+import 'package:provider_app/src/pages/disclaimer/disclaimer_screen.dart';
+import 'package:provider_app/src/pages/privacy_policy/privacy_policy_screen.dart';
+import 'package:provider_app/src/pages/terms_conditions/terms_conditions_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -17,10 +20,13 @@ Route onGenerateRoute(RouteSettings settings) {
       return materialRoute(PaymentScreen(args: args));
     case RouteConstants.notificationRoute:
       return materialRoute(const NotificationScreen());
+
     case RouteConstants.doctorDetailRoute:
       return materialRoute(const DoctorDetailScreen());
+
     case RouteConstants.familyHealthProfileRoute:
       return materialRoute(const FamilyHealthProfileScreen());
+
     case RouteConstants.domesticViolenceChecklist:
       return materialRoute(const DomesticViolenceCheckListScreen());
     case RouteConstants.cageAid:
@@ -107,6 +113,39 @@ Route onGenerateRoute(RouteSettings settings) {
 
     case RouteConstants.searchDoctorRoute:
       return materialRoute(const SearchDoctorScreen());
+
+    case RouteConstants.visitClinicRoute:
+      return materialRoute(const VisitClinicScreen());
+
+    case RouteConstants.labTestRoute:
+      return materialRoute(const LabTestScreen());
+
+    case RouteConstants.viewLabTestRoute:
+      return materialRoute(const ViewLabTestScreen());
+
+    case RouteConstants.prescriptionRoute:
+      return materialRoute(const PrescriptionScreen());
+
+    case RouteConstants.viewPrescriptionRoute:
+      return materialRoute(const ViewPrescriptionScreen());
+
+    case RouteConstants.reviewRoute:
+      return materialRoute(const ReviewScreen());
+
+    case RouteConstants.consentFormRoute:
+      return materialRoute(const ConsentFormScreen());
+
+    case RouteConstants.termsConditionsRoute:
+      return materialRoute(const TermsConditionsScreen());
+
+    case RouteConstants.privacyPolicyRoute:
+      return materialRoute(const PrivacyPolicyScreen());
+
+    case RouteConstants.disclaimerRoute:
+      return materialRoute(const DisClaimerScreen());
+
+    case RouteConstants.consentFormRoute:
+      return materialRoute(const ConsentFormScreen());
 
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
