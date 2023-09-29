@@ -26,16 +26,7 @@ class HomeScreenComponent extends StatelessWidget {
             index,
             isOpen,
           ) {
-            BlocProvider.of<AnimatedDrawerCubit>(context)
-                .pageController
-                .jumpToPage(index);
-            isOpen
-                ? BlocProvider.of<AnimatedDrawerCubit>(context)
-                    .advancedDrawerController
-                    .hideDrawer()
-                : BlocProvider.of<AnimatedDrawerCubit>(context)
-                    .advancedDrawerController
-                    .showDrawer();
+          
             return const AnimatedDrawerAfterLoadedState();
           },
           error: (error) => RetryButton(

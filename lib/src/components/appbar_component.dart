@@ -59,7 +59,112 @@ class AppBarcomponent extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 3.0, right: 3),
                       child: IconButton(
-                          onPressed: () {}, icon: const Icon(Icons.menu)),
+                          onPressed: () {
+                            // showGeneralDialog(
+                            //   context: navigationService!
+                            //       .navigatorKey.currentContext!,
+                            //   barrierDismissible: true,
+                            //   transitionDuration: const Duration(milliseconds: 500),
+                            //   barrierLabel: MaterialLocalizations.of(
+                            //           navigationService!
+                            //               .navigatorKey.currentContext!)
+                            //       .dialogLabel,
+                            //   barrierColor: Colors.black.withOpacity(0.5),
+                            //   pageBuilder: (context, _, __) {
+                            //     return Column(
+                            //       mainAxisAlignment: MainAxisAlignment.start,
+                            //       children: <Widget>[
+                            //         Card(
+                            //             color: getThemeColor(context),
+                            //             child: Container(
+                            //               margin: const EdgeInsets.only(
+                            //                   top: kToolbarHeight / 2),
+                            //               padding: const EdgeInsets.all(10),
+                            //               child: Column(
+                            //                 children: [
+                            //                   const Row(
+                            //                     mainAxisAlignment:
+                            //                         MainAxisAlignment.end,
+                            //                     crossAxisAlignment:
+                            //                         CrossAxisAlignment.end,
+                            //                     children: [
+                            //                       Icon(
+                            //                         Icons.close,
+                            //                         color: ColorConstants.white,
+                            //                       )
+                            //                     ],
+                            //                   ),
+                            //                   const SizedBox(height: 30),
+                            //                   Row(
+                            //                     crossAxisAlignment:
+                            //                         CrossAxisAlignment.center,
+                            //                     mainAxisAlignment:
+                            //                         MainAxisAlignment
+                            //                             .spaceAround,
+                            //                     children: [
+                            //                       TopSheetComponent(
+                            //                         image: AssetsConstants
+                            //                             .homeTransparentIcon,
+                            //                         onTap: () async {
+                            //                           await BlocProvider.of<
+                            //                                       AnimatedDrawerCubit>(
+                            //                                   context)
+                            //                               .updateIndex(
+                            //                                   index: 1,
+                            //                                   isOpen: false,
+                            //                                   advancedDrawerController:
+                            //                                       BlocProvider.of<
+                            //                                                   AnimatedDrawerCubit>(
+                            //                                               context)
+                            //                                           .advancedDrawerController);
+                            //                         },
+                            //                         text: StringConstants.home,
+                            //                       ),
+                            //                       TopSheetComponent(
+                            //                         image: AssetsConstants
+                            //                             .profileTransparentIcon,
+                            //                         onTap: () {},
+                            //                         text:
+                            //                             StringConstants.profile,
+                            //                       ),
+                            //                       TopSheetComponent(
+                            //                         image: AssetsConstants
+                            //                             .payNowTransparentIcon,
+                            //                         onTap: () {},
+                            //                         text: 'Pay Now',
+                            //                       ),
+                            //                       TopSheetComponent(
+                            //                         image: AssetsConstants
+                            //                             .documentTransparentIcon,
+                            //                         onTap: () {},
+                            //                         text: StringConstants
+                            //                             .documents,
+                            //                       ),
+                            //                     ],
+                            //                   )
+                            //                 ],
+                            //               ),
+                            //             )),
+                            //       ],
+                            //     );
+                            //   },
+                            //   transitionBuilder: (context, animation,
+                            //       secondaryAnimation, child) {
+                            //     return SlideTransition(
+                            //       position: CurvedAnimation(
+                            //         parent: animation,
+                            //         curve: Curves.easeOut,
+                            //       ).drive(Tween<Offset>(
+                            //         begin: const Offset(0, -1.0),
+                            //         end: Offset.zero,
+                            //       )),
+                            //       child: child,
+                            //     );
+                            //   },
+                            // );
+                  
+                          },
+                          icon: const Icon(Icons.menu)),
                     )
                   ]
                 : actionTextButton != null
@@ -98,6 +203,51 @@ class AppBarcomponent extends StatelessWidget {
                     ),
                   )
                 : const HomeTitleComponent()),
+      ),
+    );
+  }
+}
+
+class TopSheetComponent extends StatelessWidget {
+  const TopSheetComponent({
+    super.key,
+    required this.image,
+    required this.text,
+    required this.onTap,
+  });
+  final String image;
+  final String text;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      child: Column(
+        children: [
+          Container(
+            alignment: Alignment.center,
+            height: 44,
+            width: 44,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                color: darken(getThemeColor(context), 0.35)),
+            child: Image.asset(
+              image,
+              height: 20,
+              width: 20,
+            ),
+          ),
+          const SizedBox(
+            height: 3,
+          ),
+          Text(
+            text,
+            style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                color: ColorConstants.white,
+                fontFamily: FontConstantc.gilroyMedium),
+          )
+        ],
       ),
     );
   }
