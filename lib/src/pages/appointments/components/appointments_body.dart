@@ -22,25 +22,21 @@ class _AppointmentsBodyState extends State<AppointmentsBody> {
         children: [
           ProfileIndicatorsWidget(
             children: [
-              Expanded(
-                child: IndicatorWidget(
-                  onTap: () {
-                    pageController.jumpToPage(0);
-                    setState(() => currentPage = 0);
-                  },
-                  isSelected: currentPage == 0,
-                  title: StringConstants.bookAppointment,
-                ),
+              IndicatorWidget(
+                onTap: () {
+                  pageController.jumpToPage(0);
+                  setState(() => currentPage = 0);
+                },
+                isSelected: currentPage == 0,
+                title: StringConstants.bookAppointment,
               ),
-              Expanded(
-                child: IndicatorWidget(
-                  onTap: () {
-                    pageController.jumpToPage(1);
-                    setState(() => currentPage = 1);
-                  },
-                  isSelected: currentPage == 1,
-                  title: StringConstants.scheduled,
-                ),
+              IndicatorWidget(
+                onTap: () {
+                  pageController.jumpToPage(1);
+                  setState(() => currentPage = 1);
+                },
+                isSelected: currentPage == 1,
+                title: StringConstants.scheduled,
               ),
             ],
           ),

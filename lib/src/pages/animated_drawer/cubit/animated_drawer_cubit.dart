@@ -24,7 +24,6 @@ class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
         : advancedDrawerController.hideDrawer();
     _advancedDrawerController = advancedDrawerController;
     _pageController.jumpToPage(index);
-
     emit(
       _AnimatedDrawerIndexUpdated(index, isOpen),
     );

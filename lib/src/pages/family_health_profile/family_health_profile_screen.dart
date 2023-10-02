@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/family_members_screen.dart';
 import 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/health_profile/health_profile_screen.dart';
@@ -24,25 +23,21 @@ class _FamilyHealthProfileScreenState extends State<FamilyHealthProfileScreen> {
             children: [
               ProfileIndicatorsWidget(
                 children: [
-                  Expanded(
-                    child: IndicatorWidget(
-                      onTap: () {
-                        pageController.jumpToPage(0);
-                        setState(() => currentPage = 0);
-                      },
-                      isSelected: currentPage == 0,
-                      title: 'Family Members',
-                    ),
+                  IndicatorWidget(
+                    onTap: () {
+                      pageController.jumpToPage(0);
+                      setState(() => currentPage = 0);
+                    },
+                    isSelected: currentPage == 0,
+                    title: 'Family Members',
                   ),
-                  Expanded(
-                    child: IndicatorWidget(
-                      onTap: () {
-                        pageController.jumpToPage(2);
-                        setState(() => currentPage = 2);
-                      },
-                      isSelected: currentPage == 2,
-                      title: StringConstants.healthProfile,
-                    ),
+                  IndicatorWidget(
+                    onTap: () {
+                      pageController.jumpToPage(2);
+                      setState(() => currentPage = 2);
+                    },
+                    isSelected: currentPage == 2,
+                    title: StringConstants.healthProfile,
                   ),
                 ],
               ),

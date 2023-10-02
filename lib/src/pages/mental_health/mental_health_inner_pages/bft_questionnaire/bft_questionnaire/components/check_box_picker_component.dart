@@ -34,11 +34,16 @@ class _CheckBoxPickerComponentState extends State<CheckBoxPickerComponent> {
                   decoration: BoxDecoration(
                       border:
                           widget.question.value.options.length != option.key + 1
-                              ? Border(
-                                  right: BorderSide(
-                                      color: getThemeColor(context),
-                                      width: 1.5),
-                                )
+                              ? !getCurrentLanguageDirection()
+                                  ? Border(
+                                      right: BorderSide(
+                                          color: getThemeColor(context),
+                                          width: 1.5))
+                                  : Border(
+                                      left: BorderSide(
+                                          color: getThemeColor(context),
+                                          width: 1.5),
+                                    )
                               : null),
                   child: Center(
                       child: Padding(
@@ -47,27 +52,25 @@ class _CheckBoxPickerComponentState extends State<CheckBoxPickerComponent> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         InkWell(
-                          onTap: () => setState(() => option.value.isSelected = true),
-                          child: Expanded(
-                            child: Image.asset(
-                              AssetsConstants.checkOptionIcon,
-                              color: getCheckColor(
-                                  isSelected: option.value.isSelected),
-                              height: 22,
-                              width: 22,
-                            ),
+                          onTap: () =>
+                              setState(() => option.value.isSelected = true),
+                          child: Image.asset(
+                            AssetsConstants.checkOptionIcon,
+                            color: getCheckColor(
+                                isSelected: option.value.isSelected),
+                            height: 22,
+                            width: 22,
                           ),
                         ),
                         InkWell(
-                          onTap: () => setState(() => option.value.isSelected = false),
-                          child: Expanded(
-                            child: Image.asset(
-                              color: getCrossColor(
-                                  isSelected: option.value.isSelected),
-                              AssetsConstants.crossOptionIcon,
-                              height: 22,
-                              width: 22,
-                            ),
+                          onTap: () =>
+                              setState(() => option.value.isSelected = false),
+                          child: Image.asset(
+                            color: getCrossColor(
+                                isSelected: option.value.isSelected),
+                            AssetsConstants.crossOptionIcon,
+                            height: 22,
+                            width: 22,
                           ),
                         )
                       ],
@@ -80,8 +83,8 @@ class _CheckBoxPickerComponentState extends State<CheckBoxPickerComponent> {
   }
 
   Color? getCheckColor({bool? isSelected}) =>
-      isSelected == true ? const Color.fromARGB(255, 0, 255, 76) : null;
+      isSelected == true ? const Color.fromARGB(255, 55, 255, 0) : null;
 
   Color? getCrossColor({bool? isSelected}) =>
-      isSelected == false ? const Color.fromARGB(255, 255, 47, 47) : null;
+      isSelected == false ? const Color.fromARGB(255, 255, 0, 0) : null;
 }
