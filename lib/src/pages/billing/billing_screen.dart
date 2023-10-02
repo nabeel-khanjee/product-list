@@ -1,9 +1,8 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/billing/inner_page/claim_detail/claim_detail_screen.dart';
-import 'package:provider_app/src/pages/billing/inner_page/claim_detail/components/claim_details_bottom_nav_bar.dart';
 
 class BillingScreen extends StatefulWidget {
   const BillingScreen({super.key, required this.args});
+
   final BillingArgs args;
 
   @override
@@ -22,6 +21,7 @@ class _BillingScreenState extends State<BillingScreen> {
   }
 
   int? selectedIndex;
+
   @override
   Widget build(BuildContext context) {
     return IsGradientBackGround(
@@ -69,6 +69,3 @@ class _BillingScreenState extends State<BillingScreen> {
             isGradient: true));
   }
 }
-
-
-

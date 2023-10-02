@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/billing/inner_page/my_claim/components/claim_detail_componet.dart';
 
 class ClaimCompleteDetailsComponent extends StatelessWidget {
   const ClaimCompleteDetailsComponent({

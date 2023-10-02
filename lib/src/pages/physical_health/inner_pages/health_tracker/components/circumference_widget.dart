@@ -37,7 +37,7 @@ class CircumferenceWidget extends StatelessWidget {
                 lighten(Theme.of(context).scaffoldBackgroundColor, 0.05),
             readingIcon: AssetsConstants.headIcon,
             borderColor: getThemeColor(context),
-            heading: StringConstants.waist,
+            heading: StringConstants.head,
           ),
         ),
       ],

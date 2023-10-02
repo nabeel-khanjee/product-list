@@ -38,6 +38,9 @@ class ContactDetailScreenForm extends StatelessWidget {
     required this.addressPharmacyController,
     required this.cityPharmacyController,
     required this.zipCodePharmacyController,
+    required this.nameInterpreterContactDetailController,
+    required this.relationInterpreterContactController,
+    required this.contactInterpreterNumberContactDetailController,
   });
   final GlobalKey<FormState> formkey;
   final String subHeadingTwoDemographicInnerScreen;
@@ -46,6 +49,10 @@ class ContactDetailScreenForm extends StatelessWidget {
   final TextEditingController nameContactDetailController;
   final TextEditingController relationContactController;
   final TextEditingController contactNumberContactDetailController;
+  final TextEditingController nameInterpreterContactDetailController;
+  final TextEditingController relationInterpreterContactController;
+  final TextEditingController contactInterpreterNumberContactDetailController;
+
   final TextEditingController pharmacyNamePharmacyConroller;
   final TextEditingController addressPharmacyController;
   final TextEditingController cityPharmacyController;
@@ -75,6 +82,7 @@ class ContactDetailScreenForm extends StatelessWidget {
   final List<String> states;
   final Function(String? value) getStateValue;
   final String? selectedStates;
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -120,7 +128,6 @@ class ContactDetailScreenForm extends StatelessWidget {
                 value: selectedCountry,
               ),
               TitleDemographicsMainHeadingInnerPage(
-                
                   titleDemographicInnerScreen:
                       subHeadingOneDemographicInnerScreen),
               TextFormFieldComponentProfile(
@@ -134,6 +141,21 @@ class ContactDetailScreenForm extends StatelessWidget {
               TextFormFieldComponentProfile(
                 label: StringConstants.contactNumber,
                 patientIdcontroller: contactNumberContactDetailController,
+              ),
+              const TitleDemographicsMainHeadingInnerPage(
+                  titleDemographicInnerScreen: 'Interpreter Contact'),
+              TextFormFieldComponentProfile(
+                label: StringConstants.name,
+                patientIdcontroller: nameInterpreterContactDetailController,
+              ),
+              TextFormFieldComponentProfile(
+                label: StringConstants.relation,
+                patientIdcontroller: relationInterpreterContactController,
+              ),
+              TextFormFieldComponentProfile(
+                label: StringConstants.contactNumber,
+                patientIdcontroller:
+                    contactInterpreterNumberContactDetailController,
               ),
               TitleDemographicsMainHeadingInnerPage(
                   titleDemographicInnerScreen:

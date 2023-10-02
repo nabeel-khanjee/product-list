@@ -18,74 +18,84 @@ class _SelecRadioListComponentState extends State<SelectRadioListComponent> {
   String? region;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(
-        18,
+    return MainScaffold(
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: ElevatedButton(
+            onPressed: widget.isLanguage
+                ? languageCode != null
+                    ? () async {
+                        await context
+                            .setLocale(
+                              Locale(
+                                languageCode!,
+                                region!,
+                              ),
+                            )
+                            .then((value) => RestartWidget.restartApp(context));
+                      }
+                    : null
+                : null,
+            style: widget.isLanguage
+                ? languageCode == null
+                    ? Theme.of(context).elevatedButtonTheme.style!.copyWith(
+                        backgroundColor: MaterialStatePropertyAll(
+                            lighten(getThemeColor(context), 0.3)))
+                    : Theme.of(context).elevatedButtonTheme.style
+                : Theme.of(context).elevatedButtonTheme.style!.copyWith(
+                    backgroundColor: MaterialStatePropertyAll(
+                        lighten(getThemeColor(context), 0.3))),
+            child: Text(StringConstants.saveChanges)),
       ),
-      width: double.infinity,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: widget.isLanguage
-                ? languageSetting.length
-                : locationSetting.length,
-            itemBuilder: (context, index) => LanguageConponent(
-              isSelected: widget.isLanguage
-                  ? languageSetting[index].selected
-                  : locationSetting[index].selected,
-              onTap: (isSelected) async {
-                languageSetting[index].selected = isSelected;
-                languageCode = languageSetting[index].languageCode;
-                region = languageSetting[index].region;
-                for (var element in (widget.isLanguage
-                    ? languageSetting
-                    : locationSetting)) {
-                  if (element.name ==
-                      (widget.isLanguage
-                          ? languageSetting[index].name
-                          : locationSetting[index].name)) {
-                    element.selected = true;
-                  } else {
-                    element.selected = false;
-                  }
-                }
-                setState(() {});
-              },
-              text: widget.isLanguage
-                  ? languageSetting[index].name
-                  : locationSetting[index].name,
-            ),
+      isGradient: true,
+      body: Container(
+        padding: const EdgeInsets.all(
+          18,
+        ),
+        width: double.infinity,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: widget.isLanguage
+                    ? languageSetting.length
+                    : locationSetting.length,
+                itemBuilder: (context, index) => LanguageConponent(
+                  isSelected: widget.isLanguage
+                      ? languageSetting[index].selected
+                      : locationSetting[index].selected,
+                  onTap: (isSelected) async {
+                    languageSetting[index].selected = isSelected;
+                    languageCode = languageSetting[index].languageCode;
+                    region = languageSetting[index].region;
+                    for (var element in (widget.isLanguage
+                        ? languageSetting
+                        : locationSetting)) {
+                      if (element.name ==
+                          (widget.isLanguage
+                              ? languageSetting[index].name
+                              : locationSetting[index].name)) {
+                        element.selected = true;
+                      } else {
+                        element.selected = false;
+                      }
+                    }
+                    setState(() {});
+                  },
+                  text: widget.isLanguage
+                      ? languageSetting[index].name
+                      : locationSetting[index].name,
+                ),
+              ),
+
+              // const Spacer(),
+            ],
           ),
-          const Spacer(),
-          ElevatedButton(
-              onPressed: widget.isLanguage
-                  ? languageCode != null
-                      ? () async {
-                          await context.setLocale(
-                            Locale(
-                              languageCode!,
-                              region!,
-                            ),
-                          ).then((value) => RestartWidget.restartApp(context));
-                          
-                        }
-                      : null
-                  : null,
-              style: widget.isLanguage
-                  ? languageCode == null
-                      ? Theme.of(context).elevatedButtonTheme.style!.copyWith(
-                          backgroundColor: MaterialStatePropertyAll(
-                              lighten(getThemeColor(context), 0.3)))
-                      : Theme.of(context).elevatedButtonTheme.style
-                  : Theme.of(context).elevatedButtonTheme.style!.copyWith(
-                      backgroundColor: MaterialStatePropertyAll(
-                          lighten(getThemeColor(context), 0.3))),
-              child: Text(StringConstants.saveChanges))
-        ],
+        ),
       ),
     );
   }

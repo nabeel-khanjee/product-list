@@ -15,6 +15,11 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
   bool? isFemale;
   bool? isMale;
 
+  bool? isOther;
+
+  bool? isInsured;
+  bool? isNonInsured;
+
   @override
   Widget build(BuildContext context) {
     TextEditingController problemController = TextEditingController();
@@ -24,13 +29,20 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
         bottomNavigationBar: BottomNavBarAppointmentBookScreen(
           text: 'Book Appointment',
           onTap: () {
-            ShowBottomSheetComponent().showBottomSheet(
-                isControlled: true,
-                removeHeight: true,
-                removePadding: true,
-                content:
-                    PaymentMethodBottomSheet(paymentMethods: paymentMethods),
-                context: context);
+            isInsured == true
+                ? AlertDialogComponent.showDialogComponent(
+                    alertDialog: const AlertDialog(
+                        insetPadding: EdgeInsets.all(16),
+                        contentPadding: EdgeInsets.zero,
+                        content: SuccessDialog()),
+                    context: context)
+                : ShowBottomSheetComponent().showBottomSheet(
+                    isControlled: true,
+                    removeHeight: true,
+                    removePadding: true,
+                    content: PaymentMethodBottomSheet(
+                        paymentMethods: paymentMethods),
+                    context: context);
           },
         ),
         body: SingleChildScrollView(
@@ -82,6 +94,7 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
                             onTap: () => setState(() {
                                   isMale = true;
                                   isFemale = false;
+                                  isOther = false;
                                 }),
                             genderBool: isMale),
                         GenderComponent(
@@ -89,8 +102,36 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
                             onTap: () => setState(() {
                                   isMale = false;
                                   isFemale = true;
+                                  isOther = false;
                                 }),
-                            text: "Female")
+                            text: "Female"),
+                        GenderComponent(
+                            genderBool: isOther,
+                            onTap: () => setState(() {
+                                  isMale = false;
+                                  isFemale = false;
+                                  isOther = true;
+                                }),
+                            text: "Other")
+                      ]),
+                      const SizedBox(height: 20),
+                      const HeadingSmall(text: 'Payment'),
+                      const SizedBox(height: 10),
+                      Row(children: [
+                        GenderComponent(
+                            text: 'Insured',
+                            onTap: () => setState(() {
+                                  isInsured = true;
+                                  isNonInsured = false;
+                                }),
+                            genderBool: isInsured),
+                        GenderComponent(
+                            genderBool: isNonInsured,
+                            onTap: () => setState(() {
+                                  isInsured = false;
+                                  isNonInsured = true;
+                                }),
+                            text: "Non Insured")
                       ]),
                       const SizedBox(height: 20),
                       TextFormFieldComponentProfile(
@@ -99,7 +140,7 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
                           hintText: 'Write your Problem',
                           label: '')
                     ]))),
-        appBar:  const AppBarcomponent(
+        appBar: const AppBarcomponent(
             isGradient: false,
             title: "Book Appointment",
             isBackAppBar: true,

@@ -5,7 +5,8 @@ class ThemeSwitchApp extends StatelessWidget {
     super.key,
     required this.image,
     required this.text,
-    required this.onChnage, required this.value,
+    required this.onChnage,
+    required this.value,
   });
 
   final String image;
@@ -31,9 +32,7 @@ class ThemeSwitchApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TilesIconComponent(image: image),
-            const SizedBox(
-              width: 10,
-            ),
+            const SizedBox(width: 10),
             Text(text),
           ],
         ),

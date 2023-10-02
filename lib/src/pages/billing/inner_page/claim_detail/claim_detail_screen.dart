@@ -12,7 +12,8 @@ class ClaimDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return SingleChildScrollView(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -26,6 +27,8 @@ class ClaimDetailScreen extends StatelessWidget {
           const SecondaryHeading(text: 'CPT/HCPCS Code (s)'),
           const SizedBox(height: 12),
           CPTHCPCSCodeListComponent(cPTHCPCSCodeList: cPTHCPCSCodeList)
-        ]);
+        ],
+      ),
+    );
   }
 }
