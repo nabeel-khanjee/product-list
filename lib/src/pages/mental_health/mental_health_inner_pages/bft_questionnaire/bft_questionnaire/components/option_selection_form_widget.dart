@@ -25,11 +25,18 @@ class OptionSelectionFormWidget extends StatelessWidget {
                   height: 99,
                   decoration: BoxDecoration(
                       border: question.value.options.length != option.key + 1
-                          ? Border(
-                              right: BorderSide(
-                                  width: 1.5,
-                                  color: Theme.of(context)
-                                      .scaffoldBackgroundColor))
+                          ? getCurrentLanguageDirection()
+                              ? Border(
+                                  left: BorderSide(
+                                      width: 1.5,
+                                      color: Theme.of(context)
+                                          .scaffoldBackgroundColor),
+                                )
+                              : Border(
+                                  right: BorderSide(
+                                      width: 1.5,
+                                      color: Theme.of(context)
+                                          .scaffoldBackgroundColor))
                           : null),
                   child: Center(
                       child: Padding(

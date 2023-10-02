@@ -47,6 +47,8 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
                         color: ColorConstants.white,
                         fontWeight: FontWeight.w600,
                         height: 0),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 )
               ],
@@ -59,6 +61,8 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
                 fontFamily: FontConstantc.gilroySemiBold,
                 fontWeight: FontWeight.w600,
                 height: 0),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
           Text(
             element.value.dec,
@@ -66,6 +70,8 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
                 color: element.value.decColor,
                 fontWeight: FontWeight.w600,
                 height: 0),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -82,6 +88,8 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
                   style: Theme.of(context).textTheme.labelSmall!.copyWith(
                       fontFamily: FontConstantc.gilroyMedium,
                       color: ColorConstants.white),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
               )
             ],

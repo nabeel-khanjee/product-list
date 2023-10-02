@@ -46,25 +46,21 @@ class _PhysicalHealthScreenState extends State<PhysicalHealthScreen> {
           margin: const EdgeInsets.all(12),
           child: Column(children: [
             ProfileIndicatorsWidget(children: [
-              Expanded(
-                child: IndicatorWidget(
-                  onTap: () {
-                    pageController.jumpToPage(0);
-                    setState(() => currentPage = 0);
-                  },
-                  isSelected: currentPage == 0,
-                  title: StringConstants.healthTracker,
-                ),
+              IndicatorWidget(
+                onTap: () {
+                  pageController.jumpToPage(0);
+                  setState(() => currentPage = 0);
+                },
+                isSelected: currentPage == 0,
+                title: StringConstants.healthTracker,
               ),
-              Expanded(
-                child: IndicatorWidget(
-                  onTap: () {
-                    pageController.jumpToPage(1);
-                    setState(() => currentPage = 1);
-                  },
-                  isSelected: currentPage == 1,
-                  title: StringConstants.medications,
-                ),
+              IndicatorWidget(
+                onTap: () {
+                  pageController.jumpToPage(1);
+                  setState(() => currentPage = 1);
+                },
+                isSelected: currentPage == 1,
+                title: StringConstants.medications,
               ),
             ]),
             Expanded(

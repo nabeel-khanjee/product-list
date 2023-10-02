@@ -12,7 +12,7 @@ class MentalHealthListElementWidget extends StatelessWidget {
       child: Container(
           margin: const EdgeInsets.symmetric(vertical: 10),
           padding: const EdgeInsets.all(6),
-          height: 54,
+          height: 60,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: darken(getThemeColor(context), 0.3)),
