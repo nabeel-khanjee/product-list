@@ -2,8 +2,8 @@ import 'package:provider_app/src/app/app_export.dart';
 
 ThemeData darkThemeData(MyTheme theme) {
   return ThemeData(
-    drawerTheme:
-        const DrawerThemeData(backgroundColor: Colors.transparent, elevation: 0),
+    drawerTheme: const DrawerThemeData(
+        backgroundColor: Colors.transparent, elevation: 0),
     useMaterial3: true,
     colorSchemeSeed: theme.getColor(),
     brightness: Brightness.dark,

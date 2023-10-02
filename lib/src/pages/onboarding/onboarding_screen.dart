@@ -9,14 +9,16 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MainScaffold(
+      isGradient: false,
       body: Stack(
         children: [
           SizedBox(
             height: MediaQuery.of(context).size.height,
             child: Image.asset(
               AssetsConstants.doctorImageOnboardingScreen,
-              fit: BoxFit.fitHeight,
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.cover,
             ),
           ),
           Container(

@@ -29,7 +29,7 @@ class ChequePaymentWidget extends StatelessWidget {
           Row(
             children: [
               Text(
-                "Cheque Payment Mode",
+                "Check Payment Mode",
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                       color: Theme.of(context).scaffoldBackgroundColor,
                       fontWeight: FontWeight.bold,
@@ -79,7 +79,7 @@ class ChequePaymentWidget extends StatelessWidget {
                         lableColor: getThemeColor(context),
                         verticalPadding: 0,
                         patientIdcontroller: chequeNoController,
-                        label: 'Cheque No.'),
+                        label: 'Check No.'),
                   ),
                 ),
               ),
@@ -103,7 +103,7 @@ class ChequePaymentWidget extends StatelessWidget {
                         lableColor: getThemeColor(context),
                         verticalPadding: 0,
                         patientIdcontroller: chequeDateController,
-                        label: 'Cheque Date'),
+                        label: 'Check Date'),
                   ),
                 ),
               ),

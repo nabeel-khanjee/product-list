@@ -1,4 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
+
 class HomeScreenComponent extends StatelessWidget {
   HomeScreenComponent({
     super.key,
@@ -26,7 +27,6 @@ class HomeScreenComponent extends StatelessWidget {
             index,
             isOpen,
           ) {
-          
             return const AnimatedDrawerAfterLoadedState();
           },
           error: (error) => RetryButton(

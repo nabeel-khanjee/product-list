@@ -39,12 +39,15 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
                     width: 12,
                   ),
                 ),
-                Text(
-                  element.value.date,
-                  style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                      color: ColorConstants.white,
-                      fontWeight: FontWeight.w600,
-                      height: 0),
+                const SizedBox(width: 3),
+                Expanded(
+                  child: Text(
+                    element.value.date,
+                    style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                        color: ColorConstants.white,
+                        fontWeight: FontWeight.w600,
+                        height: 0),
+                  ),
                 )
               ],
             ),
@@ -72,11 +75,14 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
                 height: 24,
                 width: 24,
               ),
-              Text(
-                element.value.docName,
-                style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                    fontFamily: FontConstantc.gilroyMedium,
-                    color: ColorConstants.white),
+              const SizedBox(width: 3),
+              Expanded(
+                child: Text(
+                  element.value.docName,
+                  style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                      fontFamily: FontConstantc.gilroyMedium,
+                      color: ColorConstants.white),
+                ),
               )
             ],
           )

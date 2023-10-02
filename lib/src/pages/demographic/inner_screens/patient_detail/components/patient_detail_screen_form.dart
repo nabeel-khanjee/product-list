@@ -98,7 +98,7 @@ class PatientDetailScreenForm extends StatelessWidget {
           DropDownComponentProfile(
             onDropdownFieldTap: onDropdownFieldTapCountry,
             hintText: 'Disability/Impairment',
-            items: country,
+            items: const ['Hearing Impairment', 'Visual Impairment', 'Physical'],
             selectedItem: (value) => getCountryValue(value),
             value: selectedCountry,
           ),

@@ -4,6 +4,8 @@ Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
   switch (settings.name) {
+    case RouteConstants.requestDocumentRoute:
+      return materialRoute(const RequestDocumentScreen());
     case RouteConstants.billingRoute:
       final BillingArgs args = settings.arguments as BillingArgs;
       return materialRoute(BillingScreen(args: args));
@@ -137,7 +139,6 @@ Route onGenerateRoute(RouteSettings settings) {
 
     case RouteConstants.disclaimerRoute:
       return materialRoute(const DisClaimerScreen());
-
 
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
