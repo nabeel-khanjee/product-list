@@ -6,7 +6,7 @@ class VisitClinicCategories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-  List<String> doctorCategories = [
+  final List<String> doctorCategories = [
     "All",
     "General",
     "Dentist",

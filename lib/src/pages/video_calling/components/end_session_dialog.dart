@@ -30,7 +30,10 @@ class EndSessionDialog extends StatelessWidget {
                 width: 130,
                 height: 48,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    NavigationUtil.push(
+                        context, RouteConstants.meetingDetailsRoute);
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: ColorConstants.redIndicatorColor),
                   child: Text(

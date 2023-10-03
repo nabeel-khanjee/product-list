@@ -3,17 +3,16 @@ import 'package:provider_app/src/app/app_export.dart';
 class BottomSheetRatings extends StatelessWidget {
   const BottomSheetRatings({super.key});
 
- 
   @override
   Widget build(BuildContext context) {
-  List<String> ratings = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-  ];
-   return SizedBox(
+    List<String> ratings = [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+    ];
+    return SizedBox(
       height: 40,
       child: ListView.builder(
         itemCount: ratings.length,
@@ -25,7 +24,7 @@ class BottomSheetRatings extends StatelessWidget {
             child: Container(
               width: 60,
               decoration: BoxDecoration(
-                color: lighten(getThemeColor(context), 0.3),
+                color: lighten(getThemeColor(context), 0.15),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(

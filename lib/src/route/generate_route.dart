@@ -97,10 +97,13 @@ Route onGenerateRoute(RouteSettings settings) {
 
     case RouteConstants.meetingDetailsRoute:
       return materialRoute(const MeetingDetailsScreen());
+
     case RouteConstants.videoCallingRoute:
       return materialRoute(const VideoCallingScreen());
+
     case RouteConstants.bookAppontmentRoute:
       return materialRoute(const BookAppointmentScreen());
+
     case RouteConstants.bookAppontmentTwoRoute:
       return materialRoute(const BookAppointmentTwoScreen());
 
@@ -140,14 +143,17 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.disclaimerRoute:
       return materialRoute(const DisClaimerScreen());
 
+    case RouteConstants.allReviewsRoute:
+      return materialRoute(const AllReviewsScreen());
+
+
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
+
     case RouteConstants.faqRoute:
       return materialRoute(const FaqScreen());
 
     default:
       return materialRoute(const SplashScreen());
-
-    // return materialRoute(const VideoCallingScreen());
   }
 }

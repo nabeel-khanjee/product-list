@@ -17,22 +17,16 @@ class PastRecordsBody extends StatelessWidget {
               .copyWith(fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 10),
-        GestureDetector(
-          onTap: () {
-            NavigationUtil.push(
-              context,
-              RouteConstants.meetingDetailsRoute,
-            );
-          },
-          child: const DoctorComponent(
-            title: "Dr. Rachel McAdams",
-            imageUrl: "assets/icon/dr_profile.png",
-          ),
+        const DoctorComponent(
+          title: "Dr. Rachel McAdams",
+          imageUrl: "assets/icon/dr_profile.png",
+          callTitle: "Video Call",
         ),
         const SizedBox(height: 10),
         const DoctorComponent(
           title: "Dr. Victoria Patterson",
           imageUrl: "assets/icon/doctor_02.png",
+          callTitle: "Video Call",
         ),
         const SizedBox(height: 20),
         Text(
@@ -46,6 +40,7 @@ class PastRecordsBody extends StatelessWidget {
         const DoctorComponent(
           title: "Dr. Patricia Palmer",
           imageUrl: "assets/icon/doctor_03.png",
+          callTitle: "Voice Call",
         ),
       ],
     );
