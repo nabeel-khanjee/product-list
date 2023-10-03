@@ -12,8 +12,19 @@ class EmergencyTypesButtons extends StatelessWidget {
         ),
         const SizedBox(width: 10),
         Expanded(
-          child: typesButton(
-              context, "assets/icon/check_up.svg", "All Emergencies"),
+          child: GestureDetector(
+            onTap: () {
+              NavigationUtil.push(
+                context,
+                RouteConstants.allEmergenciesRoute,
+              );
+            },
+            child: typesButton(
+              context,
+              "assets/icon/check_up.svg",
+              "All Emergencies",
+            ),
+          ),
         ),
       ],
     );

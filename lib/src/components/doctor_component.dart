@@ -2,9 +2,13 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class DoctorComponent extends StatelessWidget {
   const DoctorComponent(
-      {super.key, required this.title, required this.imageUrl});
+      {super.key,
+      required this.title,
+      required this.callTitle,
+      required this.imageUrl});
 
   final String title;
+  final String callTitle;
   final String imageUrl;
 
   @override
@@ -38,7 +42,7 @@ class DoctorComponent extends StatelessWidget {
               children: [
                 Text(title),
                 Text(
-                  "Voice Call",
+                  callTitle,
                   style: Theme.of(context).textTheme.labelSmall!.copyWith(
                         color: ColorConstants.white.withOpacity(0.6),
                       ),
@@ -52,15 +56,39 @@ class DoctorComponent extends StatelessWidget {
                 ),
               ],
             ),
-            GestureDetector(
-              onTap: () {
-                NavigationUtil.push(
-                  context,
-                  RouteConstants.videoCallingRoute,
-                );
-              },
-              child: SvgPicture.asset("assets/icon/call.svg"),
-            ),
+            (callTitle.contains("Voice"))
+                ? GestureDetector(
+                    onTap: () {
+                      NavigationUtil.push(
+                          context, RouteConstants.audioCallingRoute);
+                    },
+                    child: SvgPicture.asset("assets/icon/call.svg"),
+                  )
+                : Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          NavigationUtil.push(
+                              context, RouteConstants.chatRoute);
+                        },
+                        child: communicationIcon(
+                          "assets/icon/chat_icon.svg",
+                          const Color(0xFFFDC13A),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          NavigationUtil.push(
+                              context, RouteConstants.videoCallingRoute);
+                        },
+                        child: communicationIcon(
+                          "assets/icon/video_call.svg",
+                          const Color(0xFFD077FF),
+                        ),
+                      ),
+                    ],
+                  )
           ],
         ),
       ),
@@ -82,6 +110,20 @@ class DoctorComponent extends StatelessWidget {
               ),
         )
       ],
+    );
+  }
+
+  Widget communicationIcon(String svgUrl, Color kColor) {
+    return Container(
+      height: 32,
+      width: 40,
+      decoration: BoxDecoration(
+        color: kColor,
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: Center(
+        child: SvgPicture.asset(svgUrl),
+      ),
     );
   }
 }

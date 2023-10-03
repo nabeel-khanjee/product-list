@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/sign_up/components/consent_form.dart';
 import 'package:provider_app/src/pages/sign_up/components/disclaimer.dart';
@@ -92,7 +91,6 @@ class _SignUpFormState extends State<SignUpForm> {
   }
 
   Widget _mobileNumberField(BuildContext context) {
- 
     return Row(
       children: [
         Container(
@@ -208,7 +206,6 @@ class _SignUpFormState extends State<SignUpForm> {
           borderRadius: BorderRadius.circular(15),
           borderSide: BorderSide.none,
         ),
-        
         prefixIcon: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: SvgPicture.asset('assets/icon/password.svg'),

@@ -57,6 +57,7 @@ class BookAppointmentsBody extends StatelessWidget {
         const DoctorComponent(
           title: "Dr. Rachel McAdams",
           imageUrl: "assets/icon/dr_profile.png",
+          callTitle: "Voice Call",
         ),
       ],
     );

@@ -7,7 +7,12 @@ class VideoCallingBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset("assets/icon/female_01.png"),
+        Image.asset(
+          "assets/icon/female_01.png",
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.fitWidth,
+        ),
         const Positioned(
           top: 50,
           right: 20,

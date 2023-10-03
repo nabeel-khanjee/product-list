@@ -6,6 +6,7 @@ class FAQComponentDoctorDetailScreen extends StatelessWidget {
     required this.faqList,
     this.isHeading = true,
   });
+
   final bool isHeading;
 
   final List<FaqList> faqList;

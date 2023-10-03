@@ -9,7 +9,9 @@ class BmiHomeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-            padding: const EdgeInsets.only(top: 10, left: 10),
+            padding: getCurrentLanguageDirection()
+                ? const EdgeInsets.only(top: 10, right: 10)
+                : const EdgeInsets.only(top: 10, left: 10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: getThemeColor(context)),
@@ -22,7 +24,9 @@ class BmiHomeWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Image.asset(AssetsConstants.pulseIcon,
-                            height: 20, width: 20, color: const Color(0xFFE0A7FF)),
+                            height: 20,
+                            width: 20,
+                            color: const Color(0xFFE0A7FF)),
                         const SizedBox(width: 5),
                         Text(StringConstants.bmi,
                             style: Theme.of(context)

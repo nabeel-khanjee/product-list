@@ -44,7 +44,7 @@ class SearchFilterBottomSheet extends StatelessWidget {
                     ),
                   ),
                   SearchDoctorCategories(
-                    fillColor: lighten(getThemeColor(context), 0.3),
+                    fillColor: lighten(getThemeColor(context), 0.15),
                   ),
                   Text(
                     "Ratings",
