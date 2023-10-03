@@ -1,7 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class VisitClinicSearchBar extends StatelessWidget {
-  const VisitClinicSearchBar({Key? key}) : super(key: key);
+  const VisitClinicSearchBar({super.key});
 
   @override
   Widget build(BuildContext context) {

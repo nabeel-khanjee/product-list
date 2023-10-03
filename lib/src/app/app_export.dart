@@ -355,3 +355,8 @@ export 'package:provider_app/src/pages/billing/inner_page/my_claim/components/pe
 export 'package:provider_app/src/pages/payment/inner_page/my_payment/components/card_payment_widget.dart';
 export 'package:provider_app/src/pages/payment/inner_page/my_payment/components/cash_payment_widget.dart';
 export 'package:provider_app/src/pages/payment/inner_page/my_payment/components/cheque_payment_widget.dart';
+export 'package:provider_app/src/pages/documents/components/documents_view.dart';
+export 'package:provider_app/src/pages/video_calling/components/end_session_dialog.dart';
+export 'package:provider_app/src/pages/visit_clinic/components/visit_clinic_categories.dart';
+export 'package:provider_app/src/pages/visit_clinic/components/visit_clinic_search_bar.dart';
+export 'package:provider_app/src/pages/visit_clinic/components/visit_clinic_show_doctors.dart';

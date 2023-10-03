@@ -20,11 +20,13 @@ class ScheduledBody extends StatelessWidget {
         const DoctorComponent(
           title: "Dr. Rachel McAdams",
           imageUrl: "assets/icon/dr_profile.png",
+          callTitle: "Video Call",
         ),
         const SizedBox(height: 10),
         const DoctorComponent(
           title: "Dr. Victoria Patterson",
           imageUrl: "assets/icon/doctor_02.png",
+          callTitle: "Video Call",
         ),
       ],
     );

@@ -29,17 +29,9 @@ class ViewLabTestBody extends StatelessWidget {
             viewTest("Test 05", context),
             viewTest("Test 06", context),
             const SizedBox(height: 8),
-            GestureDetector(
-              onTap: (){
-                NavigationUtil.push(
-                  context,
-                  RouteConstants.reviewRoute,
-                );
-              },
-              child: const Text(
-                "View Receipt",
-                style: TextStyle(color: ColorConstants.yellowIndicatorColor),
-              ),
+            const Text(
+              "View Receipt",
+              style: TextStyle(color: ColorConstants.yellowIndicatorColor),
             ),
           ],
         ),
@@ -56,31 +48,23 @@ class ViewLabTestBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(title),
-              GestureDetector(
-                onTap: (){
-                  NavigationUtil.push(
-                    context,
-                    RouteConstants.prescriptionRoute,
-                  );
-                },
-                child: Container(
-                  height: 28,
-                  width: 80,
-                  decoration: BoxDecoration(
-                    color: darken(getThemeColor(context), 0.35),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      SvgPicture.asset(
-                        "assets/icon/eye_view.svg",
-                        colorFilter: const ColorFilter.mode(
-                            ColorConstants.white, BlendMode.srcIn),
-                      ),
-                      const Text("View"),
-                    ],
-                  ),
+              Container(
+                height: 28,
+                width: 80,
+                decoration: BoxDecoration(
+                  color: darken(getThemeColor(context), 0.35),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SvgPicture.asset(
+                      "assets/icon/eye_view.svg",
+                      colorFilter: const ColorFilter.mode(
+                          ColorConstants.white, BlendMode.srcIn),
+                    ),
+                    const Text("View"),
+                  ],
                 ),
               ),
             ],

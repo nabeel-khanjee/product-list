@@ -16,7 +16,7 @@ class DocumentsView extends StatelessWidget {
       height: 56,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: ColorConstants.lightBlue,
+        color: getThemeColor(context),
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(

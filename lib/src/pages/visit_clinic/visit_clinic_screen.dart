@@ -1,7 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/visit_clinic/components/visit_clinic_categories.dart';
-import 'package:provider_app/src/pages/visit_clinic/components/visit_clinic_search_bar.dart';
-import 'package:provider_app/src/pages/visit_clinic/components/visit_clinic_show_doctors.dart';
 
 class VisitClinicScreen extends StatelessWidget {
   const VisitClinicScreen({super.key});

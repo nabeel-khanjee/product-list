@@ -1,5 +1,4 @@
 import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/video_calling/components/end_session_dialog.dart';
 
 class VideoCallingBottomIcons extends StatelessWidget {
   const VideoCallingBottomIcons({super.key});
@@ -10,15 +9,7 @@ class VideoCallingBottomIcons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         customIcon("assets/icon/message.svg", context),
-        GestureDetector(
-          onTap: (){
-            NavigationUtil.push(
-              context,
-              RouteConstants.audioCallingRoute,
-            );
-          },
-          child: customIcon("assets/icon/audio.svg", context),
-        ),
+        customIcon("assets/icon/audio.svg", context),
         customIcon("assets/icon/video.svg", context),
         GestureDetector(
           onTap: () {

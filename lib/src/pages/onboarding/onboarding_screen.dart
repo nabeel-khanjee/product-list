@@ -16,7 +16,8 @@ class OnboardingScreen extends StatelessWidget {
             height: MediaQuery.of(context).size.height,
             child: Image.asset(
               AssetsConstants.doctorImageOnboardingScreen,
-              fit: BoxFit.fitHeight,
+              width: double.infinity,
+              fit: BoxFit.fitWidth,
             ),
           ),
           Container(

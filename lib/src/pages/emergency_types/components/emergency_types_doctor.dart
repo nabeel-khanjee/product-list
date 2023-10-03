@@ -9,12 +9,7 @@ class EmergencyTypesDoctor extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ElevatedButton(
-          onPressed: () {
-            NavigationUtil.push(
-              context,
-              RouteConstants.allEmergenciesRoute,
-            );
-          },
+          onPressed: () {},
           style: ElevatedButton.styleFrom(
               backgroundColor: ColorConstants.pinkScanHome),
           child: Text(

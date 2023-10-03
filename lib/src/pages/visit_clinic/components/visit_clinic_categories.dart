@@ -3,7 +3,7 @@ import 'package:provider_app/src/app/app_export.dart';
 class VisitClinicCategories extends StatelessWidget {
   VisitClinicCategories({super.key});
 
-  List<String> doctorCategories = [
+  final List<String> doctorCategories = [
     "All",
     "General",
     "Dentist",

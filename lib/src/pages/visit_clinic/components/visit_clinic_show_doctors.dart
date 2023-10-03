@@ -11,9 +11,7 @@ class VisitClinicShowDoctors extends StatelessWidget {
         children: [
           const Text(
             "Available Doctors",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
           Expanded(
