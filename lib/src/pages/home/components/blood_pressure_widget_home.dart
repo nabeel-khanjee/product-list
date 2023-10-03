@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 
 class BloodPressureWidgetHome extends StatelessWidget {
@@ -10,7 +9,9 @@ class BloodPressureWidgetHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-      padding: const EdgeInsets.only(top: 10, left: 10),
+      padding: getCurrentLanguageDirection()
+          ? const EdgeInsets.only(top: 10, right: 10)
+          : const EdgeInsets.only(top: 10, left: 10),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: getThemeColor(context)),
