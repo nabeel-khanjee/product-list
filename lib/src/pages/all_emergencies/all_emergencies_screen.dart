@@ -5,22 +5,21 @@ class AllEmergenciesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: customGradientBg,
-        child: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
-          child: SafeArea(
-            child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
-              child: Column(
-                children: [
-                  AllEmergenciesHeader(),
-                  AllEmergenciesSearchBar(),
-                  AllEmergenciesBody(),
-                  AllEmergencyButton(),
-                ],
-              ),
+    return  Scaffold(
+      backgroundColor: darken(getThemeColor(context), 0.2),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        child: SafeArea(
+          child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                SizedBox(height: 20),
+                CustomAppBar(title: "All Emergencies"),
+                AllEmergenciesSearchBar(),
+                AllEmergenciesBody(),
+                AllEmergencyButton(),
+              ],
             ),
           ),
         ),
