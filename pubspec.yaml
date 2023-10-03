@@ -91,6 +91,7 @@ flutter_native_splash:
 
 # flutter run --flavor <flavorName> -t lib/main_<flavorName>.dart
 #  fvm flutter build apk --release --flavor prod -t lib/src/flavors/main_prod.dart
+#  fvm flutter build apk --split-per-abi --flavor prod -t lib/src/flavors/main_prod.dart
 flavorizr:
   flavors:
     prod:
