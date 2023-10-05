@@ -26,7 +26,9 @@ class GenderComponent extends StatelessWidget {
               decoration: BoxDecoration(
                 border: Border.all(color: lighten(getThemeColor(context), 0.1)),
                 borderRadius: BorderRadius.circular(11),
-                color: darken(getThemeColor(context), 0.3),
+                color: getThemeStateIsLight()
+                    ? darken(getThemeColor(context), 0.3)
+                    : lighten(getThemeColor(context), 0.3),
               ),
               padding: const EdgeInsets.all(3),
               child: genderBool == true

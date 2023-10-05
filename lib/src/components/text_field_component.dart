@@ -9,7 +9,9 @@ class TextFormFieldComponentProfile extends StatelessWidget {
     required this.label,
     this.maxLines = 1,
     this.hintText = '',
-    this.verticalPadding = 8.0,  this.lableColor=ColorConstants.greyText,  this.textInputType=TextInputType.text,
+    this.verticalPadding = 8.0,
+    this.lableColor = ColorConstants.greyText,
+    this.textInputType = TextInputType.text,
   });
   final List<TextInputFormatter>? listTextInputFormatter;
   final String label;
@@ -18,8 +20,7 @@ class TextFormFieldComponentProfile extends StatelessWidget {
   final String hintText;
   final double verticalPadding;
   final Color lableColor;
-  final TextInputType textInputType ;
-  
+  final TextInputType textInputType;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,6 @@ class TextFormFieldComponentProfile extends StatelessWidget {
           height: 1.3,
         ),
         maxLines: maxLines,
-        
         validator: (value) {
           if (value == null || value.isEmpty) {
             return 'Please enter some text';
@@ -46,11 +46,12 @@ class TextFormFieldComponentProfile extends StatelessWidget {
               getThemeColor(context),
               0.4,
             )),
-
         decoration: InputDecoration(
             focusColor: getThemeColor(context),
             filled: true,
-            fillColor: ColorConstants.white,
+            fillColor: !getThemeStateIsLight()
+                ? (lighten(getThemeColor(context), 0.35))
+                : ColorConstants.white,
             hintText: hintText,
             hintStyle: Theme.of(context)
                 .textTheme

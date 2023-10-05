@@ -31,6 +31,7 @@ class MentalHealthListElementWidget extends StatelessWidget {
                               .textTheme
                               .bodyMedium!
                               .copyWith(
+                                  color: ColorConstants.white,
                                   fontFamily: FontConstantc.gilroyMedium)),
                       const SizedBox(height: 3),
                       Text(mentalHealthListElement.value.date,

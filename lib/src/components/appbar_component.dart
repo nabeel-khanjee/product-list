@@ -45,6 +45,9 @@ class AppBarcomponent extends StatelessWidget {
                                   const EdgeInsets.only(top: 6.0, right: 3),
                               child: Image.asset(
                                 AssetsConstants.notificationAppBarIcon,
+                                color: !getThemeStateIsLight()
+                                    ? (darken(getThemeColor(context), 0.35))
+                                    : null,
                               ),
                             ),
                             Container(

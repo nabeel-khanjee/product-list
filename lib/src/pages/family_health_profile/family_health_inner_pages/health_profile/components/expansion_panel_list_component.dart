@@ -23,21 +23,25 @@ class _ExpansionPanelListComponentHealthProfileFamilyMembersState
     return ClipRRect(
         borderRadius: BorderRadius.circular(15),
         child: ExpansionPanelList(
-            expansionCallback: (panelIndex, isExpanded) => setState(() => this.isExpanded = isExpanded),
+            expansionCallback: (panelIndex, isExpanded) =>
+                setState(() => this.isExpanded = isExpanded),
             elevation: 0,
             expandedHeaderPadding: EdgeInsets.zero,
-            expandIconColor: Theme.of(context).scaffoldBackgroundColor,
+            expandIconColor: !getThemeStateIsLight()
+                ? darken(getThemeColor(context), 0.35)
+                : Theme.of(context).scaffoldBackgroundColor,
             dividerColor: ColorConstants.black,
             children: [
               ExpansionPanel(
                   backgroundColor: getThemeStateIsLight()
                       ? lighten(getThemeColor(context), 0.35)
-                      : darken(getThemeColor(context), 0.5),
+                      : lighten(getThemeColor(context), 0.3),
                   isExpanded: isExpanded ?? false,
                   headerBuilder: (context, isExpanded) =>
                       ExpansionTileComponent(
                           isExpandable: true,
-                          onTap: () => setState(() => this.isExpanded = !isExpanded),
+                          onTap: () =>
+                              setState(() => this.isExpanded = !isExpanded),
                           test: widget.disease.value.diseaseTitle),
                   body: Column(
                       children: widget.disease.value.familyMembers
@@ -82,8 +86,13 @@ class _ExpansionPanelListComponentHealthProfileFamilyMembersState
                                                         fontFamily:
                                                             FontConstantc
                                                                 .gilroySemiBold,
-                                                        color: Theme.of(context)
-                                                            .scaffoldBackgroundColor)))
+                                                        color: !getThemeStateIsLight()
+                                                            ? darken(
+                                                                getThemeColor(
+                                                                    context),
+                                                                0.35)
+                                                            : Theme.of(context)
+                                                                .scaffoldBackgroundColor)))
                                       ]))))
                           .toList()))
             ]));

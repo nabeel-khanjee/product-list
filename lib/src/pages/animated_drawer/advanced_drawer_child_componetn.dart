@@ -62,14 +62,14 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                                   style: Theme.of(context)
                                       .textTheme
                                       .bodyMedium!
-                                      .copyWith(color: ColorConstants.white),
+                                      .copyWith(),
                                 ),
                                 Text(
                                   'nabeelshakeel966@gmail.com',
                                   style: Theme.of(context)
                                       .textTheme
                                       .titleSmall!
-                                      .copyWith(color: ColorConstants.white),
+                                      .copyWith(),
                                 )
                               ],
                             ),
@@ -87,9 +87,7 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
-                          color: getThemeStateIsLight()
-                              ? lighten(getThemeColor(context))
-                              : darken(getThemeColor(context), 0.5),
+                          color: lighten(getThemeColor(context)),
                         ),
                         padding: const EdgeInsets.all(8),
                         child: Container(
@@ -98,9 +96,7 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                               border: Border.all(
                                   color: lighten(getThemeColor(context), 0.3)),
                               borderRadius: BorderRadius.circular(30),
-                              color: getThemeStateIsLight()
-                                  ? lighten(getThemeColor(context))
-                                  : darken(getThemeColor(context), 0.5),
+                              color: lighten(getThemeColor(context)),
                             ),
                             child: Icon(
                               Icons.close,

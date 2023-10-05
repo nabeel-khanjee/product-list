@@ -15,33 +15,19 @@ class DoctorDetailScreen extends StatelessWidget {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 class DoctorDetailHeadingTwo extends StatelessWidget {
   const DoctorDetailHeadingTwo({
     super.key,
     required this.text,
+    required this.color,
   });
   final String text;
-
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: Theme.of(context)
-          .textTheme
-          .bodyMedium!
-          .copyWith(color: lighten(getThemeColor(context), 0.35)),
+      style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: color),
     );
   }
 }

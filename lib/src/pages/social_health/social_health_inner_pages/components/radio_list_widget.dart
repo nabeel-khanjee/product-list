@@ -31,10 +31,10 @@ class _RadioListState extends State<RadioList> {
                   selectedTileColor: ColorConstants.black,
                   title: Text(
                     options.value.option,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodySmall!
-                        .copyWith(color: lighten(getThemeColor(context), 0.4)),
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        color: !getThemeStateIsLight()
+                            ? darken(getThemeColor(context), 0.5)
+                            : lighten(getThemeColor(context), 0.4)),
                   ),
                   value: options.value,
                   groupValue: selectedOption,
@@ -60,10 +60,10 @@ class _RadioListState extends State<RadioList> {
                 selectedTileColor: ColorConstants.black,
                 title: Text(
                   options.value.option,
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodySmall!
-                      .copyWith(color: lighten(getThemeColor(context), 0.4)),
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      color: !getThemeStateIsLight()
+                          ? darken(getThemeColor(context), 0.5)
+                          : lighten(getThemeColor(context), 0.4)),
                 ),
                 value: options.value,
                 groupValue: selectedOption,

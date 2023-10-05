@@ -24,17 +24,22 @@ class FAQComponentDoctorDetailScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Expanded(
+                  Expanded(
                     child: DoctorDetailHeadingOne(
                         heading: 'Frequently Asked Questions',
-                        headingColor: ColorConstants.white,
+                        headingColor: !getThemeStateIsLight()
+                            ? darken(getThemeColor(context), 0.35)
+                            : ColorConstants.white,
                         fontFamily: FontConstantc.gilroySemiBold),
                   ),
                   InkWell(
                     onTap: () {
                       NavigationUtil.push(context, RouteConstants.faqRoute);
                     },
-                    child: const DoctorDetailHeadingTwo(
+                    child: DoctorDetailHeadingTwo(
+                      color: getThemeStateIsLight()
+                          ? lighten(getThemeColor(context), 0.35)
+                          : darken(getThemeColor(context), 0.35),
                       text: 'View All',
                     ),
                   ),

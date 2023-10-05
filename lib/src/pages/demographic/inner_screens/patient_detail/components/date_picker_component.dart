@@ -25,7 +25,10 @@ class DatePickerComponent extends StatelessWidget {
       child: Stack(
         children: [
           DropDownComponentProfile(
-            onDropdownFieldTap: onDropdownFieldTapCity,
+              bgColor: !getThemeStateIsLight()
+                              ? (lighten(getThemeColor(context), 0.35))
+                              : ColorConstants.white,
+                        onDropdownFieldTap: onDropdownFieldTapCity,
             suffixIcon: AssetsConstants.calenderIcon,
             hintText: datePickerTitle,
             items: country,

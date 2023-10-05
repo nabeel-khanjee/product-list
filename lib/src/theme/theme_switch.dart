@@ -23,9 +23,7 @@ class ThemeSwitchApp extends StatelessWidget {
           left: 10,
           right: 10,
         ),
-        tileColor: getThemeStateIsLight()
-            ? lighten(getThemeColor(context), 0.1)
-            : darken(getThemeColor(context), 0.5),
+        tileColor: lighten(getThemeColor(context), 0.1),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,

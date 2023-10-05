@@ -73,6 +73,9 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
                           label: 'Mobile Number'),
                       const TimeStartTimeEndRowComponent(),
                       DropDownComponentProfile(
+                          bgColor: !getThemeStateIsLight()
+                              ? (lighten(getThemeColor(context), 0.35))
+                              : ColorConstants.white,
                           items: const [],
                           selectedItem: (p0) {},
                           hintText: 'Specialist',

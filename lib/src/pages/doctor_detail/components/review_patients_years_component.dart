@@ -15,13 +15,17 @@ class ReviewPatientsYearsComponentDoctorDetailScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          const Column(
+          Column(
             children: [
-              DoctorDetailHeadingOne(
+              const DoctorDetailHeadingOne(
                   heading: '348',
                   headingColor: ColorConstants.white,
                   fontFamily: FontConstantc.gilroySemiBold),
-              DoctorDetailHeadingTwo(text: 'Reviews')
+              DoctorDetailHeadingTwo(
+                  color: !getThemeStateIsLight()
+                      ? lighten(getThemeColor(context), 0.35)
+                      : darken(getThemeColor(context), 0.35),
+                  text: 'Reviews')
             ],
           ),
           Container(
@@ -29,23 +33,31 @@ class ReviewPatientsYearsComponentDoctorDetailScreen extends StatelessWidget {
             height: 60,
             color: getThemeColor(context),
           ),
-          const Column(
+          Column(
             children: [
-              DoctorDetailHeadingOne(
+              const DoctorDetailHeadingOne(
                   heading: '700+',
                   headingColor: ColorConstants.white,
                   fontFamily: FontConstantc.gilroySemiBold),
-              DoctorDetailHeadingTwo(text: 'Patients')
+              DoctorDetailHeadingTwo(
+                  color: !getThemeStateIsLight()
+                      ? lighten(getThemeColor(context), 0.35)
+                      : darken(getThemeColor(context), 0.35),
+                  text: 'Patients')
             ],
           ),
           Container(width: 1, height: 60, color: getThemeColor(context)),
-          const Column(
+          Column(
             children: [
-              DoctorDetailHeadingOne(
+              const DoctorDetailHeadingOne(
                   heading: '15',
                   headingColor: ColorConstants.white,
                   fontFamily: FontConstantc.gilroySemiBold),
-              DoctorDetailHeadingTwo(text: 'Years')
+              DoctorDetailHeadingTwo(
+                  color: !getThemeStateIsLight()
+                      ? lighten(getThemeColor(context), 0.35)
+                      : darken(getThemeColor(context), 0.35),
+                  text: 'Years')
             ],
           )
         ],
