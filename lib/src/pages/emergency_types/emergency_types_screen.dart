@@ -1,7 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class EmergencyTypesScreen extends StatelessWidget {
-  const EmergencyTypesScreen({Key? key}) : super(key: key);
+  const EmergencyTypesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

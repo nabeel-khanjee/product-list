@@ -5,7 +5,7 @@ class EmergencyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: darken(getThemeColor(context), 0.2),
       body: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0),

@@ -1,7 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class AllEmergenciesSearchBar extends StatelessWidget {
-  const AllEmergenciesSearchBar({Key? key}) : super(key: key);
+  const AllEmergenciesSearchBar({super.key});
 
   @override
   Widget build(BuildContext context) {

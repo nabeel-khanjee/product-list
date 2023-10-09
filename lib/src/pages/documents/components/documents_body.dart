@@ -61,7 +61,7 @@ class DocumentsBody extends StatelessWidget {
                   bottom: 15,
                   left: 100,
                   child: SizedBox(
-                    width: 120,
+                    width: 150,
                     height: 48,
                     child: ElevatedButton(
                       onPressed: () {
@@ -75,7 +75,7 @@ class DocumentsBody extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20))),
                       child: Text(
-                        "+ Add New",
+                        "+ Request a Doc",
                         style: Theme.of(context).textTheme.bodySmall!.copyWith(
                               color: darken(getThemeColor(context), 0.3),
                               fontWeight: FontWeight.bold,

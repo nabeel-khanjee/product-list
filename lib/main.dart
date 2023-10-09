@@ -1,10 +1,12 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 FutureOr<void> main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
   await initializeInjectedDependencies();
   navigationService = NavigationService();
   await EasyLocalization.ensureInitialized();
+
   ErrorWidget.builder = (FlutterErrorDetails details) => Material(
         color: getThemeColor(navigationService!.navigatorKey.currentContext!),
         child: SingleChildScrollView(
