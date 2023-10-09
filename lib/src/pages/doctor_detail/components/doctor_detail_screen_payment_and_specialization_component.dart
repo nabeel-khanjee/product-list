@@ -7,11 +7,15 @@ class DoctorDetailScreenPaymentAndSpecialization extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        DoctorDetailHeadingTwo(text: 'General Physician'),
-        Row(
+        DoctorDetailHeadingTwo(
+            color: getThemeStateIsLight()
+                ? lighten(getThemeColor(context), 0.35)
+                : darken(getThemeColor(context), 0.35),
+            text: 'General Physician'),
+        const Row(
           children: [
             DoctorDetailHeadingOne(
                 fontFamily: FontConstantc.gilroySemiBold,

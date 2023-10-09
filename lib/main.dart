@@ -28,7 +28,7 @@ FutureOr<void> main() async {
       path: 'assets/translations',
       child: ChangeNotifierProvider<MyTheme>(
         create: (_) => MyTheme(),
-        child: const App() ,
+        child: const App(),
       ),
     ),
   );

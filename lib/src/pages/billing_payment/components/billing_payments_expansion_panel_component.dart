@@ -30,9 +30,7 @@ class BillingPaymentExpansionPanelState
         dividerColor: ColorConstants.black,
         children: [
           ExpansionPanel(
-              backgroundColor: getThemeStateIsLight()
-                  ? lighten(getThemeColor(context), 0.1)
-                  : darken(getThemeColor(context), 0.5),
+              backgroundColor: lighten(getThemeColor(context), 0.1),
               isExpanded: isExpanded ?? false,
               headerBuilder: (context, isExpanded) => AppTileComponent(
                     isExpandable: true,

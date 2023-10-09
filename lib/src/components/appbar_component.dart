@@ -45,6 +45,9 @@ class AppBarcomponent extends StatelessWidget {
                                   const EdgeInsets.only(top: 6.0, right: 3),
                               child: Image.asset(
                                 AssetsConstants.notificationAppBarIcon,
+                                color: !getThemeStateIsLight()
+                                    ? (darken(getThemeColor(context), 0.35))
+                                    : null,
                               ),
                             ),
                             Container(
@@ -63,107 +66,107 @@ class AppBarcomponent extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 3.0, right: 3),
                         child: IconButton(
                             onPressed: () {
-                              showGeneralDialog(
-                                context: navigationService!
-                                    .navigatorKey.currentContext!,
-                                barrierDismissible: true,
-                                transitionDuration:
-                                    const Duration(milliseconds: 500),
-                                barrierLabel: MaterialLocalizations.of(
-                                        navigationService!
-                                            .navigatorKey.currentContext!)
-                                    .dialogLabel,
-                                barrierColor: Colors.black.withOpacity(0.5),
-                                pageBuilder: (context, _, __) {
-                                  return Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: <Widget>[
-                                      Card(
-                                          color: getThemeColor(context),
-                                          child: Container(
-                                            margin: const EdgeInsets.only(
-                                                top: kToolbarHeight / 2),
-                                            padding: const EdgeInsets.all(10),
-                                            child: Column(
-                                              children: [
-                                                const Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.end,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.end,
-                                                  children: [
-                                                    Icon(
-                                                      Icons.close,
-                                                      color:
-                                                          ColorConstants.white,
-                                                    )
-                                                  ],
-                                                ),
-                                                const SizedBox(height: 30),
-                                                Row(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.center,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceAround,
-                                                  children: [
-                                                    TopSheetComponent(
-                                                      image: AssetsConstants
-                                                          .homeTransparentIcon,
-                                                      onTap: () async => await drawerStateChnageUpdateIndex(
-                                                          index: 2,
-                                                          advancedDrawerController:
-                                                              BlocProvider.of<
-                                                                          AnimatedDrawerCubit>(
-                                                                      context)
-                                                                  .advancedDrawerController,
-                                                          isOpen: true,
-                                                          context: context),
-                                                      text:
-                                                          StringConstants.home,
-                                                    ),
-                                                    TopSheetComponent(
-                                                      image: AssetsConstants
-                                                          .profileTransparentIcon,
-                                                      onTap: () {},
-                                                      text: StringConstants
-                                                          .profile,
-                                                    ),
-                                                    TopSheetComponent(
-                                                      image: AssetsConstants
-                                                          .payNowTransparentIcon,
-                                                      onTap: () {},
-                                                      text: 'Pay Now',
-                                                    ),
-                                                    TopSheetComponent(
-                                                      image: AssetsConstants
-                                                          .documentTransparentIcon,
-                                                      onTap: () {},
-                                                      text: StringConstants
-                                                          .documents,
-                                                    ),
-                                                  ],
-                                                )
-                                              ],
-                                            ),
-                                          )),
-                                    ],
-                                  );
-                                },
-                                transitionBuilder: (context, animation,
-                                    secondaryAnimation, child) {
-                                  return SlideTransition(
-                                    position: CurvedAnimation(
-                                      parent: animation,
-                                      curve: Curves.easeOut,
-                                    ).drive(Tween<Offset>(
-                                      begin: const Offset(0, -1.0),
-                                      end: Offset.zero,
-                                    )),
-                                    child: child,
-                                  );
-                                },
-                              );
+                              // showGeneralDialog(
+                              //   context: navigationService!
+                              //       .navigatorKey.currentContext!,
+                              //   barrierDismissible: true,
+                              //   transitionDuration:
+                              //       const Duration(milliseconds: 500),
+                              //   barrierLabel: MaterialLocalizations.of(
+                              //           navigationService!
+                              //               .navigatorKey.currentContext!)
+                              //       .dialogLabel,
+                              //   barrierColor: Colors.black.withOpacity(0.5),
+                              //   pageBuilder: (context, _, __) {
+                              //     return Column(
+                              //       mainAxisAlignment: MainAxisAlignment.start,
+                              //       children: <Widget>[
+                              //         Card(
+                              //             color: getThemeColor(context),
+                              //             child: Container(
+                              //               margin: const EdgeInsets.only(
+                              //                   top: kToolbarHeight / 2),
+                              //               padding: const EdgeInsets.all(10),
+                              //               child: Column(
+                              //                 children: [
+                              //                   const Row(
+                              //                     mainAxisAlignment:
+                              //                         MainAxisAlignment.end,
+                              //                     crossAxisAlignment:
+                              //                         CrossAxisAlignment.end,
+                              //                     children: [
+                              //                       Icon(
+                              //                         Icons.close,
+                              //                         color:
+                              //                             ColorConstants.white,
+                              //                       )
+                              //                     ],
+                              //                   ),
+                              //                   const SizedBox(height: 30),
+                              //                   Row(
+                              //                     crossAxisAlignment:
+                              //                         CrossAxisAlignment.center,
+                              //                     mainAxisAlignment:
+                              //                         MainAxisAlignment
+                              //                             .spaceAround,
+                              //                     children: [
+                              //                       TopSheetComponent(
+                              //                         image: AssetsConstants
+                              //                             .homeTransparentIcon,
+                              //                         onTap: () async => await drawerStateChnageUpdateIndex(
+                              //                             index: 2,
+                              //                             advancedDrawerController:
+                              //                                 BlocProvider.of<
+                              //                                             AnimatedDrawerCubit>(
+                              //                                         context)
+                              //                                     .advancedDrawerController,
+                              //                             isOpen: true,
+                              //                             context: context),
+                              //                         text:
+                              //                             StringConstants.home,
+                              //                       ),
+                              //                       TopSheetComponent(
+                              //                         image: AssetsConstants
+                              //                             .profileTransparentIcon,
+                              //                         onTap: () {},
+                              //                         text: StringConstants
+                              //                             .profile,
+                              //                       ),
+                              //                       TopSheetComponent(
+                              //                         image: AssetsConstants
+                              //                             .payNowTransparentIcon,
+                              //                         onTap: () {},
+                              //                         text: 'Pay Now',
+                              //                       ),
+                              //                       TopSheetComponent(
+                              //                         image: AssetsConstants
+                              //                             .documentTransparentIcon,
+                              //                         onTap: () {},
+                              //                         text: StringConstants
+                              //                             .documents,
+                              //                       ),
+                              //                     ],
+                              //                   )
+                              //                 ],
+                              //               ),
+                              //             )),
+                              //       ],
+                              //     );
+                              //   },
+                              //   transitionBuilder: (context, animation,
+                              //       secondaryAnimation, child) {
+                              //     return SlideTransition(
+                              //       position: CurvedAnimation(
+                              //         parent: animation,
+                              //         curve: Curves.easeOut,
+                              //       ).drive(Tween<Offset>(
+                              //         begin: const Offset(0, -1.0),
+                              //         end: Offset.zero,
+                              //       )),
+                              //       child: child,
+                              //     );
+                              //   },
+                              // );
                             },
                             icon: const Icon(Icons.menu)),
                       )

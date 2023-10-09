@@ -21,7 +21,9 @@ class MyClaimsScreen extends StatelessWidget {
                     margin: const EdgeInsets.symmetric(vertical: 4),
                     padding: const EdgeInsets.only(left: 24),
                     decoration: BoxDecoration(
-                        color: darken(getThemeColor(context), 0.3),
+                        color: getThemeStateIsLight()
+                            ? darken(getThemeColor(context), 0.2)
+                            : lighten(getThemeColor(context), 0.35),
                         borderRadius: BorderRadius.circular(16),
                         border: Border.all(
                             width: 1, color: getThemeColor(context))),

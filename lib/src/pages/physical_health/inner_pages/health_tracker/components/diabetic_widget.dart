@@ -12,9 +12,13 @@ class DiabeticWidget extends StatelessWidget {
         Expanded(
           child: HealthTrackerReadingWidget(
             fontSize: 14,
-            iconColor: ColorConstants.white,
+            iconColor: !getThemeStateIsLight()
+                ? darken(getThemeColor(context), 0.35)
+                : ColorConstants.white,
             subReadingColor: ColorConstants.greyText,
-            headingColor: ColorConstants.white,
+            headingColor: !getThemeStateIsLight()
+                ? darken(getThemeColor(context), 0.35)
+                : ColorConstants.white,
             subReading: StringConstants.mgPerDl,
             reading: '34',
             forgroundColor:
@@ -28,9 +32,13 @@ class DiabeticWidget extends StatelessWidget {
         Expanded(
           child: HealthTrackerReadingWidget(
             fontSize: 14,
-            iconColor: ColorConstants.white,
+            iconColor: !getThemeStateIsLight()
+                ? darken(getThemeColor(context), 0.35)
+                : ColorConstants.white,
             subReadingColor: ColorConstants.greyText,
-            headingColor: ColorConstants.white,
+            headingColor: !getThemeStateIsLight()
+                ? darken(getThemeColor(context), 0.35)
+                : ColorConstants.white,
             subReading: StringConstants.mgPerDl,
             reading: '34',
             forgroundColor:

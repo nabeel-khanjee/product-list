@@ -120,6 +120,9 @@ class PaymentResponsibilityComponent extends StatelessWidget {
                       border:
                           Border.all(width: 2, color: getThemeColor(context))),
                   child: DropDownComponentProfile(
+                    bgColor: !getThemeStateIsLight()
+                        ? (lighten(getThemeColor(context), 0.35))
+                        : ColorConstants.white,
                     textColor: getThemeColor(context),
                     verticalMargin: 0,
                     items: const ["Card", "Cash", "Check"],

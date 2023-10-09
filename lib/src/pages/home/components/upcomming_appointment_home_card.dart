@@ -43,10 +43,10 @@ class UpcommingAppointmentHomeCard extends StatelessWidget {
                 Expanded(
                   child: Text(
                     element.value.date,
-                    style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                        color: ColorConstants.white,
-                        fontWeight: FontWeight.w600,
-                        height: 0),
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelSmall!
+                        .copyWith(fontWeight: FontWeight.w600, height: 0),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),

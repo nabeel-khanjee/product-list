@@ -57,6 +57,7 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.3.2
   top_modal_sheet: ^2.0.1
+  permission_handler: ^11.0.1
 
 dev_dependencies:
   build_runner: ^2.4.6
@@ -91,6 +92,7 @@ flutter_native_splash:
 
 # flutter run --flavor <flavorName> -t lib/main_<flavorName>.dart
 #  fvm flutter build apk --release --flavor prod -t lib/src/flavors/main_prod.dart
+#  fvm flutter build apk --split-per-abi --flavor prod -t lib/src/flavors/main_prod.dart
 flavorizr:
   flavors:
     prod:

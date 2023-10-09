@@ -13,6 +13,7 @@ class BottomNavBarPageWidget extends StatelessWidget {
       children: [
         const PreviousButton(),
         Expanded(
+          
           child: Container(),
         ),
         const PageNumberWidget(),

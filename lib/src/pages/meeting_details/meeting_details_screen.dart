@@ -5,19 +5,17 @@ class MeetingDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: customGradientBg,
-        child: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
-          child: SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                MeetingDetailsBody(),
-                MeetingDetailsStepper(),
-              ],
-            ),
+    return  Scaffold(
+      backgroundColor: darken(getThemeColor(context), 0.2),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              MeetingDetailsBody(),
+              MeetingDetailsStepper(),
+            ],
           ),
         ),
       ),

@@ -30,8 +30,12 @@ class IndicatorWidget extends StatelessWidget {
             title,
             style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                 color: !isSelected
-                    ? Theme.of(context).scaffoldBackgroundColor
-                    : ColorConstants.white,
+                    ? getThemeStateIsLight()
+                        ? Theme.of(context).scaffoldBackgroundColor
+                        : darken(getThemeColor(context), 0.5)
+                    : !getThemeStateIsLight()
+                        ? lighten(getThemeColor(context), 0.35)
+                        : darken(getThemeColor(context), 0.5),
                 fontFamily: FontConstantc.gilroySemiBold),
           )),
         ),

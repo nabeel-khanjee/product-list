@@ -72,7 +72,7 @@ class HealthTrackerReadingWidget extends StatelessWidget {
                   Text(
                     reading,
                     style: Theme.of(context).textTheme.displaySmall!.copyWith(
-                          color: ColorConstants.white,
+                          // color: ColorConstants.white,
                           fontWeight: FontWeight.w600,
                         ),
                   ),

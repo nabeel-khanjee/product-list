@@ -54,8 +54,10 @@ class UserProfileComponent extends StatelessWidget {
             children: [
               Text(
                 'Nabeel Khanjee',
-                style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                    color: ColorConstants.white, fontWeight: FontWeight.bold),
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineLarge!
+                    .copyWith(fontWeight: FontWeight.bold),
               ),
               Text(
                 'nabeelshakeel966@gmail.com',

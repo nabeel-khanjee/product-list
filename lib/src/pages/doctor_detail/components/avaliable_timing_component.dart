@@ -7,16 +7,21 @@ class AvaliableTimingComponentDoctorDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         DoctorDetailHeadingOne(
             heading: 'Avaliable Timings',
-            headingColor: ColorConstants.white,
+            headingColor: !getThemeStateIsLight()
+                ? darken(getThemeColor(context), 0.35)
+                : ColorConstants.white,
             fontFamily: FontConstantc.gilroySemiBold),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         DoctorDetailHeadingTwo(
+          color: getThemeStateIsLight()
+              ? lighten(getThemeColor(context), 0.35)
+              : darken(getThemeColor(context), 0.35),
           text: 'Monday - Friday 08:00 - 20:00',
         ),
       ],

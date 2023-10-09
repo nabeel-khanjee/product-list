@@ -44,7 +44,10 @@ class DatePickerAndDropDownWidget extends StatelessWidget {
           ),
           Expanded(
             child: DropDownComponentProfile(
-              onDropdownFieldTap: onDropdownFieldTapGender,
+              bgColor: !getThemeStateIsLight()
+                              ? (lighten(getThemeColor(context), 0.35))
+                              : ColorConstants.white,
+                          onDropdownFieldTap: onDropdownFieldTapGender,
               hintText: StringConstants.gender,
               items: gender,
               selectedItem: (value) {

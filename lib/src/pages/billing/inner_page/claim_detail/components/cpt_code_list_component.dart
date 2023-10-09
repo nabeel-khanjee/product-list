@@ -17,7 +17,9 @@ class CPTHCPCSCodeListComponent extends StatelessWidget {
             .map((cPTHCPCSCode) => Container(
                 margin: const EdgeInsets.only(bottom: 4, top: 4),
                 decoration: BoxDecoration(
-                    color: darken(getThemeColor(context), 0.2),
+                    color: getThemeStateIsLight()
+                        ? darken(getThemeColor(context), 0.2)
+                        : lighten(getThemeColor(context), 0.35),
                     borderRadius: BorderRadius.circular(16),
                     border:
                         Border.all(width: 2, color: getThemeColor(context))),

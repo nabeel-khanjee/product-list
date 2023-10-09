@@ -209,7 +209,7 @@ class EnglishConstant {
     'cellPhoneNumber': 'Cellphone Number',
     'residenceNumber': 'Residence Number',
     'address': 'Address',
-    'emergancyContactInfo': 'Emergancy Contact Info',
+    'emergancyContactInfo': 'Emergency Contact Info',
     'name': 'Name',
     'relation': 'Relation',
     'contactNumber': 'Contact Number',

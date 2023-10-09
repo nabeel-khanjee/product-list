@@ -122,6 +122,10 @@ class ContactDetailScreenForm extends StatelessWidget {
               ),
               DropDownComponentProfile(
                 onDropdownFieldTap: onDropdownFieldTapCountry,
+              bgColor: !getThemeStateIsLight()
+                              ? (lighten(getThemeColor(context), 0.35))
+                              : ColorConstants.white,
+                    
                 hintText: StringConstants.selectCountry,
                 items: country,
                 selectedItem: (value) => getCountryValue(value),

@@ -31,7 +31,9 @@ class _ExpansionPanelFaqsState extends State<ExpansionPanelFaqs> {
           children: [
             ExpansionPanel(
               hasIcon: false,
-              backgroundColor: ColorConstants.white,
+              backgroundColor: !getThemeStateIsLight()
+                  ? darken(getThemeColor(context), 0.35)
+                  : ColorConstants.white,
               isExpanded: isExpanded ?? false,
               canTapOnHeader: true,
               headerBuilder: (context, isExpanded) => GestureDetector(
@@ -47,7 +49,9 @@ class _ExpansionPanelFaqsState extends State<ExpansionPanelFaqs> {
                   height: 60,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: ColorConstants.white,
+                    color: !getThemeStateIsLight()
+                        ? darken(getThemeColor(context), 0.35)
+                        : ColorConstants.white,
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -59,12 +63,19 @@ class _ExpansionPanelFaqsState extends State<ExpansionPanelFaqs> {
                             color: Theme.of(context).scaffoldBackgroundColor),
                       ),
                       !isExpanded
-                          ? const Icon(Icons.add)
+                          ? Icon(
+                              Icons.add,
+                              color: getThemeStateIsLight()
+                                  ? darken(getThemeColor(context), 0.35)
+                                  : ColorConstants.white,
+                            )
                           : Container(
                               margin: const EdgeInsets.all(4),
                               width: 15,
                               height: 2,
-                              color: darken(getThemeColor(context), 0.4),
+                              color: getThemeStateIsLight()
+                                  ? darken(getThemeColor(context), 0.35)
+                                  : ColorConstants.white,
                             )
                     ],
                   ),
@@ -74,10 +85,10 @@ class _ExpansionPanelFaqsState extends State<ExpansionPanelFaqs> {
                 padding: const EdgeInsets.all(10),
                 child: Text(
                   widget.faq.value.desc,
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyMedium!
-                      .copyWith(color: darken(getThemeColor(context), 0.3)),
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: getThemeStateIsLight()
+                          ? darken(getThemeColor(context), 0.3)
+                          : ColorConstants.white),
                 ),
               ),
             ),

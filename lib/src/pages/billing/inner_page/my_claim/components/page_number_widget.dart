@@ -8,6 +8,7 @@ class PageNumberWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
+      flex: 2,
       child: ElevatedButton(
           style: Theme.of(context).elevatedButtonTheme.style!.copyWith(
               elevation: const MaterialStatePropertyAll(0),
@@ -18,7 +19,10 @@ class PageNumberWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                   side: BorderSide(color: getThemeColor(context)))),
               backgroundColor: MaterialStatePropertyAll(
-                  darken(getThemeColor(context), 0.3))),
+                getThemeStateIsLight()
+                    ? darken(getThemeColor(context), 0.2)
+                    : lighten(getThemeColor(context), 0.35),
+              )),
           onPressed: () {},
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
