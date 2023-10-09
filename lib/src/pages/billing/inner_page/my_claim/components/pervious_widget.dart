@@ -8,6 +8,7 @@ class PreviousButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
+        flex: 2,
         child: ElevatedButton(
             style: Theme.of(context).elevatedButtonTheme.style!.copyWith(
                 elevation: const MaterialStatePropertyAll(0),
@@ -17,7 +18,10 @@ class PreviousButton extends StatelessWidget {
                     const MaterialStatePropertyAll(Size.fromHeight(38)),
                 padding: const MaterialStatePropertyAll(EdgeInsets.zero),
                 backgroundColor: MaterialStatePropertyAll(
-                    (darken(getThemeColor(context), 0.3)))),
+                  getThemeStateIsLight()
+                      ? darken(getThemeColor(context), 0.2)
+                      : lighten(getThemeColor(context), 0.35),
+                )),
             onPressed: () {},
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

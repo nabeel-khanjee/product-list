@@ -31,7 +31,7 @@ class ThemeSwitchApp extends StatelessWidget {
           children: [
             TilesIconComponent(image: image),
             const SizedBox(width: 10),
-            Text(text),
+            Expanded(child: Text(text)),
           ],
         ),
         value: value,

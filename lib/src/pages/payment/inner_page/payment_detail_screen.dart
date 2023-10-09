@@ -20,14 +20,19 @@ class PaymentDetailScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: getThemeColor(context), width: 2),
-                color: darken(getThemeColor(context), 0.3)),
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: getThemeColor(context), width: 2),
+              color: getThemeStateIsLight()
+                  ? darken(getThemeColor(context), 0.3)
+                  : lighten(getThemeColor(context), 0.35),
+            ),
             child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  ClaimCompleteDetailsComponent(),
+                  ClaimCompleteDetailsComponent(
+                    isPayment: true,
+                  ),
                   SizedBox(height: 32),
                   Row(children: [
                     ClaimDetailsComponent(

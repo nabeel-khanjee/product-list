@@ -24,11 +24,13 @@ class EmergencyCallButton extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 2,
-              child: Text(
-                "Emergency Call Now",
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    color: ColorConstants.white, fontWeight: FontWeight.bold),
+              flex: 4,
+              child: Center(
+                child: Text(
+                  "Emergency Call Now",
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: ColorConstants.white, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             Expanded(flex: 1, child: Container())

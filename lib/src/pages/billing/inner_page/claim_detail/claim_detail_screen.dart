@@ -18,7 +18,9 @@ class ClaimDetailScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const SizedBox(height: 32),
-          const ClaimCompleteDetailsComponent(),
+          const ClaimCompleteDetailsComponent(
+            isPayment: false,
+          ),
           const SizedBox(height: 32),
           const SecondaryHeading(text: 'Diagnosis Code'),
           const SizedBox(height: 12),

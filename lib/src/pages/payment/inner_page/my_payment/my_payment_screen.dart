@@ -22,7 +22,9 @@ class MyPaymentsScreen extends StatelessWidget {
                     margin: const EdgeInsets.symmetric(vertical: 4),
                     padding: const EdgeInsets.only(left: 24),
                     decoration: BoxDecoration(
-                        color: darken(getThemeColor(context), 0.3),
+                        color: getThemeStateIsLight()
+                            ? darken(getThemeColor(context), 0.3)
+                            : lighten(getThemeColor(context), 0.35),
                         borderRadius: BorderRadius.circular(16),
                         border: Border.all(
                             width: 1, color: getThemeColor(context))),
@@ -34,7 +36,7 @@ class MyPaymentsScreen extends StatelessWidget {
                         Row(
                           children: [
                             ClaimDetailsComponent(
-                                heading: 'Claim ID',
+                                heading: 'Payment ID',
                                 value: myPayment.value.claimId),
                             ClaimDetailsComponent(
                                 heading: 'Total Amount Paid',

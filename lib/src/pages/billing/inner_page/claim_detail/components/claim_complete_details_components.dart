@@ -2,14 +2,16 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class ClaimCompleteDetailsComponent extends StatelessWidget {
   const ClaimCompleteDetailsComponent({
-    super.key,
+    super.key, required this.isPayment,
   });
+  final bool isPayment;
+  
 
   @override
   Widget build(BuildContext context) {
-    return const Row(children: [
-      ClaimDetailsComponent(heading: 'Payment ID', value: '368 DX 589'),
-      ClaimDetailsComponent(
+    return  Row(children: [
+      ClaimDetailsComponent(heading: isPayment?'Payment ID': 'Claim ID', value: '368 DX 589'),
+      const ClaimDetailsComponent(
           heading: 'Date of Service (DOS)', value: '04/16/2023')
     ]);
   }

@@ -14,8 +14,11 @@ class NotificationTileComponent extends StatelessWidget {
       padding: const EdgeInsets.all(12.0),
       margin: const EdgeInsets.symmetric(vertical: 8),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: darken(getThemeColor(context), 0.3)),
+        borderRadius: BorderRadius.circular(16),
+        color: getThemeStateIsLight()
+            ? darken(getThemeColor(context), 0.3)
+            : lighten(getThemeColor(context), 0.35),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,7 +46,9 @@ class NotificationTileComponent extends StatelessWidget {
                     Text(notification.value.date,
                         style: Theme.of(context).textTheme.labelSmall!.copyWith(
                             fontFamily: FontConstantc.gilroyMedium,
-                            color: lighten(getThemeColor(context), 0.3)))
+                            color: !getThemeStateIsLight()
+                                ? darken(getThemeColor(context), 0.2)
+                                : lighten(getThemeColor(context), 0.3)))
                   ],
                 ),
               ),
@@ -67,7 +72,9 @@ class NotificationTileComponent extends StatelessWidget {
           Text(notification.value.decs,
               style: Theme.of(context).textTheme.labelSmall!.copyWith(
                   fontFamily: FontConstantc.gilroyMedium,
-                  color: lighten(getThemeColor(context), 0.3)))
+                  color: !getThemeStateIsLight()
+                      ? darken(getThemeColor(context), 0.2)
+                      : lighten(getThemeColor(context), 0.3)))
         ],
       ),
     );
