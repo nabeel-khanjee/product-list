@@ -1,7 +1,7 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class AllEmergenciesBody extends StatelessWidget {
-  const AllEmergenciesBody({Key? key}) : super(key: key);
+  const AllEmergenciesBody({super.key});
 
   @override
   Widget build(BuildContext context) {

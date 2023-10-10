@@ -1,11 +1,11 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class MeetingDetailsScreen extends StatelessWidget {
-  const MeetingDetailsScreen({Key? key}) : super(key: key);
+  const MeetingDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: darken(getThemeColor(context), 0.2),
       body: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0),

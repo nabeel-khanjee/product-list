@@ -2,6 +2,7 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return RestartWidget(
@@ -10,17 +11,18 @@ class App extends StatelessWidget {
         builder: (context, theme, _) {
           return MultiBlocProvider(
             providers: [
+
               BlocProvider(create: (context) => AppCubit()),
               BlocProvider(create: (context) => AnimatedDrawerCubit()),
               BlocProvider(create: (context) => IsGradientBackgroundCubit()),
-        
+
+
             ],
             child: BlocBuilder<AnimatedDrawerCubit, AnimatedDrawerState>(
-              builder: (context, state) =>  MaterialApp(
+              builder: (context, state) => MaterialApp(
                 navigatorKey: navigationService?.navigatorKey,
                 localizationsDelegates: context.localizationDelegates,
                 supportedLocales: context.supportedLocales,
-                
                 locale: context.locale,
                 debugShowMaterialGrid: false,
                 debugShowCheckedModeBanner: false,

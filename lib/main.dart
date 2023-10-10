@@ -5,6 +5,7 @@ FutureOr<void> main() async {
   await initializeInjectedDependencies();
   navigationService = NavigationService();
   await EasyLocalization.ensureInitialized();
+
   ErrorWidget.builder = (FlutterErrorDetails details) => Material(
         color: getThemeColor(navigationService!.navigatorKey.currentContext!),
         child: SingleChildScrollView(

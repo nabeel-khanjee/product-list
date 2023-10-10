@@ -9,11 +9,14 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.billingRoute:
       final BillingArgs args = settings.arguments as BillingArgs;
       return materialRoute(BillingScreen(args: args));
+
     case RouteConstants.chatRoute:
       return materialRoute(const ChatScreen());
+
     case RouteConstants.paymentRoute:
       final BillingArgs args = settings.arguments as BillingArgs;
       return materialRoute(PaymentScreen(args: args));
+
     case RouteConstants.notificationRoute:
       return materialRoute(const NotificationScreen());
 
