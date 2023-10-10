@@ -14,6 +14,7 @@ class PayNowButtonComponent extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: BottomNavBarAppointmentBookScreen(
         text: 'Pay Now',
+        fgColor: ColorConstants.white,
         onTap: () {
           if (selectedPaymentMethod == 'Visa') {
             AlertDialogComponent.showDialogComponent(

@@ -11,8 +11,7 @@ class IsGradientBackgroundCubit extends Cubit<IsGradientBackgroundState> {
 
   void updateStateDarkLight({required bool value}) {
     emit(_UpdateThemeState(value));
-    return ;
-
+    return;
   }
 }
 

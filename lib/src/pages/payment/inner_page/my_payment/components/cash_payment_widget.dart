@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 
 class CashPaymentWidget extends StatelessWidget {
@@ -32,7 +31,7 @@ class CashPaymentWidget extends StatelessWidget {
               Text(
                 "Cash Payment Mode",
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      color: Theme.of(context).scaffoldBackgroundColor,
+                      color: darken(getThemeColor(context), 0.35),
                       fontWeight: FontWeight.bold,
                     ),
               ),
@@ -138,6 +137,7 @@ class CashPaymentWidget extends StatelessWidget {
                   horizontalPadding: 0,
                   verticalPadding: 15,
                   text: 'Pay Now',
+                  fgColor: ColorConstants.white,
                   onTap: () {},
                 ),
               )

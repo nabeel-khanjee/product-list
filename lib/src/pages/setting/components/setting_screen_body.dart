@@ -47,12 +47,14 @@ class SettingScreenBody extends StatelessWidget {
                 onChnage: (value) async {},
                 text: StringConstants.offersAndPromotions),
             ThemeSwitchApp(
-                value: Theme.of(context).brightness == Brightness.light,
+                value: !getThemeStateIsLight(),
                 image: AssetsConstants.lightDarkIcon,
                 onChnage: (value) async {
                   switchThemeApp();
                   BlocProvider.of<IsGradientBackgroundCubit>(context)
                       .updateStateDarkLight(value: value);
+                  BlocProvider.of<IsGradientBackgroundCubit>(context)
+                      .updateState(color: getThemeColor(context));
                 },
                 text: StringConstants.themeDarkLight),
             const AppColorPicker(),

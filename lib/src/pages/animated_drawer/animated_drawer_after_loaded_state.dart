@@ -9,7 +9,7 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
   Widget build(BuildContext context) {
     BorderSide borderSide =
         BorderSide(color: lighten(getThemeColor(context), 0.1), width: 20);
-    return AdvancedDrawer(
+    return  AdvancedDrawer(
       backdrop: const AnimatedDrawerBackDrop(),
       controller: BlocProvider.of<AnimatedDrawerCubit>(context)
           .advancedDrawerController,
@@ -54,6 +54,3 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
     );
   }
 }
-
-
-

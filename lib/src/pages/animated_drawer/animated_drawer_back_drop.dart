@@ -11,8 +11,16 @@ class AnimatedDrawerBackDrop extends StatelessWidget {
       width: double.infinity,
       height: double.infinity,
       decoration: BoxDecoration(
-        gradient: linerGradientForApp(
-          color: getThemeColor(context),
+        gradient: LinearGradient(
+          begin: Alignment.bottomCenter,
+          tileMode: TileMode.mirror,
+          end: Alignment.topCenter,
+          colors: [
+            darken(
+                getThemeColor(navigationService!.navigatorKey.currentContext!),
+                0.3),
+            getThemeColor(navigationService!.navigatorKey.currentContext!),
+          ],
         ),
       ),
       child: const AdvancedDrawerChildComponent(),

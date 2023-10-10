@@ -34,16 +34,17 @@ class DrawerElementTileWidget extends StatelessWidget {
             Image.asset(
               element.value.icon,
               height: 20,
-              color: !getThemeStateIsLight()
-                  ? darken(getThemeColor(context), 0.35)
-                  : ColorConstants.white,
+              color: ColorConstants.white,
             ),
             const SizedBox(
               width: 5,
             ),
             Text(
               element.value.name,
-              style: Theme.of(context).textTheme.bodyMedium!.copyWith(),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium!
+                  .copyWith(color: ColorConstants.white),
             ),
           ],
         ),
