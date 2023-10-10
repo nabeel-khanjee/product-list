@@ -1,36 +1,35 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class DocumentsBody extends StatelessWidget {
-  DocumentsBody({super.key});
-
-  final List<String> docsName = [
-    "Health Records 2019.docx",
-    "Medical History.xls",
-    "Healthy lifestyle.ppt",
-    "Health Records 2019.docx",
-    "Medical History.xls",
-    "Health Records 2019.docx",
-    "Medical History.xls",
-    "Healthy lifestyle.ppt",
-    "Health Records 2019.docx",
-    "Medical History.xls",
-  ];
-
-  final List<String> iconsUrl = [
-    "assets/icon/file_jpg.png",
-    "assets/icon/file_png.png",
-    "assets/icon/file_ppt.png",
-    "assets/icon/file_jpg.png",
-    "assets/icon/file_png.png",
-    "assets/icon/file_ppt.png",
-    "assets/icon/file_jpg.png",
-    "assets/icon/file_png.png",
-    "assets/icon/file_ppt.png",
-    "assets/icon/file_ppt.png",
-  ];
+  const DocumentsBody({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<String> docsName = [
+      "Health Records 2019.docx",
+      "Medical History.xls",
+      "Healthy lifestyle.ppt",
+      "Health Records 2019.docx",
+      "Medical History.xls",
+      "Health Records 2019.docx",
+      "Medical History.xls",
+      "Healthy lifestyle.ppt",
+      "Health Records 2019.docx",
+      "Medical History.xls",
+    ];
+
+    final List<String> iconsUrl = [
+      "assets/icon/file_jpg.png",
+      "assets/icon/file_png.png",
+      "assets/icon/file_ppt.png",
+      "assets/icon/file_jpg.png",
+      "assets/icon/file_png.png",
+      "assets/icon/file_ppt.png",
+      "assets/icon/file_jpg.png",
+      "assets/icon/file_png.png",
+      "assets/icon/file_ppt.png",
+      "assets/icon/file_ppt.png",
+    ];
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(

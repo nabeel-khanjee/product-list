@@ -14,25 +14,31 @@ class IndicatorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        height: 48,
-        width: 111,
-        decoration: isSelected
-            ? BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: getThemeColor(context))
-            : null,
-        child: Center(
-            child: Text(
-          title,
-          style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-              color: !isSelected
-                  ? Theme.of(context).scaffoldBackgroundColor
-                  : ColorConstants.white,
-              fontFamily: FontConstantc.gilroySemiBold),
-        )),
+    return Expanded(
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          height: 48,
+          width: 111,
+          decoration: isSelected
+              ? BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: getThemeColor(context))
+              : null,
+          child: Center(
+              child: Text(
+            title,
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                color: !isSelected
+                    ? getThemeStateIsLight()
+                        ? Theme.of(context).scaffoldBackgroundColor
+                        : darken(getThemeColor(context), 0.5)
+                    : !getThemeStateIsLight()
+                        ? lighten(getThemeColor(context), 0.35)
+                        : darken(getThemeColor(context), 0.5),
+                fontFamily: FontConstantc.gilroySemiBold),
+          )),
+        ),
       ),
     );
   }

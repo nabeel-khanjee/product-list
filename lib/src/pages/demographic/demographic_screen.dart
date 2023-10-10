@@ -50,6 +50,10 @@ class _DemographicScreenState extends State<DemographicScreen> {
   final TextEditingController pharmacyPayerIdController = TextEditingController();
   final TextEditingController pharmacyrxBinController = TextEditingController();
   final TextEditingController pharmacyrxGroupController = TextEditingController();
+  final TextEditingController nameInterpreterContactDetailController=TextEditingController();
+  final TextEditingController relationInterpreterContactController=TextEditingController();
+  final TextEditingController contactInterpreterNumberContactDetailController=TextEditingController();
+  
   final TextEditingController pharmacyrxGroupPCNController = TextEditingController();
   String? primaryInsuranceSelectedDateHealtPlan;
   String? primaryInsuranceSelectedDateEndDate;
@@ -144,6 +148,9 @@ class _DemographicScreenState extends State<DemographicScreen> {
                       states: states,
                       selectedStates: selectedStates),
                   ContactDetailScreen(
+                    contactInterpreterNumberContactDetailController: contactInterpreterNumberContactDetailController,
+                    nameInterpreterContactDetailController: nameInterpreterContactDetailController,
+                    relationInterpreterContactController: relationInterpreterContactController,
                       nameContactDetailController: nameContactDetailController,
                       relationContactController: relationContactController,
                       contactNumberContactDetailController: contactNumberContactDetailController,

@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
           backgroundColor: darken(getThemeColor(context), 0.4),
           body: Center(
             child: Image.asset(
-              "assets/images/logo.png",
+              AssetsConstants.appLogo,
               height: 200,
             ),
           ),

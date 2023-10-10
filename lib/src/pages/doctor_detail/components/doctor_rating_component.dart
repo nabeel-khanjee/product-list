@@ -11,9 +11,11 @@ class DoctorNameAndRatingComponentDoctorDetailScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const DoctorDetailHeadingOne(
+           DoctorDetailHeadingOne(
               fontFamily: FontConstantc.gilroySemiBold,
-              headingColor: ColorConstants.white,
+              headingColor: !getThemeStateIsLight()
+                ? darken(getThemeColor(context), 0.35)
+                : ColorConstants.white,
               heading: 'Dr. Rachel McAdams'),
           Padding(
               padding: const EdgeInsets.all(4.0),

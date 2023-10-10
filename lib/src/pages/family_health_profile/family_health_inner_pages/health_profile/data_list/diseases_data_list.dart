@@ -92,7 +92,7 @@ List<DiseaseFamilyMembers> diseases = [
         FamilyMember(name: 'Son', isSelected: false),
         FamilyMember(name: 'Other', isSelected: false),
       ]),
-      DiseaseFamilyMembers(diseaseTitle: 'Kedney Disease', familyMembers: [
+      DiseaseFamilyMembers(diseaseTitle: 'Kidney Disease', familyMembers: [
         FamilyMember(name: 'Mother', isSelected: false),
         FamilyMember(name: 'Father', isSelected: false),
         FamilyMember(name: 'Sister', isSelected: false),

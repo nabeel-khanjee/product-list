@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 
 class HealthTrackerReadingWidget extends StatelessWidget {
@@ -51,13 +50,15 @@ class HealthTrackerReadingWidget extends StatelessWidget {
               const SizedBox(
                 width: 5,
               ),
-              Text(
-                heading,
-                style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                    color: headingColor,
-                    fontWeight: FontWeight.w600,
-                    fontSize: fontSize,
-                    height: 0),
+              Expanded(
+                child: Text(
+                  heading,
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      color: headingColor,
+                      fontWeight: FontWeight.w600,
+                      fontSize: fontSize,
+                      height: 0),
+                ),
               )
             ],
           ),
@@ -71,7 +72,7 @@ class HealthTrackerReadingWidget extends StatelessWidget {
                   Text(
                     reading,
                     style: Theme.of(context).textTheme.displaySmall!.copyWith(
-                          color: ColorConstants.white,
+                          // color: ColorConstants.white,
                           fontWeight: FontWeight.w600,
                         ),
                   ),

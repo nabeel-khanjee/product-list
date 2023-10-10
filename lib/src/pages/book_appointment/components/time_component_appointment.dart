@@ -13,10 +13,9 @@ class TimeComponentAppointment extends StatelessWidget {
           borderRadius: BorderRadius.circular(11),
           color: selectedTimeAppointment == time.value
               ? getThemeColor(navigationService!.navigatorKey.currentContext!)
-              : darken(
-                  getThemeColor(
-                      navigationService!.navigatorKey.currentContext!),
-                  0.3)),
+              : getThemeStateIsLight()
+                  ? darken(getThemeColor(context), 0.3)
+                  : lighten(getThemeColor(context), 0.3)),
       margin: const EdgeInsets.all(5),
       child: SizedBox(
         width: MediaQuery.of(navigationService!.navigatorKey.currentContext!)

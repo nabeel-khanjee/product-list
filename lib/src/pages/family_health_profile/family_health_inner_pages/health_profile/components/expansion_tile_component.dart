@@ -27,7 +27,7 @@ class ExpansionTileComponent extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           color: getThemeStateIsLight()
               ? lighten(getThemeColor(context), 0.35)
-              : darken(getThemeColor(context), 0.5),
+              : lighten(getThemeColor(context), 0.3),
         ),
         child: Row(
           children: [
@@ -35,7 +35,9 @@ class ExpansionTileComponent extends StatelessWidget {
               test,
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   fontFamily: FontConstantc.gilroyBold,
-                  color: Theme.of(context).scaffoldBackgroundColor),
+                  color: !getThemeStateIsLight()
+                      ? darken(getThemeColor(context), 0.35)
+                      : Theme.of(context).scaffoldBackgroundColor),
             ),
           ],
         ),

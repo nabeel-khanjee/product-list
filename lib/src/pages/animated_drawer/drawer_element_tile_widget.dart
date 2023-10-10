@@ -4,15 +4,14 @@ import 'package:provider_app/src/pages/animated_drawer/route_list_app_args.dart'
 class DrawerElementTileWidget extends StatelessWidget {
   const DrawerElementTileWidget({
     super.key,
-    required this. element,
+    required this.element,
   });
   final MapEntry<int, RouteListApp> element;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 10, bottom: 20,top: 20),
-
+      padding: const EdgeInsets.only(left: 10, bottom: 20, top: 20),
       child: InkWell(
         onTap: () {
           if (element.value.isInnerPage) {
@@ -35,16 +34,16 @@ class DrawerElementTileWidget extends StatelessWidget {
             Image.asset(
               element.value.icon,
               height: 20,
+              color: !getThemeStateIsLight()
+                  ? darken(getThemeColor(context), 0.35)
+                  : ColorConstants.white,
             ),
             const SizedBox(
               width: 5,
             ),
             Text(
               element.value.name,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium!
-                  .copyWith(color: ColorConstants.white),
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(),
             ),
           ],
         ),

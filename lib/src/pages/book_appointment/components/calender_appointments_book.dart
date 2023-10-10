@@ -10,7 +10,9 @@ class CalenderAppointmentBook extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          color: darken(getThemeColor(context), 0.3)),
+          color: getThemeStateIsLight()
+              ? darken(getThemeColor(context), 0.3)
+              : lighten(getThemeColor(context), 0.3)),
       child: CalendarDatePicker(
         initialDate: DateTime.now(),
         firstDate: DateTime(2000),

@@ -40,7 +40,14 @@ class BookAppointmentComponent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(title),
+              Text(
+                title,
+                style: TextStyle(
+                  color: !getThemeStateIsLight()
+                      ? (lighten(getThemeColor(context), 0.35))
+                      : null,
+                ),
+              ),
               Text(
                 subTitle,
                 style: Theme.of(context).textTheme.labelSmall!.copyWith(

@@ -8,17 +8,25 @@ class HealthProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController addDesieseController = TextEditingController();
     return SingleChildScrollView(
       child: Column(
-        children: diseases
-            .asMap()
-            .entries
-            .map((disease) => Container(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: ExpansionPanelListComponentHealthProfileFamilyMembers(
-                      disease: disease),
-                ))
-            .toList(),
+        children: [
+          Column(
+            children: diseases
+                .asMap()
+                .entries
+                .map((disease) => Container(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child:
+                          ExpansionPanelListComponentHealthProfileFamilyMembers(
+                              disease: disease),
+                    ))
+                .toList(),
+          ),
+          TextFormFieldComponentProfile(
+              patientIdcontroller: addDesieseController, label: 'Add Desiese')
+        ],
       ),
     );
   }

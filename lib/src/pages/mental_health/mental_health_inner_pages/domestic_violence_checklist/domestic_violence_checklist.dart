@@ -34,7 +34,7 @@ class DomesticViolenceCheckListScreen extends StatelessWidget {
             )),
       ),
       isGradient: false,
-      preferredSizeAppBar: kToolbarHeight * 4,
+      preferredSizeAppBar: kToolbarHeight * 4.5,
       appBar: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

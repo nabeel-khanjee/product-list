@@ -22,25 +22,21 @@ class _CommunicationBodyState extends State<CommunicationBody> {
         children: [
           ProfileIndicatorsWidget(
             children: [
-              Expanded(
-                child: IndicatorWidget(
-                  onTap: () {
-                    pageController.jumpToPage(0);
-                    setState(() => currentPage = 0);
-                  },
-                  isSelected: currentPage == 0,
-                  title: StringConstants.scheduled,
-                ),
+              IndicatorWidget(
+                onTap: () {
+                  pageController.jumpToPage(0);
+                  setState(() => currentPage = 0);
+                },
+                isSelected: currentPage == 0,
+                title: StringConstants.scheduled,
               ),
-              Expanded(
-                child: IndicatorWidget(
-                  onTap: () {
-                    pageController.jumpToPage(1);
-                    setState(() => currentPage = 1);
-                  },
-                  isSelected: currentPage == 1,
-                  title: "Past Records",
-                ),
+              IndicatorWidget(
+                onTap: () {
+                  pageController.jumpToPage(1);
+                  setState(() => currentPage = 1);
+                },
+                isSelected: currentPage == 1,
+                title: "Past Records",
               ),
             ],
           ),

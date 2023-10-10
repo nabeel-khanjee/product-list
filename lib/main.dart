@@ -1,7 +1,6 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 FutureOr<void> main() async {
-
   WidgetsFlutterBinding.ensureInitialized();
   await initializeInjectedDependencies();
   navigationService = NavigationService();

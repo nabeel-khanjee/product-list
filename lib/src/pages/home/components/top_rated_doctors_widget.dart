@@ -33,7 +33,9 @@ class TopDatedDoctorsWidget extends StatelessWidget {
             bottonPadding: 10,
             topPadding: 22),
         DropDownComponentProfile(
-          bgColor: darken(getThemeColor(context), 0.3),
+          bgColor: !getThemeStateIsLight()
+              ? (lighten(getThemeColor(context), 0.35))
+              : darken(getThemeColor(context), 0.3),
           items: const [
             'Internal medicine',
             'Pediatrics',
@@ -60,10 +62,7 @@ class TopDatedDoctorsWidget extends StatelessWidget {
             'Rheumatology',
             'Surgeon',
           ],
-          selectedItem: (p0) {
-
-          },
-          
+          selectedItem: (p0) {},
           hintText: 'Specialist',
           onDropdownFieldTap: () {},
         ),

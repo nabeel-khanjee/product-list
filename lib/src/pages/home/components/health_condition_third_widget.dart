@@ -67,9 +67,7 @@ class HealthComditionThirdWidget extends StatelessWidget {
                                   style: Theme.of(context)
                                       .textTheme
                                       .displaySmall!
-                                      .copyWith(
-                                          color: ColorConstants.white,
-                                          fontWeight: FontWeight.w600)),
+                                      .copyWith(fontWeight: FontWeight.w600)),
                               Expanded(
                                   child: Padding(
                                       padding: const EdgeInsets.only(
@@ -92,7 +90,6 @@ class HealthComditionThirdWidget extends StatelessWidget {
                                 .textTheme
                                 .labelSmall!
                                 .copyWith(
-                                    color: ColorConstants.white,
                                     fontWeight: FontWeight.w600,
                                     height: 0,
                                     overflow: TextOverflow.ellipsis)))

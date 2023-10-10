@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 
 class QuestionHeadingAfterResult extends StatelessWidget {
@@ -18,15 +17,16 @@ class QuestionHeadingAfterResult extends StatelessWidget {
           Text(
             'Q. ',
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                fontFamily: FontConstantc.gilroyRegular,
-                color: ColorConstants.white),
+                  fontFamily: FontConstantc.gilroyRegular,
+                ),
           ),
           Expanded(
             child: Text(
               afterResultQuesions.value.question,
-              style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  fontFamily: FontConstantc.gilroyRegular,
-                  color: ColorConstants.white),
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge!
+                  .copyWith(fontFamily: FontConstantc.gilroyRegular),
             ),
           ),
         ],

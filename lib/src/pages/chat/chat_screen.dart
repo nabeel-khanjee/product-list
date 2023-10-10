@@ -108,8 +108,12 @@ class _ChatScreenState extends State<ChatScreen> {
                                             .textTheme
                                             .labelSmall!
                                             .copyWith(
-                                                color: Theme.of(context)
-                                                    .scaffoldBackgroundColor,
+                                                color: !getThemeStateIsLight()
+                                                    ? darken(
+                                                        getThemeColor(context),
+                                                        0.5)
+                                                    : Theme.of(context)
+                                                        .scaffoldBackgroundColor,
                                                 fontFamily:
                                                     FontConstantc.gilroyMedium),
                                         border: InputBorder.none),
@@ -179,8 +183,8 @@ class _ChatScreenState extends State<ChatScreen> {
             physics: const BouncingScrollPhysics(),
             itemBuilder: (context, index) {
               return Container(
-                padding:
-                    const EdgeInsets.only(left: 14, right: 14, top: 5, bottom: 5),
+                padding: const EdgeInsets.only(
+                    left: 14, right: 14, top: 5, bottom: 5),
                 child: Align(
                   alignment: (messages[index].messageType == "receiver"
                       ? Alignment.topLeft
@@ -198,7 +202,9 @@ class _ChatScreenState extends State<ChatScreen> {
                           borderRadius: BorderRadius.circular(20),
                           color: (messages[index].messageType == "receiver"
                               ? lighten(getThemeColor(context), 0.35)
-                              : Theme.of(context).scaffoldBackgroundColor),
+                              : !getThemeStateIsLight()
+                                  ? darken(getThemeColor(context), 0.1)
+                                  : Theme.of(context).scaffoldBackgroundColor),
                         ),
                         padding: const EdgeInsets.all(16),
                         child: Text(
@@ -210,8 +216,10 @@ class _ChatScreenState extends State<ChatScreen> {
                                 color: (messages[index].messageType !=
                                         "receiver"
                                     ? lighten(getThemeColor(context), 0.35)
-                                    : Theme.of(context)
-                                        .scaffoldBackgroundColor),
+                                    : !getThemeStateIsLight()
+                                        ? darken(getThemeColor(context), 0.5)
+                                        : Theme.of(context)
+                                            .scaffoldBackgroundColor),
                               ),
                         ),
                       ),
@@ -223,8 +231,9 @@ class _ChatScreenState extends State<ChatScreen> {
                               .textTheme
                               .titleMedium!
                               .copyWith(
-                                  color:
-                                      lighten(getThemeColor(context), 0.3)),
+                                  color: !getThemeStateIsLight()
+                                      ? darken(getThemeColor(context), 0.5)
+                                      : lighten(getThemeColor(context), 0.3)),
                         ),
                       )
                     ],

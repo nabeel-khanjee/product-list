@@ -96,21 +96,30 @@ class PatientDetailScreenForm extends StatelessWidget {
             patientIdcontroller: ssnController,
           ),
           DropDownComponentProfile(
-            onDropdownFieldTap: onDropdownFieldTapCountry,
+            bgColor: !getThemeStateIsLight()
+                              ? (lighten(getThemeColor(context), 0.35))
+                              : ColorConstants.white,
+                          onDropdownFieldTap: onDropdownFieldTapCountry,
             hintText: 'Disability/Impairment',
-            items: country,
+            items: const ['Hearing Impairment', 'Visual Impairment', 'Physical'],
             selectedItem: (value) => getCountryValue(value),
             value: selectedCountry,
           ),
           DropDownComponentProfile(
-            onDropdownFieldTap: onDropdownFieldTapCountry,
+            bgColor: !getThemeStateIsLight()
+                              ? (lighten(getThemeColor(context), 0.35))
+                              : ColorConstants.white,
+                          onDropdownFieldTap: onDropdownFieldTapCountry,
             hintText: StringConstants.selectCountry,
             items: country,
             selectedItem: (value) => getCountryValue(value),
             value: selectedCountry,
           ),
           DropDownComponentProfile(
-            onDropdownFieldTap: onDropdownFieldTapState,
+             bgColor: !getThemeStateIsLight()
+                              ? (lighten(getThemeColor(context), 0.35))
+                              : ColorConstants.white,
+                         onDropdownFieldTap: onDropdownFieldTapState,
             hintText: StringConstants.selectState,
             items: states,
             selectedItem: (value) => getStateValue(value),

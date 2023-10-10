@@ -70,7 +70,7 @@ class ViewLabTestBody extends StatelessWidget {
             ],
           ),
         ),
-        Divider(color: ColorConstants.greyText),
+        const Divider(color: ColorConstants.greyText),
       ],
     );
   }

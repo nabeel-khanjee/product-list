@@ -8,6 +8,7 @@ class NextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
+      flex: 2,
       child: ElevatedButton(
           style: Theme.of(context).elevatedButtonTheme.style!.copyWith(
               elevation: const MaterialStatePropertyAll(0),

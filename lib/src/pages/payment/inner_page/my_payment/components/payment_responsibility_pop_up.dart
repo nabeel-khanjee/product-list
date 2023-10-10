@@ -1,6 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-
 class PaymentResponsibilityComponent extends StatelessWidget {
   const PaymentResponsibilityComponent({
     super.key,
@@ -121,9 +120,12 @@ class PaymentResponsibilityComponent extends StatelessWidget {
                       border:
                           Border.all(width: 2, color: getThemeColor(context))),
                   child: DropDownComponentProfile(
+                    bgColor: !getThemeStateIsLight()
+                        ? (lighten(getThemeColor(context), 0.35))
+                        : ColorConstants.white,
                     textColor: getThemeColor(context),
                     verticalMargin: 0,
-                    items: const ["Card", "Cash", "Cheque"],
+                    items: const ["Card", "Cash", "Check"],
                     selectedItem: (paymentMethod) {
                       selectedItemPayemntMethod(paymentMethod);
                     },
@@ -168,7 +170,7 @@ class PaymentResponsibilityComponent extends StatelessWidget {
                                     TextEditingController(text: ''),
                               ),
                               context: context);
-                        } else if (selectedPaymentMethod == 'Cheque') {
+                        } else if (selectedPaymentMethod == 'Check') {
                           ShowBottomSheetComponent().showBottomSheet(
                               isControlled: true,
                               removeHeight: true,

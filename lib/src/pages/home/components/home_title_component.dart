@@ -8,39 +8,31 @@ class HomeTitleComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Text(
-                'Hi, ',
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(
-                        color: ColorConstants.yellowGolden,
-                        fontWeight: FontWeight.bold),
-              ),
-              Text(
-                'Nabeel',
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(
-                        color: ColorConstants.white,
-                        fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
-          Text(
-            StringConstants.howAreYouFeelingToday,
-            style: Theme.of(context)
-                .textTheme
-                .bodySmall!
-                .copyWith(color: ColorConstants.white),
-          ),
-        ],
-      );
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Text(
+              'Hi, ',
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: ColorConstants.yellowGolden,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Nabeel',
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium!
+                  .copyWith(fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
+        Text(
+          StringConstants.howAreYouFeelingToday,
+          style: Theme.of(context).textTheme.bodySmall!.copyWith(),
+        ),
+      ],
+    );
   }
 }

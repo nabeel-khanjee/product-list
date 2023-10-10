@@ -24,8 +24,10 @@ class HomeWidgetHeading extends StatelessWidget {
         children: [
           Text(
             title,
-            style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                color: ColorConstants.white, fontWeight: FontWeight.bold),
+            style: Theme.of(context)
+                .textTheme
+                .titleLarge!
+                .copyWith(fontWeight: FontWeight.bold),
           ),
           if (isSeeAll)
             Text(

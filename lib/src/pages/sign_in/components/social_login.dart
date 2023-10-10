@@ -33,7 +33,6 @@ class SocialLogin extends StatelessWidget {
                 text: StringConstants.createAccount,
                 style: Theme.of(context)
                     .textTheme
-
                     .bodySmall!
                     .copyWith(color: Colors.lightBlue),
                 recognizer: TapGestureRecognizer()

@@ -44,6 +44,10 @@ export 'package:provider_app/src/pages/book_appointment/book_appointment_screen.
 export 'package:provider_app/src/pages/doctor_detail/doctor_detail_screen.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_profile_screen.dart';
 export 'package:provider_app/src/pages/notification/notification_screen.dart';
+export 'package:provider_app/src/pages/all_reviews/components/users_review.dart';
+export 'package:provider_app/src/pages/documents/components/documents_body.dart';
+export 'package:provider_app/src/pages/request_document/components/request_document_body.dart';
+
 export 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/data_list/main_questions_list.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/data_list/family_members_other_specift_list.dart';
 export 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/components/family_members_list_component.dart';
@@ -308,13 +312,10 @@ export 'package:provider_app/src/pages/video_calling/video_calling_screen.dart';
 export 'package:provider_app/src/pages/forgot_password/components/forgot_password_body.dart';
 export 'package:provider_app/src/pages/forgot_password/components/forgot_password_header.dart';
 export 'package:provider_app/src/pages/visit_clinic/visit_clinic_screen.dart';
-export 'package:provider_app/src/pages/all_reviews/components/users_review.dart';
 export 'package:provider_app/src/pages/all_reviews/components/write_review.dart';
 export 'package:provider_app/src/pages/consent_form/components/consent_form_body.dart';
 export 'package:provider_app/src/pages/consent_form/components/consent_form_button.dart';
 export 'package:provider_app/src/pages/consent_form/components/consent_form_terms_conditions.dart';
-export 'package:provider_app/src/pages/documents/components/documents_body.dart';
-export 'package:provider_app/src/pages/request_document/components/request_document_body.dart';
 export 'package:provider_app/src/pages/request_document/components/request_document_button.dart';
 export 'package:provider_app/src/pages/video_calling/bottom_sheet/bottom_sheet_fields.dart';
 export 'package:provider_app/src/pages/video_calling/bottom_sheet/bottom_sheet_files_icons.dart';

@@ -5,7 +5,8 @@ class ThemeSwitchApp extends StatelessWidget {
     super.key,
     required this.image,
     required this.text,
-    required this.onChnage, required this.value,
+    required this.onChnage,
+    required this.value,
   });
 
   final String image;
@@ -22,19 +23,15 @@ class ThemeSwitchApp extends StatelessWidget {
           left: 10,
           right: 10,
         ),
-        tileColor: getThemeStateIsLight()
-            ? lighten(getThemeColor(context), 0.1)
-            : darken(getThemeColor(context), 0.5),
+        tileColor: lighten(getThemeColor(context), 0.1),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TilesIconComponent(image: image),
-            const SizedBox(
-              width: 10,
-            ),
-            Text(text),
+            const SizedBox(width: 10),
+            Expanded(child: Text(text)),
           ],
         ),
         value: value,

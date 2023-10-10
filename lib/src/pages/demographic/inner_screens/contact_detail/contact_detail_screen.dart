@@ -44,7 +44,7 @@ class ContactDetailScreen extends StatelessWidget {
     required this.addressPharmacyController,
     required this.cityPharmacyController,
     required this.zipCodePharmacyController,
-    required this.phoneNumberPharmacyController,
+    required this.phoneNumberPharmacyController, required this.nameInterpreterContactDetailController, required this.relationInterpreterContactController, required this.contactInterpreterNumberContactDetailController,
   });
 
   final GlobalKey<FormState> formkey;
@@ -67,6 +67,10 @@ class ContactDetailScreen extends StatelessWidget {
   final TextEditingController cellPhoneNumberController;
   final TextEditingController residenceNumberController;
   final TextEditingController selectStateController;
+  final TextEditingController nameInterpreterContactDetailController;
+  final TextEditingController relationInterpreterContactController;
+  final TextEditingController contactInterpreterNumberContactDetailController;
+  
   final List<String> country;
   final String? selectedDate;
   final List<String> gender;
@@ -100,6 +104,9 @@ class ContactDetailScreen extends StatelessWidget {
               titleDemographicInnerScreen: titleDemographicInnerScreen),
           ContactDetailScreenForm(
               formkey: formkey,
+              contactInterpreterNumberContactDetailController: contactInterpreterNumberContactDetailController,
+              nameInterpreterContactDetailController: nameInterpreterContactDetailController,
+              relationInterpreterContactController: relationInterpreterContactController,
               addressPharmacyController: addressPharmacyController,
               cityPharmacyController: cityPharmacyController,
               contactNumberContactDetailController:

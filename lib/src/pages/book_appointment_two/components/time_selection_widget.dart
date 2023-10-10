@@ -17,7 +17,9 @@ class TimeSelectionWidget extends StatelessWidget {
           height: 54,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
-              color: ColorConstants.white),
+              color: getThemeStateIsLight()
+                  ? ColorConstants.white
+                  : lighten(getThemeColor(context), 0.35)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

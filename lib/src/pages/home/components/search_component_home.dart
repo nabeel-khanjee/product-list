@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 
 class SearchCompoentHome extends StatelessWidget {
@@ -9,7 +8,7 @@ class SearchCompoentHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         NavigationUtil.push(
           context,
           RouteConstants.searchDoctorRoute,
@@ -20,7 +19,9 @@ class SearchCompoentHome extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: darken(getThemeColor(context), 0.3)),
+            color: !getThemeStateIsLight()
+                ? (lighten(getThemeColor(context), 0.35))
+                : darken(getThemeColor(context), 0.3)),
         child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

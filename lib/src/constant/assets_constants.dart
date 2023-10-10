@@ -1,5 +1,6 @@
 class AssetsConstants {
   //Images
+  static const String logoutImage = 'assets/images/logout_image.png';
   static String doctorDetailImage = 'assets/images/doctor_profile_image.jpg';
   static String visaPaymentImage = 'assets/images/visa_payment_image.png';
   static String masterCardPaymentImage =
@@ -97,4 +98,14 @@ class AssetsConstants {
       'assets/icon/unselected_check_icon.png';
   static const String attachmentIcon = 'assets/icon/attachment_icon.png';
   static const String sendMsgIcon = 'assets/icon/send_msg_icon.png';
+  static const String documentTransparentIcon =
+      'assets/icon/document_transparent_icon.png';
+  static const String homeTransparentIcon =
+      'assets/icon/home_transparent_icon.png';
+  static const String payNowTransparentIcon =
+      'assets/icon/pay_now_transparent_icon.png';
+  static const String profileTransparentIcon =
+      'assets/icon/profile_transparent_icon.png';
+
+  static const String appLogo = "assets/images/logo.png";
 }

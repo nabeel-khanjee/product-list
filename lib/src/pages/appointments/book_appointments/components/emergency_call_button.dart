@@ -16,14 +16,24 @@ class EmergencyCallButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            SvgPicture.asset("assets/icon/emergency.svg"),
-            Text(
-              "Emergency Call Now",
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium!
-                  .copyWith(fontWeight: FontWeight.bold),
+            Expanded(
+              flex: 1,
+              child: SvgPicture.asset(
+                "assets/icon/emergency.svg",
+                width: 35,
+              ),
             ),
+            Expanded(
+              flex: 4,
+              child: Center(
+                child: Text(
+                  "Emergency Call Now",
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: ColorConstants.white, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            Expanded(flex: 1, child: Container())
           ],
         ),
       ),

@@ -1,7 +1,10 @@
 import 'package:provider_app/src/app/app_export.dart';
 
 class VisitClinicCategories extends StatelessWidget {
-  VisitClinicCategories({super.key});
+  const VisitClinicCategories({super.key});
+
+  @override
+  Widget build(BuildContext context) {
 
   final List<String> doctorCategories = [
     "All",
@@ -11,9 +14,6 @@ class VisitClinicCategories extends StatelessWidget {
     "Heart Specialist",
     "Eye Specialist",
   ];
-
-  @override
-  Widget build(BuildContext context) {
     return SizedBox(
       height: 40,
       child: ListView.builder(

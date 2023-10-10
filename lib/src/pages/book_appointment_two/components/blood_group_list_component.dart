@@ -1,4 +1,3 @@
-
 import 'package:provider_app/src/app/app_export.dart';
 
 class BloodGroupListComponent extends StatelessWidget {
@@ -33,7 +32,9 @@ class BloodGroupListComponent extends StatelessWidget {
                         borderRadius: BorderRadius.circular(11),
                         color: selectedBloodGroup == bloodGroup.value.bloddGroud
                             ? lighten(getThemeColor(context), 0.1)
-                            : darken(getThemeColor(context), 0.3)),
+                            : getThemeStateIsLight()
+                                ? darken(getThemeColor(context), 0.3)
+                                : lighten(getThemeColor(context), 0.3)),
                     child: Center(child: Text(bloodGroup.value.bloddGroud)),
                   ),
                 ))
@@ -42,4 +43,3 @@ class BloodGroupListComponent extends StatelessWidget {
     );
   }
 }
-
