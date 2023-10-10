@@ -59,7 +59,7 @@ class BMIWidget extends StatelessWidget {
                       padding: const EdgeInsets.only(bottom: 6, left: 5),
                       child: Text(
                         StringConstants.kgPerMerterSquare,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: ColorConstants.white,
                         ),
                       ),
@@ -106,7 +106,7 @@ class BMIWidget extends StatelessWidget {
                           padding: const EdgeInsets.only(bottom: 6, left: 5),
                           child: Text(
                             StringConstants.kg,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: ColorConstants.white,
                             ),
                           ),
@@ -149,7 +149,7 @@ class BMIWidget extends StatelessWidget {
                           padding: const EdgeInsets.only(bottom: 6, left: 5),
                           child: Text(
                             StringConstants.merterSquare,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: ColorConstants.white,
                             ),
                           ),

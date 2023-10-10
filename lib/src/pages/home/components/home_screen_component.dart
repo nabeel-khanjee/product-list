@@ -1,13 +1,18 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-class HomeScreenComponent extends StatelessWidget {
-  HomeScreenComponent({
+class HomeScreenComponent extends StatefulWidget {
+  const HomeScreenComponent({
     super.key,
     required this.snap,
   });
 
   final bool snap;
 
+  @override
+  State<HomeScreenComponent> createState() => _HomeScreenComponentState();
+}
+
+class _HomeScreenComponentState extends State<HomeScreenComponent> {
   final _advancedDrawerController = AdvancedDrawerController();
 
   @override
@@ -17,7 +22,10 @@ class HomeScreenComponent extends StatelessWidget {
         ..getDashBoardOverview(context,
             pageController: PageController(initialPage: 0),
             advancedDrawerController: _advancedDrawerController),
-      child: BlocBuilder<AnimatedDrawerCubit, AnimatedDrawerState>(
+      child: BlocConsumer<AnimatedDrawerCubit, AnimatedDrawerState>(
+        listener: (context, state) {
+          setState(() {});
+        },
         builder: (context, state) => state.maybeWhen(
           loaded: (
             pageControllerLoaded,

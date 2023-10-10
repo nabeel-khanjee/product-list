@@ -32,7 +32,7 @@ class CardPaymentWidget extends StatelessWidget {
               Text(
                 "Card Payment Mode",
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      color: Theme.of(context).scaffoldBackgroundColor,
+                      color: darken(getThemeColor(context), 0.35),
                       fontWeight: FontWeight.bold,
                     ),
               ),
@@ -45,7 +45,9 @@ class CardPaymentWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             child: Container(
               decoration: BoxDecoration(
-                  color: ColorConstants.white,
+                  color: !getThemeStateIsLight()
+                      ? (lighten(getThemeColor(context), 0.35))
+                      : ColorConstants.white,
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(width: 2, color: getThemeColor(context))),
               child: Row(
@@ -181,6 +183,7 @@ class CardPaymentWidget extends StatelessWidget {
                   horizontalPadding: 0,
                   verticalPadding: 15,
                   text: 'Pay Now',
+                  fgColor: ColorConstants.white,
                   onTap: () {},
                 ),
               )

@@ -9,8 +9,8 @@ class HomeScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MainScaffold(
-        bottomNavigationBar: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+        bottomNavigationBar: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
           child: EmergencyCallButton(),
         ),
         body: SingleChildScrollView(

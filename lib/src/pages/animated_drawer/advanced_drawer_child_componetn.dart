@@ -62,14 +62,14 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                                   style: Theme.of(context)
                                       .textTheme
                                       .bodyMedium!
-                                      .copyWith(),
+                                      .copyWith(color: ColorConstants.white),
                                 ),
                                 Text(
                                   'nabeelshakeel966@gmail.com',
                                   style: Theme.of(context)
                                       .textTheme
                                       .titleSmall!
-                                      .copyWith(),
+                                      .copyWith(color: ColorConstants.white),
                                 )
                               ],
                             ),

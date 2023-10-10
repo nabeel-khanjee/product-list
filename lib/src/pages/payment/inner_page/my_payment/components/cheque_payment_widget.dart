@@ -31,7 +31,7 @@ class ChequePaymentWidget extends StatelessWidget {
               Text(
                 "Check Payment Mode",
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      color: Theme.of(context).scaffoldBackgroundColor,
+                      color: darken(getThemeColor(context), 0.35),
                       fontWeight: FontWeight.bold,
                     ),
               ),
@@ -137,6 +137,7 @@ class ChequePaymentWidget extends StatelessWidget {
                   horizontalPadding: 0,
                   verticalPadding: 15,
                   text: 'Pay Now',
+                  fgColor: ColorConstants.white,
                   onTap: () {},
                 ),
               )

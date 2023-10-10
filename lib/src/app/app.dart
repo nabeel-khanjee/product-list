@@ -16,6 +16,7 @@ class App extends StatelessWidget {
               BlocProvider(create: (context) => AnimatedDrawerCubit()),
               BlocProvider(create: (context) => IsGradientBackgroundCubit()),
 
+
             ],
             child: BlocBuilder<AnimatedDrawerCubit, AnimatedDrawerState>(
               builder: (context, state) => MaterialApp(
