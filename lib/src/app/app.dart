@@ -13,12 +13,14 @@ class App extends StatelessWidget {
               BlocProvider(create: (context) => AppCubit()),
               BlocProvider(create: (context) => AnimatedDrawerCubit()),
               BlocProvider(create: (context) => IsGradientBackgroundCubit()),
+        
             ],
             child: BlocBuilder<AnimatedDrawerCubit, AnimatedDrawerState>(
-              builder: (context, state) => MaterialApp(
+              builder: (context, state) =>  MaterialApp(
                 navigatorKey: navigationService?.navigatorKey,
                 localizationsDelegates: context.localizationDelegates,
                 supportedLocales: context.supportedLocales,
+                
                 locale: context.locale,
                 debugShowMaterialGrid: false,
                 debugShowCheckedModeBanner: false,

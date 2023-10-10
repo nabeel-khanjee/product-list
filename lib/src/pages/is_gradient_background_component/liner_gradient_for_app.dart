@@ -7,7 +7,7 @@ LinearGradient linerGradientForApp({ Color? color,}) {
     end: Alignment.topCenter,
     colors: [
       !getThemeStateIsLight()
-          ? Theme.of(navigationService!.navigatorKey.currentContext!)
+          ?  Theme.of(navigationService!.navigatorKey.currentContext!)
               .scaffoldBackgroundColor
           : darken(color??getThemeColor(navigationService!.navigatorKey.currentContext!), 0.3),
       !getThemeStateIsLight()

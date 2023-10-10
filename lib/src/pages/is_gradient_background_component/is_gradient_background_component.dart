@@ -4,14 +4,14 @@ class IsGradientBackGround extends StatelessWidget {
   const IsGradientBackGround({
     super.key,
     required this.body,
-    required this.isBackAppBar,
-    required this.appbarText,
+    this.isBackAppBar,
+    this.appbarText,
     this.isAppBar = true,
   });
   final Widget body;
-  final bool isBackAppBar;
-  final String appbarText;
-  final bool isAppBar;
+  final bool? isBackAppBar;
+  final String? appbarText;
+  final bool? isAppBar;
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +28,15 @@ class IsGradientBackGround extends StatelessWidget {
               child: MainScaffold(
                 body: body,
                 isGradient: true,
-                appBar: isAppBar
-                    ? AppBarcomponent(
-                        isTitleTowLines: false,
-                        isBackAppBar: isBackAppBar,
-                        isGradient: true,
-                        title: appbarText,
-                      )
+                appBar: isAppBar != null
+                    ? isAppBar!
+                        ? AppBarcomponent(
+                            isTitleTowLines: false,
+                            isBackAppBar: isBackAppBar ?? false,
+                            isGradient: true,
+                            title: appbarText ?? '',
+                          )
+                        : null
                     : null,
               ),
             ),
@@ -46,14 +48,15 @@ class IsGradientBackGround extends StatelessWidget {
               child: MainScaffold(
                 body: body,
                 isGradient: true,
-                appBar: isAppBar
-                    ? AppBarcomponent(
-                      
-                        isTitleTowLines: false,
-                        isBackAppBar: isBackAppBar,
-                        isGradient: true,
-                        title: appbarText,
-                      )
+                appBar: isAppBar != null
+                    ? isAppBar!
+                        ? AppBarcomponent(
+                            isTitleTowLines: false,
+                            isBackAppBar: isBackAppBar ?? false,
+                            isGradient: true,
+                            title: appbarText ?? '',
+                          )
+                        : null
                     : null,
               ),
             ),
