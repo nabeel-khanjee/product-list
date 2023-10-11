@@ -5,6 +5,7 @@ class MainScaffold extends StatelessWidget {
   final Widget? appBar;
   final Widget? bottomNavigationBar;
   final double? preferredSizeAppBar;
+  final Widget? floatingActionButton;
 
   const MainScaffold({
     super.key,
@@ -12,7 +13,7 @@ class MainScaffold extends StatelessWidget {
     required this.isGradient,
     this.appBar,
     this.bottomNavigationBar,
-    this.preferredSizeAppBar,
+    this.preferredSizeAppBar, this.floatingActionButton,
   });
 
   final Widget body;
@@ -20,6 +21,7 @@ class MainScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: floatingActionButton,
       bottomNavigationBar: bottomNavigationBar,
       backgroundColor: getThemeStateIsLight()
           ? isGradient

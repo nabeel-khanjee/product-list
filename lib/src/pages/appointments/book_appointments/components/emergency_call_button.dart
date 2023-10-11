@@ -18,8 +18,8 @@ class EmergencyCallButton extends StatelessWidget {
           children: [
             Expanded(
               flex: 1,
-              child: SvgPicture.asset(
-                "assets/icon/emergency.svg",
+              child: Image.asset(
+                AssetsConstants.emergencyMainScreenImage,
                 width: 35,
               ),
             ),

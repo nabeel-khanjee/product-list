@@ -43,6 +43,9 @@ class AssetsConstants {
   static const String lightDarkIcon = 'assets/icon/light_dark_icon.png';
   static const String notificationAppBarIcon =
       'assets/icon/notification_icon_app_bar.png';
+  static const String emergencyMainScreenImage =
+      
+      'assets/images/emergency_main_screen_image.png';
   static const String notificationIcon = 'assets/icon/notification_icon.png';
   static const String offersAndPromotionIcon =
       'assets/icon/offers_and_promotion_icon.png';
