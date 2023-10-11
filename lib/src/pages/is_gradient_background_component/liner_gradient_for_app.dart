@@ -1,19 +1,27 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-LinearGradient linerGradientForApp({ Color? color,}) {
+LinearGradient linerGradientForApp({
+  bool isVertical = false,
+  Color? color,
+}) {
   return LinearGradient(
-    begin: Alignment.bottomCenter,
+    begin: isVertical ? Alignment.centerLeft : Alignment.bottomCenter,
     tileMode: TileMode.mirror,
-    end: Alignment.topCenter,
+    end: isVertical ? Alignment.centerRight : Alignment.topCenter,
     colors: [
-      !getThemeStateIsLight()
-          ?  Theme.of(navigationService!.navigatorKey.currentContext!)
-              .scaffoldBackgroundColor
-          : darken(color??getThemeColor(navigationService!.navigatorKey.currentContext!), 0.3),
       !getThemeStateIsLight()
           ? Theme.of(navigationService!.navigatorKey.currentContext!)
               .scaffoldBackgroundColor
-          : color??getThemeColor(navigationService!.navigatorKey.currentContext!),
+          : darken(
+              color ??
+                  getThemeColor(
+                      navigationService!.navigatorKey.currentContext!),
+              0.3),
+      !getThemeStateIsLight()
+          ? Theme.of(navigationService!.navigatorKey.currentContext!)
+              .scaffoldBackgroundColor
+          : color ??
+              getThemeColor(navigationService!.navigatorKey.currentContext!),
     ],
   );
 }
