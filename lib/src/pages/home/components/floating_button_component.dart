@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:provider_app/src/app/app_export.dart';
 
 class FancyFab extends StatefulWidget {
@@ -5,14 +6,11 @@ class FancyFab extends StatefulWidget {
   final String tooltip;
   final IconData icon;
 
-  const FancyFab(
-      {super.key,
-      required this.onPressed,
-      required this.tooltip,
-      required this.icon});
+  FancyFab(
+      {required this.onPressed, required this.tooltip, required this.icon});
 
   @override
-  State<FancyFab> createState() => _FancyFabState();
+  _FancyFabState createState() => _FancyFabState();
 }
 
 class _FancyFabState extends State<FancyFab>
@@ -22,11 +20,11 @@ class _FancyFabState extends State<FancyFab>
   Animation<Color?>? _buttonColor;
   Animation<double>? _animateIcon;
   Animation<double>? _translateButton;
-  final Curve _curve = Curves.easeOut;
-  final double _fabHeight = 56.0;
+  Curve _curve = Curves.easeOut;
+  double _fabHeight = 56.0;
 
   @override
-  void initState() {
+  initState() {
     _animationController = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 500))
       ..addListener(() {
@@ -60,12 +58,12 @@ class _FancyFabState extends State<FancyFab>
   }
 
   @override
-  void dispose() {
+  dispose() {
     _animationController!.dispose();
     super.dispose();
   }
 
-  void animate() {
+  animate() {
     if (!isOpened) {
       _animationController!.forward();
     } else {
@@ -75,41 +73,49 @@ class _FancyFabState extends State<FancyFab>
   }
 
   Widget add() {
-    return const FloatingActionButton(
-      onPressed: null,
-      tooltip: 'Add',
-      child: Icon(Icons.chat),
+    return Container(
+      child: const FloatingActionButton(
+        onPressed: null,
+        tooltip: 'Add',
+        child: Icon(Icons.chat),
+      ),
     );
   }
 
   Widget image() {
-    return const FloatingActionButton(
-      backgroundColor: ColorConstants.redIndicatorColor,
-      onPressed: null,
-      tooltip: 'Image',
-      child: Icon(
-        Icons.call,
-        color: ColorConstants.white,
+    return Container(
+      child: const FloatingActionButton(
+        backgroundColor: ColorConstants.redIndicatorColor,
+        onPressed: null,
+        tooltip: 'Image',
+        child: Icon(
+          Icons.call,
+          color: ColorConstants.white,
+        ),
       ),
     );
   }
 
   Widget inbox() {
-    return const FloatingActionButton(
-      onPressed: null,
-      tooltip: 'Inbox',
-      child: Icon(Icons.inbox),
+    return Container(
+      child: const FloatingActionButton(
+        onPressed: null,
+        tooltip: 'Inbox',
+        child: Icon(Icons.inbox),
+      ),
     );
   }
 
   Widget toggle() {
-    return FloatingActionButton(
-      backgroundColor: _buttonColor!.value,
-      onPressed: animate,
-      tooltip: 'Toggle',
-      child: AnimatedIcon(
-        icon: AnimatedIcons.menu_close,
-        progress: _animateIcon!,
+    return Container(
+      child: FloatingActionButton(
+        backgroundColor: _buttonColor!.value,
+        onPressed: animate,
+        tooltip: 'Toggle',
+        child: AnimatedIcon(
+          icon: AnimatedIcons.menu_close,
+          progress: _animateIcon!,
+        ),
       ),
     );
   }

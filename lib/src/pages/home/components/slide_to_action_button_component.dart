@@ -11,10 +11,10 @@ class SlideActionBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: 100,
       child: Padding(
-        padding: const EdgeInsets.all(0),
+        padding: EdgeInsets.all(0),
         child: SimpleExample(stretchThumb: true, callback: () {}),
 
         // child: SlideAction(
@@ -157,7 +157,7 @@ class SimpleExample extends StatelessWidget {
                 state.isPerformingAction
                     ? "Loading..."
                     : "Slide To Emergency Call Now",
-                style: const TextStyle(
+                style: TextStyle(
                     shadows: [Shadow(offset: Offset(5, 5), blurRadius: 7)]),
               ),
             ),
@@ -177,52 +177,19 @@ class SimpleExample extends StatelessWidget {
                 isVertical: true,
                 color: !state.isPerformingAction
                     ? ColorConstants.redIndicatorColor
-                    : Colors.white.withOpacity(0.2)),
+                    : ColorConstants.royalBlue),
 
             // color: ColorConstants.redIndicatorColor,
             borderRadius: BorderRadius.circular(100),
           ),
           child: Align(
-            alignment: state.isPerformingAction
-                ? Alignment.center
-                : Alignment.centerRight,
+            alignment: Alignment.centerRight,
             child: SizedBox(
               width: stretchThumb ? 64 : double.infinity,
               child: Center(
                 child: state.isPerformingAction
-                    ? Row(
-                        children: [
-                          Opacity(
-                            opacity: !state.isPerformingAction
-                                ? lerpDouble(
-                                    1,
-                                    0,
-                                    (state.thumbFractionalPosition * 2)
-                                        .clamp(0.0, 1.0))!
-                                : 1,
-                            child: Center(
-                              child: Text(
-                                // Show loading if async operation is being performed
-                                state.isPerformingAction
-                                    ? "Loading..."
-                                    : "Slide To Emergency Call Now",
-                                style: const TextStyle(
-                                  shadows: [
-                                    Shadow(offset: Offset(5, 5), blurRadius: 7)
-                                  ],
-                                ),
-                              ),
-                            ),
-
-                            // child: Center(
-                            //   child: Text(
-                            //     "Thumb fraction: ${state.thumbFractionalPosition.toStringAsPrecision(2)}",
-                            //   ),
-                          ),
-                          const CupertinoActivityIndicator(
-                            color: Colors.white,
-                          ),
-                        ],
+                    ? const CupertinoActivityIndicator(
+                        color: Colors.white,
                       )
                     : Image.asset(AssetsConstants.emergencyMainScreenImage),
 
