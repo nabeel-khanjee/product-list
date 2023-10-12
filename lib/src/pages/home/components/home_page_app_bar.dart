@@ -1,9 +1,9 @@
 import 'package:provider_app/src/app/app_export.dart';
+
 class HomePageAppBar extends StatelessWidget {
   const HomePageAppBar({
     super.key,
   });
-
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +31,12 @@ class HomePageAppBar extends StatelessWidget {
       ],
       leading: IconButton(
           onPressed: () => drawerStateChnageUpdateIndex(
-            advancedDrawerController: BlocProvider.of<AnimatedDrawerCubit>(context).advancedDrawerController,
-            isOpen: false,
-          context: context
-          ),
+                context: context,
+                advancedDrawerController:
+                    BlocProvider.of<AnimatedDrawerCubit>(context)
+                        .advancedDrawerController,
+                isOpen: false,
+              ),
           icon: const Icon(
             Icons.more_vert,
           )),

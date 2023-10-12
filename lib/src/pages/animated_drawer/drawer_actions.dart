@@ -1,12 +1,15 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-Future<AnimatedDrawerCubit> drawerStateChnageUpdateIndex(
+AnimatedDrawerCubit drawerStateChnageUpdateIndex(
         {int? index,
         required bool isOpen,
         AdvancedDrawerController? advancedDrawerController,
-        required BuildContext context}) async =>
+        PageController? pageController,
+        
+        required BuildContext context})  =>
     BlocProvider.of<AnimatedDrawerCubit>(context)
       ..updateIndex(
+pageController: pageController,
           advancedDrawerController: advancedDrawerController ??
               BlocProvider.of<AnimatedDrawerCubit>(context)
                   .advancedDrawerController,

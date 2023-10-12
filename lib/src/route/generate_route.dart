@@ -149,7 +149,6 @@ Route onGenerateRoute(RouteSettings settings) {
     case RouteConstants.allReviewsRoute:
       return materialRoute(const AllReviewsScreen());
 
-
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
 

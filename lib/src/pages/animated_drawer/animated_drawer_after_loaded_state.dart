@@ -2,15 +2,19 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class AnimatedDrawerAfterLoadedState extends StatelessWidget {
   const AnimatedDrawerAfterLoadedState({
-    super.key,
+    super.key, required this.color,
   });
+  final Color color;
+  
 
   @override
   Widget build(BuildContext context) {
     BorderSide borderSide =
-        BorderSide(color: lighten(getThemeColor(context), 0.1), width: 20);
-    return  AdvancedDrawer(
-      backdrop: const AnimatedDrawerBackDrop(),
+        BorderSide(color: lighten(color, 0.1), width: 20);
+    return AdvancedDrawer(
+      backdrop:  AnimatedDrawerBackDrop(
+        color: color,
+      ),
       controller: BlocProvider.of<AnimatedDrawerCubit>(context)
           .advancedDrawerController,
       animationCurve: Curves.easeInOut,

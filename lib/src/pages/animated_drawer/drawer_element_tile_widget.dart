@@ -16,11 +16,12 @@ class DrawerElementTileWidget extends StatelessWidget {
         onTap: () {
           if (element.value.isInnerPage) {
             drawerStateChnageUpdateIndex(
+              context: context,
                 advancedDrawerController:
                     BlocProvider.of<AnimatedDrawerCubit>(context)
                         .advancedDrawerController,
                 isOpen: true,
-                context: context,
+
                 index: element.value.pageIndex);
           } else {
             NavigationUtil.push(

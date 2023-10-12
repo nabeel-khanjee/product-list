@@ -53,8 +53,6 @@ class SettingScreenBody extends StatelessWidget {
                   switchThemeApp();
                   BlocProvider.of<IsGradientBackgroundCubit>(context)
                       .updateStateDarkLight(value: value);
-                  BlocProvider.of<IsGradientBackgroundCubit>(context)
-                      .updateState(color: getThemeColor(context));
                 },
                 text: StringConstants.themeDarkLight),
             const AppColorPicker(),

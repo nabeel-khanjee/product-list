@@ -16,27 +16,54 @@ class ThemeSwitchApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: SwitchListTile.adaptive(
-        contentPadding: const EdgeInsets.only(
-          left: 10,
-          right: 10,
-        ),
-        tileColor: lighten(getThemeColor(context), 0.1),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            TilesIconComponent(image: image),
-            const SizedBox(width: 10),
-            Expanded(child: Text(text)),
-          ],
-        ),
-        value: value,
-        onChanged: (value) => onChnage(value),
-      ),
+    return BlocBuilder<IsGradientBackgroundCubit, IsGradientBackgroundState>(
+      builder: (context, state) => state.maybeWhen(
+          orElse: () => Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: SwitchListTile.adaptive(
+                  contentPadding: const EdgeInsets.only(
+                    left: 10,
+                    right: 10,
+                  ),
+                  tileColor: lighten(getThemeColor(context), 0.1),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      TilesIconComponent(image: image),
+                      const SizedBox(width: 10),
+                      Expanded(child: Text(text)),
+                    ],
+                  ),
+                  value: value,
+                  onChanged: (value) => onChnage(value),
+                ),
+              ),
+          updateColorState: (color) => Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: SwitchListTile.adaptive(
+                  contentPadding: const EdgeInsets.only(
+                    left: 10,
+                    right: 10,
+                  ),
+                  tileColor: lighten(color, 0.1),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      TilesIconComponent(image: image),
+                      const SizedBox(width: 10),
+                      Expanded(child: Text(text)),
+                    ],
+                  ),
+                  value: value,
+                  onChanged: (value) => onChnage(value),
+                ),
+              )),
     );
   }
 }

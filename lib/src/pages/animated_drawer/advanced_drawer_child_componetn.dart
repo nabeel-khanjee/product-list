@@ -5,6 +5,7 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
     super.key,
   });
 
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -79,11 +80,12 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () => drawerStateChnageUpdateIndex(
+                        context: context,
                           advancedDrawerController:
                               BlocProvider.of<AnimatedDrawerCubit>(context)
                                   .advancedDrawerController,
                           isOpen: true,
-                          context: context),
+                          ),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),

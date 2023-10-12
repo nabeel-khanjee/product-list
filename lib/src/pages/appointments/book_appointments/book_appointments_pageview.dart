@@ -1,6 +1,5 @@
 import 'package:provider_app/src/app/app_export.dart';
 import 'package:provider_app/src/pages/appointments/book_appointments/components/book_appointments_body.dart';
-import 'package:provider_app/src/pages/appointments/book_appointments/components/emergency_call_button.dart';
 import 'package:provider_app/src/pages/home/components/slide_to_action_button_component.dart';
 
 class BookAppointmentsPageView extends StatelessWidget {

@@ -2,8 +2,9 @@ import 'package:provider_app/src/app/app_export.dart';
 
 class AnimatedDrawerBackDrop extends StatelessWidget {
   const AnimatedDrawerBackDrop({
-    super.key,
-  });
+    super.key, required this.color,
+  });final Color color ;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -13,13 +14,13 @@ class AnimatedDrawerBackDrop extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.bottomCenter,
-          tileMode: TileMode.mirror,
+          // tileMode: TileMode.mirror,
           end: Alignment.topCenter,
           colors: [
             darken(
-                getThemeColor(navigationService!.navigatorKey.currentContext!),
+                color,
                 0.3),
-            getThemeColor(navigationService!.navigatorKey.currentContext!),
+            color,
           ],
         ),
       ),
