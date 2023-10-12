@@ -1,11 +1,10 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-ThemeData lightThemeData(MyTheme theme) {
+ThemeData lightThemeData(MyTheme theme, {Color? color}) {
   return ThemeData(
     useMaterial3: true,
-    colorSchemeSeed: theme.getColor(),
+    colorSchemeSeed: color ?? theme.getColor(),
     brightness: Brightness.light,
-    
     scaffoldBackgroundColor: darken(theme.getColor(), 0.35),
     appBarTheme: AppBarTheme(
         backgroundColor: darken(theme.getColor(), 0.35),

@@ -1,18 +1,14 @@
 import 'package:provider_app/src/app/app_export.dart';
 
-class HomeScreenComponent extends StatefulWidget {
-  const HomeScreenComponent({
+class HomeScreenComponent extends StatelessWidget {
+  HomeScreenComponent({
     super.key,
     required this.snap,
+    this.color,
   });
-
+  final Color? color;
   final bool snap;
 
-  @override
-  State<HomeScreenComponent> createState() => _HomeScreenComponentState();
-}
-
-class _HomeScreenComponentState extends State<HomeScreenComponent> {
   final _advancedDrawerController = AdvancedDrawerController();
 
   @override
@@ -22,20 +18,21 @@ class _HomeScreenComponentState extends State<HomeScreenComponent> {
         ..getDashBoardOverview(context,
             pageController: PageController(initialPage: 0),
             advancedDrawerController: _advancedDrawerController),
-      child: BlocConsumer<AnimatedDrawerCubit, AnimatedDrawerState>(
-        listener: (context, state) {
-          setState(() {});
-        },
+      child: BlocBuilder<AnimatedDrawerCubit, AnimatedDrawerState>(
         builder: (context, state) => state.maybeWhen(
           loaded: (
             pageControllerLoaded,
           ) =>
-              const AnimatedDrawerAfterLoadedState(),
+              AnimatedDrawerAfterLoadedState(
+            color: color ?? getThemeColor(context),
+            
+          ),
           animatedDrawerIndexUpdated: (
             index,
             isOpen,
           ) {
-            return const AnimatedDrawerAfterLoadedState();
+            return AnimatedDrawerAfterLoadedState(
+                color: color ?? getThemeColor(context));
           },
           error: (error) => RetryButton(
             onTap: () => context

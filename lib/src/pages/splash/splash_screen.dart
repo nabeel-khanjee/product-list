@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 1), () async {
       await NavigationUtil.popAllAndPush(
         context,
-          RouteConstants.onboardingRoute,
+        RouteConstants.onboardingRoute,
       );
     });
   }
@@ -32,8 +32,8 @@ class _SplashScreenState extends State<SplashScreen> {
     return Consumer<MyTheme>(
       builder: (context, theme, child) {
         this.theme = theme;
-        return Scaffold(
-          backgroundColor: darken(getThemeColor(context), 0.4),
+        return MainScaffold(
+          isGradient: false,
           body: Center(
             child: Image.asset(
               AssetsConstants.appLogo,

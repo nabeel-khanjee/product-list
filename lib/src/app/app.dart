@@ -11,27 +11,22 @@ class App extends StatelessWidget {
         builder: (context, theme, _) {
           return MultiBlocProvider(
             providers: [
-
               BlocProvider(create: (context) => AppCubit()),
               BlocProvider(create: (context) => AnimatedDrawerCubit()),
               BlocProvider(create: (context) => IsGradientBackgroundCubit()),
-
-
             ],
-            child: BlocBuilder<AnimatedDrawerCubit, AnimatedDrawerState>(
-              builder: (context, state) => MaterialApp(
-                navigatorKey: navigationService?.navigatorKey,
-                localizationsDelegates: context.localizationDelegates,
-                supportedLocales: context.supportedLocales,
-                locale: context.locale,
-                debugShowMaterialGrid: false,
-                debugShowCheckedModeBanner: false,
-                themeMode: theme.currentTheme(),
-                darkTheme: darkThemeData(theme),
-                title: F.title,
-                theme: lightThemeData(theme),
-                onGenerateRoute: onGenerateRoute,
-              ),
+            child: MaterialApp(
+              navigatorKey: navigationService?.navigatorKey,
+              localizationsDelegates: context.localizationDelegates,
+              supportedLocales: context.supportedLocales,
+              locale: context.locale,
+              debugShowMaterialGrid: false,
+              debugShowCheckedModeBanner: false,
+              themeMode: theme.currentTheme(),
+              darkTheme: darkThemeData(theme),
+              title: F.title,
+              theme: lightThemeData(theme),
+              onGenerateRoute: onGenerateRoute,
             ),
           );
         },

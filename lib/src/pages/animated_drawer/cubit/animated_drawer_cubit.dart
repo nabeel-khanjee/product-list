@@ -14,15 +14,17 @@ class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
     return;
   }
 
-  Future<void> updateIndex(
+  void updateIndex(
       {required int index,
       required bool isOpen,
-      required AdvancedDrawerController advancedDrawerController}) async {
+      required AdvancedDrawerController advancedDrawerController,
+      PageController? pageController}) {
     _bottomNavIndex = index;
     !isOpen
         ? advancedDrawerController.showDrawer()
         : advancedDrawerController.hideDrawer();
     _advancedDrawerController = advancedDrawerController;
+    
     _pageController.jumpToPage(index);
     emit(const _Loading());
     emit(

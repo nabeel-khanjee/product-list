@@ -30,7 +30,6 @@ void _injectBlocsAndCubits() {
   getIt.registerFactory(() => IsGradientBackgroundCubit());
   getIt.registerFactory(() => PHQ9Cubit());
   getIt.registerFactory(() => GAD7Cubit());
-  
 }
 
 Future<void> _initializeData({bool enableLogging = true}) async {
