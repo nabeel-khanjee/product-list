@@ -11,10 +11,10 @@ class SlideActionBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 100,
       child: Padding(
-        padding: EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
         child: SimpleExample(stretchThumb: true, callback: () {}),
 
         // child: SlideAction(
@@ -157,7 +157,7 @@ class SimpleExample extends StatelessWidget {
                 state.isPerformingAction
                     ? "Loading..."
                     : "Slide To Emergency Call Now",
-                style: TextStyle(
+                style: const TextStyle(
                     shadows: [Shadow(offset: Offset(5, 5), blurRadius: 7)]),
               ),
             ),
