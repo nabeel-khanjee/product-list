@@ -19,20 +19,22 @@ class AppColorPicker extends StatelessWidget {
           Text(
             StringConstants.selectColor,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           MaterialColorPicker(
-            onColorChange: (color) {
+            onColorChange: (color) async {
               switchColorApp(color: color);
-              BlocProvider.of<IsGradientBackgroundCubit>(context).updateState(color: color);
+              BlocProvider.of<IsGradientBackgroundCubit>(context)
+                  .updateState(color: color);
             },
-            onMainColorChange: (ColorSwatch? color) {
+            onMainColorChange: (ColorSwatch? color) async {
               switchColorApp(color: color!);
-              BlocProvider.of<IsGradientBackgroundCubit>(context).updateState(color: color);
+              BlocProvider.of<IsGradientBackgroundCubit>(context)
+                  .updateState(color: color);
             },
             selectedColor: getThemeColor(context),
-          )
+          ),
         ],
       ),
     );

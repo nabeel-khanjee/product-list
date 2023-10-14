@@ -7,6 +7,9 @@ class SharedPreferenceConstants {
   static String isSplash = 'splash';
   static String isScanUsed = 'is-scan-used';
   static const String userId = 'user-id';
-  static const String continuePress='continue-press';
-  static const String scanComplete='scan-complete';
+  static const String continuePress = 'continue-press';
+  static const String scanComplete = 'scan-complete';
+
+  static const String isDark = 'isDark';
+  static const String color = 'color';
 }

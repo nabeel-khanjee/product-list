@@ -5,19 +5,42 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-            onPressed: () => drawerStateChnageUpdateIndex(
-                isOpen: false,
-                context: context,
-                advancedDrawerController:
-                    BlocProvider.of<AnimatedDrawerCubit>(context)
-                        .advancedDrawerController),
-            icon: Icon(Icons.more_vert)),
-        title: Text(StringConstants.profile),
-      ),
-      body: Container(),
-    );
+    return IsGradientBackGround(
+        body: Column(
+          children: [
+            const UserProfileComponent(),
+            Container(
+              padding: const EdgeInsets.all(3),
+              decoration: const BoxDecoration(
+                  color: ColorConstants.white,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20))),
+              child: Column(children: [
+                AppTileComponent(
+                  isExpandable: false,
+                  test: StringConstants.demographicProfile,
+                  image: AssetsConstants.demographicProfile,
+                  onTap: () {
+                    NavigationUtil.push(
+                        context, RouteConstants.demographicRoute);
+                  },
+                ),
+                const ExpansionPanelListComponent(),
+                AppTileComponent(
+                  isExpandable: false,
+                  test: StringConstants.familyHealthProfile,
+                  image: AssetsConstants.familyHealthProfile,
+                      onTap: () {
+                    NavigationUtil.push(
+                        context, RouteConstants.familyHealthProfileRoute);
+                  },
+            ),
+              ]),
+            ),
+          ],
+        ),
+        isBackAppBar: false,
+        appbarText: StringConstants.profile);
   }
 }

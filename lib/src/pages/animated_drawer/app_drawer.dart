@@ -1,4 +1,6 @@
 import 'package:provider_app/src/app/app_export.dart';
+import 'package:provider_app/src/pages/animated_drawer/drawer_element_tile_widget.dart';
+import 'package:provider_app/src/pages/animated_drawer/route_list_app_args.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({
@@ -25,6 +27,41 @@ class AppDrawer extends StatelessWidget {
       RouteListApp(
         isInnerPage: true,
         pageIndex: 2,
+        name: StringConstants.appointments,
+        route: RouteConstants.appointmentsRoute,
+        icon: AssetsConstants.appointmentsIcon,
+      ),
+      RouteListApp(
+        isInnerPage: true,
+        pageIndex: 3,
+        name: StringConstants.communication,
+        route: RouteConstants.appointmentsRoute,
+        icon: AssetsConstants.communicationIcon,
+      ),
+      RouteListApp(
+        isInnerPage: true,
+        pageIndex: 4,
+        name: StringConstants.documents,
+        route: RouteConstants.appointmentsRoute,
+        icon: AssetsConstants.documentsIcon,
+      ),
+      RouteListApp(
+        isInnerPage: true,
+        pageIndex: 5,
+        name: StringConstants.medications,
+        route: RouteConstants.appointmentsRoute,
+        icon: AssetsConstants.medicationsIcon,
+      ),
+      RouteListApp(
+        isInnerPage: true,
+        pageIndex: 6,
+        name: StringConstants.billings,
+        route: RouteConstants.appointmentsRoute,
+        icon: AssetsConstants.billsIcon,
+      ),
+      RouteListApp(
+        isInnerPage: true,
+        pageIndex: 7,
         name: StringConstants.settings,
         route: RouteConstants.settingRoute,
         icon: AssetsConstants.settingIcon,
@@ -33,66 +70,15 @@ class AppDrawer extends StatelessWidget {
     return Drawer(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
       child: Column(
+        
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: drawerElements
             .asMap()
             .entries
-            .map((e) => Container(
-                  padding: EdgeInsets.all(20),
-                  child: InkWell(
-                    onTap: () {
-                      if (e.value.isInnerPage) {
-                        drawerStateChnageUpdateIndex(
-                          advancedDrawerController: BlocProvider.of<AnimatedDrawerCubit>(context).advancedDrawerController,
-                            isOpen: true,
-                            context: context,
-                            index: e.value.pageIndex);
-                      } else {
-                        NavigationUtil.push(
-                          context,
-                          e.value.route,
-                        );
-                      }
-                    },
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          e.value.icon,
-                          height: 20,
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          e.value.name,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyMedium!
-                              .copyWith(color: ColorConstants.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                ))
+            .map((element) => DrawerElementTileWidget(element: element))
             .toList(),
       ),
     );
   }
-}
-
-class RouteListApp {
-  final String name;
-  final String route;
-  final String icon;
-  final bool isInnerPage;
-  final int pageIndex;
-
-  RouteListApp({
-    required this.isInnerPage,
-    required this.pageIndex,
-    required this.name,
-    required this.route,
-    required this.icon,
-  });
 }
