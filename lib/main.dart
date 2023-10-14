@@ -16,6 +16,7 @@ FutureOr<void> main() async {
           ),
         ),
       );
+
   runApp(
     EasyLocalization(
       supportedLocales: const [
@@ -28,7 +29,11 @@ FutureOr<void> main() async {
       fallbackLocale: const Locale('en', 'US'),
       path: 'assets/translations',
       child: ChangeNotifierProvider<MyTheme>(
-        create: (_) => MyTheme(),
+        create: (_) => MyTheme()
+          ..currentTheme()
+          ..getColor()
+          ..getStorageTheme()
+          ..switchTheme(),
         child: const App(),
       ),
     ),
