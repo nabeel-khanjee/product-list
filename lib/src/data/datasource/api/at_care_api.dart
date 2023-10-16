@@ -29,6 +29,8 @@ class SoftTechTestApi {
 
   static String kRouteGetProducts = 'products';
 
+  static String kRouteGetProductDetail(int id) => '$kRouteGetProducts/$id';
+
   static String kRouteDeleteMedicalRecord(int id) =>
       '$kRouteMedicalRecords/$id';
   static String kRouteDeleteMedicalRecordFile(int id) =>
@@ -259,8 +261,13 @@ class SoftTechTestApi {
     return;
   }
 
-  Future<DataListDto<ProductDto>> getProducts(
-      int limit) async {
+  Future<BaseResponseDto<ProductDto>> getProductDetails(int id) async {
+    final response = await dio.get(kRouteGetProductDetail(id));
+    return BaseResponseDto.fromJson({'data': response.data},
+        (value) => ProductDto.fromJson(value as Map<String, dynamic>));
+  }
+
+  Future<DataListDto<ProductDto>> getProducts(int limit) async {
     final response =
         await dio.get(kRouteGetProducts, queryParameters: {'limit': limit});
     return DataListDto.fromJson(

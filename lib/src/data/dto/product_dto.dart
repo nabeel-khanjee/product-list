@@ -16,6 +16,7 @@ class ProductDto {
   String? category;
   String? image;
   RatingDto? rating;
+  
 
   ProductDto(
       {this.id,

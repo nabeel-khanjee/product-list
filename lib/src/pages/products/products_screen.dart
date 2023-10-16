@@ -54,7 +54,11 @@ class ProductsScreen extends StatelessWidget {
                 },
                 error: (message) {
                   return ErrorState(
-                    limit: limit,
+                    onTap: () {
+                      context
+                          .read<ProductsListCubit>()
+                          .getAllProducts(limit: limit);
+                    },
                     msg: message,
                   );
                 },
@@ -69,12 +73,12 @@ class ProductsScreen extends StatelessWidget {
 class ErrorState extends StatelessWidget {
   const ErrorState({
     super.key,
-    required this.limit,
     required this.msg,
+    required this.onTap,
   });
 
-  final int limit;
   final String msg;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -94,11 +98,7 @@ class ErrorState extends StatelessWidget {
         SizedBox(
           width: MediaQuery.of(context).size.width / 3,
           height: 50,
-          child: ElevatedButton(
-              onPressed: () {
-                context.read<ProductsListCubit>().getAllProducts(limit: limit);
-              },
-              child: const Text('Retry')),
+          child: ElevatedButton(onPressed: onTap, child: const Text('Retry')),
         )
       ],
     ));
@@ -191,7 +191,9 @@ class ProductComponent extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         NavigationUtil.push(context, RouteConstants.productDetaiRoute,
-            args: ProductDetailArgs(id: id));
+            args: ProductDetailArgs(id: id,
+            title: title
+            ));
       },
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 10),

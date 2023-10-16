@@ -373,6 +373,11 @@ class ObjectMapper {
     return error;
   }
 
+  BaseResponseDto<ProductDto> toGetProductDetail(
+      BaseResponseDto<ProductDto> dto) {
+    return BaseResponseDto(data: dto.data);
+  }
+
   DataListDto<ProductDto> toGetProducts(DataListDto<ProductDto> dto) {
     return DataListDto(
         currentPage: 0, pageSize: 0, totalPages: 0, data: dto.data);

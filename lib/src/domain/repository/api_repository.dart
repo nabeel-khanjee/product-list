@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:softtech_test/src/data/dto/base_response_dto.dart';
 import 'package:softtech_test/src/data/dto/data_list_dto.dart';
 import 'package:softtech_test/src/data/dto/product_dto.dart';
 import 'package:softtech_test/src/domain/domain.dart';
@@ -75,4 +76,6 @@ abstract class ApiRepository extends Repository {
       bool isInstantConsultationScreen);
 
   Future<Result<DataListDto<ProductDto>>> getProducts(int limit);
+
+  Future<Result<BaseResponseDto<ProductDto>>> getProductDetails(int id);
 }
