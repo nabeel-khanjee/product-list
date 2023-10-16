@@ -40,7 +40,7 @@ class ProductDetailScreen extends StatelessWidget {
                             product.image!,
                             height: 150,
                           ),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           Expanded(
                               child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -52,7 +52,7 @@ class ProductDetailScreen extends StatelessWidget {
                           ))
                         ],
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Row(
                         children: [
                           Expanded(
