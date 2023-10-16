@@ -33,13 +33,13 @@ android {
     productFlavors {
         prod {
             dimension "flavor-type"
-            applicationId "com.atCare.patient.android"
-            resValue "string", "app_name", "AT Care"
+        applicationId "com.softtech.sefttech_test.android"
+            resValue "string", "app_name", "Soft Tech Test"
         }
         staging {
             dimension "flavor-type"
-            applicationId "com.atCare.patient.android"
-            resValue "string", "app_name", "AT Care Staging"
+            applicationId "com.softTechTest.patient.android"
+            resValue "string", "app_name", "Soft Tech Test Staging"
         }
     }
 

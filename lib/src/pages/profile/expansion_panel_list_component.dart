@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class ExpansionPanelListComponent extends StatefulWidget {
   const ExpansionPanelListComponent({
@@ -30,8 +30,7 @@ class _ExpansionPanelListComponentState
         dividerColor: ColorConstants.black,
         children: [
           ExpansionPanel(
-              backgroundColor:  lighten(getThemeColor(context), 0.1)
-                  ,
+              backgroundColor: lighten(getThemeColor(context), 0.1),
               isExpanded: isExpanded ?? false,
               headerBuilder: (context, isExpanded) => AppTileComponent(
                     isExpandable: true,

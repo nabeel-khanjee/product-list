@@ -1,6 +1,6 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/family_members/family_members_screen.dart';
-import 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/health_profile/health_profile_screen.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/family_health_profile/family_health_inner_pages/family_members/family_members_screen.dart';
+import 'package:softtech_test/src/pages/family_health_profile/family_health_inner_pages/health_profile/health_profile_screen.dart';
 
 class FamilyHealthProfileScreen extends StatefulWidget {
   const FamilyHealthProfileScreen({super.key});

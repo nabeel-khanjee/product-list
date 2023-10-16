@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class BFTQuestionnaireScreen extends StatelessWidget {
   const BFTQuestionnaireScreen({super.key});
@@ -64,5 +64,3 @@ class BFTQuestionnaireScreen extends StatelessWidget {
     );
   }
 }
-
-

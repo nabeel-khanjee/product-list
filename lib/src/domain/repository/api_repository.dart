@@ -1,9 +1,11 @@
 import 'dart:io';
-import 'package:provider_app/src/domain/domain.dart';
-import 'package:provider_app/src/domain/model/appointment.dart';
-import 'package:provider_app/src/domain/model/data_list.dart';
-import 'package:provider_app/src/domain/model/docotor.dart';
-import 'package:provider_app/src/domain/model/medical_records.dart';
+import 'package:softtech_test/src/data/dto/data_list_dto.dart';
+import 'package:softtech_test/src/data/dto/product_dto.dart';
+import 'package:softtech_test/src/domain/domain.dart';
+import 'package:softtech_test/src/domain/model/appointment.dart';
+import 'package:softtech_test/src/domain/model/data_list.dart';
+import 'package:softtech_test/src/domain/model/docotor.dart';
+import 'package:softtech_test/src/domain/model/medical_records.dart';
 
 abstract class ApiRepository extends Repository {
   ///
@@ -72,4 +74,5 @@ abstract class ApiRepository extends Repository {
       String? medicalRecordId,
       bool isInstantConsultationScreen);
 
+  Future<Result<DataListDto<ProductDto>>> getProducts(int limit);
 }

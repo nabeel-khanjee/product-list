@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class DoctorNameAndRatingComponentDoctorDetailScreen extends StatelessWidget {
   const DoctorNameAndRatingComponentDoctorDetailScreen({
@@ -11,11 +11,11 @@ class DoctorNameAndRatingComponentDoctorDetailScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-           DoctorDetailHeadingOne(
+          DoctorDetailHeadingOne(
               fontFamily: FontConstantc.gilroySemiBold,
               headingColor: !getThemeStateIsLight()
-                ? darken(getThemeColor(context), 0.35)
-                : ColorConstants.white,
+                  ? darken(getThemeColor(context), 0.35)
+                  : ColorConstants.white,
               heading: 'Dr. Rachel McAdams'),
           Padding(
               padding: const EdgeInsets.all(4.0),

@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/video_calling/bottom_sheet/attach_files_bottom_sheet.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/video_calling/bottom_sheet/attach_files_bottom_sheet.dart';
 
 class VideoCallingTopIcons extends StatelessWidget {
   const VideoCallingTopIcons({super.key});

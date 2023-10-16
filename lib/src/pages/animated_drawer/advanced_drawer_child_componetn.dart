@@ -1,10 +1,9 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class AdvancedDrawerChildComponent extends StatelessWidget {
   const AdvancedDrawerChildComponent({
     super.key,
   });
-
 
   @override
   Widget build(BuildContext context) {
@@ -81,11 +80,11 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                     GestureDetector(
                       onTap: () => drawerStateChnageUpdateIndex(
                         context: context,
-                          advancedDrawerController:
-                              BlocProvider.of<AnimatedDrawerCubit>(context)
-                                  .advancedDrawerController,
-                          isOpen: true,
-                          ),
+                        advancedDrawerController:
+                            BlocProvider.of<AnimatedDrawerCubit>(context)
+                                .advancedDrawerController,
+                        isOpen: true,
+                      ),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),

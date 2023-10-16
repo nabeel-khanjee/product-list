@@ -1,12 +1,14 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/cage_aid/components/check_box_tile_component.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/mental_health/mental_health_inner_pages/cage_aid/components/check_box_tile_component.dart';
 
 class CheckBoxListTileComponent extends StatelessWidget {
   const CheckBoxListTileComponent({
-    super.key, required this.checkBoxListData, required this.textStyle,
+    super.key,
+    required this.checkBoxListData,
+    required this.textStyle,
   });
-final  List<CheckBoxListData> checkBoxListData ;
-final TextStyle  textStyle;
+  final List<CheckBoxListData> checkBoxListData;
+  final TextStyle textStyle;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,8 +18,9 @@ final TextStyle  textStyle;
             .asMap()
             .entries
             .map(
-              (item) => CheckBoxTileComponent(item: item,
-              textStyle: textStyle,
+              (item) => CheckBoxTileComponent(
+                item: item,
+                textStyle: textStyle,
               ),
             )
             .toList());

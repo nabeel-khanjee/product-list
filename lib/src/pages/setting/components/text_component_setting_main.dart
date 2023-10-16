@@ -1,5 +1,4 @@
-
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class TextComponentSettingMainHeading extends StatelessWidget {
   const TextComponentSettingMainHeading({
@@ -10,8 +9,8 @@ class TextComponentSettingMainHeading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: FontStylesConstants.gilroy(
-      fontFamily: FontConstantc.gilroyRegular,
-      fontSize: 20));
+    return Text(text,
+        style: FontStylesConstants.gilroy(
+            fontFamily: FontConstantc.gilroyRegular, fontSize: 20));
   }
 }

@@ -236,7 +236,7 @@ class EnglishConstant {
     'selectCountry': 'Select Country',
     'selectState': 'Select State',
     'onboardingText':
-        'Experience healthcare reimagined with ATCare! Connect with top doctors, therapists, and specialists virtually.',
+        'Experience healthcare reimagined with Soft Tech Test! Connect with top doctors, therapists, and specialists virtually.',
     'getStarted': 'Get Started',
     'selectColor': "Select Colors",
     'generalSettings': 'General Settings',

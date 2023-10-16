@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class DemographicScreen extends StatefulWidget {
   const DemographicScreen({super.key});
@@ -21,40 +21,63 @@ class _DemographicScreenState extends State<DemographicScreen> {
   final TextEditingController selectCityController = TextEditingController();
   final TextEditingController zipCodeController = TextEditingController();
   final TextEditingController addressController = TextEditingController();
-  final TextEditingController cellPhoneNumberController = TextEditingController();
-  final TextEditingController residenceNumberController = TextEditingController();
+  final TextEditingController cellPhoneNumberController =
+      TextEditingController();
+  final TextEditingController residenceNumberController =
+      TextEditingController();
   final TextEditingController selectStateController = TextEditingController();
   List<String> country = ['Pakistan', 'USA', "UAE"];
   List<String> states = ['Sindh', 'Punjab', "Blochistan"];
   String? selectedCountry;
   String? selectedStates;
   String? selectedGender;
-  List<String> gender = [ StringConstants.male, StringConstants.female];
+  List<String> gender = [StringConstants.male, StringConstants.female];
   String? selectedDate;
-  final TextEditingController nameContactDetailController = TextEditingController();
-  final TextEditingController relationContactController = TextEditingController();
-  final TextEditingController contactNumberContactDetailController = TextEditingController();
-  final TextEditingController pharmacyNamePharmacyConroller = TextEditingController();
-  final TextEditingController addressPharmacyController = TextEditingController();
+  final TextEditingController nameContactDetailController =
+      TextEditingController();
+  final TextEditingController relationContactController =
+      TextEditingController();
+  final TextEditingController contactNumberContactDetailController =
+      TextEditingController();
+  final TextEditingController pharmacyNamePharmacyConroller =
+      TextEditingController();
+  final TextEditingController addressPharmacyController =
+      TextEditingController();
   final TextEditingController cityPharmacyController = TextEditingController();
-  final TextEditingController zipCodePharmacyController = TextEditingController();
-  final TextEditingController phoneNumberPharmacyController = TextEditingController();
-  final TextEditingController primaryInsuranceNameController = TextEditingController();
-  final TextEditingController primaryInsurancememberIdController = TextEditingController();
-  final TextEditingController primaryInsuranceinsuranceGroupController = TextEditingController();
-  final TextEditingController primaryInsuranceBinController = TextEditingController();
-  final TextEditingController secondaryInsuranceNameController = TextEditingController();
-  final TextEditingController secondaryInsurancememberIdController = TextEditingController();
-  final TextEditingController secondaryInsuranceinsuranceGroupController = TextEditingController();
-  final TextEditingController secondaryInsuranceBinController = TextEditingController();
-  final TextEditingController pharmacyPayerIdController = TextEditingController();
+  final TextEditingController zipCodePharmacyController =
+      TextEditingController();
+  final TextEditingController phoneNumberPharmacyController =
+      TextEditingController();
+  final TextEditingController primaryInsuranceNameController =
+      TextEditingController();
+  final TextEditingController primaryInsurancememberIdController =
+      TextEditingController();
+  final TextEditingController primaryInsuranceinsuranceGroupController =
+      TextEditingController();
+  final TextEditingController primaryInsuranceBinController =
+      TextEditingController();
+  final TextEditingController secondaryInsuranceNameController =
+      TextEditingController();
+  final TextEditingController secondaryInsurancememberIdController =
+      TextEditingController();
+  final TextEditingController secondaryInsuranceinsuranceGroupController =
+      TextEditingController();
+  final TextEditingController secondaryInsuranceBinController =
+      TextEditingController();
+  final TextEditingController pharmacyPayerIdController =
+      TextEditingController();
   final TextEditingController pharmacyrxBinController = TextEditingController();
-  final TextEditingController pharmacyrxGroupController = TextEditingController();
-  final TextEditingController nameInterpreterContactDetailController=TextEditingController();
-  final TextEditingController relationInterpreterContactController=TextEditingController();
-  final TextEditingController contactInterpreterNumberContactDetailController=TextEditingController();
-  
-  final TextEditingController pharmacyrxGroupPCNController = TextEditingController();
+  final TextEditingController pharmacyrxGroupController =
+      TextEditingController();
+  final TextEditingController nameInterpreterContactDetailController =
+      TextEditingController();
+  final TextEditingController relationInterpreterContactController =
+      TextEditingController();
+  final TextEditingController contactInterpreterNumberContactDetailController =
+      TextEditingController();
+
+  final TextEditingController pharmacyrxGroupPCNController =
+      TextEditingController();
   String? primaryInsuranceSelectedDateHealtPlan;
   String? primaryInsuranceSelectedDateEndDate;
   String? secondaryInsuranceSelectedDateHealtPlan;
@@ -84,7 +107,6 @@ class _DemographicScreenState extends State<DemographicScreen> {
                     pageController.jumpToPage(1);
                     setState(() => currentPage = 1);
                   },
-
                   isSelected: currentPage == 1,
                   title: StringConstants.contact,
                 ),
@@ -121,16 +143,18 @@ class _DemographicScreenState extends State<DemographicScreen> {
                           setState(() => selectedCountry = value),
                       getCountryValue: (value) =>
                           setState(() => selectedCountry = value),
-                      onDatePickerTap: () => showDatePicker(context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime(2000),
-                          lastDate: DateTime.now()).then((value) =>
-                          setState(() =>
-                          selectedDate = DateFormat('yyyy-MM-dd').format(value!)
-                              .substring(0, 10))),
+                      onDatePickerTap: () => showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now())
+                          .then((value) => setState(() => selectedDate =
+                              DateFormat('yyyy-MM-dd')
+                                  .format(value!)
+                                  .substring(0, 10))),
                       selectedCountry: selectedCountry,
-                      titleDemographicInnerScreen: StringConstants
-                          .patientDetails,
+                      titleDemographicInnerScreen:
+                          StringConstants.patientDetails,
                       formkey: _formkeyPatientDetail,
                       patientIdController: patientIdController,
                       firstNameController: firstNameController,
@@ -148,17 +172,23 @@ class _DemographicScreenState extends State<DemographicScreen> {
                       states: states,
                       selectedStates: selectedStates),
                   ContactDetailScreen(
-                    contactInterpreterNumberContactDetailController: contactInterpreterNumberContactDetailController,
-                    nameInterpreterContactDetailController: nameInterpreterContactDetailController,
-                    relationInterpreterContactController: relationInterpreterContactController,
+                      contactInterpreterNumberContactDetailController:
+                          contactInterpreterNumberContactDetailController,
+                      nameInterpreterContactDetailController:
+                          nameInterpreterContactDetailController,
+                      relationInterpreterContactController:
+                          relationInterpreterContactController,
                       nameContactDetailController: nameContactDetailController,
                       relationContactController: relationContactController,
-                      contactNumberContactDetailController: contactNumberContactDetailController,
-                      pharmacyNamePharmacyConroller: pharmacyNamePharmacyConroller,
+                      contactNumberContactDetailController:
+                          contactNumberContactDetailController,
+                      pharmacyNamePharmacyConroller:
+                          pharmacyNamePharmacyConroller,
                       addressPharmacyController: addressPharmacyController,
                       cityPharmacyController: cityPharmacyController,
                       zipCodePharmacyController: zipCodePharmacyController,
-                      phoneNumberPharmacyController: phoneNumberPharmacyController,
+                      phoneNumberPharmacyController:
+                          phoneNumberPharmacyController,
                       addressController: addressController,
                       cellPhoneNumberController: cellPhoneNumberController,
                       residenceNumberController: residenceNumberController,
@@ -179,20 +209,20 @@ class _DemographicScreenState extends State<DemographicScreen> {
                           setState(() => selectedCountry = value),
                       getCountryValue: (value) =>
                           setState(() => selectedCountry = value),
-                      onDatePickerTap: () => showDatePicker(context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime(2000),
-                          lastDate: DateTime.now()).then((value) =>
-                          setState(() =>
-                          selectedDate = DateFormat('yyyy-MM-dd').format(value!)
-                              .substring(0, 10))),
+                      onDatePickerTap: () => showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now())
+                          .then((value) => setState(() => selectedDate =
+                              DateFormat('yyyy-MM-dd')
+                                  .format(value!)
+                                  .substring(0, 10))),
                       selectedCountry: selectedCountry,
-                      titleDemographicInnerScreen: StringConstants
-                          .contactDetails,
-                      subHeadingOneDemographicInnerScreen: StringConstants
-                          .emergancyContactInfo,
-                      subHeadingTwoDemographicInnerScreen: StringConstants
-                          .yourPharmacyAddress,
+                      titleDemographicInnerScreen:
+                          StringConstants.contactDetails,
+                      subHeadingOneDemographicInnerScreen: StringConstants.emergancyContactInfo,
+                      subHeadingTwoDemographicInnerScreen: StringConstants.yourPharmacyAddress,
                       formkey: _formkeyContactDetail,
                       patientIdController: patientIdController,
                       firstNameController: firstNameController,
@@ -211,43 +241,23 @@ class _DemographicScreenState extends State<DemographicScreen> {
                       selectedStates: selectedStates),
                   DemographicInsuranceScreen(
                       onTapPrimaryInsuranceEndDate: () => showDatePicker(
-                          context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime(2000),
-                          lastDate: DateTime.now()).then((value) =>
-                          setState(() =>
-                          primaryInsuranceSelectedDateEndDate = DateFormat(
-                              'yyyy-MM-dd').format(value!).substring(0, 10))),
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now())
+                          .then((value) => setState(() =>
+                              primaryInsuranceSelectedDateEndDate =
+                                  DateFormat('yyyy-MM-dd')
+                                      .format(value!)
+                                      .substring(0, 10))),
                       onTapPrimaryInsuranceHealthPlan: () => showDatePicker(
-                          context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime(2000),
-                          lastDate: DateTime.now()).then((value) =>
-                          setState(() =>
-                          primaryInsuranceSelectedDateHealtPlan = DateFormat(
-                              'yyyy-MM-dd')
-                              .format(value!)
-                              .substring(0, 10))),
-                      onTapSecondaryInsuranceEndDate: () => showDatePicker(
-                          context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime(2000),
-                          lastDate: DateTime.now()).then((value) =>
-                          setState(() =>
-                          secondaryInsuranceSelectedDateEndDate = DateFormat(
-                              'yyyy-MM-dd')
-                              .format(value!)
-                              .substring(0, 10))),
-                      onTapSecondaryInsuranceHealthPlan: () => showDatePicker(
-                          context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime(2000),
-                          lastDate: DateTime.now()).then((value) =>
-                          setState(() =>
-                          secondaryInsuranceSelectedDateHealtPlan = DateFormat(
-                              'yyyy-MM-dd')
-                              .format(value!)
-                              .substring(0, 10))),
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2000),
+                              lastDate: DateTime.now())
+                          .then((value) => setState(() => primaryInsuranceSelectedDateHealtPlan = DateFormat('yyyy-MM-dd').format(value!).substring(0, 10))),
+                      onTapSecondaryInsuranceEndDate: () => showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(2000), lastDate: DateTime.now()).then((value) => setState(() => secondaryInsuranceSelectedDateEndDate = DateFormat('yyyy-MM-dd').format(value!).substring(0, 10))),
+                      onTapSecondaryInsuranceHealthPlan: () => showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(2000), lastDate: DateTime.now()).then((value) => setState(() => secondaryInsuranceSelectedDateHealtPlan = DateFormat('yyyy-MM-dd').format(value!).substring(0, 10))),
                       formkeyInsuranceDetail: _formkeyInsuranceDetail,
                       primaryInsuranceNameController: primaryInsuranceNameController,
                       primaryInsuranceSelectedDateHealtPlan: primaryInsuranceSelectedDateHealtPlan,
@@ -276,15 +286,12 @@ class _DemographicScreenState extends State<DemographicScreen> {
             padding: const EdgeInsets.all(8.0),
             child: InkWell(
                 onTap: () {
-                  if (_formkeyPatientDetail.currentState!.validate()) {} else {}
+                  if (_formkeyPatientDetail.currentState!.validate()) {
+                  } else {}
                 },
                 child: Text(
                   StringConstants.save,
-                  style: Theme
-                      .of(context)
-                      .textTheme
-                      .titleLarge!
-                      .copyWith(
+                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
                       color: getThemeColor(context),
                       fontFamily: FontConstantc.gilroyMedium),
                 )),

@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class PatientDetailScreenForm extends StatelessWidget {
   const PatientDetailScreenForm({
@@ -97,29 +97,33 @@ class PatientDetailScreenForm extends StatelessWidget {
           ),
           DropDownComponentProfile(
             bgColor: !getThemeStateIsLight()
-                              ? (lighten(getThemeColor(context), 0.35))
-                              : ColorConstants.white,
-                          onDropdownFieldTap: onDropdownFieldTapCountry,
+                ? (lighten(getThemeColor(context), 0.35))
+                : ColorConstants.white,
+            onDropdownFieldTap: onDropdownFieldTapCountry,
             hintText: 'Disability/Impairment',
-            items: const ['Hearing Impairment', 'Visual Impairment', 'Physical'],
+            items: const [
+              'Hearing Impairment',
+              'Visual Impairment',
+              'Physical'
+            ],
             selectedItem: (value) => getCountryValue(value),
             value: selectedCountry,
           ),
           DropDownComponentProfile(
             bgColor: !getThemeStateIsLight()
-                              ? (lighten(getThemeColor(context), 0.35))
-                              : ColorConstants.white,
-                          onDropdownFieldTap: onDropdownFieldTapCountry,
+                ? (lighten(getThemeColor(context), 0.35))
+                : ColorConstants.white,
+            onDropdownFieldTap: onDropdownFieldTapCountry,
             hintText: StringConstants.selectCountry,
             items: country,
             selectedItem: (value) => getCountryValue(value),
             value: selectedCountry,
           ),
           DropDownComponentProfile(
-             bgColor: !getThemeStateIsLight()
-                              ? (lighten(getThemeColor(context), 0.35))
-                              : ColorConstants.white,
-                         onDropdownFieldTap: onDropdownFieldTapState,
+            bgColor: !getThemeStateIsLight()
+                ? (lighten(getThemeColor(context), 0.35))
+                : ColorConstants.white,
+            onDropdownFieldTap: onDropdownFieldTapState,
             hintText: StringConstants.selectState,
             items: states,
             selectedItem: (value) => getStateValue(value),

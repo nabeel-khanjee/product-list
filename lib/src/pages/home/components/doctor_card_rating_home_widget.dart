@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class DoctorCardRatingHomeWidget extends StatelessWidget {
   const DoctorCardRatingHomeWidget({
@@ -15,8 +15,7 @@ class DoctorCardRatingHomeWidget extends StatelessWidget {
       children: [
         Container(
           margin: const EdgeInsets.all(10),
-          padding:
-              const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Colors.grey.shade200.withOpacity(0.7)),
@@ -33,12 +32,9 @@ class DoctorCardRatingHomeWidget extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 4.0),
                 child: Text(
                   element.value.rating,
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyMedium!
-                      .copyWith(
-                          color: ColorConstants.black,
-                          fontFamily: FontConstantc.gilroyMedium),
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: ColorConstants.black,
+                      fontFamily: FontConstantc.gilroyMedium),
                 ),
               ),
             ],

@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/view_prescription/components/view_prescription_body.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/view_prescription/components/view_prescription_body.dart';
 
 class ViewPrescriptionScreen extends StatelessWidget {
   const ViewPrescriptionScreen({super.key});
@@ -16,7 +16,6 @@ class ViewPrescriptionScreen extends StatelessWidget {
               CustomAppBar(title: "Prescriptions"),
               SizedBox(height: 20),
               ViewPrescriptionBody(),
-
 
               // SizedBox(height: 20),
               // PrescriptionBody(),

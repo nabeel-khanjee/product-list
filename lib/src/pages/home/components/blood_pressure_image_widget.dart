@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class BloodPressureImageWidget extends StatelessWidget {
   const BloodPressureImageWidget({
@@ -16,15 +16,13 @@ class BloodPressureImageWidget extends StatelessWidget {
               opacity: 1,
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
-                child: Image.asset(
-                    AssetsConstants.bloodPressureCardInnerImage,
+                child: Image.asset(AssetsConstants.bloodPressureCardInnerImage,
                     color: Colors.black),
               )),
           ClipRect(
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 1.0, sigmaY: 2.0),
-              child: Image.asset(
-                  AssetsConstants.bloodPressureCardInnerImage),
+              child: Image.asset(AssetsConstants.bloodPressureCardInnerImage),
             ),
           ),
           Container(

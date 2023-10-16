@@ -1,7 +1,7 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/review/components/review_content.dart';
-import 'package:provider_app/src/pages/review/components/review_profile.dart';
-import 'package:provider_app/src/pages/review/components/review_submit.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/review/components/review_content.dart';
+import 'package:softtech_test/src/pages/review/components/review_profile.dart';
+import 'package:softtech_test/src/pages/review/components/review_submit.dart';
 
 class ReviewScreen extends StatelessWidget {
   const ReviewScreen({super.key});

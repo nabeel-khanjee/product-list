@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/gad_7/data_list/gad_7_data_list.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/mental_health/mental_health_inner_pages/gad_7/data_list/gad_7_data_list.dart';
 
 int getScoresGAD7({
   required MapEntry<int, Question> quesion,

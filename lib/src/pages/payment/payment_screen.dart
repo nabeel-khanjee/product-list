@@ -1,7 +1,7 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/payment/data_list/my_payment_list.dart';
-import 'package:provider_app/src/pages/payment/inner_page/my_payment/my_payment_screen.dart';
-import 'package:provider_app/src/pages/payment/inner_page/payment_detail_screen.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/payment/data_list/my_payment_list.dart';
+import 'package:softtech_test/src/pages/payment/inner_page/my_payment/my_payment_screen.dart';
+import 'package:softtech_test/src/pages/payment/inner_page/payment_detail_screen.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({super.key, required this.args});

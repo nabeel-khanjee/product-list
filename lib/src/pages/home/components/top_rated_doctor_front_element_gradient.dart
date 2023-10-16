@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class TopRatedDoctorFrontElementGradient extends StatelessWidget {
   const TopRatedDoctorFrontElementGradient({
@@ -33,5 +33,3 @@ class TopRatedDoctorFrontElementGradient extends StatelessWidget {
     );
   }
 }
-
-

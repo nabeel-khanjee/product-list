@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/disclaimer/components/disclaimer_body.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/disclaimer/components/disclaimer_body.dart';
 
 class DisClaimerScreen extends StatelessWidget {
   const DisClaimerScreen({super.key});

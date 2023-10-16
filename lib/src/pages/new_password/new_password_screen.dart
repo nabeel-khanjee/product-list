@@ -1,6 +1,6 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/new_password/components/new_password_body.dart';
-import 'package:provider_app/src/pages/new_password/components/new_password_header.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/new_password/components/new_password_body.dart';
+import 'package:softtech_test/src/pages/new_password/components/new_password_header.dart';
 
 class NewPasswordScreen extends StatelessWidget {
   const NewPasswordScreen({Key? key}) : super(key: key);

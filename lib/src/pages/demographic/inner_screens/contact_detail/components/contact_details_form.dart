@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class ContactDetailScreenForm extends StatelessWidget {
   const ContactDetailScreenForm({
@@ -122,10 +122,9 @@ class ContactDetailScreenForm extends StatelessWidget {
               ),
               DropDownComponentProfile(
                 onDropdownFieldTap: onDropdownFieldTapCountry,
-              bgColor: !getThemeStateIsLight()
-                              ? (lighten(getThemeColor(context), 0.35))
-                              : ColorConstants.white,
-                    
+                bgColor: !getThemeStateIsLight()
+                    ? (lighten(getThemeColor(context), 0.35))
+                    : ColorConstants.white,
                 hintText: StringConstants.selectCountry,
                 items: country,
                 selectedItem: (value) => getCountryValue(value),

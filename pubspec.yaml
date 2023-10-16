@@ -1,4 +1,4 @@
-name: provider_app
+name: softtech_test
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -98,22 +98,22 @@ flavorizr:
   flavors:
     prod:
       app:
-        name: "AT Care"
+        name: "Soft Tech Test"
       android:
-        applicationId: "com.atCare.patient.android"
+        applicationId: "com.softTechTest.patient.android"
       ios:
-        bundleId: "com.atCare.patient.ios"
+        bundleId: "com.softTechTest.patient.ios"
       macos:
-        bundleId: "com.atCare.patient.mac"
+        bundleId: "com.softTechTest.patient.mac"
     staging:
       app:
-        name: "AT Care Staging"
+        name: "Soft Tech Test Staging"
       android:
-        applicationId: "com.atCare.patient.android"
+        applicationId: "com.softTechTest.patient.android"
       ios:
-        bundleId: "com.atCare.patient.ios"
+        bundleId: "com.softTechTest.patient.ios"
       macos:
-        bundleId: "com.atCare.patient.mac"
+        bundleId: "com.softTechTest.patient.mac"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

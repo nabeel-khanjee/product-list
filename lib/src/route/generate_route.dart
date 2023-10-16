@@ -1,4 +1,6 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/product_detail/product_detail_page.dart';
+import 'package:softtech_test/src/pages/products/products_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   MaterialPageRoute materialRoute(Widget widget) =>
@@ -154,8 +156,11 @@ Route onGenerateRoute(RouteSettings settings) {
 
     case RouteConstants.faqRoute:
       return materialRoute(const FaqScreen());
+    case RouteConstants.productDetaiRoute:
+      final args = settings.arguments as ProductDetailArgs;
+      return materialRoute( ProductDetailScreen(args: args));
 
     default:
-      return materialRoute(const SplashScreen());
+      return materialRoute(const ProductsScreen());
   }
 }

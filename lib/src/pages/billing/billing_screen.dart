@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class BillingScreen extends StatefulWidget {
   const BillingScreen({super.key, required this.args});

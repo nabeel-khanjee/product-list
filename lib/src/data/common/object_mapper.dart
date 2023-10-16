@@ -1,39 +1,40 @@
 import 'package:dio/dio.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:logger/logger.dart';
-import 'package:provider_app/src/data/dto/appointment_dto.dart';
-import 'package:provider_app/src/data/dto/appointments_history_dto.dart';
-import 'package:provider_app/src/data/dto/base_response_dto.dart';
-import 'package:provider_app/src/data/dto/dashboard_overview_dto.dart';
-import 'package:provider_app/src/data/dto/data_list_dto.dart';
-import 'package:provider_app/src/data/dto/doctor_dto.dart';
-import 'package:provider_app/src/data/dto/error_dto.dart';
-import 'package:provider_app/src/data/dto/last_health_scan_dto.dart';
-import 'package:provider_app/src/data/dto/medical_record_dto.dart';
-import 'package:provider_app/src/data/dto/medical_record_file_dto.dart';
-import 'package:provider_app/src/data/dto/medical_records_history_dto.dart';
-import 'package:provider_app/src/data/dto/package_dto.dart';
-import 'package:provider_app/src/data/dto/prescribed_dto.dart';
-import 'package:provider_app/src/data/dto/prescribed_element_dto.dart';
-import 'package:provider_app/src/data/dto/prescription_dto.dart';
-import 'package:provider_app/src/data/dto/sehat_scan_history_dto.dart';
-import 'package:provider_app/src/data/dto/share_record_with_doctor_dto.dart';
-import 'package:provider_app/src/data/dto/subscription_dto.dart';
-import 'package:provider_app/src/domain/domain.dart';
-import 'package:provider_app/src/domain/extension/let_extension.dart';
-import 'package:provider_app/src/domain/extension/list_extension.dart';
-import 'package:provider_app/src/domain/model/appointment.dart';
-import 'package:provider_app/src/domain/model/data_list.dart';
-import 'package:provider_app/src/domain/model/docotor.dart';
-import 'package:provider_app/src/domain/model/medical_record_file.dart';
-import 'package:provider_app/src/domain/model/medical_records.dart';
-import 'package:provider_app/src/domain/model/package.dart';
-import 'package:provider_app/src/domain/model/precribed_element.dart';
-import 'package:provider_app/src/domain/model/prescribed.dart';
-import 'package:provider_app/src/domain/model/prescription.dart';
-import 'package:provider_app/src/domain/model/shared_with_doctors.dart';
-import 'package:provider_app/src/domain/model/subscription.dart';
-import 'package:provider_app/src/domain/status/readings_status.dart';
+import 'package:softtech_test/src/data/dto/appointment_dto.dart';
+import 'package:softtech_test/src/data/dto/appointments_history_dto.dart';
+import 'package:softtech_test/src/data/dto/base_response_dto.dart';
+import 'package:softtech_test/src/data/dto/dashboard_overview_dto.dart';
+import 'package:softtech_test/src/data/dto/data_list_dto.dart';
+import 'package:softtech_test/src/data/dto/doctor_dto.dart';
+import 'package:softtech_test/src/data/dto/error_dto.dart';
+import 'package:softtech_test/src/data/dto/last_health_scan_dto.dart';
+import 'package:softtech_test/src/data/dto/medical_record_dto.dart';
+import 'package:softtech_test/src/data/dto/medical_record_file_dto.dart';
+import 'package:softtech_test/src/data/dto/medical_records_history_dto.dart';
+import 'package:softtech_test/src/data/dto/package_dto.dart';
+import 'package:softtech_test/src/data/dto/prescribed_dto.dart';
+import 'package:softtech_test/src/data/dto/prescribed_element_dto.dart';
+import 'package:softtech_test/src/data/dto/prescription_dto.dart';
+import 'package:softtech_test/src/data/dto/product_dto.dart';
+import 'package:softtech_test/src/data/dto/sehat_scan_history_dto.dart';
+import 'package:softtech_test/src/data/dto/share_record_with_doctor_dto.dart';
+import 'package:softtech_test/src/data/dto/subscription_dto.dart';
+import 'package:softtech_test/src/domain/domain.dart';
+import 'package:softtech_test/src/domain/extension/let_extension.dart';
+import 'package:softtech_test/src/domain/extension/list_extension.dart';
+import 'package:softtech_test/src/domain/model/appointment.dart';
+import 'package:softtech_test/src/domain/model/data_list.dart';
+import 'package:softtech_test/src/domain/model/docotor.dart';
+import 'package:softtech_test/src/domain/model/medical_record_file.dart';
+import 'package:softtech_test/src/domain/model/medical_records.dart';
+import 'package:softtech_test/src/domain/model/package.dart';
+import 'package:softtech_test/src/domain/model/precribed_element.dart';
+import 'package:softtech_test/src/domain/model/prescribed.dart';
+import 'package:softtech_test/src/domain/model/prescription.dart';
+import 'package:softtech_test/src/domain/model/shared_with_doctors.dart';
+import 'package:softtech_test/src/domain/model/subscription.dart';
+import 'package:softtech_test/src/domain/status/readings_status.dart';
 
 class ObjectMapper {
   final Logger logger;
@@ -161,7 +162,7 @@ class ObjectMapper {
     final prescription = dto.prescription;
     final doctor = dto.doctor.throwOnNull('Doctor must not be null');
     return Appointment(
-      prescriptionHere:dto.prescriptionHere??"",
+      prescriptionHere: dto.prescriptionHere ?? "",
       date: dto.date ?? '',
       id: id,
       userId: userId,
@@ -169,7 +170,7 @@ class ObjectMapper {
       consultationFee: dto.consultationFee ?? 0,
       reason: dto.reason ?? '',
       type: dto.type ?? '',
-      appointmentType:dto.appointmentType??'',
+      appointmentType: dto.appointmentType ?? '',
       prefix: dto.prefix ?? '',
       time: dto.time ?? '',
       remainingTime: dto.remainingTime ?? 0,
@@ -271,7 +272,7 @@ class ObjectMapper {
         dto.medicalRecordFiles?.map((e) => toMedicalRecordFile(e)).toList() ??
             [];
     return MedicalRecords(
-      createdAt: dto.createdAt??"",
+        createdAt: dto.createdAt ?? "",
         id: dto.id ?? 0,
         userId: dto.userId ?? 0,
         prescriptionId: dto.prescriptionId ?? 0,
@@ -291,7 +292,6 @@ class ObjectMapper {
     final doctor =
         dto.doctor.throwOnNull('Shared record doctor must not be null');
     return SharedWithDoctors(
-
       id: dto.id ?? 0,
       doctorId: dto.doctorId ?? 0,
       medicalRecordId: dto.medicalRecordId ?? 0,
@@ -371,5 +371,10 @@ class ObjectMapper {
       'An error has occurred. code=${error.code}, message=${error.message}',
     );
     return error;
+  }
+
+  DataListDto<ProductDto> toGetProducts(DataListDto<ProductDto> dto) {
+    return DataListDto(
+        currentPage: 0, pageSize: 0, totalPages: 0, data: dto.data);
   }
 }

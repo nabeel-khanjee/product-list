@@ -1,9 +1,10 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class CheckBoxTileComponent extends StatefulWidget {
   const CheckBoxTileComponent({
     super.key,
-    required this.item, required this.textStyle,
+    required this.item,
+    required this.textStyle,
   });
   final MapEntry<int, CheckBoxListData> item;
   final TextStyle textStyle;
@@ -41,8 +42,10 @@ class _CheckBoxTileComponentState extends State<CheckBoxTileComponent> {
               ),
             ),
             const SizedBox(width: 10),
-            Expanded(child: Text(widget.item.value.name,
-            style: widget.textStyle,
+            Expanded(
+                child: Text(
+              widget.item.value.name,
+              style: widget.textStyle,
             ))
           ],
         ),

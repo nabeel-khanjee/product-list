@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/search_doctor/components/search_doctor_dialog.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/search_doctor/components/search_doctor_dialog.dart';
 
 class SearchDoctorShowDoctors extends StatelessWidget {
   const SearchDoctorShowDoctors({super.key});

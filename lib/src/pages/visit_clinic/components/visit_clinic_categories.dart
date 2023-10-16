@@ -1,19 +1,18 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class VisitClinicCategories extends StatelessWidget {
   const VisitClinicCategories({super.key});
 
   @override
   Widget build(BuildContext context) {
-
-  final List<String> doctorCategories = [
-    "All",
-    "General",
-    "Dentist",
-    "Neurosurgeon",
-    "Heart Specialist",
-    "Eye Specialist",
-  ];
+    final List<String> doctorCategories = [
+      "All",
+      "General",
+      "Dentist",
+      "Neurosurgeon",
+      "Heart Specialist",
+      "Eye Specialist",
+    ];
     return SizedBox(
       height: 40,
       child: ListView.builder(

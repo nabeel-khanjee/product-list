@@ -29,7 +29,7 @@ class ArabicConstant {
     'selectCountry': 'حدد الدولة',
     'selectState': 'اختر ولايه',
     'onboardingText':
-        'تجربة الرعاية الصحية أعيد تصورها مع ATCare! تواصل مع أفضل الأطباء والمعالجين والمتخصصين تقريبًا.',
+        'تجربة الرعاية الصحية أعيد تصورها مع Soft Tech Test! تواصل مع أفضل الأطباء والمعالجين والمتخصصين تقريبًا.',
     'getStarted': 'البدء',
     'selectColor': 'إختر لون',
     'generalSettings': 'الاعدادات العامة',

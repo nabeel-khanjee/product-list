@@ -1,4 +1,4 @@
-import 'package:provider_app/src/pages/billing_payment/args/billing_args.dart';
+import 'package:softtech_test/src/pages/billing_payment/args/billing_args.dart';
 
 class BillingList {
   final String text;

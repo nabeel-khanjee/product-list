@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 FutureOr<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +16,7 @@ FutureOr<void> main() async {
           ),
         ),
       );
+
   runApp(
     EasyLocalization(
       supportedLocales: const [
@@ -28,7 +29,11 @@ FutureOr<void> main() async {
       fallbackLocale: const Locale('en', 'US'),
       path: 'assets/translations',
       child: ChangeNotifierProvider<MyTheme>(
-        create: (_) => MyTheme(),
+        create: (_) => MyTheme()
+          ..currentTheme()
+          ..getColor()
+          ..getStorageTheme()
+          ..switchTheme(),
         child: const App(),
       ),
     ),

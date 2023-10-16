@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -16,6 +16,7 @@ class App extends StatelessWidget {
               BlocProvider(create: (context) => IsGradientBackgroundCubit()),
             ],
             child: MaterialApp(
+              
               navigatorKey: navigationService?.navigatorKey,
               localizationsDelegates: context.localizationDelegates,
               supportedLocales: context.supportedLocales,

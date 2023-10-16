@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/search_doctor/components/search_filter_bottom_sheet.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/search_doctor/components/search_filter_bottom_sheet.dart';
 
 class SearchDoctorSearchBar extends StatelessWidget {
   const SearchDoctorSearchBar({Key? key}) : super(key: key);

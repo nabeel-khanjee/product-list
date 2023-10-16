@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class HealthConditionsWidget extends StatelessWidget {
   const HealthConditionsWidget({
@@ -19,9 +19,3 @@ class HealthConditionsWidget extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-

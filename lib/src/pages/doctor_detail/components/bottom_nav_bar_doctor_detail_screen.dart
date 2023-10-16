@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class BottomNavBarDoctorDetailScreen extends StatelessWidget {
   const BottomNavBarDoctorDetailScreen({
@@ -13,15 +13,14 @@ class BottomNavBarDoctorDetailScreen extends StatelessWidget {
         height: 90,
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           DoctorDetailScreenBottonNavBarButton(
-            onTap: () {
-              
-            },
+              onTap: () {},
               text: 'Contact Dr.',
               bgColor: ColorConstants.white,
               textColor: darken(getThemeColor(context), 0.4)),
           const SizedBox(width: 10),
           DoctorDetailScreenBottonNavBarButton(
-            onTap: () => NavigationUtil.push(context, RouteConstants.bookAppontmentRoute),
+              onTap: () => NavigationUtil.push(
+                  context, RouteConstants.bookAppontmentRoute),
               text: StringConstants.bookNow,
               bgColor: getThemeColor(context),
               textColor: ColorConstants.white)
@@ -34,17 +33,18 @@ class DoctorDetailScreenBottonNavBarButton extends StatelessWidget {
     super.key,
     required this.bgColor,
     required this.textColor,
-    required this.text, required this.onTap,
+    required this.text,
+    required this.onTap,
   });
   final Color bgColor;
   final Color textColor;
   final String text;
-final VoidCallback onTap;
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: InkWell(
-        onTap:onTap ,
+        onTap: onTap,
         child: Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20), color: bgColor),

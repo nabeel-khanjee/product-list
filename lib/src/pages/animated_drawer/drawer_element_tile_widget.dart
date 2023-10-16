@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/animated_drawer/route_list_app_args.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/animated_drawer/route_list_app_args.dart';
 
 class DrawerElementTileWidget extends StatelessWidget {
   const DrawerElementTileWidget({
@@ -16,12 +16,11 @@ class DrawerElementTileWidget extends StatelessWidget {
         onTap: () {
           if (element.value.isInnerPage) {
             drawerStateChnageUpdateIndex(
-              context: context,
+                context: context,
                 advancedDrawerController:
                     BlocProvider.of<AnimatedDrawerCubit>(context)
                         .advancedDrawerController,
                 isOpen: true,
-
                 index: element.value.pageIndex);
           } else {
             NavigationUtil.push(

@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class OtherFamilyMembersListComponent extends StatelessWidget {
   const OtherFamilyMembersListComponent({
@@ -17,26 +17,21 @@ class OtherFamilyMembersListComponent extends StatelessWidget {
                       child: Row(
                     children: [
                       Padding(
-                        padding:
-                            const EdgeInsets.symmetric(vertical: 8.0),
+                        padding: const EdgeInsets.symmetric(vertical: 8.0),
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width / 3,
                           child: TextFormField(
-                            
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(
                                     borderSide: BorderSide(
                                         color: getThemeColor(context)),
-                                    borderRadius:
-                                        BorderRadius.circular(10))),
+                                    borderRadius: BorderRadius.circular(10))),
                           ),
                         ),
                       ),
                     ],
                   )),
-                  Expanded(
-                      child:
-                          RadioList(questions: questions, isRow: true)),
+                  Expanded(child: RadioList(questions: questions, isRow: true)),
                 ],
               ))
           .toList(),

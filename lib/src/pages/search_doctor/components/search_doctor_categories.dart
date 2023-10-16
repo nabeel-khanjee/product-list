@@ -1,22 +1,21 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class SearchDoctorCategories extends StatelessWidget {
   const SearchDoctorCategories({super.key, this.fillColor});
 
-  final  Color? fillColor;
- 
+  final Color? fillColor;
+
   @override
   Widget build(BuildContext context) {
-
-  List<String> doctorCategories = [
-    "All",
-    "General",
-    "Dentist",
-    "Neurosurgeon",
-    "Heart Specialist",
-    "Eye Specialist",
-  ];
-   return SizedBox(
+    List<String> doctorCategories = [
+      "All",
+      "General",
+      "Dentist",
+      "Neurosurgeon",
+      "Heart Specialist",
+      "Eye Specialist",
+    ];
+    return SizedBox(
       height: 40,
       child: ListView.builder(
         itemCount: doctorCategories.length,
