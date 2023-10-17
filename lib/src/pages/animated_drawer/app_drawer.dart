@@ -67,16 +67,20 @@ class AppDrawer extends StatelessWidget {
         icon: AssetsConstants.settingIcon,
       ),
     ];
-    return Drawer(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: drawerElements
-            .asMap()
-            .entries
-            .map((element) => DrawerElementTileWidget(element: element))
-            .toList(),
+    return Container(
+      height: 600,
+      child: Drawer(
+        elevation: 0,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: drawerElements
+              .asMap()
+              .entries
+              .map((element) => DrawerElementTileWidget(element: element))
+              .toList(),
+        ),
       ),
     );
   }

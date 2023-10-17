@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
           .then((value) async => value != null
               ? await NavigationUtil.popAllAndPush(
                   context,
-                  RouteConstants.allProductsRoute,
+                  RouteConstants.homeRoute,
                 )
               : await NavigationUtil.popAllAndPush(
                   context,

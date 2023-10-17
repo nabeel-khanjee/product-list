@@ -24,8 +24,8 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        NavigationUtil.push(
-                            context, RouteConstants.signInRoute);
+                        // NavigationUtil.push(
+                        //     context, RouteConstants.signInRoute);
                       },
                       child: Row(
                         children: [
@@ -41,8 +41,8 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                               child: InkWell(
                                 onTap: () {
-                                  NavigationUtil.push(
-                                      context, RouteConstants.signInRoute);
+                                  // NavigationUtil.push(
+                                  //     context, RouteConstants.signInRoute);
                                 },
                                 child: Image.network(
                                     fit: BoxFit.fill,
@@ -111,23 +111,32 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
               ),
             ],
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      AssetsConstants.logoutImage,
-                      height: 24,
-                    )
-                  ],
+          InkWell(
+            onTap: () {
+              getIt
+                  .get<SharedPreferencesUtil>()
+                  .removeValue(SharedPreferenceConstants.apiAuthToken)
+                  .then((value) => Navigator.popAndPushNamed(
+                      context, RouteConstants.splashRoute));
+            },
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        AssetsConstants.logoutImage,
+                        height: 24,
+                      )
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

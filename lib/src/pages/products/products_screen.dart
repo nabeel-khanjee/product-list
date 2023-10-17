@@ -16,7 +16,7 @@ class ProductsScreen extends StatelessWidget {
         appBar: const AppBarcomponent(
             isGradient: false,
             title: "Products",
-            isBackAppBar: true,
+            isBackAppBar: false,
             isTitleTowLines: false),
         body: BlocProvider(
           create: (context) =>
@@ -191,9 +191,7 @@ class ProductComponent extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         NavigationUtil.push(context, RouteConstants.productDetaiRoute,
-            args: ProductDetailArgs(id: id,
-            title: title
-            ));
+            args: ProductDetailArgs(id: id, title: title));
       },
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 10),

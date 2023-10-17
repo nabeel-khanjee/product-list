@@ -20,7 +20,7 @@ class SignInForm extends StatelessWidget {
             controller: userNameController, label: 'User Name'),
         const SizedBox(height: 20),
         TextFormFieldComponent(
-            controller: passwordController, label: 'User Name'),
+            controller: passwordController, label: 'Password'),
         const SizedBox(height: 10),
         GestureDetector(
           onTap: () {
@@ -43,8 +43,8 @@ class SignInForm extends StatelessWidget {
                   loaded: (token) {
                     getIt.get<SharedPreferencesUtil>().setString(
                         SharedPreferenceConstants.apiAuthToken, token.token);
-                    return NavigationUtil.push(
-                        context, RouteConstants.allProductsRoute);
+                    return NavigationUtil.pushReplace(context,
+                        RouteConstants.homeRoute, RouteConstants.signInRoute);
                   },
                 ),
             builder: (context, state) => state.maybeWhen(
@@ -87,8 +87,8 @@ class SignInForm extends StatelessWidget {
                                 userName: userNameController.text,
                                 password: passwordController.text);
                           },
-                          child: Text("Retry Login")),
-                      SizedBox(height: 10),
+                          child: const Text("Retry Login")),
+                      const SizedBox(height: 10),
                       Text(
                         message,
                         style: Theme.of(context)
