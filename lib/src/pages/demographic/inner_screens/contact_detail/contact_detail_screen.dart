@@ -5,7 +5,7 @@ class ContactDetailScreen extends StatelessWidget {
   const ContactDetailScreen({
     super.key,
     required this.formkey,
-    required this.patientIdController,
+    required this.controller,
     required this.firstNameController,
     required this.middleNameController,
     required this.lastNameController,
@@ -61,7 +61,7 @@ class ContactDetailScreen extends StatelessWidget {
   final TextEditingController zipCodePharmacyController;
   final TextEditingController zipCodeController;
   final TextEditingController selectCityController;
-  final TextEditingController patientIdController;
+  final TextEditingController controller;
   final TextEditingController firstNameController;
   final TextEditingController middleNameController;
   final TextEditingController lastNameController;

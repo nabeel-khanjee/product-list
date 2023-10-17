@@ -2,6 +2,7 @@ import 'package:softtech_test/src/app/app_export.dart';
 import 'package:softtech_test/src/pages/mental_health/mental_health_inner_pages/gad_7/cubit/gad_7_cubit.dart';
 import 'package:softtech_test/src/pages/product_detail/cubit/product_detail_cubit.dart';
 import 'package:softtech_test/src/pages/products/cubit/products_list_cubit.dart';
+import 'package:softtech_test/src/pages/sign_in/cubit/sign_in_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -33,6 +34,7 @@ void _injectBlocsAndCubits() {
   getIt.registerFactory(() => PHQ9Cubit());
   getIt.registerFactory(() => ProductsListCubit(getIt.get()));
   getIt.registerFactory(() => ProductDetailCubit(getIt.get()));
+  getIt.registerFactory(() => SignInCubit(getIt.get()));
   getIt.registerFactory(() => GAD7Cubit());
 }
 

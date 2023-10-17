@@ -100,20 +100,20 @@ flavorizr:
       app:
         name: "Soft Tech Test"
       android:
-        applicationId: "com.softTechTest.patient.android"
+        applicationId: "com.softTech.softTechTest.android"
       ios:
-        bundleId: "com.softTechTest.patient.ios"
+        bundleId: "com.softTech.softTechTest.ios"
       macos:
-        bundleId: "com.softTechTest.patient.mac"
+        bundleId: "com.softTech.softTechTest.mac"
     staging:
       app:
         name: "Soft Tech Test Staging"
       android:
-        applicationId: "com.softTechTest.patient.android"
+        applicationId: "com.softTech.softTechTest.android"
       ios:
-        bundleId: "com.softTechTest.patient.ios"
+        bundleId: "com.softTech.softTechTest.ios"
       macos:
-        bundleId: "com.softTechTest.patient.mac"
+        bundleId: "com.softTech.softTechTest.mac"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

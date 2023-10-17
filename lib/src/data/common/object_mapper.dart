@@ -20,6 +20,7 @@ import 'package:softtech_test/src/data/dto/product_dto.dart';
 import 'package:softtech_test/src/data/dto/sehat_scan_history_dto.dart';
 import 'package:softtech_test/src/data/dto/share_record_with_doctor_dto.dart';
 import 'package:softtech_test/src/data/dto/subscription_dto.dart';
+import 'package:softtech_test/src/data/dto/token_dto.dart';
 import 'package:softtech_test/src/domain/domain.dart';
 import 'package:softtech_test/src/domain/extension/let_extension.dart';
 import 'package:softtech_test/src/domain/extension/list_extension.dart';
@@ -381,5 +382,9 @@ class ObjectMapper {
   DataListDto<ProductDto> toGetProducts(DataListDto<ProductDto> dto) {
     return DataListDto(
         currentPage: 0, pageSize: 0, totalPages: 0, data: dto.data);
+  }
+
+  BaseResponseDto<TokenDto> toSignIn(BaseResponseDto<TokenDto> dto) {
+    return BaseResponseDto<TokenDto>(data: dto.data);
   }
 }

@@ -4,7 +4,7 @@ class PatientDetailScreen extends StatelessWidget {
   const PatientDetailScreen({
     super.key,
     required this.formkey,
-    required this.patientIdController,
+    required this.controller,
     required this.firstNameController,
     required this.middleNameController,
     required this.lastNameController,
@@ -35,7 +35,7 @@ class PatientDetailScreen extends StatelessWidget {
   final GlobalKey<FormState> formkey;
   final TextEditingController zipCodeController;
   final TextEditingController selectCityController;
-  final TextEditingController patientIdController;
+  final TextEditingController controller;
   final TextEditingController firstNameController;
   final TextEditingController middleNameController;
   final TextEditingController lastNameController;
@@ -73,7 +73,7 @@ class PatientDetailScreen extends StatelessWidget {
               formkey: formkey,
               selectCityController: selectCityController,
               zipCodeController: zipCodeController,
-              patientIdController: patientIdController,
+              controller: controller,
               firstNameController: firstNameController,
               middleNameController: middleNameController,
               lastNameController: lastNameController,

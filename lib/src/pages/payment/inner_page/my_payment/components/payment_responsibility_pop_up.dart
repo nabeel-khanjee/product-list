@@ -56,10 +56,10 @@ class PaymentResponsibilityComponent extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       border:
                           Border.all(width: 2, color: getThemeColor(context))),
-                  child: TextFormFieldComponentProfile(
+                  child: TextFormFieldComponent(
                       lableColor: getThemeColor(context),
                       verticalPadding: 0,
-                      patientIdcontroller: patientResponsibilityController,
+                      controller: patientResponsibilityController,
                       label: 'Patient Responsibilty'),
                 ),
               ),
@@ -77,10 +77,10 @@ class PaymentResponsibilityComponent extends StatelessWidget {
                           border: Border.all(
                               width: 2, color: getThemeColor(context)),
                         ),
-                        child: TextFormFieldComponentProfile(
+                        child: TextFormFieldComponent(
                             lableColor: getThemeColor(context),
                             verticalPadding: 0,
-                            patientIdcontroller: amountController,
+                            controller: amountController,
                             textInputType: TextInputType.number,
                             label: 'Amount'),
                       ),
@@ -98,10 +98,10 @@ class PaymentResponsibilityComponent extends StatelessWidget {
                           border: Border.all(
                               width: 2, color: getThemeColor(context)),
                         ),
-                        child: TextFormFieldComponentProfile(
+                        child: TextFormFieldComponent(
                             lableColor: getThemeColor(context),
                             verticalPadding: 0,
-                            patientIdcontroller: advancePaymentController,
+                            controller: advancePaymentController,
                             textInputType: TextInputType.number,
                             label: 'Advance Payment'),
                       ),

@@ -1,10 +1,10 @@
 import 'package:flutter/services.dart';
 import 'package:softtech_test/src/app/app_export.dart';
 
-class TextFormFieldComponentProfile extends StatelessWidget {
-  const TextFormFieldComponentProfile({
+class TextFormFieldComponent extends StatelessWidget {
+  const TextFormFieldComponent({
     super.key,
-    required this.patientIdcontroller,
+    required this.controller,
     this.listTextInputFormatter,
     required this.label,
     this.maxLines = 1,
@@ -15,7 +15,7 @@ class TextFormFieldComponentProfile extends StatelessWidget {
   });
   final List<TextInputFormatter>? listTextInputFormatter;
   final String label;
-  final TextEditingController patientIdcontroller;
+  final TextEditingController controller;
   final int maxLines;
   final String hintText;
   final double verticalPadding;
@@ -39,7 +39,7 @@ class TextFormFieldComponentProfile extends StatelessWidget {
           return null;
         },
         inputFormatters: listTextInputFormatter,
-        controller: patientIdcontroller,
+        controller: controller,
         style: Theme.of(context).textTheme.bodySmall!.copyWith(
             fontFamily: FontConstantc.gilroyMedium,
             color: darken(

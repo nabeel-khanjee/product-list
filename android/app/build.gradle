@@ -38,7 +38,7 @@ android {
         }
         staging {
             dimension "flavor-type"
-            applicationId "com.softTechTest.patient.android"
+            applicationId "com.softTechT.softTechTest.android"
             resValue "string", "app_name", "Soft Tech Test Staging"
         }
     }

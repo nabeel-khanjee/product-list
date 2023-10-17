@@ -51,10 +51,10 @@ class CashPaymentWidget extends StatelessWidget {
                 children: [
                   Expanded(
                     flex: 10,
-                    child: TextFormFieldComponentProfile(
+                    child: TextFormFieldComponent(
                         lableColor: getThemeColor(context),
                         verticalPadding: 0,
-                        patientIdcontroller: recievedByController,
+                        controller: recievedByController,
                         label: 'Recieved by'),
                   ),
                 ],
@@ -75,10 +75,10 @@ class CashPaymentWidget extends StatelessWidget {
                       border:
                           Border.all(width: 2, color: getThemeColor(context)),
                     ),
-                    child: TextFormFieldComponentProfile(
+                    child: TextFormFieldComponent(
                         lableColor: getThemeColor(context),
                         verticalPadding: 0,
-                        patientIdcontroller: enteredByController,
+                        controller: enteredByController,
                         label: 'Entered by'),
                   ),
                 ),
@@ -99,10 +99,10 @@ class CashPaymentWidget extends StatelessWidget {
                       border:
                           Border.all(width: 2, color: getThemeColor(context)),
                     ),
-                    child: TextFormFieldComponentProfile(
+                    child: TextFormFieldComponent(
                         lableColor: getThemeColor(context),
                         verticalPadding: 0,
-                        patientIdcontroller: datePaidController,
+                        controller: datePaidController,
                         label: 'Cash Date'),
                   ),
                 ),
@@ -119,10 +119,10 @@ class CashPaymentWidget extends StatelessWidget {
                       border:
                           Border.all(width: 2, color: getThemeColor(context)),
                     ),
-                    child: TextFormFieldComponentProfile(
+                    child: TextFormFieldComponent(
                         lableColor: getThemeColor(context),
                         verticalPadding: 0,
-                        patientIdcontroller: amountController,
+                        controller: amountController,
                         textInputType: TextInputType.number,
                         label: 'Amount'),
                   ),

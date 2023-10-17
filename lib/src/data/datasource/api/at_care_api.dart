@@ -12,6 +12,7 @@ import 'package:softtech_test/src/data/dto/doctor_dto.dart';
 import 'package:softtech_test/src/data/dto/medical_records_history_dto.dart';
 import 'package:softtech_test/src/data/dto/product_dto.dart';
 import 'package:softtech_test/src/data/dto/sehat_scan_history_dto.dart';
+import 'package:softtech_test/src/data/dto/token_dto.dart';
 
 ///
 ///
@@ -28,6 +29,8 @@ class SoftTechTestApi {
       'medical-record/download-medical-record-pdf';
 
   static String kRouteGetProducts = 'products';
+
+  static String kRouteAuthLogin = 'auth/login';
 
   static String kRouteGetProductDetail(int id) => '$kRouteGetProducts/$id';
 
@@ -259,6 +262,14 @@ class SoftTechTestApi {
       kRouteDownloadRecord(medicalRecordId),
     );
     return;
+  }
+
+  Future<BaseResponseDto<TokenDto>> signIn(
+      {required String userName, required String password}) async {
+    final response = await dio.post(kRouteAuthLogin,
+        data: {'username': userName, 'password': password});
+    return BaseResponseDto.fromJson({"data": response.data},
+        (value) => TokenDto.fromJson(value as Map<String, dynamic>));
   }
 
   Future<BaseResponseDto<ProductDto>> getProductDetails(int id) async {

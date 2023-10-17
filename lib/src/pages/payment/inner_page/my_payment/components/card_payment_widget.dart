@@ -54,10 +54,10 @@ class CardPaymentWidget extends StatelessWidget {
                 children: [
                   Expanded(
                     flex: 10,
-                    child: TextFormFieldComponentProfile(
+                    child: TextFormFieldComponent(
                         lableColor: getThemeColor(context),
                         verticalPadding: 0,
-                        patientIdcontroller: cardNoController,
+                        controller: cardNoController,
                         label: 'Card No.'),
                   ),
                   Expanded(
@@ -85,10 +85,10 @@ class CardPaymentWidget extends StatelessWidget {
                       border:
                           Border.all(width: 2, color: getThemeColor(context)),
                     ),
-                    child: TextFormFieldComponentProfile(
+                    child: TextFormFieldComponent(
                         lableColor: getThemeColor(context),
                         verticalPadding: 0,
-                        patientIdcontroller: validityController,
+                        controller: validityController,
                         label: 'Validity'),
                   ),
                 ),
@@ -105,10 +105,10 @@ class CardPaymentWidget extends StatelessWidget {
                       border:
                           Border.all(width: 2, color: getThemeColor(context)),
                     ),
-                    child: TextFormFieldComponentProfile(
+                    child: TextFormFieldComponent(
                         lableColor: getThemeColor(context),
                         verticalPadding: 0,
-                        patientIdcontroller: cvcController,
+                        controller: cvcController,
                         label: 'CVC'),
                   ),
                 ),
@@ -124,10 +124,10 @@ class CardPaymentWidget extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(width: 2, color: getThemeColor(context))),
-              child: TextFormFieldComponentProfile(
+              child: TextFormFieldComponent(
                   lableColor: getThemeColor(context),
                   verticalPadding: 0,
-                  patientIdcontroller: patientResponsibilityController,
+                  controller: patientResponsibilityController,
                   label: 'Patient Responsibilty'),
             ),
           ),
@@ -145,10 +145,10 @@ class CardPaymentWidget extends StatelessWidget {
                       border:
                           Border.all(width: 2, color: getThemeColor(context)),
                     ),
-                    child: TextFormFieldComponentProfile(
+                    child: TextFormFieldComponent(
                         lableColor: getThemeColor(context),
                         verticalPadding: 0,
-                        patientIdcontroller: amountController,
+                        controller: amountController,
                         textInputType: TextInputType.number,
                         label: 'Amount'),
                   ),
@@ -166,10 +166,10 @@ class CardPaymentWidget extends StatelessWidget {
                       border:
                           Border.all(width: 2, color: getThemeColor(context)),
                     ),
-                    child: TextFormFieldComponentProfile(
+                    child: TextFormFieldComponent(
                         lableColor: getThemeColor(context),
                         verticalPadding: 0,
-                        patientIdcontroller: datePaidController,
+                        controller: datePaidController,
                         label: 'Date Paid'),
                   ),
                 ),

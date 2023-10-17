@@ -129,38 +129,30 @@ Route onGenerateRoute(RouteSettings settings) {
 
     case RouteConstants.prescriptionRoute:
       return materialRoute(const PrescriptionScreen());
-
     case RouteConstants.viewPrescriptionRoute:
       return materialRoute(const ViewPrescriptionScreen());
-
     case RouteConstants.reviewRoute:
       return materialRoute(const ReviewScreen());
-
     case RouteConstants.consentFormRoute:
       return materialRoute(const ConsentFormScreen());
-
     case RouteConstants.termsConditionsRoute:
       return materialRoute(const TermsConditionsScreen());
-
     case RouteConstants.privacyPolicyRoute:
       return materialRoute(const PrivacyPolicyScreen());
-
     case RouteConstants.disclaimerRoute:
       return materialRoute(const DisClaimerScreen());
-
     case RouteConstants.allReviewsRoute:
       return materialRoute(const AllReviewsScreen());
-
     case RouteConstants.onboardingRoute:
       return materialRoute(const OnboardingScreen());
-
     case RouteConstants.faqRoute:
       return materialRoute(const FaqScreen());
     case RouteConstants.productDetaiRoute:
       final args = settings.arguments as ProductDetailArgs;
-      return materialRoute( ProductDetailScreen(args: args));
-
-    default:
+      return materialRoute(ProductDetailScreen(args: args));
+    case RouteConstants.allProductsRoute:
       return materialRoute(const ProductsScreen());
+    default:
+      return materialRoute(const SplashScreen());
   }
 }

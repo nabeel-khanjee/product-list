@@ -5,6 +5,7 @@ import 'package:softtech_test/src/data/datasource/api/at_care_api.dart';
 import 'package:softtech_test/src/data/dto/base_response_dto.dart';
 import 'package:softtech_test/src/data/dto/data_list_dto.dart';
 import 'package:softtech_test/src/data/dto/product_dto.dart';
+import 'package:softtech_test/src/data/dto/token_dto.dart';
 import 'package:softtech_test/src/domain/domain.dart';
 import 'package:softtech_test/src/domain/model/appointment.dart';
 import 'package:softtech_test/src/domain/model/data_list.dart';
@@ -194,5 +195,19 @@ class ApiRepositoryImpl extends ApiRepository {
       logger.e(e);
       return Result.failed(objectMapper.toError(e));
     }
+  }
+  
+  @override
+  Future<Result<BaseResponseDto<TokenDto>>> signIn({required String userName, required String password}) async {
+      try {
+      final response = await softTechTestApi.signIn(password: password,
+      userName: userName
+      );
+      return Result.success(objectMapper.toSignIn(response));
+    } on Exception catch (e) {
+      logger.e(e);
+      return Result.failed(objectMapper.toError(e));
+    }
+  
   }
 }

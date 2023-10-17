@@ -23,8 +23,8 @@ class HealthProfileScreen extends StatelessWidget {
                     ))
                 .toList(),
           ),
-          TextFormFieldComponentProfile(
-              patientIdcontroller: addDesieseController, label: 'Add Desiese')
+          TextFormFieldComponent(
+              controller: addDesieseController, label: 'Add Desiese')
         ],
       ),
     );

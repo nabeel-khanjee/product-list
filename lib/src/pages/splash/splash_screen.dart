@@ -20,10 +20,18 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _navigateAfterDelay() {
     Timer(const Duration(seconds: 1), () async {
-      await NavigationUtil.popAllAndPush(
-        context,
-        RouteConstants.onboardingRoute,
-      );
+      getIt
+          .get<SharedPreferencesUtil>()
+          .getString(SharedPreferenceConstants.apiAuthToken)
+          .then((value) async => value != null
+              ? await NavigationUtil.popAllAndPush(
+                  context,
+                  RouteConstants.allProductsRoute,
+                )
+              : await NavigationUtil.popAllAndPush(
+                  context,
+                  RouteConstants.signInRoute,
+                ));
     });
   }
 

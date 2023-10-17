@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:softtech_test/src/data/dto/base_response_dto.dart';
 import 'package:softtech_test/src/data/dto/data_list_dto.dart';
 import 'package:softtech_test/src/data/dto/product_dto.dart';
+import 'package:softtech_test/src/data/dto/token_dto.dart';
 import 'package:softtech_test/src/domain/domain.dart';
 import 'package:softtech_test/src/domain/model/appointment.dart';
 import 'package:softtech_test/src/domain/model/data_list.dart';
@@ -78,4 +79,6 @@ abstract class ApiRepository extends Repository {
   Future<Result<DataListDto<ProductDto>>> getProducts(int limit);
 
   Future<Result<BaseResponseDto<ProductDto>>> getProductDetails(int id);
+
+Future<Result<BaseResponseDto<TokenDto>>>  signIn({required String userName,required String password});
 }

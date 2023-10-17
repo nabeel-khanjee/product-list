@@ -12,7 +12,7 @@ class _DemographicScreenState extends State<DemographicScreen> {
   final _formkeyPatientDetail = GlobalKey<FormState>();
   final _formkeyContactDetail = GlobalKey<FormState>();
   final _formkeyInsuranceDetail = GlobalKey<FormState>();
-  final TextEditingController patientIdController = TextEditingController();
+  final TextEditingController controller = TextEditingController();
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController middleNameController = TextEditingController();
   final TextEditingController lastNameController = TextEditingController();
@@ -156,7 +156,7 @@ class _DemographicScreenState extends State<DemographicScreen> {
                       titleDemographicInnerScreen:
                           StringConstants.patientDetails,
                       formkey: _formkeyPatientDetail,
-                      patientIdController: patientIdController,
+                      controller: controller,
                       firstNameController: firstNameController,
                       middleNameController: middleNameController,
                       selectCityController: selectCityController,
@@ -224,7 +224,7 @@ class _DemographicScreenState extends State<DemographicScreen> {
                       subHeadingOneDemographicInnerScreen: StringConstants.emergancyContactInfo,
                       subHeadingTwoDemographicInnerScreen: StringConstants.yourPharmacyAddress,
                       formkey: _formkeyContactDetail,
-                      patientIdController: patientIdController,
+                      controller: controller,
                       firstNameController: firstNameController,
                       middleNameController: middleNameController,
                       selectCityController: selectCityController,

@@ -1,18 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'products_dto.dart';
+part of 'token_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-ProductsDto _$ProductsDtoFromJson(Map<String, dynamic> json) => ProductsDto(
-      products: (json['products'] as List<dynamic>?)
-          ?.map((e) => ProductDto.fromJson(e as Map<String, dynamic>))
-          .toList(),
+TokenDto _$TokenDtoFromJson(Map<String, dynamic> json) => TokenDto(
+      token: json['token'] as String?,
     );
 
-Map<String, dynamic> _$ProductsDtoToJson(ProductsDto instance) {
+Map<String, dynamic> _$TokenDtoToJson(TokenDto instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -21,6 +19,6 @@ Map<String, dynamic> _$ProductsDtoToJson(ProductsDto instance) {
     }
   }
 
-  writeNotNull('products', instance.products?.map((e) => e.toJson()).toList());
+  writeNotNull('token', instance.token);
   return val;
 }
