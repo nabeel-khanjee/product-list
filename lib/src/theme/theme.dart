@@ -9,7 +9,7 @@ class MyTheme with ChangeNotifier {
         .getBool(SharedPreferenceConstants.isDark))!;
   }
 
-  ThemeMode currentTheme() {
+  ThemeMode currentTheme()  {
     return isDark ? ThemeMode.dark : ThemeMode.light;
   }
 
@@ -20,7 +20,7 @@ class MyTheme with ChangeNotifier {
 
   void switchTheme() {
     isDark = !isDark;
-    getIt
+     getIt
         .get<SharedPreferencesUtil>()
         .setBool(SharedPreferenceConstants.isDark, value: isDark);
     notifyListeners();

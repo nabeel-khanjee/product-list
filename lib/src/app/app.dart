@@ -25,7 +25,7 @@ class App extends StatelessWidget {
               locale: context.locale,
               debugShowMaterialGrid: false,
               debugShowCheckedModeBanner: false,
-              themeMode: theme.currentTheme(),
+              themeMode:   theme.currentTheme(),
               darkTheme: darkThemeData(theme),
               title: F.title,
               theme: lightThemeData(theme),
