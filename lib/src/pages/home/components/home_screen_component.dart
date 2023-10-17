@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class HomeScreenComponent extends StatelessWidget {
   HomeScreenComponent({
@@ -25,7 +25,6 @@ class HomeScreenComponent extends StatelessWidget {
           ) =>
               AnimatedDrawerAfterLoadedState(
             color: color ?? getThemeColor(context),
-            
           ),
           animatedDrawerIndexUpdated: (
             index,

@@ -1,9 +1,9 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class CardDetailComponent extends StatelessWidget {
   const CardDetailComponent({
     super.key,
-    required this. paymentMethod,
+    required this.paymentMethod,
   });
   final MapEntry<int, PaymentMethod> paymentMethod;
   @override

@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 part 'animated_drawer_cubit.freezed.dart';
 
 class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
@@ -24,7 +24,7 @@ class AnimatedDrawerCubit extends Cubit<AnimatedDrawerState> {
         ? advancedDrawerController.showDrawer()
         : advancedDrawerController.hideDrawer();
     _advancedDrawerController = advancedDrawerController;
-    
+
     _pageController.jumpToPage(index);
     emit(const _Loading());
     emit(

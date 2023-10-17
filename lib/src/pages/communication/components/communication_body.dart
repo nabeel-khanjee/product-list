@@ -1,6 +1,6 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/communication/past_records/past_records_pageview.dart';
-import 'package:provider_app/src/pages/communication/scheduled/scheduled_pageview.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/communication/past_records/past_records_pageview.dart';
+import 'package:softtech_test/src/pages/communication/scheduled/scheduled_pageview.dart';
 
 class CommunicationBody extends StatefulWidget {
   const CommunicationBody({super.key});

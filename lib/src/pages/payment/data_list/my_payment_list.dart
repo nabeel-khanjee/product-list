@@ -1,4 +1,4 @@
-import 'package:provider_app/src/pages/payment/model/my_payment_model.dart';
+import 'package:softtech_test/src/pages/payment/model/my_payment_model.dart';
 
 List<MyPayment> myPaymentList = [
   MyPayment(

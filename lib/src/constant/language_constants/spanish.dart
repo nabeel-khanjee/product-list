@@ -29,7 +29,7 @@ class SpanishConstant {
     'selectCountry': 'Seleccionar país',
     'selectState': 'Seleccione estado',
     'onboardingText':
-        '¡Experimente la atención médica reinventada con ATCare! Conéctese virtualmente con los mejores médicos, terapeutas y especialistas.',
+        '¡Experimente la atención médica reinventada con Soft Tech Test! Conéctese virtualmente con los mejores médicos, terapeutas y especialistas.',
     'getStarted': 'Empezar',
     'selectColor': 'seleccionar el color',
     'generalSettings': 'Configuración general',

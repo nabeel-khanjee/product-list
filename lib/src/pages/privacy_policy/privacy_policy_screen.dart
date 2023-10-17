@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/privacy_policy/components/privacy_policy_body.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/privacy_policy/components/privacy_policy_body.dart';
 
 class PrivacyPolicyScreen extends StatelessWidget {
   const PrivacyPolicyScreen({super.key});

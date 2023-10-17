@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class BookAppointmentTwoScreen extends StatefulWidget {
   const BookAppointmentTwoScreen({super.key});
@@ -58,9 +58,8 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
                               .titleLarge!
                               .copyWith(
                                   fontFamily: FontConstantc.gilroySemiBold)),
-                      TextFormFieldComponentProfile(
-                          patientIdcontroller: fullNameController,
-                          label: 'Full Name'),
+                      TextFormFieldComponent(
+                          controller: fullNameController, label: 'Full Name'),
                       DatePickerComponent(
                           country: const [],
                           datePickerTitle: 'Date of Birth',
@@ -68,8 +67,8 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
                           onDatePickerTap: () {},
                           onDropdownFieldTapCity: () {},
                           selectedDate: ''),
-                      TextFormFieldComponentProfile(
-                          patientIdcontroller: mobileNumberController,
+                      TextFormFieldComponent(
+                          controller: mobileNumberController,
                           label: 'Mobile Number'),
                       const TimeStartTimeEndRowComponent(),
                       DropDownComponentProfile(
@@ -137,9 +136,9 @@ class _BookAppointmentTwoScreenState extends State<BookAppointmentTwoScreen> {
                             text: "Non Insured")
                       ]),
                       const SizedBox(height: 20),
-                      TextFormFieldComponentProfile(
+                      TextFormFieldComponent(
                           maxLines: 5,
-                          patientIdcontroller: problemController,
+                          controller: problemController,
                           hintText: 'Write your Problem',
                           label: '')
                     ]))),

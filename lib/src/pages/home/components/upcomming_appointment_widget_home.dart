@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class UpcommingAppointmentWidgetHome extends StatelessWidget {
   const UpcommingAppointmentWidgetHome({
@@ -48,8 +48,7 @@ class UpcommingAppointmentWidgetHome extends StatelessWidget {
           children: upcommingAppointment
               .asMap()
               .entries
-              .map(
-                  (element) => UpcommingAppointmentHomeCard(element: element))
+              .map((element) => UpcommingAppointmentHomeCard(element: element))
               .toList(),
         ),
       )

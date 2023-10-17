@@ -1,4 +1,4 @@
-import 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/health_profile/model/family_members.dart';
+import 'package:softtech_test/src/pages/family_health_profile/family_health_inner_pages/health_profile/model/family_members.dart';
 
 class DiseaseFamilyMembers {
   final String diseaseTitle;

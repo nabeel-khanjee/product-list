@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class MainScaffold extends StatelessWidget {
   final bool isGradient;
@@ -13,7 +13,8 @@ class MainScaffold extends StatelessWidget {
     required this.isGradient,
     this.appBar,
     this.bottomNavigationBar,
-    this.preferredSizeAppBar, this.floatingActionButton,
+    this.preferredSizeAppBar,
+    this.floatingActionButton,
   });
 
   final Widget body;

@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/appointments/book_appointments/components/book_appointments_component.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/appointments/book_appointments/components/book_appointments_component.dart';
 
 class BookAppointmentsBody extends StatelessWidget {
   const BookAppointmentsBody({Key? key}) : super(key: key);
@@ -33,7 +33,7 @@ class BookAppointmentsBody extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         GestureDetector(
-          onTap: (){
+          onTap: () {
             NavigationUtil.push(
               context,
               RouteConstants.labTestRoute,

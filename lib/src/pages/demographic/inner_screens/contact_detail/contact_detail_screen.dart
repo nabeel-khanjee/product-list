@@ -1,11 +1,11 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/demographic/inner_screens/contact_detail/components/contact_details_form.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/demographic/inner_screens/contact_detail/components/contact_details_form.dart';
 
 class ContactDetailScreen extends StatelessWidget {
   const ContactDetailScreen({
     super.key,
     required this.formkey,
-    required this.patientIdController,
+    required this.controller,
     required this.firstNameController,
     required this.middleNameController,
     required this.lastNameController,
@@ -44,7 +44,10 @@ class ContactDetailScreen extends StatelessWidget {
     required this.addressPharmacyController,
     required this.cityPharmacyController,
     required this.zipCodePharmacyController,
-    required this.phoneNumberPharmacyController, required this.nameInterpreterContactDetailController, required this.relationInterpreterContactController, required this.contactInterpreterNumberContactDetailController,
+    required this.phoneNumberPharmacyController,
+    required this.nameInterpreterContactDetailController,
+    required this.relationInterpreterContactController,
+    required this.contactInterpreterNumberContactDetailController,
   });
 
   final GlobalKey<FormState> formkey;
@@ -58,7 +61,7 @@ class ContactDetailScreen extends StatelessWidget {
   final TextEditingController zipCodePharmacyController;
   final TextEditingController zipCodeController;
   final TextEditingController selectCityController;
-  final TextEditingController patientIdController;
+  final TextEditingController controller;
   final TextEditingController firstNameController;
   final TextEditingController middleNameController;
   final TextEditingController lastNameController;
@@ -70,7 +73,7 @@ class ContactDetailScreen extends StatelessWidget {
   final TextEditingController nameInterpreterContactDetailController;
   final TextEditingController relationInterpreterContactController;
   final TextEditingController contactInterpreterNumberContactDetailController;
-  
+
   final List<String> country;
   final String? selectedDate;
   final List<String> gender;
@@ -104,9 +107,12 @@ class ContactDetailScreen extends StatelessWidget {
               titleDemographicInnerScreen: titleDemographicInnerScreen),
           ContactDetailScreenForm(
               formkey: formkey,
-              contactInterpreterNumberContactDetailController: contactInterpreterNumberContactDetailController,
-              nameInterpreterContactDetailController: nameInterpreterContactDetailController,
-              relationInterpreterContactController: relationInterpreterContactController,
+              contactInterpreterNumberContactDetailController:
+                  contactInterpreterNumberContactDetailController,
+              nameInterpreterContactDetailController:
+                  nameInterpreterContactDetailController,
+              relationInterpreterContactController:
+                  relationInterpreterContactController,
               addressPharmacyController: addressPharmacyController,
               cityPharmacyController: cityPharmacyController,
               contactNumberContactDetailController:

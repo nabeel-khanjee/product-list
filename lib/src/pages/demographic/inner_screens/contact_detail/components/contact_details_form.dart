@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class ContactDetailScreenForm extends StatelessWidget {
   const ContactDetailScreenForm({
@@ -91,41 +91,40 @@ class ContactDetailScreenForm extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                   label: StringConstants.cellPhoneNumber,
-                  patientIdcontroller: cellPhoneNumberController,
+                  controller: cellPhoneNumberController,
                   listTextInputFormatter: [
                     CardFormatter(sample: '(xxx)xxx-xxxx', separator: '-')
                   ]),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.residenceNumber,
-                patientIdcontroller: residenceNumberController,
+                controller: residenceNumberController,
                 listTextInputFormatter: [
                   CardFormatter(sample: '(xxx)xxx-xxxx', separator: '-')
                 ],
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.address,
-                patientIdcontroller: addressController,
+                controller: addressController,
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.selectCity,
-                patientIdcontroller: selectCityController,
+                controller: selectCityController,
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.selectState,
-                patientIdcontroller: selectStateController,
+                controller: selectStateController,
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.zipCode,
-                patientIdcontroller: zipCodeController,
+                controller: zipCodeController,
               ),
               DropDownComponentProfile(
                 onDropdownFieldTap: onDropdownFieldTapCountry,
-              bgColor: !getThemeStateIsLight()
-                              ? (lighten(getThemeColor(context), 0.35))
-                              : ColorConstants.white,
-                    
+                bgColor: !getThemeStateIsLight()
+                    ? (lighten(getThemeColor(context), 0.35))
+                    : ColorConstants.white,
                 hintText: StringConstants.selectCountry,
                 items: country,
                 selectedItem: (value) => getCountryValue(value),
@@ -134,55 +133,54 @@ class ContactDetailScreenForm extends StatelessWidget {
               TitleDemographicsMainHeadingInnerPage(
                   titleDemographicInnerScreen:
                       subHeadingOneDemographicInnerScreen),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.name,
-                patientIdcontroller: nameContactDetailController,
+                controller: nameContactDetailController,
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.relation,
-                patientIdcontroller: relationContactController,
+                controller: relationContactController,
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.contactNumber,
-                patientIdcontroller: contactNumberContactDetailController,
+                controller: contactNumberContactDetailController,
               ),
               const TitleDemographicsMainHeadingInnerPage(
                   titleDemographicInnerScreen: 'Interpreter Contact'),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.name,
-                patientIdcontroller: nameInterpreterContactDetailController,
+                controller: nameInterpreterContactDetailController,
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.relation,
-                patientIdcontroller: relationInterpreterContactController,
+                controller: relationInterpreterContactController,
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.contactNumber,
-                patientIdcontroller:
-                    contactInterpreterNumberContactDetailController,
+                controller: contactInterpreterNumberContactDetailController,
               ),
               TitleDemographicsMainHeadingInnerPage(
                   titleDemographicInnerScreen:
                       subHeadingTwoDemographicInnerScreen),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.pharmacyName,
-                patientIdcontroller: pharmacyNamePharmacyConroller,
+                controller: pharmacyNamePharmacyConroller,
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.yourPharmacyAddress,
-                patientIdcontroller: addressPharmacyController,
+                controller: addressPharmacyController,
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.city,
-                patientIdcontroller: cityPharmacyController,
+                controller: cityPharmacyController,
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.zipCode,
-                patientIdcontroller: zipCodePharmacyController,
+                controller: zipCodePharmacyController,
               ),
-              TextFormFieldComponentProfile(
+              TextFormFieldComponent(
                 label: StringConstants.phoneNumber,
-                patientIdcontroller: phoneNumberPharmacyController,
+                controller: phoneNumberPharmacyController,
               ),
             ]));
   }

@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class DoctorDetailAndBookNowWidget extends StatelessWidget {
   const DoctorDetailAndBookNowWidget({
@@ -17,20 +17,14 @@ class DoctorDetailAndBookNowWidget extends StatelessWidget {
             children: [
               Text(
                 StringConstants.drLouisaJackson,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium!
-                    .copyWith(
-                        fontFamily: FontConstantc.gilroySemiBold,
-                        color: ColorConstants.black),
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    fontFamily: FontConstantc.gilroySemiBold,
+                    color: ColorConstants.black),
               ),
               Text(StringConstants.heartSpecialist,
-                  style: Theme.of(context)
-                      .textTheme
-                      .labelSmall!
-                      .copyWith(
-                          fontFamily: FontConstantc.gilroySemiBold,
-                          color: ColorConstants.greyText)),
+                  style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                      fontFamily: FontConstantc.gilroySemiBold,
+                      color: ColorConstants.greyText)),
             ],
           ),
           SizedBox(
@@ -38,20 +32,13 @@ class DoctorDetailAndBookNowWidget extends StatelessWidget {
               width: 96,
               child: ElevatedButton(
                   onPressed: () {},
-                  style: Theme.of(context)
-                      .elevatedButtonTheme
-                      .style!
-                      .copyWith(
-                          shape: MaterialStatePropertyAll(
-                              RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(100))),
-                          padding: const MaterialStatePropertyAll(
-                              EdgeInsets.all(0)),
-                          textStyle: MaterialStatePropertyAll(
-                              Theme.of(context)
-                                  .textTheme
-                                  .bodySmall)),
+                  style: Theme.of(context).elevatedButtonTheme.style!.copyWith(
+                      shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(100))),
+                      padding:
+                          const MaterialStatePropertyAll(EdgeInsets.all(0)),
+                      textStyle: MaterialStatePropertyAll(
+                          Theme.of(context).textTheme.bodySmall)),
                   child: Text(
                     StringConstants.bookNow,
                   )))

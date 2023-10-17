@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class DatePickerComponent extends StatelessWidget {
   const DatePickerComponent({
@@ -25,10 +25,10 @@ class DatePickerComponent extends StatelessWidget {
       child: Stack(
         children: [
           DropDownComponentProfile(
-              bgColor: !getThemeStateIsLight()
-                              ? (lighten(getThemeColor(context), 0.35))
-                              : ColorConstants.white,
-                        onDropdownFieldTap: onDropdownFieldTapCity,
+            bgColor: !getThemeStateIsLight()
+                ? (lighten(getThemeColor(context), 0.35))
+                : ColorConstants.white,
+            onDropdownFieldTap: onDropdownFieldTapCity,
             suffixIcon: AssetsConstants.calenderIcon,
             hintText: datePickerTitle,
             items: country,

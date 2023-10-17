@@ -1,6 +1,6 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/notification/components/notification_tile_component.dart';
-import 'package:provider_app/src/pages/notification/list_data/notification_list_data.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/notification/components/notification_tile_component.dart';
+import 'package:softtech_test/src/pages/notification/list_data/notification_list_data.dart';
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({super.key});
@@ -30,4 +30,3 @@ class NotificationScreen extends StatelessWidget {
     );
   }
 }
-

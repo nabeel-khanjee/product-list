@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/audio_calling/components/audio_calling_body.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/audio_calling/components/audio_calling_body.dart';
 
 class AudioCallingScreen extends StatelessWidget {
   const AudioCallingScreen({Key? key}) : super(key: key);

@@ -1,20 +1,24 @@
 import 'dart:io';
 import 'package:logger/logger.dart';
-import 'package:provider_app/src/data/common/object_mapper.dart';
-import 'package:provider_app/src/data/datasource/api/at_care_api.dart';
-import 'package:provider_app/src/domain/domain.dart';
-import 'package:provider_app/src/domain/model/appointment.dart';
-import 'package:provider_app/src/domain/model/data_list.dart';
-import 'package:provider_app/src/domain/model/docotor.dart';
-import 'package:provider_app/src/domain/model/medical_records.dart';
+import 'package:softtech_test/src/data/common/object_mapper.dart';
+import 'package:softtech_test/src/data/datasource/api/at_care_api.dart';
+import 'package:softtech_test/src/data/dto/base_response_dto.dart';
+import 'package:softtech_test/src/data/dto/data_list_dto.dart';
+import 'package:softtech_test/src/data/dto/product_dto.dart';
+import 'package:softtech_test/src/data/dto/token_dto.dart';
+import 'package:softtech_test/src/domain/domain.dart';
+import 'package:softtech_test/src/domain/model/appointment.dart';
+import 'package:softtech_test/src/domain/model/data_list.dart';
+import 'package:softtech_test/src/domain/model/docotor.dart';
+import 'package:softtech_test/src/domain/model/medical_records.dart';
 
 class ApiRepositoryImpl extends ApiRepository {
-  final ATCareApi atCareApi;
+  final SoftTechTestApi softTechTestApi;
   final ObjectMapper objectMapper;
   final Logger logger;
 
   ApiRepositoryImpl({
-    required this.atCareApi,
+    required this.softTechTestApi,
     required this.objectMapper,
     required this.logger,
   });
@@ -22,8 +26,30 @@ class ApiRepositoryImpl extends ApiRepository {
   @override
   Future<Result<AnimatedDrawer>> getDashboardOverview() async {
     try {
-      final response = await atCareApi.getDashBoardOverview();
+      final response = await softTechTestApi.getDashBoardOverview();
       return Result.success(objectMapper.toDashboardOverview(response));
+    } on Exception catch (e) {
+      logger.e(e);
+      return Result.failed(objectMapper.toError(e));
+    }
+  }
+
+  @override
+  Future<Result<BaseResponseDto<ProductDto>>> getProductDetails(int id) async {
+    try {
+      final response = await softTechTestApi.getProductDetails(id);
+      return Result.success(objectMapper.toGetProductDetail(response));
+    } on Exception catch (e) {
+      logger.e(e);
+      return Result.failed(objectMapper.toError(e));
+    }
+  }
+
+  @override
+  Future<Result<DataListDto<ProductDto>>> getProducts(limit) async {
+    try {
+      final response = await softTechTestApi.getProducts(limit);
+      return Result.success(objectMapper.toGetProducts(response));
     } on Exception catch (e) {
       logger.e(e);
       return Result.failed(objectMapper.toError(e));
@@ -33,7 +59,7 @@ class ApiRepositoryImpl extends ApiRepository {
   @override
   Future<Result<List<LastHealthScan>>> getSehatScanHistory(date) async {
     try {
-      final response = await atCareApi.getSehatScanHistory(date);
+      final response = await softTechTestApi.getSehatScanHistory(date);
       return Result.success(objectMapper.toSehatScanHistory(response));
     } on Exception catch (e) {
       logger.e(e);
@@ -44,7 +70,7 @@ class ApiRepositoryImpl extends ApiRepository {
   @override
   Future<Result<List<MedicalRecords>>> getMedicalRecordsHistory() async {
     try {
-      final response = await atCareApi.getMedicalRecordsHistory();
+      final response = await softTechTestApi.getMedicalRecordsHistory();
       return Result.success(objectMapper.toMedicalRecordsHistory(response));
     } on Exception catch (e) {
       logger.e(e);
@@ -56,7 +82,7 @@ class ApiRepositoryImpl extends ApiRepository {
   Future<Result<List<Appointment>>> getPastAppointments(
       String startDate, String endDate) async {
     try {
-      final response = await atCareApi.getPastAppointments(
+      final response = await softTechTestApi.getPastAppointments(
           endDate: endDate, startDate: startDate);
       return Result.success(objectMapper.toPastAppointments(response));
     } on Exception catch (e) {
@@ -74,7 +100,7 @@ class ApiRepositoryImpl extends ApiRepository {
     bool isInstantConsultationScreen,
   ) async {
     try {
-      await atCareApi.addMedicalRecords(
+      await softTechTestApi.addMedicalRecords(
           filesList, ids, date, fileName, isInstantConsultationScreen);
       return Result.success("");
     } on Exception catch (e) {
@@ -92,7 +118,7 @@ class ApiRepositoryImpl extends ApiRepository {
       String? medicalRecordId,
       bool isInstantConsultationScreen) async {
     try {
-      await atCareApi.editMedicalRecords(filesList, ids, date, fileName,
+      await softTechTestApi.editMedicalRecords(filesList, ids, date, fileName,
           medicalRecordId, isInstantConsultationScreen);
       return Result.success("");
     } on Exception catch (e) {
@@ -106,7 +132,7 @@ class ApiRepositoryImpl extends ApiRepository {
       {required int medicalRecordId}) async {
     try {
       final response =
-          await atCareApi.getDoctors(medicalRecordId: medicalRecordId);
+          await softTechTestApi.getDoctors(medicalRecordId: medicalRecordId);
       return Result.success(objectMapper.toDoctorsList(response));
     } on Exception catch (e) {
       logger.e(e);
@@ -118,7 +144,7 @@ class ApiRepositoryImpl extends ApiRepository {
   Future<Result> shareMedicalRecord(
       int doctorId, int medicalRecordId, bool isFromInstantConsultation) async {
     try {
-      await atCareApi.shareMedicalRecord(doctorId, medicalRecordId,
+      await softTechTestApi.shareMedicalRecord(doctorId, medicalRecordId,
           isFromInstantConsultation: isFromInstantConsultation);
       return Result.success("");
     } on Exception catch (e) {
@@ -130,7 +156,7 @@ class ApiRepositoryImpl extends ApiRepository {
   @override
   Future<Result> deleteMedicalRecord(int medicalRecordId) async {
     try {
-      await atCareApi.deleteMedicalRecord(medicalRecordId);
+      await softTechTestApi.deleteMedicalRecord(medicalRecordId);
       return Result.success("");
     } on Exception catch (e) {
       logger.e(e);
@@ -141,7 +167,7 @@ class ApiRepositoryImpl extends ApiRepository {
   @override
   Future<Result> deleteMedicalRecordFile(int fileId) async {
     try {
-      await atCareApi.deleteMedicalRecordFile(fileId);
+      await softTechTestApi.deleteMedicalRecordFile(fileId);
       return Result.success("");
     } on Exception catch (e) {
       logger.e(e);
@@ -151,7 +177,7 @@ class ApiRepositoryImpl extends ApiRepository {
 
   Future<Result> downloadMedicalRecord(int medicalRecordId) async {
     try {
-      await atCareApi.deleteMedicalRecord(medicalRecordId);
+      await softTechTestApi.deleteMedicalRecord(medicalRecordId);
       return Result.success("");
     } on Exception catch (e) {
       logger.e(e);
@@ -163,12 +189,25 @@ class ApiRepositoryImpl extends ApiRepository {
   Future<Result<List<MedicalRecords>>> getMedicalRecordsHistoryB(
       String a, String b) async {
     try {
-      final response =
-          await atCareApi.getMedicalRecordsHistoryB(a, b);
+      final response = await softTechTestApi.getMedicalRecordsHistoryB(a, b);
       return Result.success(objectMapper.toMedicalRecordsHistory(response));
     } on Exception catch (e) {
       logger.e(e);
       return Result.failed(objectMapper.toError(e));
     }
+  }
+  
+  @override
+  Future<Result<BaseResponseDto<TokenDto>>> signIn({required String userName, required String password}) async {
+      try {
+      final response = await softTechTestApi.signIn(password: password,
+      userName: userName
+      );
+      return Result.success(objectMapper.toSignIn(response));
+    } on Exception catch (e) {
+      logger.e(e);
+      return Result.failed(objectMapper.toError(e));
+    }
+  
   }
 }

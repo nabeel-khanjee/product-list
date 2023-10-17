@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({
@@ -20,10 +20,18 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _navigateAfterDelay() {
     Timer(const Duration(seconds: 1), () async {
-      await NavigationUtil.popAllAndPush(
-        context,
-        RouteConstants.onboardingRoute,
-      );
+      getIt
+          .get<SharedPreferencesUtil>()
+          .getString(SharedPreferenceConstants.apiAuthToken)
+          .then((value) async => value != null
+              ? await NavigationUtil.popAllAndPush(
+                  context,
+                  RouteConstants.homeRoute,
+                )
+              : await NavigationUtil.popAllAndPush(
+                  context,
+                  RouteConstants.signInRoute,
+                ));
     });
   }
 

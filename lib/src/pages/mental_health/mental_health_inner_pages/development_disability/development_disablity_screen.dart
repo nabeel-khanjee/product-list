@@ -1,7 +1,7 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/development_disability/components/radio_list_development_disability.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/development_disability/data_list/development_disablity_main_questions_data_list.dart';
-import 'package:provider_app/src/pages/mental_health/mental_health_inner_pages/development_disability/data_list/observation_questions_filled_by_doctor.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/mental_health/mental_health_inner_pages/development_disability/components/radio_list_development_disability.dart';
+import 'package:softtech_test/src/pages/mental_health/mental_health_inner_pages/development_disability/data_list/development_disablity_main_questions_data_list.dart';
+import 'package:softtech_test/src/pages/mental_health/mental_health_inner_pages/development_disability/data_list/observation_questions_filled_by_doctor.dart';
 
 class DevlopmentDiabilityScreen extends StatelessWidget {
   const DevlopmentDiabilityScreen({super.key});

@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/social_health/data_list/social_health_list_data.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/social_health/data_list/social_health_list_data.dart';
 
 class SocialHealthScreen extends StatelessWidget {
   const SocialHealthScreen({super.key});

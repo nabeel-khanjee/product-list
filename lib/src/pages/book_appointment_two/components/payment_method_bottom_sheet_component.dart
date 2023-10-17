@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class PaymentMethodBottomSheet extends StatefulWidget {
   const PaymentMethodBottomSheet({
@@ -26,7 +26,7 @@ class _PaymentMethodBottomSheetState extends State<PaymentMethodBottomSheet> {
                   topLeft: Radius.circular(16), topRight: Radius.circular(16))),
           child: Column(children: [
             const SizedBox(height: 25),
-             const PaymentHeaderComponent(),
+            const PaymentHeaderComponent(),
             const SizedBox(height: 10),
             const Divider(color: ColorConstants.grey),
             const SizedBox(height: 10),

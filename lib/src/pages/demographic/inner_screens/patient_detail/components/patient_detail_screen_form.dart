@@ -1,10 +1,10 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class PatientDetailScreenForm extends StatelessWidget {
   const PatientDetailScreenForm({
     super.key,
     required this.formkey,
-    required this.patientIdController,
+    required this.controller,
     required this.firstNameController,
     required this.middleNameController,
     required this.lastNameController,
@@ -32,7 +32,7 @@ class PatientDetailScreenForm extends StatelessWidget {
   final GlobalKey<FormState> formkey;
   final TextEditingController zipCodeController;
   final TextEditingController selectCityController;
-  final TextEditingController patientIdController;
+  final TextEditingController controller;
   final TextEditingController firstNameController;
   final TextEditingController middleNameController;
   final TextEditingController lastNameController;
@@ -59,27 +59,27 @@ class PatientDetailScreenForm extends StatelessWidget {
     return Form(
         key: formkey,
         child: Column(children: [
-          TextFormFieldComponentProfile(
+          TextFormFieldComponent(
               label: StringConstants.patientID,
-              patientIdcontroller: patientIdController,
+              controller: controller,
               listTextInputFormatter: [
                 CardFormatter(sample: 'xxxx-xxxx-xxxx-xxxx', separator: '-')
               ]),
-          TextFormFieldComponentProfile(
+          TextFormFieldComponent(
             label: StringConstants.firstName,
-            patientIdcontroller: firstNameController,
+            controller: firstNameController,
           ),
-          TextFormFieldComponentProfile(
+          TextFormFieldComponent(
             label: StringConstants.middleName,
-            patientIdcontroller: middleNameController,
+            controller: middleNameController,
           ),
-          TextFormFieldComponentProfile(
+          TextFormFieldComponent(
             label: StringConstants.lastName,
-            patientIdcontroller: lastNameController,
+            controller: lastNameController,
           ),
-          TextFormFieldComponentProfile(
+          TextFormFieldComponent(
             label: StringConstants.suffix,
-            patientIdcontroller: suffixController,
+            controller: suffixController,
           ),
           DatePickerAndDropDownWidget(
               onDatePickerTap: onDatePickerTap,
@@ -91,47 +91,51 @@ class PatientDetailScreenForm extends StatelessWidget {
               gender: gender,
               getGenderValue: getGenderValue,
               selectedGender: selectedGender),
-          TextFormFieldComponentProfile(
+          TextFormFieldComponent(
             label: StringConstants.ssn,
-            patientIdcontroller: ssnController,
+            controller: ssnController,
           ),
           DropDownComponentProfile(
             bgColor: !getThemeStateIsLight()
-                              ? (lighten(getThemeColor(context), 0.35))
-                              : ColorConstants.white,
-                          onDropdownFieldTap: onDropdownFieldTapCountry,
+                ? (lighten(getThemeColor(context), 0.35))
+                : ColorConstants.white,
+            onDropdownFieldTap: onDropdownFieldTapCountry,
             hintText: 'Disability/Impairment',
-            items: const ['Hearing Impairment', 'Visual Impairment', 'Physical'],
+            items: const [
+              'Hearing Impairment',
+              'Visual Impairment',
+              'Physical'
+            ],
             selectedItem: (value) => getCountryValue(value),
             value: selectedCountry,
           ),
           DropDownComponentProfile(
             bgColor: !getThemeStateIsLight()
-                              ? (lighten(getThemeColor(context), 0.35))
-                              : ColorConstants.white,
-                          onDropdownFieldTap: onDropdownFieldTapCountry,
+                ? (lighten(getThemeColor(context), 0.35))
+                : ColorConstants.white,
+            onDropdownFieldTap: onDropdownFieldTapCountry,
             hintText: StringConstants.selectCountry,
             items: country,
             selectedItem: (value) => getCountryValue(value),
             value: selectedCountry,
           ),
           DropDownComponentProfile(
-             bgColor: !getThemeStateIsLight()
-                              ? (lighten(getThemeColor(context), 0.35))
-                              : ColorConstants.white,
-                         onDropdownFieldTap: onDropdownFieldTapState,
+            bgColor: !getThemeStateIsLight()
+                ? (lighten(getThemeColor(context), 0.35))
+                : ColorConstants.white,
+            onDropdownFieldTap: onDropdownFieldTapState,
             hintText: StringConstants.selectState,
             items: states,
             selectedItem: (value) => getStateValue(value),
             value: selectedStates,
           ),
-          TextFormFieldComponentProfile(
+          TextFormFieldComponent(
             label: StringConstants.selectCity,
-            patientIdcontroller: selectCityController,
+            controller: selectCityController,
           ),
-          TextFormFieldComponentProfile(
+          TextFormFieldComponent(
             label: StringConstants.zipCode,
-            patientIdcontroller: zipCodeController,
+            controller: zipCodeController,
           ),
         ]));
   }

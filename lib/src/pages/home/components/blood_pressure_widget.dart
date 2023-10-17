@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/home/components/blood_pressure_image_widget.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/home/components/blood_pressure_image_widget.dart';
 
 class BloodPressureWidget extends StatelessWidget {
   const BloodPressureWidget({

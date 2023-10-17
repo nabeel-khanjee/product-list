@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 part 'is_gradient_background_cubit.freezed.dart';
 
@@ -26,8 +26,9 @@ class IsGradientBackgroundState with _$IsGradientBackgroundState {
 
   const factory IsGradientBackgroundState.loaded() = _Loaded;
 
-  const factory IsGradientBackgroundState.updateColorState(Color color) = _UpdateColorState;
+  const factory IsGradientBackgroundState.updateColorState(Color color) =
+      _UpdateColorState;
 
-  const factory IsGradientBackgroundState.updateStateDarkLight(bool value) = _UpdateThemeState;
-
+  const factory IsGradientBackgroundState.updateStateDarkLight(bool value) =
+      _UpdateThemeState;
 }

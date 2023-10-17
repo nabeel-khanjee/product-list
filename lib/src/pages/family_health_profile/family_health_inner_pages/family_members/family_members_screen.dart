@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class FamilyHealthScreen extends StatelessWidget {
   const FamilyHealthScreen({super.key});
@@ -17,6 +17,3 @@ class FamilyHealthScreen extends StatelessWidget {
     );
   }
 }
-
-
-

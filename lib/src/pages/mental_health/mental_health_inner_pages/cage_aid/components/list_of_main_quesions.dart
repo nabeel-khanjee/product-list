@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class ListOfMainQuestions extends StatelessWidget {
   const ListOfMainQuestions({
@@ -11,8 +11,7 @@ class ListOfMainQuestions extends StatelessWidget {
       children: quesions
           .asMap()
           .entries
-          .map((question) =>
-              SocialHealthRadioListQuesion(questions: question))
+          .map((question) => SocialHealthRadioListQuesion(questions: question))
           .toList(),
     );
   }

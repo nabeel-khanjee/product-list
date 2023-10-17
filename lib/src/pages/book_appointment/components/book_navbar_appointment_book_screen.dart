@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class BottomNavBarAppointmentBookScreen extends StatelessWidget {
   const BottomNavBarAppointmentBookScreen({
@@ -34,7 +34,6 @@ class BottomNavBarAppointmentBookScreen extends StatelessWidget {
           child: Text(
             text,
             style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-              
                 fontFamily: FontConstantc.gilroySemiBold, color: fgColor),
           )),
     );

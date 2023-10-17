@@ -1,6 +1,6 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/health_profile/components/expansion_panel_list_component.dart';
-import 'package:provider_app/src/pages/family_health_profile/family_health_inner_pages/health_profile/data_list/diseases_data_list.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/family_health_profile/family_health_inner_pages/health_profile/components/expansion_panel_list_component.dart';
+import 'package:softtech_test/src/pages/family_health_profile/family_health_inner_pages/health_profile/data_list/diseases_data_list.dart';
 
 class HealthProfileScreen extends StatelessWidget {
   const HealthProfileScreen({super.key});
@@ -23,8 +23,8 @@ class HealthProfileScreen extends StatelessWidget {
                     ))
                 .toList(),
           ),
-          TextFormFieldComponentProfile(
-              patientIdcontroller: addDesieseController, label: 'Add Desiese')
+          TextFormFieldComponent(
+              controller: addDesieseController, label: 'Add Desiese')
         ],
       ),
     );

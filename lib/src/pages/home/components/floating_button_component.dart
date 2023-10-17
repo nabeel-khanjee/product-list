@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class FancyFab extends StatefulWidget {
   final Function() onPressed;
@@ -6,7 +6,10 @@ class FancyFab extends StatefulWidget {
   final IconData icon;
 
   const FancyFab(
-      {super.key, required this.onPressed, required this.tooltip, required this.icon});
+      {super.key,
+      required this.onPressed,
+      required this.tooltip,
+      required this.icon});
 
   @override
   State<FancyFab> createState() => _FancyFabState();
@@ -23,7 +26,7 @@ class _FancyFabState extends State<FancyFab>
   final double _fabHeight = 56.0;
 
   @override
- void initState() {
+  void initState() {
     _animationController = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 500))
       ..addListener(() {
@@ -57,12 +60,12 @@ class _FancyFabState extends State<FancyFab>
   }
 
   @override
-void  dispose() {
+  void dispose() {
     _animationController!.dispose();
     super.dispose();
   }
 
- void animate() {
+  void animate() {
     if (!isOpened) {
       _animationController!.forward();
     } else {

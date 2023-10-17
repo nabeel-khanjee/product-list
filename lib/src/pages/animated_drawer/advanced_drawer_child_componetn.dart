@@ -1,10 +1,9 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class AdvancedDrawerChildComponent extends StatelessWidget {
   const AdvancedDrawerChildComponent({
     super.key,
   });
-
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +24,8 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        NavigationUtil.push(
-                            context, RouteConstants.signInRoute);
+                        // NavigationUtil.push(
+                        //     context, RouteConstants.signInRoute);
                       },
                       child: Row(
                         children: [
@@ -42,8 +41,8 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                               child: InkWell(
                                 onTap: () {
-                                  NavigationUtil.push(
-                                      context, RouteConstants.signInRoute);
+                                  // NavigationUtil.push(
+                                  //     context, RouteConstants.signInRoute);
                                 },
                                 child: Image.network(
                                     fit: BoxFit.fill,
@@ -81,11 +80,11 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
                     GestureDetector(
                       onTap: () => drawerStateChnageUpdateIndex(
                         context: context,
-                          advancedDrawerController:
-                              BlocProvider.of<AnimatedDrawerCubit>(context)
-                                  .advancedDrawerController,
-                          isOpen: true,
-                          ),
+                        advancedDrawerController:
+                            BlocProvider.of<AnimatedDrawerCubit>(context)
+                                .advancedDrawerController,
+                        isOpen: true,
+                      ),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
@@ -112,23 +111,32 @@ class AdvancedDrawerChildComponent extends StatelessWidget {
               ),
             ],
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      AssetsConstants.logoutImage,
-                      height: 24,
-                    )
-                  ],
+          InkWell(
+            onTap: () {
+              getIt
+                  .get<SharedPreferencesUtil>()
+                  .removeValue(SharedPreferenceConstants.apiAuthToken)
+                  .then((value) => Navigator.popAndPushNamed(
+                      context, RouteConstants.splashRoute));
+            },
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        AssetsConstants.logoutImage,
+                        height: 24,
+                      )
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

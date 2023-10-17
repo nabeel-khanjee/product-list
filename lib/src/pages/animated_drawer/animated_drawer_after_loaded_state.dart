@@ -1,18 +1,19 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/products/products_screen.dart';
 
 class AnimatedDrawerAfterLoadedState extends StatelessWidget {
   const AnimatedDrawerAfterLoadedState({
-    super.key, required this.color,
+    super.key,
+    required this.color,
   });
   final Color color;
-  
 
   @override
   Widget build(BuildContext context) {
-    BorderSide borderSide =
-        BorderSide(color: lighten(color, 0.1), width: 20);
+    BorderSide borderSide = BorderSide(color: lighten(color, 0.1), width: 20);
     return AdvancedDrawer(
-      backdrop:  AnimatedDrawerBackDrop(
+      
+      backdrop: AnimatedDrawerBackDrop(
         color: color,
       ),
       controller: BlocProvider.of<AnimatedDrawerCubit>(context)
@@ -43,7 +44,7 @@ class AnimatedDrawerAfterLoadedState extends StatelessWidget {
             controller:
                 BlocProvider.of<AnimatedDrawerCubit>(context).pageController,
             children: const [
-              HomeScreenBody(),
+              ProductsScreen(),
               ProfileScreen(),
               AppointmentsScreen(),
               CommunicationScreen(),

@@ -1,7 +1,7 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/sign_up/components/consent_form.dart';
-import 'package:provider_app/src/pages/sign_up/components/disclaimer.dart';
-import 'package:provider_app/src/pages/sign_up/components/privacy_policy.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/sign_up/components/consent_form.dart';
+import 'package:softtech_test/src/pages/sign_up/components/disclaimer.dart';
+import 'package:softtech_test/src/pages/sign_up/components/privacy_policy.dart';
 
 part 'sign_up_form.freezed.dart';
 

@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -31,11 +31,11 @@ class ProfileScreen extends StatelessWidget {
                   isExpandable: false,
                   test: StringConstants.familyHealthProfile,
                   image: AssetsConstants.familyHealthProfile,
-                      onTap: () {
+                  onTap: () {
                     NavigationUtil.push(
                         context, RouteConstants.familyHealthProfileRoute);
                   },
-            ),
+                ),
               ]),
             ),
           ],

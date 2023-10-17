@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/doctor_detail/list_data/faq_list_data.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/doctor_detail/list_data/faq_list_data.dart';
 
 class FaqScreen extends StatelessWidget {
   const FaqScreen({super.key});

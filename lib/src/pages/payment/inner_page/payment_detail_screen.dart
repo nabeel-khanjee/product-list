@@ -1,5 +1,5 @@
-import 'package:provider_app/src/app/app_export.dart';
-import 'package:provider_app/src/pages/billing/components/bottom_nav_bar_page_widget.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/billing/components/bottom_nav_bar_page_widget.dart';
 
 class PaymentDetailScreen extends StatelessWidget {
   const PaymentDetailScreen({

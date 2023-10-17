@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 List<BillingList> paymentList = [
   BillingList(
@@ -10,5 +10,3 @@ List<BillingList> paymentList = [
       route: RouteConstants.paymentRoute,
       args: BillingArgs(pageIndex: 1)),
 ];
-
-

@@ -1,18 +1,26 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
+import 'package:softtech_test/src/pages/sign_in/cubit/sign_in_cubit.dart';
 
 class SignInForm extends StatelessWidget {
   const SignInForm({super.key});
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController userNameController =
+        TextEditingController(text: 'mor_2314');
+    TextEditingController passwordController =
+        TextEditingController(text: "83r5^_");
+
     return Column(
       children: [
         const SizedBox(height: 50),
         Text(StringConstants.account),
         const SizedBox(height: 25),
-        _buildEmailField(context),
+        TextFormFieldComponent(
+            controller: userNameController, label: 'User Name'),
         const SizedBox(height: 20),
-        _buildPasswordField(context),
+        TextFormFieldComponent(
+            controller: passwordController, label: 'Password'),
         const SizedBox(height: 10),
         GestureDetector(
           onTap: () {
@@ -27,81 +35,80 @@ class SignInForm extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 40),
-        _signInButton(context),
+        BlocConsumer<SignInCubit, SignInState>(
+            listener: (context, state) => state.maybeWhen(
+                  orElse: () {
+                    return null;
+                  },
+                  loaded: (token) {
+                    getIt.get<SharedPreferencesUtil>().setString(
+                        SharedPreferenceConstants.apiAuthToken, token.token);
+                    return NavigationUtil.pushReplace(context,
+                        RouteConstants.homeRoute, RouteConstants.signInRoute);
+                  },
+                ),
+            builder: (context, state) => state.maybeWhen(
+                loading: () => ElevatedButton(
+                    onPressed: () {
+                      context.read<SignInCubit>().signIn(
+                          userName: userNameController.text,
+                          password: passwordController.text);
+                    },
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text('Loading...'),
+                        SizedBox(width: 10),
+                        SizedBox(
+                          height: 20,
+                          width: 20,
+                          child: AppProgressIndicator(
+                            color: ColorConstants.white,
+                          ),
+                        )
+                      ],
+                    )),
+                loaded: (token) => ElevatedButton(
+                    onPressed: () {
+                      context.read<SignInCubit>().signIn(
+                          userName: userNameController.text,
+                          password: passwordController.text);
+                    },
+                    child: const Text('Success Sign In')),
+                error: (message) {
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      ElevatedButton(
+                          onPressed: () {
+                            context.read<SignInCubit>().signIn(
+                                userName: userNameController.text,
+                                password: passwordController.text);
+                          },
+                          child: const Text("Retry Login")),
+                      const SizedBox(height: 10),
+                      Text(
+                        message,
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodySmall!
+                            .copyWith(color: ColorConstants.redIndicatorColor),
+                      ),
+                    ],
+                  );
+                },
+                orElse: () => ElevatedButton(
+                    onPressed: () {
+                      context.read<SignInCubit>().signIn(
+                          userName: userNameController.text,
+                          password: passwordController.text);
+                    },
+                    child: const Text('Sign In')))),
         const SizedBox(height: 50),
-        const SocialLogin(),
+        // const SocialLogin(),
       ],
-    );
-  }
-
-  Widget _buildEmailField(BuildContext context) {
-    return TextFormField(
-      decoration: InputDecoration(
-        fillColor: darken(getThemeColor(context), 0.25),
-        filled: true,
-        contentPadding: const EdgeInsets.symmetric(vertical: 14),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide.none,
-        ),
-        prefixIcon: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
-          child: SvgPicture.asset('assets/icon/email.svg'),
-        ),
-        prefixIconConstraints: const BoxConstraints(minHeight: 20),
-        labelText: StringConstants.email,
-        labelStyle: const TextStyle(color: ColorConstants.white),
-      ),
-    );
-  }
-
-  Widget _buildPasswordField(BuildContext context) {
-    return TextFormField(
-      decoration: InputDecoration(
-        fillColor: darken(getThemeColor(context), 0.25),
-        filled: true,
-        contentPadding: const EdgeInsets.symmetric(vertical: 14),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide.none,
-        ),
-        prefixIcon: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
-          child: SvgPicture.asset('assets/icon/password.svg'),
-        ),
-        prefixIconConstraints: const BoxConstraints(minHeight: 20),
-        labelText: StringConstants.password,
-        labelStyle: const TextStyle(color: ColorConstants.white),
-        suffixIcon: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0),
-          child: SvgPicture.asset('assets/icon/eye.svg'),
-        ),
-        suffixIconConstraints: const BoxConstraints(minHeight: 20),
-      ),
-    );
-  }
-
-  Widget _signInButton(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 56,
-      child: ElevatedButton(
-        onPressed: () {
-          NavigationUtil.push(
-            context,
-            RouteConstants.homeRoute,
-          );
-        },
-        style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-        ),
-        child: Text(
-          StringConstants.signIn,
-          style: Theme.of(context).textTheme.bodyMedium,
-        ),
-      ),
     );
   }
 }

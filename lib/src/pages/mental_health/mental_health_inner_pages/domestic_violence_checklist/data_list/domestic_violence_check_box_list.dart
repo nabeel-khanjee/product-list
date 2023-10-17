@@ -1,4 +1,4 @@
-import 'package:provider_app/src/app/app_export.dart';
+import 'package:softtech_test/src/app/app_export.dart';
 
 List<CheckBoxListData> domesticViolenceCheckBoxList = [
   CheckBoxListData(false, StringConstants.embarrassYouWithBadNamesAndPutDowns),
@@ -7,16 +7,23 @@ List<CheckBoxListData> domesticViolenceCheckBoxList = [
       false, StringConstants.controlWhatYouDoWhoYouSeeOrTalkToOrWhereToGo),
   CheckBoxListData(
       false, StringConstants.stopYouFromSeeingOrTalkingToFriendsOrFamily),
-  CheckBoxListData(false, StringConstants.takeYourMoneyOrSocialSecurityMakeYouAskForMoneyOrRefuseToGiveYouMoney),
+  CheckBoxListData(
+      false,
+      StringConstants
+          .takeYourMoneyOrSocialSecurityMakeYouAskForMoneyOrRefuseToGiveYouMoney),
   CheckBoxListData(false, StringConstants.makeAllTheDecisions),
   CheckBoxListData(
-      false, StringConstants.tellYouThatYouAreABadParentOrThreatenToTakeAwayOrHurtYourChildren),
+      false,
+      StringConstants
+          .tellYouThatYouAreABadParentOrThreatenToTakeAwayOrHurtYourChildren),
   CheckBoxListData(
-      false, StringConstants.actLikeTheAbuseIsNoBigDealItsYourFaultOrEvenDeniesDoingIt),
-  CheckBoxListData(false, StringConstants.destroyYourPropertyOrThreatenToKillYourPets),
-  CheckBoxListData(false, StringConstants.intimidateYouWithGunKnivesOrOtherWeapons),
+      false,
+      StringConstants
+          .actLikeTheAbuseIsNoBigDealItsYourFaultOrEvenDeniesDoingIt),
   CheckBoxListData(
-      false, StringConstants.threatenToCommitSucide),
+      false, StringConstants.destroyYourPropertyOrThreatenToKillYourPets),
   CheckBoxListData(
-      false, StringConstants.threatenToKillYou),
+      false, StringConstants.intimidateYouWithGunKnivesOrOtherWeapons),
+  CheckBoxListData(false, StringConstants.threatenToCommitSucide),
+  CheckBoxListData(false, StringConstants.threatenToKillYou),
 ];
