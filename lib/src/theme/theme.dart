@@ -13,7 +13,7 @@ class MyTheme with ChangeNotifier {
     return isDark ? ThemeMode.dark : ThemeMode.light;
   }
 
-  void switchColor(Color color) {
+  void switchColor(Color color) { 
     MyTheme.color = color;
     notifyListeners();
   }
