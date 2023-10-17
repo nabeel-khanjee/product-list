@@ -67,7 +67,7 @@ class AppDrawer extends StatelessWidget {
         icon: AssetsConstants.settingIcon,
       ),
     ];
-    return Container(
+    return SizedBox(
       height: 600,
       child: Drawer(
         elevation: 0,
